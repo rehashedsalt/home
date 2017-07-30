@@ -50,6 +50,7 @@ exec --no-startup-id redshift -l 38.627003:-90.199402
 exec_always --no-startup-id compton -bc --config ~/.config/compton.conf
 exec_always --no-startup-id dunst
 exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/gruvbox.jpeg
+exec --no-startup-id mopidy
 
 ###################
 ## Settings
