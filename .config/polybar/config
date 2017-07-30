@@ -48,7 +48,7 @@ font-1 = "Overpass:size=10;1"
 font-2 = "Overpass:size=6;1"
 
 modules-left = i3
-modules-center = 
+modules-center = xwindow
 modules-right = cpu memory separator battery volume separator wlan eth temperature separator date redshift
 
 ;tray-position = right
