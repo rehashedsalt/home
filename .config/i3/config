@@ -47,7 +47,6 @@ exec --no-startup-id redshift -l 38.627003:-90.199402
 exec_always --no-startup-id compton -bc --config ~/.config/compton.conf
 exec_always --no-startup-id dunst
 exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/gruvbox.jpeg
-exec --no-startup-id mate-settings-daemon
 
 ###################
 ## Settings
@@ -79,6 +78,8 @@ bindsym $mod+n exec i3-msg rename workspace to "$(rofi -dmenu -p 'Rename workspa
 # Mod1 is LALT, Mod4 is LSUP
 set $mod Mod1
 set $sup Mod4
+set $ctl Ctrl
+set $shift Shift
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 #floating_modifier $mod
@@ -115,16 +116,16 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+$shift+j move left
+bindsym $mod+$shift+k move down
+bindsym $mod+$shift+l move up
+bindsym $mod+$shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+$shift+Left move left
+bindsym $mod+$shift+Down move down
+bindsym $mod+$shift+Up move up
+bindsym $mod+$shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -133,7 +134,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $sup+f fullscreen toggle
+bindsym $mod+$shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -141,7 +142,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-#bindsym $mod+Shift+space floating toggle
+#bindsym $mod+$shift+space floating toggle
 
 # change focus between tiling / floating windows
 #bindsym $mod+space focus mode_toggle
@@ -168,28 +169,28 @@ bindsym $mod+0 workspace number 10
 bindsym $mod+I workspace next
 bindsym $mod+U workspace prev
 
-bindsym Ctrl+$mod+Right workspace next
-bindsym Ctrl+$mod+Left workspace prev
+bindsym $ctl+$mod+Right workspace next
+bindsym $ctl+$mod+Left workspace prev
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number 1
-bindsym $mod+Shift+2 move container to workspace number 2
-bindsym $mod+Shift+3 move container to workspace number 3
-bindsym $mod+Shift+4 move container to workspace number 4
-bindsym $mod+Shift+5 move container to workspace number 5
-bindsym $mod+Shift+6 move container to workspace number 6
-bindsym $mod+Shift+7 move container to workspace number 7
-bindsym $mod+Shift+8 move container to workspace number 8
-bindsym $mod+Shift+9 move container to workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 10
+bindsym $mod+$shift+1 move container to workspace number 1
+bindsym $mod+$shift+2 move container to workspace number 2
+bindsym $mod+$shift+3 move container to workspace number 3
+bindsym $mod+$shift+4 move container to workspace number 4
+bindsym $mod+$shift+5 move container to workspace number 5
+bindsym $mod+$shift+6 move container to workspace number 6
+bindsym $mod+$shift+7 move container to workspace number 7
+bindsym $mod+$shift+8 move container to workspace number 8
+bindsym $mod+$shift+9 move container to workspace number 9
+bindsym $mod+$shift+0 move container to workspace number 10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+$shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+$shift+r restart
 # exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Really exit i3wm? This will close all running applications and end your X session.' -b 'Exit' 'i3-msg exit'"
-bindsym $mod+Shift+e exec "bash i3-salt-logout-dunst"
+#bindsym $mod+$shift+e exec "i3-nagbar -t warning -m 'Really exit i3wm? This will close all running applications and end your X session.' -b 'Exit' 'i3-msg exit'"
+bindsym $mod+$shift+e exec "bash i3-salt-logout-dunst"
 # lock the screen
 bindsym $sup+l exec "bash i3-salt-lock"
 
