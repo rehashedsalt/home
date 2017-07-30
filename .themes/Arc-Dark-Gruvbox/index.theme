@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Arc-Dark-Gruvbox
+Comment=An Arc mod by Salt
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Arc-Dark-Gruvbox
+MetacityTheme=Arc-Dark-Gruvbox
+IconTheme=papirus-dark
+CursorTheme=Adwaita
+ButtonLayout=menu:minimize,maximize,close
