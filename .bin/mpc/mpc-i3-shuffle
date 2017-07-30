@@ -1,0 +1,6 @@
+#!/bin/bash
+if [[ "$(mpc random)" == *"random: on"* ]]; then
+	notify-send -a "Mopidy" -u low -t 1 "Shuffle On" "Songs will be played in random order"
+else
+	notify-send -a "Mopidy" -u low -t 1 "Shuffle Off" "Songs will be played sequentially"
+fi

@@ -217,9 +217,30 @@ mode "resize" {
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
+        # back to normal: Enter, Escape, or MOD+R
         bindsym Return mode "default"
         bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
+
+mode "media" {
+	# Shuffle and Repeat
+	bindsym s exec --no-startup-id "~/.bin/mpc/mpc-i3-shuffle"
+	bindsym r exec --no-startup-id "~/.bin/mpc/mpc-i3-repeat"
+
+	# Toggle playback
+	bindsym p exec --no-startup-id "mpc toggle; notify-send -a 'Mopidy' -u low -t 1 'Toggle' 'Toggled playback'
+
+	# Skip between tracks
+	bindsym Right exec --no-startup-id "mpc next; notify-send -a 'Mopidy' -u low -t 1 'Next' 'The current song has been skipped'"
+	bindsym Left exec --no-startup-id "mpc prev; notify-send -a 'Mopidy' -u low -t 1 'Previous' 'Rewound to the previous song'"
+
+	# back to normal: Enter, Escape, or MOD+M
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+m mode "default"
+}
+
+bindsym $mod+m mode "media"
