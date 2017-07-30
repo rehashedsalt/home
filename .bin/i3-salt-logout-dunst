@@ -1,0 +1,4 @@
+#!/bin/sh
+if [ "`dunstify -a i3 -u 2 -t 15000 -A 1,Cancel -A 0,Logout "Logout?" "This will close all running applications and end your X session!"`" = "0" ]; then
+	i3-msg exit
+fi

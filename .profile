@@ -1,0 +1,73 @@
+#!/bin/sh
+
+# POSIX NOTICE
+# This script is not fully POSIX-compliant. It uses features that,
+# while popular, are undefined by POSIX. Namely:
+#
+# * The use of the `local` keyword
+#
+# Users of this script on minimalist shells will have to adapt
+# this script accordingly.
+
+contains() {
+    string="$1"
+    substring="$2"
+    if test "${string#*$substring}" != "$string"; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+# Common miscellaneous aliases are all defined here for convenience
+__define_aliases() {
+
+    # Common Aliases
+    
+    alias cp='cp -i'
+    alias dd=dcfldd
+    alias ls='ls --color=auto'
+    alias ll='ls -alF'
+    alias la='ls -a --color=auto'
+    alias l='ls -CF'
+    alias waitwhat='echo $?'
+
+    alias fug='sudo `history -p !!`'
+}
+
+# Functions to be exported to the shell
+# Mostly just helper wrappers and such
+__define_functions() {
+    # Arch-only helper functions
+    local testcase=`contains "$(ls /etc/*release)" "arch"`
+    if [ "$testcase" ]; then
+        export PAC_HELPER="pacaur"
+        local helpers="pacaur yaourt pacman"
+        for helper in $helpers; do
+            if [ "$(pacman -Qq "$helper" > /dev/null)" ]; then
+                export PAC_HELPER="$helper"
+                break
+            fi
+        done
+        
+        alias pac="\$PAC_HELPER"
+        alias pacq="\$PAC_HELPER -Qs"
+        alias pacqi="\$PAC_HELPER -Qi"
+        alias pacs="\$PAC_HELPER -S"
+        alias pacss="\$PAC_HELPER -Ss"
+        alias pacsu="\$PAC_HELPER -Syu"
+        alias pacsyu="\$PAC_HELPER -Syyu"
+        alias pacsr="\$PAC_HELPER -Rsnu"
+    fi
+}
+
+# Call functions that need to be called
+__define_aliases
+__define_functions
+
+export TERM="linux"
+
+EDITOR=$(which vim)
+PATH=$PATH:~/.bin
+export EDITOR
+export PATH
