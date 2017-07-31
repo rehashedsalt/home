@@ -9,7 +9,7 @@
 
 [colors]
 background = ${xrdb:background:#1d2021}
-background-alt = ${xrdb:color8:#a89984}
+background-alt = ${xrdb:background_soft:#32302f}
 foreground = ${xrdb:color15:#ebdbb2}
 foreground-alt = ${xrdb:color8:#928374}
 primary = ${xrdb:color10:#b8bb26}
@@ -252,7 +252,7 @@ label-time-foreground = ${colors.foreground}
 bar-progress-width = 100
 bar-progress-indicator = ${module/bartemplate.bar-indicator}
 bar-progress-fill = ${module/bartemplate.bar-fill}
-bar-progress-fill-foreground = ${colors.primary-alt}
+bar-progress-fill-foreground = ${xrdb:color9:#fb4934}
 bar-progress-empty = ${module/bartemplate.bar-empty}
 bar-progress-empty-foreground = ${module/bartemplate.bar-empty-foreground}
 
@@ -277,7 +277,7 @@ bar-empty-foreground = ${colors.background-alt}
 type = internal/xbacklight
 inherit = module/bartemplate
 label = BRI
-bar-fill-foreground = ${colors.primary}
+bar-fill-foreground = ${colors.primary-alt}
 
 [module/backlight-acpi]
 inherit = module/xbacklight
@@ -379,12 +379,12 @@ label-muted = VOL
 label-muted-foreground = ${colors.foreground-alt}
 
 bar-volume-width = ${module/bartemplate.bar-width}
-bar-volume-foreground = ${colors.primary}
+bar-volume-foreground = ${colors.primary-alt}
 ;${xrdb:color14:#8ec07c}
 bar-volume-indicator = 
 bar-volume-fill = ${module/bartemplate.bar-fill}
 bar-volume-fill-font = ${module/bartemplate.bar-fill-font}
-bar-volume-fill-foreground = ${colors.primary}
+bar-volume-fill-foreground = ${colors.primary-alt}
 ;${xrdb:color14:#8ec07c}
 bar-volume-empty = ${module/bartemplate.bar-empty}
 bar-volume-empty-font = ${module/bartemplate.bar-empty-font}
