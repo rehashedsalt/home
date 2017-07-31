@@ -103,9 +103,9 @@ font-1 = ${bar/top.font-1}
 ;font-2 = siji:pixelsize=10;1
 font-2 = ${bar/top.font-2}
 
-modules-left = cpu memory
+modules-left = temperature eth wlan separator cpu memory
 modules-center = mpd
-modules-right = battery volume separator wlan eth temperature
+modules-right = xbacklight volume battery
 
 ;tray-position = right
 ;tray-padding = 2
@@ -276,8 +276,8 @@ bar-empty-foreground = ${colors.background-alt}
 [module/xbacklight]
 type = internal/xbacklight
 inherit = module/bartemplate
-label = BL
-bar-fill-foreground = ${xrdb:color11:#fabd2f}
+label = BRI
+bar-fill-foreground = ${colors.primary}
 
 [module/backlight-acpi]
 inherit = module/xbacklight
