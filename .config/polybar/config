@@ -240,7 +240,7 @@ icon-repeat-once = ⟳1
 icon-next = >>
 icon-next-foreground = ${colors.foreground}
 
-label-song = %title% - %artist%
+label-song = %title%
 label-song-foreground = ${colors.foreground}
 label-song-maxlen = 25
 label-song-ellipsis = true
