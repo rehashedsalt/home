@@ -240,6 +240,9 @@ mode "media" {
 	bindsym Right exec --no-startup-id "mpc next; notify-send -a 'Mopidy' -u low -t 1 'Next' 'The current song has been skipped'"
 	bindsym Left exec --no-startup-id "mpc prev; notify-send -a 'Mopidy' -u low -t 1 'Previous' 'Rewound to the previous song'"
 
+	# Stop it altogether
+	bindsym k exec --no-startup-id "mpc stop; notify-send -a 'Mopidy' -u low -t 1 'Stopped' 'Playback has been stopped'"
+
 	# back to normal: Enter, Escape, or MOD+M
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
