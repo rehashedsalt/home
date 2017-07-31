@@ -225,10 +225,14 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-mode "media" {
+mode "mopidy" {
 	# Shuffle and Repeat
 	bindsym s exec --no-startup-id "~/.bin/mpc/mpc-i3-shuffle"
 	bindsym r exec --no-startup-id "~/.bin/mpc/mpc-i3-repeat"
+
+	# Volume keys
+	bindsym Up exec --no-startup-id "mpc volume +5"
+	bindsym Down exec --no-startup-id "mpc volume -5"
 
 	# Toggle playback
 	bindsym t exec --no-startup-id "mpc toggle; notify-send -a 'Mopidy' -u low -t 1 'Toggle' 'Toggled playback'
@@ -253,4 +257,4 @@ mode "media" {
 	bindsym $mod+m mode "default"
 }
 
-bindsym $mod+m mode "media"
+bindsym $mod+m mode "mopidy"
