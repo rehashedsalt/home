@@ -358,9 +358,11 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = " %Y-%m-%d"
+date = %a
+date-alt = %A, %B %d
 
-time = %H:%M
+time = %I:%M %p
+time-alt = %I:%M %p
 
 label = %date% %time%
 label-foreground = ${colors.foreground}
