@@ -9,7 +9,7 @@
 
 [colors]
 background = ${xrdb:background:#1d2021}
-background-alt = ${xrdb:background_soft:#32302f}
+background-alt = ${xrdb:bg2:#504945}
 foreground = ${xrdb:color15:#ebdbb2}
 foreground-alt = ${xrdb:color8:#928374}
 primary = ${xrdb:color10:#b8bb26}

@@ -2,7 +2,7 @@
 ! urxvt configuration
 !-----------------------------
 urxvt*scrollBar: false
-!urxvt*font: xft:Terminus:pixelsize=9,xft:Inconsolata\ for\ Powerline:pixelsize=9
+!urxvt*font: xft:Terminus:size=9,xft:Inconsolata\ for\ Powerline:size=10
 urxvt*font: xft:Hack:size=9
 urxvt*letterSpace: -1
 !urxvt*font: xft:Hack Regular:size=9
@@ -33,6 +33,9 @@ rofi.width: 30
 *background_med: #282828
 ! soft contrast
 *background_soft: #32302f
+
+*bg2: #504945
+*bg3: #665c54
 
 *foreground: #ebdbb2
 ! Black + DarkGrey
