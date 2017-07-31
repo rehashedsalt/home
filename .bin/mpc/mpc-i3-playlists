@@ -1,5 +1,8 @@
 #!/bin/bash
 PLAYLIST="$(mpc lsplaylists | rofi -lines 10 -dmenu -p 'Play MPD Playlist: ')"
+if [ "$PLAYLIST" = "" ]; then
+	exit
+fi
 mpc clear
 mpc load $PLAYLIST
 mpc play
