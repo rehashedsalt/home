@@ -1,2 +1,6 @@
 #!/bin/bash
-local PLAYLIST="$(mpc lsplaylists | rofi -dmenu -p 'Play MPD Playlist: ')"
+PLAYLIST="$(mpc lsplaylists | rofi -lines 10 -dmenu -p 'Play MPD Playlist: ')"
+mpc clear
+mpc load $PLAYLIST
+mpc play
+notify-send -u low -t 5 -a 'Mopidy' "$PLAYLIST" "Beginning playback of playlist $PLAYLIST"
