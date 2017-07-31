@@ -1,9 +1,15 @@
 #!/bin/bash
-PLAYLIST="$(mpc lsplaylists | rofi -lines 10 -dmenu -p 'Play MPD Playlist: ')"
+MESSAGE='-mesg Append:'
+if [ "$1" = "--clear" ]; then
+	MESSAGE='-mesg Replace:'
+fi
+PLAYLIST="$(mpc lsplaylists | rofi -lines 10 -dmenu -p 'Play MPD Playlist: ' $MESSAGE)"
 if [ "$PLAYLIST" = "" ]; then
 	exit
 fi
-mpc clear
+if [ "$1" = "--clear" ]; then
+	mpc clear
+fi
 mpc load $PLAYLIST
 mpc play
 notify-send -u low -t 5 -a 'Mopidy' "$PLAYLIST" "Beginning playback of playlist $PLAYLIST"

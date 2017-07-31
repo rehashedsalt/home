@@ -234,7 +234,9 @@ mode "media" {
 	bindsym t exec --no-startup-id "mpc toggle; notify-send -a 'Mopidy' -u low -t 1 'Toggle' 'Toggled playback'
 
 	# Start playing a playlist
-	bindsym p exec --no-startup-id "~/.bin/mpc/mpc-i3-playlists"
+	bindsym p exec --no-startup-id "~/.bin/mpc/mpc-i3-playlists --clear"
+	# Append a playlist
+	bindsym o exec --no-startup-id "~/.bin/mpc/mpc-i3-playlists"
 
 	# Skip between tracks
 	bindsym Right exec --no-startup-id "mpc next; notify-send -a 'Mopidy' -u low -t 1 'Next' 'The current song has been skipped'"
