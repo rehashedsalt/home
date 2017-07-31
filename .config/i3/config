@@ -226,9 +226,10 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 mode "mopidy" {
-	# Shuffle and Repeat
+	# Shuffle, Repeat, and Consume
 	bindsym s exec --no-startup-id "~/.bin/mpc/mpc-i3-shuffle"
 	bindsym r exec --no-startup-id "~/.bin/mpc/mpc-i3-repeat"
+	bindsym e exec --no-startup-id "~/.bin/mpc/mpc-i3-consume"
 
 	# Volume keys
 	bindsym Up exec --no-startup-id "mpc volume +5"

@@ -1,0 +1,6 @@
+#!/bin/bash
+if [[ "$(mpc consume)" == *"consume: on"* ]]; then
+	notify-send -a "Mopidy" -u low -t 1 "Consume On" "Songs will be removed from the playlist after completion"
+else
+	notify-send -a "Mopidy" -u low -t 1 "Consume Off" "Songs will remain in the playlist after completion"
+fi
