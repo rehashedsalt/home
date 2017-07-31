@@ -1,0 +1,2 @@
+#!/bin/bash
+local PLAYLIST="$(mpc lsplaylists | rofi -dmenu -p 'Play MPD Playlist: ')"
