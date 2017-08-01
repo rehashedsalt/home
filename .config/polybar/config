@@ -28,6 +28,8 @@ accent-blue = ${xrdb:color12:#83a598}
 font-0 = "DejaVu Sans:size=10;1"
 font-1 = "Overpass:size=10;1"
 font-2 = "Symbola:size=10;1"
+font-3 =
+font-4 =
 
 ;========================================
 ; BARS
@@ -53,6 +55,8 @@ foreground = ${res/colors.foreground}
 font-0 = ${res/fonts.font-0}
 font-1 = ${res/fonts.font-1}
 font-2 = ${res/fonts.font-2}
+font-3 = ${res/fonts.font-3}
+font-4 = ${res/fonts.font-4}
 
 ; UPPER
 ;====================
@@ -327,3 +331,4 @@ type = internal/xwindow
 label = %title%
 label-maxlen = 75
 label-ellipsis = true
+
