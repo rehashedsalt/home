@@ -45,6 +45,9 @@ font pango:Overpass 10
 ## Statusbars and Daemons
 ###################
 
+# Because NO DM! If we're just starting the system, we need to lock it up.
+exec --no-startup-id "bash i3-salt-lock"
+
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id redshift -l 38.627003:-90.199402
 exec_always --no-startup-id compton -bc --config ~/.config/compton.conf
@@ -192,9 +195,11 @@ bindsym $mod+$shift+0 move container to workspace number 10
 bindsym $mod+$shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+$shift+r restart
+
 # exit i3 (logs you out of your X session)
 #bindsym $mod+$shift+e exec "i3-nagbar -t warning -m 'Really exit i3wm? This will close all running applications and end your X session.' -b 'Exit' 'i3-msg exit'"
 bindsym $mod+$shift+e exec "bash i3-salt-logout-dunst"
+
 # lock the screen
 bindsym $sup+l exec "bash i3-salt-lock"
 
