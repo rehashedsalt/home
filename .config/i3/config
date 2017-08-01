@@ -45,7 +45,7 @@ font pango:Overpass 10
 ## Statusbars and Daemons
 ###################
 
-# Because NO DM! If we're just starting the system, we need to lock it up.
+# Use in case of NODM and .xinitrc -- If we're just starting the system, we need to lock it up.
 exec --no-startup-id "bash i3-salt-lock"
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
