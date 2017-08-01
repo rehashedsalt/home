@@ -1,4 +1,8 @@
-;INFO: https://github.com/jaagr/polybar
+;==================================================
+;
+;  INFO: https://github.com/jaagr/polybar
+;
+;===================================================
 
 ;========================================
 ; RESOURCES
@@ -59,7 +63,7 @@ tray-padding = 2
 
 modules-left = i3 | xwindow
 modules-center = date
-modules-right = temperature | wlan | redshift
+modules-right = temperature | wlan
 
 ; LOWER
 ;====================
@@ -84,13 +88,6 @@ content-foreground = ${res/colors.foreground}
 
 ; CUSTOM
 ;====================
-[module/redshift]
-type = custom/script
-format = <label>
-label = %output%
-label-foreground = ${res/colors.accent-red}
-interval = 5
-exec = ~/.config/polybar/redshift.sh
 
 ; TEMPLATE
 ;====================
