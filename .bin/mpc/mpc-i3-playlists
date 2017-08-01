@@ -11,5 +11,7 @@ if [ "$1" = "--clear" ]; then
 	mpc clear
 fi
 mpc load $PLAYLIST
-mpc play
+if [[ "$(mpc)" != *"playing"* ]]; then
+	mpc play
+fi
 notify-send -u low -t 5 -a 'Mopidy' "$PLAYLIST" "Beginning playback of playlist $PLAYLIST"
