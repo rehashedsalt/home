@@ -1,16 +1,9 @@
 #!/bin/sh
 SHOT=/tmp/lockimg.png
-LOCKIMAGE=~/.i3lockicon
+LOCKIMAGE=$HOME/.i3lockicon
 import -window root $SHOT
 
-## Radial blur
-#convert $SHOT -resize 50% $IMAGE
-#convert $SHOT -blur 2x8 $IMAGE
-#convert $SHOT -resize 200% $IMAGE
-## Neat info-only censor
-convert $SHOT -scale 10% $SHOT
-convert $SHOT -scale 1000% $SHOT
-	[[ -f $LOCKIMAGE ]] && convert $SHOT $LOCKIMG -gravity center -composite -matte $SHOT
-
+convert $SHOT -scale 10% -scale 1000% $SHOT
+[[ -f $LOCKIMAGE ]] && convert $SHOT $LOCKIMAGE -gravity center -composite -matte $SHOT
 i3lock -i $SHOT
 rm $SHOT
