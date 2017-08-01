@@ -46,7 +46,7 @@ font pango:Overpass 10
 ###################
 
 # Use in case of NODM and .xinitrc -- If we're just starting the system, we need to lock it up.
-exec --no-startup-id "bash i3-salt-lock"
+exec --no-startup-id "i3lock -c1d2021"
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id redshift -l 38.627003:-90.199402
