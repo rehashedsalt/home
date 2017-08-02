@@ -75,9 +75,9 @@ modules-right = temperature | wlan
 inherit = template/bar
 bottom=true
 
-modules-left = cpu memory
+modules-left = battery cpu memory
 modules-center = mpd
-modules-right = xbacklight volume battery
+modules-right = xbacklight volume
 
 ;========================================
 ; MODULES
@@ -105,6 +105,9 @@ label-background = ${res/colors.background}
 bar-width = 30
 bar-fill = /
 bar-fill-foreground = ${res/colors.accent-blue}
+bar-fill-foreground-progress = ${res/colors.accent-green}
+bar-fill-foreground-resource = ${res/colors.accent-red}
+bar-fill-foreground-setting = ${res/colors.accent-blue}
 bar-fill-background = ${res/colors.background}
 bar-indicator = /
 bar-indicator-foreground = ${res/colors.foreground}
@@ -160,15 +163,15 @@ label-charging = "CHR"
 label-charging-foreground = ${template/module/bar.label-foreground}
 label-charging-background = ${template/module/bar.label-background}
 label-discharging = "BAT"
-label-discharging-foreground = ${template/module/bar.label-foreground
+label-discharging-foreground = ${template/module/bar.label-foreground}
 label-discharging-background = ${template/module/bar.label-background}
 label-full = "CHR"
-label-full-foreground = ${self.bar-capacity-fill-foreground}
+label-full-foreground = ${res/colors.accent-green}
 label-full-background = ${template/module/bar.label-background}
 
 bar-capacity-width = ${template/module/bar.bar-width}
 bar-capacity-fill = ${template/module/bar.bar-fill}
-bar-capacity-fill-foreground = ${res/colors.accent-green}
+bar-capacity-fill-foreground = ${template/module/bar.bar-fill-foreground-resource}
 bar-capacity-fill-background = ${template/module/bar.bar-fill-background}
 bar-capacity-indicator = ${template/module/bar.bar-indicator}
 bar-capacity-indicator-foreground = ${template/module/bar.bar-indicator-foreground}
@@ -189,7 +192,7 @@ label-background = ${template/module/bar.label-background}
 
 bar-load-width = ${template/module/bar.bar-width}
 bar-load-fill = ${template/module/bar.bar-fill}
-bar-load-fill-foreground = ${res/colors.accent-red}
+bar-load-fill-foreground = ${template/module/bar.bar-fill-foreground-resource}
 bar-load-fill-background = ${template/module/bar.bar-fill-background}
 bar-load-indicator = ${template/module/bar.bar-indicator}
 bar-load-indicator-foreground = ${template/module/bar.bar-indicator-foreground}
@@ -224,7 +227,7 @@ label-background = ${template/module/bar.label-background}
 
 bar-used-width = ${template/module/bar.bar-width}
 bar-used-fill = ${template/module/bar.bar-fill}
-bar-used-fill-foreground = ${res/colors.accent-red}
+bar-used-fill-foreground = ${template/module/bar.bar-fill-foreground-resource}
 bar-used-fill-background = ${template/module/bar.bar-fill-background}
 bar-used-indicator = ${template/module/bar.bar-indicator}
 bar-used-indicator-foreground = ${template/module/bar.bar-indicator-foreground}
@@ -256,7 +259,7 @@ label-time-background = ${res/colors.background}
 
 bar-progress-width = 100
 bar-progress-fill = ${template/module/bar.bar-fill}
-bar-progress-fill-foreground = ${res/colors.accent-blue}
+bar-progress-fill-foreground = ${template/module/bar.bar-fill-foreground-progress}
 bar-progress-fill-background = ${template/module/bar.bar-fill-background}
 bar-progress-indicator = ${template/module/bar.bar-indicator}
 bar-progress-indicator-foreground = ${template/module/bar.bar-indicator-foreground}
@@ -295,7 +298,7 @@ label-muted-background = ${template/module/bar.label-background}
 
 bar-volume-width = ${template/module/bar.bar-width}
 bar-volume-fill = ${template/module/bar.bar-fill}
-bar-volume-fill-foreground = ${template/module/bar.bar-fill-foreground}
+bar-volume-fill-foreground = ${template/module/bar.bar-fill-foreground-setting}
 bar-volume-fill-background = ${template/module/bar.bar-fill-background}
 bar-volume-indicator = ${template/module/bar.bar-indicator}
 bar-volume-indicator-foreground = ${template/module/bar.bar-indicator-foreground}
@@ -325,6 +328,7 @@ interval = 3
 type = internal/xbacklight
 inherit = template/module/bar
 label = BRI
+bar-fill-foreground = ${template/module/bar.bar-fill-foreground-setting}
 
 [module/xwindow]
 type = internal/xwindow
