@@ -106,7 +106,8 @@ bar-width = 30
 bar-fill = /
 bar-fill-foreground = ${res/colors.accent-blue}
 bar-fill-foreground-progress = ${res/colors.accent-green}
-bar-fill-foreground-resource = ${res/colors.accent-red}
+bar-fill-foreground-resource-low = ${res/colors.accent-red}
+bar-fill-foreground-resource-high = ${res/colors.accent-green}
 bar-fill-foreground-setting = ${res/colors.accent-blue}
 bar-fill-background = ${res/colors.background}
 bar-indicator = /
@@ -171,7 +172,7 @@ label-full-background = ${template/module/bar.label-background}
 
 bar-capacity-width = ${template/module/bar.bar-width}
 bar-capacity-fill = ${template/module/bar.bar-fill}
-bar-capacity-fill-foreground = ${template/module/bar.bar-fill-foreground-resource}
+bar-capacity-fill-foreground = ${template/module/bar.bar-fill-foreground-resource-high}
 bar-capacity-fill-background = ${template/module/bar.bar-fill-background}
 bar-capacity-indicator = ${template/module/bar.bar-indicator}
 bar-capacity-indicator-foreground = ${template/module/bar.bar-indicator-foreground}
@@ -192,7 +193,7 @@ label-background = ${template/module/bar.label-background}
 
 bar-load-width = ${template/module/bar.bar-width}
 bar-load-fill = ${template/module/bar.bar-fill}
-bar-load-fill-foreground = ${template/module/bar.bar-fill-foreground-resource}
+bar-load-fill-foreground = ${template/module/bar.bar-fill-foreground-resource-low}
 bar-load-fill-background = ${template/module/bar.bar-fill-background}
 bar-load-indicator = ${template/module/bar.bar-indicator}
 bar-load-indicator-foreground = ${template/module/bar.bar-indicator-foreground}
@@ -227,7 +228,7 @@ label-background = ${template/module/bar.label-background}
 
 bar-used-width = ${template/module/bar.bar-width}
 bar-used-fill = ${template/module/bar.bar-fill}
-bar-used-fill-foreground = ${template/module/bar.bar-fill-foreground-resource}
+bar-used-fill-foreground = ${template/module/bar.bar-fill-foreground-resource-low}
 bar-used-fill-background = ${template/module/bar.bar-fill-background}
 bar-used-indicator = ${template/module/bar.bar-indicator}
 bar-used-indicator-foreground = ${template/module/bar.bar-indicator-foreground}
