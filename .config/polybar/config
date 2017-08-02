@@ -45,7 +45,7 @@ height = 24
 
 ; Module padding and spacing
 padding = 2
-module-margin = 2
+module-margin = 1
 
 ; Module colors
 background = ${res/colors.background}
@@ -67,7 +67,7 @@ tray-padding = 2
 
 modules-left = i3 | xwindow
 modules-center = date
-modules-right = temperature | wlan
+modules-right = wlan-up wlan-down | temperature
 
 ; LOWER
 ;====================
@@ -116,6 +116,21 @@ bar-indicator-background = ${res/colors.background}
 bar-empty = /
 bar-empty-foreground = ${res/colors.background-alt}
 bar-empty-background = ${res/colors.background}
+
+[template/module/network]
+type = internal/network
+interface = wlp1s0
+format-connected = <label-connected>
+format-connected-foreground = ${res/colors.foreground}
+format-connected-background = ${res/colors.background}
+format-disconnected = <label-disconnected>
+format-disconnected-foreground = ${res/colors.accent-red}
+format-disconnected-background = ${res/colors.background}
+
+label-connected = %upspeed% %downspeed% - %signal%%
+label-disconnected = 
+
+interval = 1
 
 ; STOCK
 ;====================
@@ -310,20 +325,16 @@ bar-volume-empty-background = ${template/module/bar.bar-empty-background}
 
 interval = 1
 
-[module/wlan]
-type = internal/network
-interface = wlp1s0
-format-connected = <label-connected>
-format-connected-foreground = ${res/colors.accent-green}
-format-connected-background = ${res/colors.background}
-format-disconnected = <label-disconnected>
-format-disconnected-foreground = ${res/colors.accent-red}
-format-disconnected-background = ${res/colors.background}
+[module/wlan-up]
+inherit = template/module/network
+label-connected = %upspeed%
+label-connected-foreground = ${res/colors.accent-blue}
+label-disconnected = %ifname% Disconnected
 
-label-connected = %essid%
-label-disconnected = %ifname%
-
-interval = 3
+[module/wlan-down]
+inherit = template/module/network
+label-connected = %downspeed%
+label-connected-foreground = ${res/colors.accent-blue-dark}
 
 [module/xbacklight]
 type = internal/xbacklight
