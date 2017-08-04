@@ -51,7 +51,7 @@
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 2
+    separator_height = 1
 
     # Padding between text and separator.
     padding = 8
@@ -178,7 +178,7 @@
     dmenu = /usr/bin/rofi -dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/waterfox -new-tab
+    browser = /usr/bin/firefox -new-tab
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true

@@ -207,7 +207,7 @@ bindsym $mod+$shift+r restart
 
 # exit i3 (logs you out of your X session)
 #bindsym $mod+$shift+e exec "i3-nagbar -t warning -m 'Really exit i3wm? This will close all running applications and end your X session.' -b 'Exit' 'i3-msg exit'"
-bindsym $mod+$shift+e exec "bash i3-salt-logout-dunst"
+bindsym $mod+$shift+e exec "i3-salt-logout-dunst"
 
 # lock the screen
 bindsym $sup+l exec "bash i3-salt-lock"
@@ -273,3 +273,14 @@ mode "mopidy" {
 }
 
 bindsym $mod+m mode "mopidy"
+
+mode "test" {
+	bindsym p exec --no-startup-id notify-send "i3 Current Path" "$PATH"
+	bindsym n exec --no-startup-id notify-send "Test Notification" "This is a simple test notification"
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+$shift+t mode "default"
+}
+
+bindsym $mod+$shift+t mode "test"
