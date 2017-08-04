@@ -295,11 +295,13 @@ format = <label>
 format-warn = <label-warn>
 
 label = %temperature%
+label-padding = 2
 label-foreground = ${res/colors.foreground}
 label-background = ${res/colors.background}
 label-warn = %temperature%
+label-warn-padding = ${self.label-padding}
 label-warn-foreground = ${res/colors.background}
-label-warn-background = ${res/colors.accent-red}
+label-warn-background = ${res/colors.alert}
 
 [module/volume]
 type = internal/volume
