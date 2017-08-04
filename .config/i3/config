@@ -61,7 +61,13 @@ exec --no-startup-id mopidy
 ## Settings
 ###################
 
+# No terminal bell
 exec --no-startup-id xset -b
+# No DPMS (display blanking)
+exec --no-startup-id xset -dpms
+# No screensaver
+exec --no-startup-id xset s off
+
 
 ###################
 ## Workspaces
