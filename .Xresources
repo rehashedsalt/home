@@ -3,7 +3,7 @@
 !-----------------------------
 urxvt*scrollBar: false
 !urxvt*font: xft:Terminus:size=9,xft:Inconsolata\ for\ Powerline:size=10
-urxvt*font: xft:Hack:size=9
+urxvt*font: xft:Hack:size=9,xft:PowerlineSymbols:size=9
 urxvt*letterSpace: -1
 !urxvt*font: xft:Hack Regular:size=9
 !urxvt*depth: 32
