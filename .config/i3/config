@@ -50,7 +50,7 @@ font pango:Overpass 10
 # Use in case of NODM/autlogin and .xinitrc -- If we're just starting the system, we need to lock it up.
 exec --no-startup-id "i3lock -c1d2021"
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id redshift -l 38.627003:-90.199402
 exec_always --no-startup-id compton -bc --config ~/.config/compton.conf
 exec_always --no-startup-id dunst
@@ -207,10 +207,10 @@ bindsym $mod+$shift+r restart
 
 # exit i3 (logs you out of your X session)
 #bindsym $mod+$shift+e exec "i3-nagbar -t warning -m 'Really exit i3wm? This will close all running applications and end your X session.' -b 'Exit' 'i3-msg exit'"
-bindsym $mod+$shift+e exec "i3-salt-logout-dunst"
+bindsym $mod+$shift+e exec "~/.bin/i3-salt-logout-dunst"
 
 # lock the screen
-bindsym $sup+l exec "bash i3-salt-lock"
+bindsym $sup+l exec "~/.bin/i3-salt-lock"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

@@ -67,7 +67,7 @@ tray-padding = 2
 
 modules-left = i3 | xwindow
 modules-center = date
-modules-right = wlan-up wlan-down | temperature
+modules-right = xkeyboard | wlan-up wlan-down | temperature
 
 ; LOWER
 ;====================
@@ -344,6 +344,20 @@ type = internal/xbacklight
 inherit = template/module/bar
 label = BRI
 bar-fill-foreground = ${template/module/bar.bar-fill-foreground-setting}
+
+[module/xkeyboard]
+type = internal/xkeyboard
+format = <label-indicator> <label-layout>
+
+label-layout = %name%
+label-layout-padding = 0
+label-layout-background = ${res/colors.background}
+label-layout-foreground = ${res/colors.foreground}
+
+label-indicator = %name%
+label-indicator-padding = 1
+label-indicator-background = ${self.label-layout-background}
+label-indicator-foreground = ${res/colors.accent-blue}
 
 [module/xwindow]
 type = internal/xwindow
