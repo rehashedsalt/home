@@ -67,6 +67,6 @@ __define_functions
 export TERM="linux"
 
 EDITOR=$(which vim)
-PATH=$PATH:~/.bin:~/.local/bin
+PATH=$PATH:$HOME/.bin:$HOME/.local/bin
 export EDITOR
 export PATH
