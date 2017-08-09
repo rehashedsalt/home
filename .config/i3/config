@@ -50,13 +50,13 @@ font pango:Overpass 10
 # Use in case of NODM/autlogin and .xinitrc -- If we're just starting the system, we need to lock it up.
 exec --no-startup-id "i3lock -c1d2021"
 
-exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec --no-startup-id redshift -l 38.627003:-90.199402
-exec_always --no-startup-id compton -bc --config ~/.config/compton.conf
-exec_always --no-startup-id dunst
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/i3/*
-exec --no-startup-id mopidy
-exec --no-startup-id syncthing -no-browser
+exec_always --no-startup-id "sleep 3; ~/.config/polybar/launch.sh"
+exec --no-startup-id "redshift -l 38.627003:-90.199402"
+exec_always --no-startup-id "compton -bc --config ~/.config/compton.conf"
+exec_always --no-startup-id "dunst"
+exec_always --no-startup-id "sleep 3; feh --bg-fill ~/Pictures/Wallpapers/i3/*"
+exec --no-startup-id "mopidy"
+exec --no-startup-id "syncthing -no-browser"
 
 ###################
 ## Settings
