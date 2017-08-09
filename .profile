@@ -39,8 +39,7 @@ __define_aliases() {
 # Mostly just helper wrappers and such
 __define_functions() {
     # Arch-only helper functions
-    local testcase=`contains "$(ls /etc/*release)" "arch"`
-    if [ "$testcase" ]; then
+    if [ "$(which pacman)" ]; then
         export PAC_HELPER="pacaur"
         local helpers="pacaur yaourt pacman"
         for helper in $helpers; do
