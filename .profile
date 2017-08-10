@@ -39,7 +39,7 @@ __define_aliases() {
 # Mostly just helper wrappers and such
 __define_functions() {
     # Arch-only helper functions
-    if [ "$(which pacman)" ]; then
+    if [ "$(which pacman > /dev/null 2>&1)" ]; then
         export PAC_HELPER="pacaur"
         local helpers="pacaur yaourt pacman"
         for helper in $helpers; do
