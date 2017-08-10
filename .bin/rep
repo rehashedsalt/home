@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ -z "$@" ]; then
+	printf "rep: no commands specified\n"
+	exit 1
+fi
+while :; do
+	for command in "$@"; do
+		$command
+	done
+	sleep 1
+done
+

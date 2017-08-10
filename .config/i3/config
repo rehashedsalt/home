@@ -7,7 +7,7 @@
 ###################
 
 # Titlebar and borders
-new_window pixel 1
+new_window pixel 2
 
 # i3-gaps configs
 gaps inner 4
@@ -17,12 +17,15 @@ gaps outer 0
 # Note: fallbacks are copied from gruvbox-dark
 # Source: https://github.com/morhetz/gruvbox-generalized
 set_from_resource $bg background #1d2021
+set_from_resource $bgm background_med #282828
+set_from_resource $bg_soft background_soft #32302f
 set_from_resource $black color0 #282828
 set_from_resource $red color1 #cc241d
 set_from_resource $green color2 #98971a
 set_from_resource $yellow color3 #d79921
 set_from_resource $blue color4 #458588
 set_from_resource $purple color5 #b16286
+set_form_resource $cyan color6 #689d6a
 set_from_resource $gray color7 #a89984
 set_from_resource $gray2 color8 #928374
 set_from_resource $red2 color9 #fb4934
@@ -30,11 +33,12 @@ set_from_resource $green2 color10 #b8bb26
 set_from_resource $yellow2 color11 #fabd2f
 set_from_resource $blue2 color12 #83a598
 set_from_resource $purple2 color13 #d3869b
+set_from_resource $cyan2 color14 #8ec07c
 set_from_resource $fg color15 #ebdbb2
 
 # Apply colors to i3
 #	<colorclass>			<border>	<backgrd>	<text>		<indicator>	<child_border>
-	client.focused			$blue		$bg 		$fg		$green2		$fg
+	client.focused			$gray		$bg 		$fg		$green2		$gray
 	client.focused_inactive		$bg		$bg		$gray2		$green		$bg
 	client.unfocused		$bg		$bg		$gray2		$green		$bg
 	client.urgent			$bg		$bg		$yellow2	$yellow		$bg
