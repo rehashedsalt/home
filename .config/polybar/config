@@ -363,7 +363,7 @@ bar-fill-foreground = ${template/module/bar.bar-fill-foreground-setting}
 
 [module/xkeyboard]
 type = internal/xkeyboard
-format = <label-indicator> <label-layout>
+format = <label-indicator>  <label-layout>
 
 label-layout = %name%
 label-layout-padding = 2
