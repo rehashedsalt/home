@@ -28,6 +28,7 @@ if [[ "$(which emerge)" ]]; then
 	alias e-sync='sudo emerge --sync'
 	alias e-upgrade='sudo emerge -DNuva --with-bdeps=y @world'
 	alias e-inst='sudo emerge -av'
+	alias e-depclean='sudo emerge -a --depclean'
 fi
 ## neofetch
 alias fetch='neofetch --disable model resolution --block_range 0 15 --image wall --xoffset 4 --yoffset 4'
