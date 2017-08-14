@@ -347,13 +347,15 @@ interval = 1
 [module/wlan-up]
 inherit = template/module/network
 label-connected = %upspeed%
-label-connected-background = ${res/colors.accent-control}
+label-connected-foreground = ${res/colors.accent-control}
+label-connected-background = ${res/colors.background}
 label-disconnected = %ifname% Disconnected
 
 [module/wlan-down]
 inherit = template/module/network
 label-connected = %downspeed%
-label-connected-background = ${res/colors.accent-control-dark}
+label-connected-foreground = ${res/colors.accent-control-dark}
+label-connected-background = ${res/colors.background}
 
 [module/xbacklight]
 type = internal/xbacklight
