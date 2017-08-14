@@ -65,9 +65,12 @@ inherit = template/bar
 tray-position = right
 tray-padding = 2
 
+border-bottom-size = 2
+border-bottom-color = ${res/colors.accent-control}
+
 modules-left = i3 | xwindow
 modules-center = date
-modules-right = xkeyboard | wlan-up wlan-down | temperature
+modules-right = wlan-up wlan-down | xkeyboard | temperature
 
 ; LOWER
 ;====================
@@ -75,7 +78,10 @@ modules-right = xkeyboard | wlan-up wlan-down | temperature
 inherit = template/bar
 bottom=true
 
-modules-left = battery cpu memory
+border-top-size = 2
+border-top-color = ${res/colors.accent-control}
+
+modules-left = battery | cpu memory
 modules-center = mpd
 modules-right = xbacklight volume
 
@@ -87,7 +93,7 @@ modules-right = xbacklight volume
 ;====================
 [module/|]
 type = custom/text
-content = "|"
+content = " "
 content-foreground = ${res/colors.foreground}
 
 ; CUSTOM
@@ -99,21 +105,22 @@ content-foreground = ${res/colors.foreground}
 format = <label> <bar>
 
 label = "<TEMPLATE>"
-label-foreground = ${res/colors.foreground}
-label-background = ${res/colors.background}
+label-padding = 2
+label-foreground = ${res/colors.background}
+label-background = ${res/colors.accent-control}
 
 bar-width = 30
-bar-fill = /
+bar-fill = |
 bar-fill-foreground = ${res/colors.accent-control}
 bar-fill-foreground-progress = ${res/colors.accent-nice}
 bar-fill-foreground-resource-low = ${res/colors.accent-urgent}
 bar-fill-foreground-resource-high = ${res/colors.accent-nice}
 bar-fill-foreground-setting = ${res/colors.accent-control}
 bar-fill-background = ${res/colors.background}
-bar-indicator = /
+bar-indicator = |
 bar-indicator-foreground = ${res/colors.foreground}
 bar-indicator-background = ${res/colors.background}
-bar-empty = /
+bar-empty = |
 bar-empty-foreground = ${res/colors.background-alt}
 bar-empty-background = ${res/colors.background}
 
@@ -121,14 +128,16 @@ bar-empty-background = ${res/colors.background}
 type = internal/network
 interface = wlp1s0
 format-connected = <label-connected>
-format-connected-foreground = ${res/colors.foreground}
-format-connected-background = ${res/colors.background}
+format-connected-foreground = ${res/colors.background}
+format-connected-background = ${res/colors.accent-control}
 format-disconnected = <label-disconnected>
 format-disconnected-foreground = ${res/colors.accent-urgent}
 format-disconnected-background = ${res/colors.background}
 
 label-connected = %upspeed% %downspeed% - %signal%%
+label-connected-padding = 2
 label-disconnected = 
+label-disconnected-padding = 2
 
 interval = 1
 
@@ -176,15 +185,18 @@ format-charging = <label-charging> <bar-capacity>
 format-discharging = <label-discharging> <bar-capacity>
 format-full = <label-full> <bar-capacity>
 
-label-charging = "CHR"
+label-charging = "+"
+label-charging-padding = ${template/module/bar.label-padding}
 label-charging-foreground = ${template/module/bar.label-foreground}
 label-charging-background = ${template/module/bar.label-background}
-label-discharging = "BAT"
+label-discharging = "-"
+label-discharging-padding = ${self.label-charging-padding}
 label-discharging-foreground = ${template/module/bar.label-foreground}
 label-discharging-background = ${template/module/bar.label-background}
-label-full = "CHR"
-label-full-foreground = ${res/colors.accent-nice}
-label-full-background = ${template/module/bar.label-background}
+label-full = "$"
+label-full-padding = ${self.label-charging-padding}
+label-full-foreground = ${template/module/bar.label-foreground}
+label-full-background = ${res/colors.accent-nice}
 
 bar-capacity-width = ${template/module/bar.bar-width}
 bar-capacity-fill = ${template/module/bar.bar-fill}
@@ -203,9 +215,10 @@ interval = 60
 type = internal/cpu
 format = <label> <bar-load>
 
-label = "CPU"
+label = "C"
+label-padding = ${template/module/bar.label-padding}
 label-foreground = ${template/module/bar.label-foreground}
-label-background = ${template/module/bar.label-background}
+label-background = ${res/colors.accent-urgent-dark}
 
 bar-load-width = ${template/module/bar.bar-width}
 bar-load-fill = ${template/module/bar.bar-fill}
@@ -238,9 +251,10 @@ interval = 30
 type = internal/memory
 format = <label> <bar-used>
 
-label = "MEM"
+label = "M"
+label-padding = ${template/module/bar.label-padding}
 label-foreground = ${template/module/bar.label-foreground}
-label-background = ${template/module/bar.label-background}
+label-background = ${res/colors.accent-urgent-dark}
 
 bar-used-width = ${template/module/bar.bar-width}
 bar-used-fill = ${template/module/bar.bar-fill}
@@ -296,8 +310,8 @@ format-warn = <label-warn>
 
 label = %temperature%
 label-padding = 2
-label-foreground = ${res/colors.foreground}
-label-background = ${res/colors.background}
+label-foreground = ${res/colors.background}
+label-background = ${res/colors.accent-control-dark}
 label-warn = %temperature%
 label-warn-padding = ${self.label-padding}
 label-warn-foreground = ${res/colors.background}
@@ -308,12 +322,14 @@ type = internal/volume
 format-volume = <label-volume> <bar-volume>
 format-muted = <label-muted> <bar-volume>
 
-label-volume = "VOL"
+label-volume = "V"
+label-volume-padding = ${template/module/bar.label-padding}
 label-volume-foreground = ${template/module/bar.label-foreground}
 label-volume-background = ${template/module/bar.label-background}
-label-muted = "VOL"
-label-muted-foreground = ${res/colors.foreground-alt}
-label-muted-background = ${template/module/bar.label-background}
+label-muted = "V"
+label-muted-padding = ${self.label-volume-padding}
+label-muted-foreground = ${res/colors.background}
+label-muted-background = ${res/colors.background-alt}
 
 bar-volume-width = ${template/module/bar.bar-width}
 bar-volume-fill = ${template/module/bar.bar-fill}
@@ -331,13 +347,13 @@ interval = 1
 [module/wlan-up]
 inherit = template/module/network
 label-connected = %upspeed%
-label-connected-foreground = ${res/colors.accent-control}
+label-connected-background = ${res/colors.accent-control}
 label-disconnected = %ifname% Disconnected
 
 [module/wlan-down]
 inherit = template/module/network
 label-connected = %downspeed%
-label-connected-foreground = ${res/colors.accent-control-dark}
+label-connected-background = ${res/colors.accent-control-dark}
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -350,14 +366,14 @@ type = internal/xkeyboard
 format = <label-indicator> <label-layout>
 
 label-layout = %name%
-label-layout-padding = 0
-label-layout-background = ${res/colors.background}
-label-layout-foreground = ${res/colors.foreground}
+label-layout-padding = 2
+label-layout-background = ${res/colors.accent-control-dark}
+label-layout-foreground = ${res/colors.background}
 
 label-indicator = %name%
-label-indicator-padding = 1
-label-indicator-background = ${self.label-layout-background}
-label-indicator-foreground = ${res/colors.accent-control}
+label-indicator-padding = 2
+label-indicator-background = ${res/colors.accent-control}
+label-indicator-foreground = ${self.label-layout-foreground}
 
 [module/xwindow]
 type = internal/xwindow
