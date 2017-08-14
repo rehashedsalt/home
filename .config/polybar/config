@@ -17,12 +17,12 @@ foreground-alt = ${xrdb:color8:#928374}
 alert-dark = ${xrdb:color3:#d79921}
 alert = ${xrdb:color11:#fabd2f}
 
-accent-red-dark = ${xrdb:color1:#cc241d}
-accent-red = ${xrdb:color9:#fb4934}
-accent-green-dark = ${xrdb:color2:#98971a}
-accent-green = ${xrdb:color10:#b8bb26}
-accent-blue-dark = ${xrdb:color4:#458588}
-accent-blue = ${xrdb:color12:#83a598}
+accent-urgent-dark = ${xrdb:color1:#cc241d}
+accent-urgent = ${xrdb:color9:#fb4934}
+accent-nice-dark = ${xrdb:color2:#98971a}
+accent-nice = ${xrdb:color10:#b8bb26}
+accent-control-dark = ${xrdb:color5:#b16286}
+accent-control = ${xrdb:color13:#d3869b}
 
 [res/fonts]
 font-0 = "DejaVu Sans:size=10;1"
@@ -104,11 +104,11 @@ label-background = ${res/colors.background}
 
 bar-width = 30
 bar-fill = /
-bar-fill-foreground = ${res/colors.accent-blue}
-bar-fill-foreground-progress = ${res/colors.accent-green}
-bar-fill-foreground-resource-low = ${res/colors.accent-red}
-bar-fill-foreground-resource-high = ${res/colors.accent-green}
-bar-fill-foreground-setting = ${res/colors.accent-blue}
+bar-fill-foreground = ${res/colors.accent-control}
+bar-fill-foreground-progress = ${res/colors.accent-nice}
+bar-fill-foreground-resource-low = ${res/colors.accent-urgent}
+bar-fill-foreground-resource-high = ${res/colors.accent-nice}
+bar-fill-foreground-setting = ${res/colors.accent-control}
 bar-fill-background = ${res/colors.background}
 bar-indicator = /
 bar-indicator-foreground = ${res/colors.foreground}
@@ -124,7 +124,7 @@ format-connected = <label-connected>
 format-connected-foreground = ${res/colors.foreground}
 format-connected-background = ${res/colors.background}
 format-disconnected = <label-disconnected>
-format-disconnected-foreground = ${res/colors.accent-red}
+format-disconnected-foreground = ${res/colors.accent-urgent}
 format-disconnected-background = ${res/colors.background}
 
 label-connected = %upspeed% %downspeed% - %signal%%
@@ -141,19 +141,19 @@ index-sort = true
 
 label-mode-padding = 2
 label-mode-foreground = ${res/colors.background}
-label-mode-background = ${res/colors.accent-green}
+label-mode-background = ${res/colors.accent-control}
 
 ; Active workspace on focused monitor
 label-focused = %name%
 label-focused-padding = 2
 label-focused-foreground = ${res/colors.background}
-label-focused-background = ${res/colors.accent-green}
+label-focused-background = ${res/colors.accent-control}
 
 ; Active workspace on unfocused monitor
 label-visible = ${self.label-focused}
 label-visible-padding = ${self.label-focused-padding}
 label-visible-foreground = ${self.label-focused-foreground}
-label-visible-background = ${res/colors.accent-green-dark}
+label-visible-background = ${res/colors.accent-control-dark}
 
 ; Inactive workspace
 label-unfocused = ${self.label-focused}
@@ -183,7 +183,7 @@ label-discharging = "BAT"
 label-discharging-foreground = ${template/module/bar.label-foreground}
 label-discharging-background = ${template/module/bar.label-background}
 label-full = "CHR"
-label-full-foreground = ${res/colors.accent-green}
+label-full-foreground = ${res/colors.accent-nice}
 label-full-background = ${template/module/bar.label-background}
 
 bar-capacity-width = ${template/module/bar.bar-width}
@@ -331,13 +331,13 @@ interval = 1
 [module/wlan-up]
 inherit = template/module/network
 label-connected = %upspeed%
-label-connected-foreground = ${res/colors.accent-blue}
+label-connected-foreground = ${res/colors.accent-control}
 label-disconnected = %ifname% Disconnected
 
 [module/wlan-down]
 inherit = template/module/network
 label-connected = %downspeed%
-label-connected-foreground = ${res/colors.accent-blue-dark}
+label-connected-foreground = ${res/colors.accent-control-dark}
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -357,7 +357,7 @@ label-layout-foreground = ${res/colors.foreground}
 label-indicator = %name%
 label-indicator-padding = 1
 label-indicator-background = ${self.label-layout-background}
-label-indicator-foreground = ${res/colors.accent-blue}
+label-indicator-foreground = ${res/colors.accent-control}
 
 [module/xwindow]
 type = internal/xwindow
