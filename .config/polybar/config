@@ -70,7 +70,7 @@ border-bottom-color = ${res/colors.accent-control}
 
 modules-left = i3 | xwindow
 modules-center = date
-modules-right = wlan-up wlan-down | xkeyboard | temperature
+modules-right = wlan-up wlan-down | xkeyboard
 
 ; LOWER
 ;====================
@@ -81,9 +81,9 @@ bottom=true
 border-top-size = 2
 border-top-color = ${res/colors.accent-control}
 
-modules-left = battery | cpu memory
+modules-left = battery cpu memory
 modules-center = mpd
-modules-right = xbacklight volume
+modules-right = xbacklight volume temperature
 
 ;========================================
 ; MODULES
