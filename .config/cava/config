@@ -95,17 +95,17 @@ method = pulse
 # Colors can be one of seven predefined: black, blue, cyan, green, magenta, red, white, yellow.
 # Or defined by hex code '#xxxxxx' (hex code must be within '').
 background = '#1d2021' #bg0_h
-foreground = '#d3869b' #purple
+foreground = 'magenta'
 
 
 [smoothing]
 
 # Multiplier for the integral smoothing calculations. Takes values from 0-0.99.
 # Higher values means smoother, but less precise. Set to 0 to disable.
-; integral = 0.7
+; integral = 0.0
 
 # Disables or enables the so-called "Monstercat smoothing". Set to 0 to disable.
-; monstercat = 1
+; monstercat = 0
 
 # Set gravity multiplier for "drop off". Higher values means bars will drop faster.
 # Accepts only non-negative values. 0.5 means half gravity, 2 means double. Set to 0 to disable "drop off".
