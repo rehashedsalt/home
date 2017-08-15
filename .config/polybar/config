@@ -9,7 +9,8 @@
 ;========================================
 [res/colors]
 background = ${xrdb:background:#1d2021}
-background-alt = ${xrdb:bg2:#504945}
+background-med = ${xrdb:bg1:#282828}
+background-soft = ${xrdb:bg2:#504945}
 
 foreground = ${xrdb:color15:#ebdbb2}
 foreground-alt = ${xrdb:color8:#928374}
@@ -83,7 +84,7 @@ border-top-color = ${res/colors.accent-control}
 
 modules-left = battery cpu memory
 modules-center = mpd
-modules-right = xbacklight volume temperature
+modules-right = backlight volume temperature
 
 ;========================================
 ; MODULES
@@ -121,7 +122,7 @@ bar-indicator = |
 bar-indicator-foreground = ${res/colors.foreground}
 bar-indicator-background = ${res/colors.background}
 bar-empty = |
-bar-empty-foreground = ${res/colors.background-alt}
+bar-empty-foreground = ${res/colors.background-soft}
 bar-empty-background = ${res/colors.background}
 
 [template/module/network]
@@ -242,6 +243,7 @@ date-alt = %A, %B %d
 time-alt = %I:%M %p
 
 label = %date% %time%
+label-padding = 2
 label-foreground = ${res/colors.foreground}
 label-background = ${res/colors.background}
 
@@ -280,8 +282,8 @@ label-song-background = ${res/colors.background}
 label-song-maxlen = 25
 label-song-ellipsis = true
 
-label-offline = "SALT"
-label-offline-foreground = ${res/colors.foreground}
+label-offline = "Disconnected from MPD"
+label-offline-foreground = ${res/colors.background-soft}
 label-offline-background = ${res/colors.background}
 
 label-time = %elapsed%/%total%
@@ -329,7 +331,7 @@ label-volume-background = ${template/module/bar.label-background}
 label-muted = "V"
 label-muted-padding = ${self.label-volume-padding}
 label-muted-foreground = ${res/colors.background}
-label-muted-background = ${res/colors.background-alt}
+label-muted-background = ${res/colors.background-soft}
 
 bar-volume-width = ${template/module/bar.bar-width}
 bar-volume-fill = ${template/module/bar.bar-fill}
@@ -357,10 +359,12 @@ label-connected = %downspeed%
 label-connected-foreground = ${res/colors.accent-control-dark}
 label-connected-background = ${res/colors.background}
 
-[module/xbacklight]
-type = internal/xbacklight
+[module/backlight]
+type = internal/backlight
 inherit = template/module/bar
-label = BRI
+card = intel_backlight
+
+label = B
 bar-fill-foreground = ${template/module/bar.bar-fill-foreground-setting}
 
 [module/xkeyboard]
