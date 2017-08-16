@@ -17,6 +17,7 @@ __define_aliases() {
     alias cp='cp -i'
     if [ `which dcfldd` ]; then
     	alias dd=dcfldd
+	alias ddgnu=dd
     fi
     alias ls='ls --color=auto'
     alias ll='ls -alF'
