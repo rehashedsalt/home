@@ -31,7 +31,7 @@ Basic themeing file, holding whatever colorscheme I'm currently attatched to. Wh
 Currently does nothing because I never use `bash`.
 
 ### .profile
-This hideous blob really needs work.
+Shell-agnostic configuration. Should be POSIX-compliant.
 
 ### .xinitrc
 I use a DM so this sees very little love. If I can figure out how to into environment variables, maybe this'll see more use.
@@ -40,4 +40,4 @@ I use a DM so this sees very little love. If I can figure out how to into enviro
 Don't look. Right now it's just me trying to hack together an environment.
 
 ### .zshrc
-A simple `zsh` configuration file.
+A simple `zsh` configuration file, as built to handle oh-my-zsh.
