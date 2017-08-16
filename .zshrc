@@ -1,4 +1,7 @@
-export PATH=$HOME/.bin:$HOME/.local/bin:/usr/local/bin:$PATH
+#export PATH=$HOME/.bin:$HOME/.local/bin:/usr/local/bin:$PATH
+if [[ -f "/etc/profile" ]]; then
+	source /etc/profile 2>& /dev/null
+fi
 export ZSH=/home/salt/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
