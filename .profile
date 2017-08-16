@@ -9,23 +9,15 @@
 # Users of this script on minimalist shells will have to adapt
 # this script accordingly.
 
-contains() {
-    string="$1"
-    substring="$2"
-    if test "${string#*$substring}" != "$string"; then
-        return 0
-    else
-        return 1
-    fi
-}
-
 # Common miscellaneous aliases are all defined here for convenience
 __define_aliases() {
 
     # Common Aliases
     
     alias cp='cp -i'
-    alias dd=dcfldd
+    if [ `which dcfldd` ]; then
+    	alias dd=dcfldd
+    fi
     alias ls='ls --color=auto'
     alias ll='ls -alF'
     alias la='ls -a --color=auto'
@@ -64,7 +56,9 @@ __define_functions() {
 __define_aliases
 __define_functions
 
-export TERM="linux"
+if [ "$TERM" = "rxvt-unicode-256color" ]; then
+	export TERM=xterm-256color
+fi
 
 EDITOR=$(which vim)
 PATH=$PATH:$HOME/.bin:$HOME/.local/bin
