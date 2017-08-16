@@ -57,24 +57,4 @@ zstyle :compinstall filename '/home/salt/.zshrc'
 autoload -Uz compinit
 compinit
 
-# Aliases
-## ls
-alias l='ls --color=auto --file-type'
-alias la='ls -A --color=auto --file-type'
-alias ls='ls --color=auto'
-alias ll='ls -Ahl --color=auto --file-type'
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-## emerge
-if [[ "$(which emerge)" ]]; then
-	alias e-sync='sudo emerge --sync'
-	alias e-upgrade='sudo emerge -DNuva --with-bdeps=y @world'
-	alias e-inst='sudo emerge -av'
-	alias e-depclean='sudo emerge -a --depclean'
-fi
-## neofetch
-if [[ "$(which neofetch)" ]]; then
-	alias fetch='neofetch --disable model resolution --block_range 0 15 --image wall --xoffset 4 --yoffset 4 --scrot ~/Pictures/neofetch.png'
-	alias fetch-up='neofetch --disable model resolution --block_range 0 15 --image wall --xoffset 4 --yoffset 4 --upload --image_host imgur'
-fi
-
 source $ZSH/oh-my-zsh.sh
