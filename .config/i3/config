@@ -10,7 +10,7 @@
 new_window pixel 2
 
 # i3-gaps configs
-gaps inner 6
+gaps inner 0
 gaps outer 0
 
 # Set up our colors
