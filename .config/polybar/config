@@ -66,7 +66,7 @@ inherit = template/bar
 tray-position = right
 tray-padding = 2
 
-border-bottom-size = 2
+border-bottom-size = 0
 border-bottom-color = ${res/colors.accent-control}
 
 modules-left = i3 | xwindow
@@ -79,7 +79,7 @@ modules-right = wlan-up wlan-down | xkeyboard
 inherit = template/bar
 bottom=true
 
-border-top-size = 2
+border-top-size = 0
 border-top-color = ${res/colors.accent-control}
 
 modules-left = battery cpu memory
