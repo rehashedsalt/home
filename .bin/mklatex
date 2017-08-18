@@ -34,3 +34,6 @@ done
 if [ "$(which llpp)" ]; then
 	killall -SIGHUP llpp
 fi
+if [ "$(which mupdf)" ]; then
+	killall -SIGHUP mupdf
+fi
