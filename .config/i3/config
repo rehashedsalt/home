@@ -282,13 +282,14 @@ mode "mopidy" {
 
 bindsym $mod+m mode "mopidy"
 
-mode "test" {
-	bindsym p exec --no-startup-id notify-send "i3 Current Path" "$PATH"
+mode "control" {
 	bindsym n exec --no-startup-id notify-send "Test Notification" "This is a simple test notification"
+	bindsym p exec --no-startup-id notify-send "i3 Current Path" "$PATH"
+	bindsym w exec --no-startup-id "~/.bin/i3-randwall"
 
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
 	bindsym $mod+$shift+t mode "default"
 }
 
-bindsym $mod+$shift+t mode "test"
+bindsym $mod+$shift+t mode "control"
