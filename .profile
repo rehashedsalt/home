@@ -41,6 +41,13 @@ if [ `which emerge` ]; then
 	alias e-sync='sudo emerge --sync'
 fi
 
+# Add an alias for lsblk, since I tend to use that
+if [ `which lsblk` ]; then
+	alias lsblk='lsblk -p'
+	alias lsblkf='lsblk -pf'
+fi
+
+# Add neofetch aliases if we have that
 if [ `which neofetch` ]; then
 	alias fetch='neofetch --disable model resolution --block_range 0 15 --image wall --xoffset 4 --yoffset 4 --scrot ~/Pictures/Screenshots/neofetch.png'
 	alias fetch-up='neofetch --disable model resolution --block_range 0 15 --image wall --xoffset 4 --yoffset 4 --upload --image-host imgur'
