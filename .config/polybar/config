@@ -362,7 +362,7 @@ label-connected-background = ${res/colors.background}
 [module/backlight]
 type = internal/backlight
 inherit = template/module/bar
-card = intel_backlight
+card = acpi_video0
 
 label = B
 bar-fill-foreground = ${template/module/bar.bar-fill-foreground-setting}
