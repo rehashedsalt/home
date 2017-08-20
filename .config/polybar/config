@@ -83,7 +83,7 @@ border-top-size = 0
 border-top-color = ${res/colors.primary}
 
 modules-left = battery cpu memory
-modules-center = mpd
+modules-center = filesystem
 modules-right = backlight volume temperature
 
 ;========================================
@@ -248,6 +248,37 @@ label-foreground = ${res/colors.foreground}
 label-background = ${res/colors.background}
 
 interval = 30
+
+[module/filesystem]
+type = internal/fs
+
+mount-0 = /
+mount-1 = /home
+mount-2 = /boot
+
+format-mounted = <label-mounted> <bar-used>
+format-unmounted = <label-unmounted>
+
+label-mounted = %mountpoint%
+label-mounted-padding = ${template/module/bar.label-padding}
+label-mounted-foreground = ${res/colors.background}
+label-mounted-background = ${res/colors.primary}
+
+label-unmounted = %mountpoint%
+label-unmounted-padding = ${template/module/bar.label-padding}
+label-unmounted-foreground = ${res/colors.background}
+label-unmounted-background = ${res/colors.background-soft}
+
+bar-used-width = ${template/module/bar.bar-width}
+bar-used-fill = ${template/module/bar.bar-fill}
+bar-used-fill-foreground = ${res/colors.primary}
+bar-used-fill-background = ${template/module/bar.bar-fill-background}
+bar-used-indicator = ${template/module/bar.bar-indicator}
+bar-used-indicator-foreground = ${template/module/bar.bar-indicator-foreground}
+bar-used-indicator-background = ${template/module/bar.bar-indicator-background}
+bar-used-empty = ${template/module/bar.bar-empty}
+bar-used-empty-foreground = ${template/module/bar.bar-empty-foreground}
+bar-used-empty-background = ${template/module/bar.bar-empty-background}
 
 [module/memory]
 type = internal/memory
