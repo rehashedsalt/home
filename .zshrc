@@ -12,16 +12,10 @@ ZSH_THEME="theunraveler"
 #HYPHEN_INSENSITIVE="true"
 #DISABLE_AUTO_UPDATE="true"
 #export UPDATE_ZSH_DAYS=13
-#DISABLE_LS_COLORS="true"
 #DISABLE_AUTO_TITLE="true"
 #ENABLE_CORRECTION="true"
 #COMPLETION_WAITING_DOTS="true"
 #DISABLE_UNTRACKED_FILES_DIRTY="true"
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-#HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-#ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -45,11 +39,11 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs vi_mode)
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+
 setopt appendhistory autocd correctall extendedglob nomatch
 unsetopt beep notify
 bindkey -v
 zstyle :compinstall filename '/home/salt/.zshrc'
-
 autoload -Uz compinit
 compinit
 
