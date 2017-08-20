@@ -1,9 +1,5 @@
-#export PATH=$HOME/.bin:$HOME/.local/bin:/usr/local/bin:$PATH
 if [[ -f "/etc/profile" ]]; then
 	source /etc/profile 2>& /dev/null
-fi
-if [[ -f "$HOME/.profile" ]]; then
-	source "$HOME/.profile" 2>& /dev/null
 fi
 export ZSH=/home/salt/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -58,3 +54,7 @@ autoload -Uz compinit
 compinit
 
 source $ZSH/oh-my-zsh.sh
+
+if [[ -f "$HOME/.profile" ]]; then
+	source "$HOME/.profile" 2>& /dev/null
+fi
