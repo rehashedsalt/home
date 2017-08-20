@@ -11,8 +11,8 @@
 alert-dark = ${xrdb:color3:#d79921}
 alert = ${xrdb:color11:#fabd2f}
 
-primary-dark = ${xrdb:color5:#b16286}
-primary = ${xrdb:color13:#d3869b}
+primary-dark = ${xrdb:color6:#689d6a}
+primary = ${xrdb:color14:#8ec07c}
 
 resource-bad-dark = ${xrdb:color1:#cc241d}
 resource-bad = ${xrdb:color9:#fb4934}
