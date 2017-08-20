@@ -39,6 +39,8 @@ if [ `which emerge` ]; then
 	alias e-upgrade='sudo emerge -DNuva --with-bdeps=y @world'
 	alias e-search='emerge -s'
 	alias e-sync='sudo emerge --sync'
+else
+	alias emerge='"emerge" was not found. Does the system use portage at all?'
 fi
 
 # Add an alias for lsblk, since I tend to use that
