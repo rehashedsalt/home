@@ -8,22 +8,22 @@
 ; RESOURCES
 ;========================================
 [res/colors]
-background = ${xrdb:background:#1d2021}
-background-med = ${xrdb:bg1:#282828}
-background-soft = ${xrdb:bg2:#504945}
-
-foreground = ${xrdb:color15:#ebdbb2}
-foreground-alt = ${xrdb:color8:#928374}
-
 alert-dark = ${xrdb:color3:#d79921}
 alert = ${xrdb:color11:#fabd2f}
 
-accent-urgent-dark = ${xrdb:color1:#cc241d}
-accent-urgent = ${xrdb:color9:#fb4934}
-accent-nice-dark = ${xrdb:color2:#98971a}
-accent-nice = ${xrdb:color10:#b8bb26}
-accent-control-dark = ${xrdb:color5:#b16286}
-accent-control = ${xrdb:color13:#d3869b}
+primary-dark = ${xrdb:color5:#b16286}
+primary = ${xrdb:color13:#d3869b}
+
+resource-bad-dark = ${xrdb:color1:#cc241d}
+resource-bad = ${xrdb:color9:#fb4934}
+resource-good-dark = ${xrdb:color2:#98971a}
+resource-good = ${xrdb:color10:#b8bb26}
+
+background = ${xrdb:background:#1d2021}
+background-med = ${xrdb:bg1:#282828}
+background-soft = ${xrdb:bg2:#504945}
+foreground = ${xrdb:color15:#ebdbb2}
+foreground-alt = ${xrdb:color8:#928374}
 
 [res/fonts]
 font-0 = "DejaVu Sans:size=10;1"
@@ -67,7 +67,7 @@ tray-position = right
 tray-padding = 2
 
 border-bottom-size = 0
-border-bottom-color = ${res/colors.accent-control}
+border-bottom-color = ${res/colors.primary}
 
 modules-left = i3 | xwindow
 modules-center = date
@@ -80,7 +80,7 @@ inherit = template/bar
 bottom=true
 
 border-top-size = 0
-border-top-color = ${res/colors.accent-control}
+border-top-color = ${res/colors.primary}
 
 modules-left = battery cpu memory
 modules-center = mpd
@@ -108,15 +108,15 @@ format = <label> <bar>
 label = "<TEMPLATE>"
 label-padding = 2
 label-foreground = ${res/colors.background}
-label-background = ${res/colors.accent-control}
+label-background = ${res/colors.primary}
 
 bar-width = 30
 bar-fill = |
-bar-fill-foreground = ${res/colors.accent-control}
-bar-fill-foreground-progress = ${res/colors.accent-nice}
-bar-fill-foreground-resource-low = ${res/colors.accent-urgent}
-bar-fill-foreground-resource-high = ${res/colors.accent-nice}
-bar-fill-foreground-setting = ${res/colors.accent-control}
+bar-fill-foreground = ${res/colors.primary}
+bar-fill-foreground-progress = ${res/colors.resource-good}
+bar-fill-foreground-resource-low = ${res/colors.resource-bad}
+bar-fill-foreground-resource-high = ${res/colors.resource-good}
+bar-fill-foreground-setting = ${res/colors.primary}
 bar-fill-background = ${res/colors.background}
 bar-indicator = |
 bar-indicator-foreground = ${res/colors.foreground}
@@ -130,9 +130,9 @@ type = internal/network
 interface = wlp1s0
 format-connected = <label-connected>
 format-connected-foreground = ${res/colors.background}
-format-connected-background = ${res/colors.accent-control}
+format-connected-background = ${res/colors.primary}
 format-disconnected = <label-disconnected>
-format-disconnected-foreground = ${res/colors.accent-urgent}
+format-disconnected-foreground = ${res/colors.resource-bad}
 format-disconnected-background = ${res/colors.background}
 
 label-connected = %upspeed% %downspeed% - %signal%%
@@ -151,19 +151,19 @@ index-sort = true
 
 label-mode-padding = 2
 label-mode-foreground = ${res/colors.background}
-label-mode-background = ${res/colors.accent-control}
+label-mode-background = ${res/colors.primary}
 
 ; Active workspace on focused monitor
 label-focused = %name%
 label-focused-padding = 2
 label-focused-foreground = ${res/colors.background}
-label-focused-background = ${res/colors.accent-control}
+label-focused-background = ${res/colors.primary}
 
 ; Active workspace on unfocused monitor
 label-visible = ${self.label-focused}
 label-visible-padding = ${self.label-focused-padding}
 label-visible-foreground = ${self.label-focused-foreground}
-label-visible-background = ${res/colors.accent-control-dark}
+label-visible-background = ${res/colors.primary-dark}
 
 ; Inactive workspace
 label-unfocused = ${self.label-focused}
@@ -189,15 +189,15 @@ format-full = <label-full> <bar-capacity>
 label-charging = "+"
 label-charging-padding = ${template/module/bar.label-padding}
 label-charging-foreground = ${template/module/bar.label-foreground}
-label-charging-background = ${res/colors.accent-nice-dark}
+label-charging-background = ${res/colors.resource-good-dark}
 label-discharging = "-"
 label-discharging-padding = ${self.label-charging-padding}
 label-discharging-foreground = ${template/module/bar.label-foreground}
-label-discharging-background = ${res/colors.accent-nice-dark}
+label-discharging-background = ${res/colors.resource-good-dark}
 label-full = "$"
 label-full-padding = ${self.label-charging-padding}
 label-full-foreground = ${template/module/bar.label-foreground}
-label-full-background = ${res/colors.accent-nice}
+label-full-background = ${res/colors.resource-good}
 
 bar-capacity-width = ${template/module/bar.bar-width}
 bar-capacity-fill = ${template/module/bar.bar-fill}
@@ -219,7 +219,7 @@ format = <label> <bar-load>
 label = "C"
 label-padding = ${template/module/bar.label-padding}
 label-foreground = ${template/module/bar.label-foreground}
-label-background = ${res/colors.accent-urgent-dark}
+label-background = ${res/colors.resource-bad-dark}
 
 bar-load-width = ${template/module/bar.bar-width}
 bar-load-fill = ${template/module/bar.bar-fill}
@@ -256,7 +256,7 @@ format = <label> <bar-used>
 label = "M"
 label-padding = ${template/module/bar.label-padding}
 label-foreground = ${template/module/bar.label-foreground}
-label-background = ${res/colors.accent-urgent-dark}
+label-background = ${res/colors.resource-bad-dark}
 
 bar-used-width = ${template/module/bar.bar-width}
 bar-used-fill = ${template/module/bar.bar-fill}
@@ -313,7 +313,7 @@ format-warn = <label-warn>
 label = %temperature%
 label-padding = 2
 label-foreground = ${res/colors.background}
-label-background = ${res/colors.accent-control-dark}
+label-background = ${res/colors.primary-dark}
 label-warn = %temperature%
 label-warn-padding = ${self.label-padding}
 label-warn-foreground = ${res/colors.background}
@@ -349,14 +349,14 @@ interval = 1
 [module/wlan-up]
 inherit = template/module/network
 label-connected = %upspeed%
-label-connected-foreground = ${res/colors.accent-control}
+label-connected-foreground = ${res/colors.primary}
 label-connected-background = ${res/colors.background}
 label-disconnected = %ifname% Disconnected
 
 [module/wlan-down]
 inherit = template/module/network
 label-connected = %downspeed%
-label-connected-foreground = ${res/colors.accent-control-dark}
+label-connected-foreground = ${res/colors.primary-dark}
 label-connected-background = ${res/colors.background}
 
 [module/backlight]
@@ -373,12 +373,12 @@ format = <label-indicator>  <label-layout>
 
 label-layout = %name%
 label-layout-padding = 2
-label-layout-background = ${res/colors.accent-control-dark}
+label-layout-background = ${res/colors.primary-dark}
 label-layout-foreground = ${res/colors.background}
 
 label-indicator = %name%
 label-indicator-padding = 2
-label-indicator-background = ${res/colors.accent-control}
+label-indicator-background = ${res/colors.primary}
 label-indicator-foreground = ${self.label-layout-foreground}
 
 [module/xwindow]
