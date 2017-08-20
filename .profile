@@ -82,10 +82,14 @@ fi
 
 # Aliases for common utilities
 alias cp='cp -i'
-alias l='ls -CF --color=auto --file-type'
-alias la='ls -AF --color=auto --file-type'
-alias ls='ls -F --color=auto'
-alias ll='ls -AhlF --color=auto --file-type'
+
+lsarguments='--color=auto --group-directories-first'
+alias l="ls -CF  --file-type $lsarguments"
+alias la="ls -AF  --file-type $lsarguments"
+alias ls="ls -F $lsarguments"
+alias ll="ls -AhlF  --file-type $lsarguments"
+unset lsarguments
+
 alias waitwhat='echo $?'
 alias fug='sudo `history -p !!`'
 
