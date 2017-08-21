@@ -72,7 +72,7 @@ border-bottom-color = ${res/colors.primary}
 
 modules-left = wlan cpu-ramp memory-label || xwindow
 modules-center = i3
-modules-right = temperature-nobox volume-ramp battery-ramp date
+modules-right = temperature-ramp volume-ramp battery-ramp date
 
 ; LOWER
 ;====================
@@ -424,10 +424,13 @@ label-warn-padding = ${self.label-padding}
 label-warn-foreground = ${res/colors.background}
 label-warn-background = ${res/colors.alert}
 
-[module/temperature-nobox]
+[module/temperature-ramp]
 inherit = module/temperature
 
-label =  %temperature%
+format = <ramp> <label>
+format-warning = <ramp> <label>
+
+label = %temperature%
 label-padding = 0
 label-foreground = ${res/colors.foreground}
 label-background = ${res/colors.background}
@@ -435,6 +438,12 @@ label-warn = %temperature%
 label-warn-padding = ${self.label-padding}
 label-warn-foreground = ${res/colors.background}
 label-warn-background = ${res/colors.alert}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
 
 [module/volume-bar]
 type = internal/volume
