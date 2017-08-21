@@ -3,8 +3,9 @@
 !-----------------------------
 urxvt*scrollBar: false
 !urxvt*font: xft:Terminus:size=9,xft:Inconsolata\ for\ Powerline:size=10
-urxvt*font: xft:Hack:size=9,xft:PowerlineSymbols:size=9
-urxvt*letterSpace: -1
+!urxvt*font: xft:Hack:size=9,xft:PowerlineSymbols:size=9
+urxvt*font: xft:xos4 Terminus:size=9
+urxvt*letterSpace: 0
 !urxvt*font: xft:Hack Regular:size=9
 !urxvt*depth: 32
 !urxvt*background: rgba:2828/2828/2828/c800

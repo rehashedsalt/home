@@ -27,7 +27,7 @@ foreground-alt = ${xrdb:color8:#928374}
 
 [res/fonts]
 #font-0 = "DejaVu Sans:size=10;1"
-font-0 = "Overpass:size=9;1"
+font-0 = "xos4 Terminus:size=9;1"
 font-1 = "FontAwesome:size=10;1"
 font-2 =
 font-3 =
@@ -70,7 +70,7 @@ tray-padding = 2
 border-bottom-size = 0
 border-bottom-color = ${res/colors.primary}
 
-modules-left = wlan | cpu-ramp | memory-label || xwindow
+modules-left = wlan cpu-ramp memory-label || xwindow
 modules-center = i3
 modules-right = volume-ramp temperature-nobox | battery-ramp date
 
@@ -373,7 +373,7 @@ interval = 1
 type = internal/memory
 format = <label>
 
-label =  %gb_used%
+label =   %gb_used%
 label-padding = 2
 label-foreground = ${res/colors.resource-bad-dark}
 label-background = ${res/colors.background}
