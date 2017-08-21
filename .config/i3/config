@@ -11,7 +11,7 @@ new_window pixel 2
 for_window [class=".*"] border pixel 2
 
 # i3-gaps configs
-gaps inner 0
+gaps inner 4
 gaps outer 0
 
 # Set up our colors
