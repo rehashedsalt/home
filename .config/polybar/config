@@ -65,14 +65,14 @@ font-4 = ${res/fonts.font-4}
 [bar/top]
 inherit = template/bar
 tray-position = right
-tray-padding = 2
+tray-padding = 0
 
 border-bottom-size = 0
 border-bottom-color = ${res/colors.primary}
 
 modules-left = wlan cpu-ramp memory-label || xwindow
 modules-center = i3
-modules-right = volume-ramp temperature-nobox | battery-ramp date
+modules-right = temperature-nobox volume-ramp battery-ramp date
 
 ; LOWER
 ;====================
@@ -112,7 +112,7 @@ content-foreground = ${res/colors.foreground}
 format = <label> <bar>
 
 label = "<TEMPLATE>"
-label-padding = 2
+label-padding = 0
 label-foreground = ${res/colors.background}
 label-background = ${res/colors.primary}
 
@@ -236,15 +236,15 @@ format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
 
 label-charging = %percentage%% %time%
-label-charging-padding = 2
+label-charging-padding = 0
 label-charging-foreground = ${res/colors.foreground}
 label-charging-background = ${res/colors.background}
 label-discharging = %percentage%% %time%
-label-discharging-padding = 2
+label-discharging-padding = 0
 label-discharging-foreground = ${res/colors.primary}
 label-discharging-background = ${res/colors.background}
 label-full = %percentage%%
-label-full-padding = 2
+label-full-padding = 0
 label-full-foreground = ${res/colors.primary-dark}
 label-full-background = ${res/colors.background}
 
@@ -287,7 +287,7 @@ inherit = template/module/cpu
 format = <label> <ramp-coreload>
 
 label = 
-label-padding = 2
+label-padding = 0
 label-foreground = ${res/colors.resource-bad}
 label-background = ${res/colors.background}
 
@@ -310,7 +310,7 @@ date-alt = %A, %B %d
 time-alt = %I:%M %p
 
 label = %date% %time%
-label-padding = 2
+label-padding = 0
 label-foreground = ${res/colors.foreground}
 label-background = ${res/colors.background}
 
@@ -374,7 +374,7 @@ type = internal/memory
 format = <label>
 
 label =   %gb_used%
-label-padding = 2
+label-padding = 0
 label-foreground = ${res/colors.resource-bad-dark}
 label-background = ${res/colors.background}
 
@@ -416,7 +416,7 @@ format = <label>
 format-warn = <label-warn>
 
 label = %temperature%
-label-padding = 2
+label-padding = 0
 label-foreground = ${res/colors.background}
 label-background = ${res/colors.primary-dark}
 label-warn = %temperature%
@@ -428,7 +428,7 @@ label-warn-background = ${res/colors.alert}
 inherit = module/temperature
 
 label =  %temperature%
-label-padding = 2
+label-padding = 0
 label-foreground = ${res/colors.foreground}
 label-background = ${res/colors.background}
 label-warn = %temperature%
@@ -465,11 +465,11 @@ interval = 1
 
 [module/volume-ramp]
 type = internal/volume
-format-volume = <ramp-volume><label-volume>
+format-volume = <ramp-volume> <label-volume>
 format-muted = <label-muted>
 
 label-volume = %percentage%%
-label-volume-padding = 2
+label-volume-padding = 0
 label-volume-foreground = ${res/colors.foreground}
 label-volume-background = ${res/colors.background}
 label-muted = 
@@ -503,12 +503,12 @@ type = internal/xkeyboard
 format = <label-indicator><label-layout>
 
 label-layout = %name%
-label-layout-padding = 2
+label-layout-padding = 0
 label-layout-background = ${res/colors.primary-dark}
 label-layout-foreground = ${res/colors.background}
 
 label-indicator = %name%
-label-indicator-padding = 2
+label-indicator-padding = 0
 label-indicator-background = ${res/colors.primary}
 label-indicator-foreground = ${self.label-layout-foreground}
 
