@@ -57,7 +57,7 @@ font pango:Overpass 10
 # Use in case of NODM/autlogin and .xinitrc -- If we're just starting the system, we need to lock it up.
 exec --no-startup-id "i3lock -i ~/.i3splash"
 
-exec_always --no-startup-id "sleep 1; polybar top"
+exec_always --no-startup-id "killall polybar; sleep 1; polybar top"
 #exec_always --no-startup-id "sleep 1; polybar bottom"
 exec --no-startup-id "redshift -l 38.627003:-90.199402"
 exec_always --no-startup-id "compton --config ~/.config/compton.conf"
