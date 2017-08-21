@@ -234,12 +234,13 @@ inherit = template/module/battery
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <label-full>
+time-format = %H:%M
 
 label-charging = %percentage%%
 label-charging-padding = 0
 label-charging-foreground = ${res/colors.primary}
 label-charging-background = ${res/colors.background}
-label-discharging = %percentage%% %time%
+label-discharging = %percentage%% (%time%)
 label-discharging-padding = 0
 label-discharging-foreground = ${res/colors.foreground}
 label-discharging-background = ${res/colors.background}
