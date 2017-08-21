@@ -288,7 +288,7 @@ format = <label> <ramp-coreload>
 
 label = 
 label-padding = 0
-label-foreground = ${res/colors.resource-bad}
+label-foreground = ${res/colors.foreground}
 label-background = ${res/colors.background}
 
 ramp-coreload-0 = ▁
@@ -299,7 +299,7 @@ ramp-coreload-4 = ▅
 ramp-coreload-5 = ▆
 ramp-coreload-6 = ▇
 ramp-coreload-7 = █
-ramp-coreload-foreground = ${res/colors.resource-bad}
+ramp-coreload-foreground = ${res/colors.foreground}
 
 [module/date]
 type = internal/date
@@ -375,7 +375,7 @@ format = <label>
 
 label =   %gb_used%
 label-padding = 0
-label-foreground = ${res/colors.resource-bad-dark}
+label-foreground = ${res/colors.foreground}
 label-background = ${res/colors.background}
 
 [module/mpd]
