@@ -136,7 +136,7 @@ type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 95
-interval = 60
+interval = 15
 
 [template/module/cpu]
 type = internal/cpu
