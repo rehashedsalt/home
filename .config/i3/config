@@ -288,6 +288,7 @@ bindsym $mod+m mode "mopidy"
 mode "control" {
 	bindsym n exec --no-startup-id notify-send "Test Notification" "This is a simple test notification"
 	bindsym p exec --no-startup-id notify-send "i3 Current Path" "$PATH"
+	bindsym s exec --no-startup-id "import $HOME/Pictures/Screenshot/Import/Screenshot-$(date --iso-8601)-$(uuidgen).png"
 	bindsym w exec --no-startup-id "~/.bin/i3-randwall"
 
 	bindsym Return mode "default"
