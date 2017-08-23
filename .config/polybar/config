@@ -209,17 +209,17 @@ format = <label-state> <label-mode>
 pin-workspaces = true
 
 ; Firefox logo
-ws-icon-0 = web;
+ws-icon-0 = I;
 ; Beamed eigth notes
-ws-icon-1 = music;
+ws-icon-1 = II;
 ; Terminal
-ws-icon-2 = terminal;
+ws-icon-2 = III;
 ; Folder
-ws-icon-3 = files; 
+ws-icon-3 = IV;
 ; Envelope
-ws-icon-8 = mail; 
+ws-icon-8 = IX;
 ; Erlenmeyer flask
-ws-icon-9 = touchy; 
+ws-icon-9 = X;
 ; Monitor
 ws-icon-default = 
 

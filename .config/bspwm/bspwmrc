@@ -36,12 +36,12 @@ xset s off
 ## SERVICES AND DAEMONS
 sxhkd &						# Simple hotkey daemon
 dunst &						# Notification daemon
-redshift -l 38.627003;-90.199402 &		# Eye strain-reducer
+redshift -l 38.627003:-90.199402 &		# Eye strain-reducer
 
 feh --randomize --bg-fill ~/Pictures/Wallpapers/i3 &
 compton &					# Desktop compositor
 pulseaudio -D &					# Audio daemon
-polybar top &					# Simple bar system for monitoring system
+polybar top & # Simple bar
 
 syncthing -no-browser &				# File synchronization daemon
 
@@ -51,7 +51,7 @@ syncthing -no-browser &				# File synchronization daemon
 i3lock -i ~/.i3splash &
 
 ## bspwm GENERAL CONFIGURATION
-bspc monitor -d			web music terminal files V VI VII VIII mail touchy
+bspc monitor -d			I II III IV V VI VII VIII IX X
 
 bspc config border_width	2
 bspc config window_gap		4
@@ -70,7 +70,7 @@ bspc config normal_border_color			"#1d2021"
 bspc config urgent_border_color			"#fabd2f"
 
 ## bspwm WINDOW RULES
-bspc rule -a Firefox desktop=web
-bspc rule -a Spotify desktop=music
-bspc rule -a Thunderbird desktop=mail
+bspc rule -a Firefox desktop=I
+bspc rule -a Spotify desktop=II
+bspc rule -a Thunderbird desktop=IX
 
