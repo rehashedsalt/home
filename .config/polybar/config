@@ -208,9 +208,17 @@ enable-scroll = true
 format = <label-state> <label-mode>
 pin-workspaces = true
 
+; Firefox logo
 ws-icon-0 = web;
+; Beamed eigth notes
 ws-icon-1 = music;
+; Terminal
 ws-icon-2 = terminal;
+; Folder
+ws-icon-3 = files; 
+; Erlenmeyer flask
+ws-icon-9 = touchy; 
+; Monitor
 ws-icon-default = 
 
 ; Active workspace on focused monitor
@@ -219,9 +227,24 @@ label-focused-padding = 2
 label-focused-foreground = ${res/colors.background}
 label-focused-background = ${res/colors.primary}
 
+; Inactive filled workspace on focused monitor
+label-occupied = ${self.label-focused}
+label-occupied-padding = ${self.label-focused-padding}
+label-occupied-foreground = ${res/colors.background}
+label-occupied-background = ${res/colors.background-soft}
 
+; Inactive empty workspace on focused monitor
+label-empty = ${self.label-focused}
+label-empty-padding = ${self.label-focused-padding}
+label-empty-foreground = ${res/colors.background-soft}
+label-empty-background = ${res/colors.background}
 
-; Urgent workspace
+; Filled workspace on unfocused monitor
+label-dimmed-padding = ${self.label-focused-padding}
+label-dimmed-foreground = ${res/colors.primary-dark}
+label-dimmed-background = ${res/colors.background-soft}
+
+; Urgent workspace on any monitor
 label-urgent = ${self.label-focused}
 label-urgent-padding = ${self.label-focused-padding}
 label-urgent-foreground = ${res/colors.background}
