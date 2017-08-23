@@ -51,7 +51,7 @@ syncthing -no-browser &				# File synchronization daemon
 i3lock -i "~/.i3splash" &
 
 ## bspwm GENERAL CONFIGURATION
-bspc monitor -d			web music terminal files V VI VII VIII IX touchy
+bspc monitor -d			web music terminal files V VI VII VIII mail touchy
 
 bspc config border_width	2
 bspc config window_gap		4
@@ -60,6 +60,8 @@ bspc config split_ratio		0.52
 bspc config borderless_monocle	true
 bspc config gapless_monocle	true
 bspc focus_follows_pointer	true
+bspc pointer_follows_focus	true
+bspc pointer_follows_monitor	true
 
 bspc config active_border_color			"#8ec07c"
 bspc config focused_border_color		"#689d6a"
@@ -68,5 +70,7 @@ bspc config normal_border_color			"#1d2021"
 bspc config urgent_border_color			"#fabd2f"
 
 ## bspwm WINDOW RULES
-bspc rule -a Firefox desktop=^0
+bspc rule -a Firefox desktop=web
+bspc rule -a Spotify desktop=music
+bspc rule -a Thunderbird desktop=mail
 

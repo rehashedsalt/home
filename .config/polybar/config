@@ -215,7 +215,9 @@ ws-icon-1 = music;
 ; Terminal
 ws-icon-2 = terminal;
 ; Folder
-ws-icon-3 = files; 
+ws-icon-3 = files; 
+; Envelope
+ws-icon-8 = mail; 
 ; Erlenmeyer flask
 ws-icon-9 = touchy; 
 ; Monitor
