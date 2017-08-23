@@ -290,7 +290,7 @@ interval = 1
 inherit = template/module/cpu
 format = <label> <ramp-coreload>
 
-label = 
+label = 
 label-padding = 0
 label-foreground = ${res/colors.foreground}
 label-background = ${res/colors.background}
