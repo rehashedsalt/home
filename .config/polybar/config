@@ -72,9 +72,9 @@ tray-padding = 0
 border-bottom-size = 0
 border-bottom-color = ${res/colors.primary}
 
-modules-left = i3 bspwm || wlan cpu-ramp memory-label
+modules-left = i3 bspwm || wlan
 modules-center = xwindow
-modules-right = temperature-ramp volume-ramp battery-ramp date
+modules-right = temperature-ramp || cpu-label memory-label || volume-ramp battery-ramp || date
 
 ; LOWER
 ;====================
@@ -358,6 +358,14 @@ ramp-coreload-7 = █
 ramp-coreload-7-foreground = ${res/colors.alert-hard}
 ramp-coreload-foreground = ${res/colors.foreground}
 
+[module/cpu-label]
+inherit = template/module/cpu
+format = <label>
+label =  %percentage%%
+label-padding = 0
+label-foreground = ${res/colors.foreground}
+label-background = ${res/colors.background}
+
 [module/date]
 type = internal/date
 
@@ -430,7 +438,7 @@ interval = 1
 type = internal/memory
 format = <label>
 
-label =   %gb_used%
+label =   %percentage_used%%
 label-padding = 0
 label-foreground = ${res/colors.foreground}
 label-background = ${res/colors.background}
@@ -493,8 +501,8 @@ label-foreground = ${res/colors.foreground}
 label-background = ${res/colors.background}
 label-warn =  %temperature%
 label-warn-padding = ${self.label-padding}
-label-warn-foreground = ${res/colors.background}
-label-warn-background = ${res/colors.alert}
+label-warn-foreground = ${res/colors.alert}
+label-warn-background = ${res/colors.background}
 
 #ramp-0 = 
 #ramp-1 = 
