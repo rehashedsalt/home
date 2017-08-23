@@ -72,8 +72,8 @@ tray-padding = 0
 border-bottom-size = 0
 border-bottom-color = ${res/colors.primary}
 
-modules-left = wlan cpu-ramp memory-label || xwindow
-modules-center = i3
+modules-left = i3 bspwm || wlan cpu-ramp memory-label
+modules-center = xwindow
 modules-right = temperature-ramp volume-ramp battery-ramp date
 
 ; LOWER
@@ -194,6 +194,32 @@ label-unfocused = ${self.label-focused}
 label-unfocused-padding = ${self.label-focused-padding}
 label-unfocused-foreground = ${res/colors.foreground}
 label-unfocused-background = ${res/colors.background} 
+
+; Urgent workspace
+label-urgent = ${self.label-focused}
+label-urgent-padding = ${self.label-focused-padding}
+label-urgent-foreground = ${res/colors.background}
+label-urgent-background = ${res/colors.alert}
+
+[module/bspwm]
+type = internal/bspwm
+enable-click = true
+enable-scroll = true
+format = <label-state> <label-mode>
+pin-workspaces = true
+
+ws-icon-0 = web;
+ws-icon-1 = music;
+ws-icon-2 = terminal;
+ws-icon-default = 
+
+; Active workspace on focused monitor
+label-focused = %icon%
+label-focused-padding = 2
+label-focused-foreground = ${res/colors.background}
+label-focused-background = ${res/colors.primary}
+
+
 
 ; Urgent workspace
 label-urgent = ${self.label-focused}
