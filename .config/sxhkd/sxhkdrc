@@ -17,11 +17,8 @@ alt + Escape
 	pkill -USR1 -x sxhkd
 
 # pulseaudio hotkeys
-AudioRaiseVolume
-	pactl set-sink-volume 0 +5%
-
-AudioLowerVolume
-	pactl set-sink-volume 0 -5%
+Audio{Raise,Lower}Volume
+	pactl set-sink-volume 0 {+,-}5%
 
 AudioMute
 	pactl set-sink-mute 0 toggle
