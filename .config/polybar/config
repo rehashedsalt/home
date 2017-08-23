@@ -438,7 +438,7 @@ interval = 1
 type = internal/memory
 format = <label>
 
-label =   %percentage_used%%
+label =   %percentage_used%% (%gb_used%)
 label-padding = 0
 label-foreground = ${res/colors.foreground}
 label-background = ${res/colors.background}
