@@ -1,4 +1,0 @@
-#!/bin/bash
-walls=($HOME/Pictures/Wallpapers/i3/*)
-wall=${walls[$RANDOM % ${#walls[@]} ]}
-feh --bg-fill "$wall"
