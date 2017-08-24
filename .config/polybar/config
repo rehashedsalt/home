@@ -73,9 +73,9 @@ tray-padding = 0
 border-bottom-size = 0
 border-bottom-color = ${res/colors.primary}
 
-modules-left = i3 bspwm || wlan eth || mpd 
+modules-left = i3 bspwm || wlan eth || cpu-label memory-label || temperature-ramp
 modules-center = xwindow
-modules-right = temperature-ramp || cpu-label memory-label || xbacklight-label volume-ramp battery-ramp || date
+modules-right =  mpd || xbacklight-label volume-ramp battery-ramp || date
 
 ;========================================
 ; MODULES
