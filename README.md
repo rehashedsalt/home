@@ -9,7 +9,7 @@ Unless, of course, it has a GPL or MIT header or something. Then, by all means, 
 A series of executables, several (but not all) of them written by me. One day I'll get around to writing up licenses for all of them.
 
 ## ~/.config
-Application-specific configuration files.
+Application-specific configuration files. If you're looking for my rice, it's mostly in here.
 
 ## ~/.local
 Right now it's just a bunch of Powerline fonts. Note, however, that several `shellrc`s here will access executables in the `~/.local/bin` directory.
@@ -28,7 +28,7 @@ Any explanation for it is longer than it.
 Basic themeing file, holding whatever colorscheme I'm currently attatched to. Where possible, I try to reference it to centralize themeing.
 
 ### .bash\_profile
-Currently does nothing because I never use `bash`.
+Currently does almost nothing because I never use `bash`.
 
 ### .profile
 Shell-agnostic configuration. Should be POSIX-compliant.
