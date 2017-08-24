@@ -64,6 +64,7 @@ exec --no-startup-id "redshift -l 38.627003:-90.199402"
 exec_always --no-startup-id "compton --config ~/.config/compton.conf"
 exec_always --no-startup-id "dunst"
 exec_always --no-startup-id "feh --randomize --bg-fill ~/Pictures/Wallpapers/i3"
+exec_always --no-startup-id "xfce4-power-manager"
 #exec --no-startup-id "mopidy"
 exec --no-startup-id "syncthing -no-browser"
 
