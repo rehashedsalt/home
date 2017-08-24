@@ -38,6 +38,9 @@ rofi.width: 30
 *bg5: #665c54
 
 *foreground: #ebdbb2
+*fg2: #d5c4a1
+*fg3: #bdae93
+*fg4: #a89984
 
 ! Black + DarkGrey
 *color0:  #282828

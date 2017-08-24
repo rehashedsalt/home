@@ -22,11 +22,13 @@ resource-good-dark = ${xrdb:color2:#98971a}
 resource-good = ${xrdb:color10:#b8bb26}
 
 background = ${xrdb:background:#1d2021}
-background-med = ${xrdb:bg3:#282828}
-background-soft = ${xrdb:bg4:#504945}
-foreground = ${xrdb:color15:#ebdbb2}
-foreground-alt = ${xrdb:color8:#928374}
-foreground-soft = 
+background-2 = ${xrdb:bg2:#282828}
+background-3 = ${xrdb:bg3:#32302f}
+background-4 = ${xrdb:bg4:#504945}
+foreground = ${xrdb:foreground:#ebdbb2}
+foreground-2 = ${xrdb:fg2:#d5c4a1}
+foreground-3 = ${xrdb:fg3:#bdae93}
+foreground-4 = ${xrdb:fg4:#a89984}
 
 [res/fonts]
 #font-0 = "DejaVu Sans:size=10;1"
@@ -118,7 +120,7 @@ bar-indicator = |
 bar-indicator-foreground = ${res/colors.foreground}
 bar-indicator-background = ${res/colors.background}
 bar-empty = |
-bar-empty-foreground = ${res/colors.background-soft}
+bar-empty-foreground = ${res/colors.background-4}
 bar-empty-background = ${res/colors.background}
 
 [template/module/battery]
@@ -221,18 +223,18 @@ label-focused-background = ${res/colors.primary}
 label-occupied = ${self.label-focused}
 label-occupied-padding = ${self.label-focused-padding}
 label-occupied-foreground = ${res/colors.background}
-label-occupied-background = ${res/colors.background-soft}
+label-occupied-background = ${res/colors.background-4}
 
 ; Inactive empty workspace on focused monitor
 label-empty = ${self.label-focused}
 label-empty-padding = ${self.label-focused-padding}
-label-empty-foreground = ${res/colors.background-soft}
+label-empty-foreground = ${res/colors.background-4}
 label-empty-background = ${res/colors.background}
 
 ; Filled workspace on unfocused monitor
 label-dimmed-padding = ${self.label-focused-padding}
 label-dimmed-foreground = ${res/colors.primary-dark}
-label-dimmed-background = ${res/colors.background-soft}
+label-dimmed-background = ${res/colors.background-4}
 
 ; Urgent workspace on any monitor
 label-urgent = ${self.label-focused}
@@ -389,7 +391,7 @@ label-mounted-background = ${res/colors.primary}
 label-unmounted = %mountpoint%
 label-unmounted-padding = ${template/module/bar.label-padding}
 label-unmounted-foreground = ${res/colors.background}
-label-unmounted-background = ${res/colors.background-soft}
+label-unmounted-background = ${res/colors.background-4}
 
 bar-used-width = ${template/module/bar.bar-width}
 bar-used-fill = ${template/module/bar.bar-fill}
@@ -447,7 +449,7 @@ icon-repeat = 
 icon-stop = 
 
 toggle-on-foreground = ${res/colors.foreground}
-toggle-off-foreground = ${res/colors.background-soft}
+toggle-off-foreground = ${res/colors.background-4}
 
 label-song = %title%
 label-song-foreground = ${res/colors.foreground}
@@ -456,7 +458,7 @@ label-song-maxlen = 25
 label-song-ellipsis = true
 
 label-offline = "Disconnected from MPD"
-label-offline-foreground = ${res/colors.background-soft}
+label-offline-foreground = ${res/colors.background-4}
 label-offline-background = ${res/colors.background}
 
 label-time = %elapsed%/%total%
@@ -534,7 +536,7 @@ label-volume-background = ${template/module/bar.label-background}
 label-muted = "V"
 label-muted-padding = ${self.label-volume-padding}
 label-muted-foreground = ${res/colors.background}
-label-muted-background = ${res/colors.background-soft}
+label-muted-background = ${res/colors.background-4}
 
 bar-volume-width = ${template/module/bar.bar-width}
 bar-volume-fill = ${template/module/bar.bar-fill}
@@ -560,7 +562,7 @@ label-volume-foreground = ${res/colors.foreground}
 label-volume-background = ${res/colors.background}
 label-muted =  %percentage%%
 label-muted-padding = ${self.label-volume-padding}
-label-muted-foreground = ${res/colors.background-soft}
+label-muted-foreground = ${res/colors.background-4}
 label-muted-background = ${res/colors.background}
 
 ramp-volume-0 = 
