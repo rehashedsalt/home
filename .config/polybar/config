@@ -72,9 +72,9 @@ tray-padding = 0
 border-bottom-size = 0
 border-bottom-color = ${res/colors.primary}
 
-modules-left = i3 bspwm || wlan
+modules-left = i3 bspwm || wlan || mpd mpd-control
 modules-center = xwindow
-modules-right = temperature-ramp || cpu-label memory-label || mpd volume-ramp battery-ramp || date
+modules-right = temperature-ramp || cpu-label memory-label || volume-ramp battery-ramp || date
 
 ; LOWER
 ;====================
@@ -458,6 +458,9 @@ icon-random = 
 icon-repeat = 
 icon-stop = 
 
+toggle-on-foreground = ${res/colors.foreground}
+toggle-off-foreground = ${res/colors.background-soft}
+
 label-song = %title%
 label-song-foreground = ${res/colors.foreground}
 label-song-background = ${res/colors.background}
@@ -484,6 +487,16 @@ bar-progress-empty-foreground = ${template/module/bar.bar-empty-foreground}
 bar-progress-empty-background = ${template/module/bar.bar-empty-background}
 
 interval = 1
+
+[module/mpd-control]
+inherit = module/mpd
+format-online = <icon-prev> <toggle> <icon-stop> <icon-next>
+label-offline = ""
+
+[module/mpd-control-ext]
+inherit = module/mpd
+format-online = <icon-random> <icon-repeat>
+label-offline = ""
 
 [module/temperature]
 inherit = template/module/temperature
