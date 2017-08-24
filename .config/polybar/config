@@ -22,10 +22,11 @@ resource-good-dark = ${xrdb:color2:#98971a}
 resource-good = ${xrdb:color10:#b8bb26}
 
 background = ${xrdb:background:#1d2021}
-background-med = ${xrdb:bg1:#282828}
-background-soft = ${xrdb:bg2:#504945}
+background-med = ${xrdb:bg3:#282828}
+background-soft = ${xrdb:bg4:#504945}
 foreground = ${xrdb:color15:#ebdbb2}
 foreground-alt = ${xrdb:color8:#928374}
+foreground-soft = 
 
 [res/fonts]
 #font-0 = "DejaVu Sans:size=10;1"
@@ -557,7 +558,7 @@ label-volume = %percentage%%
 label-volume-padding = 0
 label-volume-foreground = ${res/colors.foreground}
 label-volume-background = ${res/colors.background}
-label-muted = 
+label-muted =  %percentage%%
 label-muted-padding = ${self.label-volume-padding}
 label-muted-foreground = ${res/colors.background-soft}
 label-muted-background = ${res/colors.background}

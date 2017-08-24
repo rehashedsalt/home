@@ -18,8 +18,8 @@ gaps outer 0
 # Note: fallbacks are copied from gruvbox-dark
 # Source: https://github.com/morhetz/gruvbox-generalized
 set_from_resource $bg background #1d2021
-set_from_resource $bgm background_med #282828
-set_from_resource $bg_soft background_soft #32302f
+set_from_resource $bgm bg2 #282828
+set_from_resource $bg_soft bg3 #32302f
 set_from_resource $black color0 #282828
 set_from_resource $red color1 #cc241d
 set_from_resource $green color2 #98971a

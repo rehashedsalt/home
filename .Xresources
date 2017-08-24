@@ -32,15 +32,13 @@ rofi.width: 30
 
 ! hard contrast: 
 *background: #1d2021
-! medium contrast
-*background_med: #282828
-! soft contrast
-*background_soft: #32302f
-
-*bg2: #504945
-*bg3: #665c54
+*bg2: #282828
+*bg3: #32302f
+*bg4: #504945
+*bg5: #665c54
 
 *foreground: #ebdbb2
+
 ! Black + DarkGrey
 *color0:  #282828
 *color8:  #928374
