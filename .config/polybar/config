@@ -72,7 +72,7 @@ tray-padding = 0
 border-bottom-size = 0
 border-bottom-color = ${res/colors.primary}
 
-modules-left = i3 bspwm || wlan || mpd-control mpd 
+modules-left = i3 bspwm || wlan || mpd 
 modules-center = xwindow
 modules-right = temperature-ramp || cpu-label memory-label || volume-ramp battery-ramp || date
 
