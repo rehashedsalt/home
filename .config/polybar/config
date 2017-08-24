@@ -74,7 +74,7 @@ border-bottom-color = ${res/colors.primary}
 
 modules-left = i3 bspwm || wlan
 modules-center = xwindow
-modules-right = temperature-ramp || cpu-label memory-label || volume-ramp battery-ramp || date
+modules-right = temperature-ramp || cpu-label memory-label || mpd volume-ramp battery-ramp || date
 
 ; LOWER
 ;====================
@@ -447,8 +447,16 @@ label-background = ${res/colors.background}
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song> <bar-progress> <label-time>
+format-online = <label-song> <label-time>
 format-offline = <label-offline>
+
+icon-next = 
+icon-pause = 
+icon-play = 
+icon-prev = 
+icon-random = 
+icon-repeat = 
+icon-stop = 
 
 label-song = %title%
 label-song-foreground = ${res/colors.foreground}
