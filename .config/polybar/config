@@ -506,12 +506,12 @@ label-warn-padding = ${self.label-padding}
 label-warn-foreground = ${res/colors.alert}
 label-warn-background = ${res/colors.background}
 
-#ramp-0 = 
-#ramp-1 = 
-#ramp-2 = 
-#ramp-3 = 
-#ramp-4 = 
-ramp-0 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+#ramp-0 = 
 
 [module/volume-bar]
 type = internal/volume
