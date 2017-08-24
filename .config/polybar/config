@@ -64,7 +64,7 @@ font-4 = ${res/fonts.font-4}
 
 ; UPPER
 ;====================
-[bar/top]
+[bar/alpha]
 inherit = template/bar
 tray-position = right
 tray-padding = 0
@@ -78,7 +78,7 @@ modules-right = temperature-ramp || cpu-label memory-label || volume-ramp batter
 
 ; LOWER
 ;====================
-[bar/bottom]
+[bar/beta]
 inherit = template/bar
 bottom=true
 

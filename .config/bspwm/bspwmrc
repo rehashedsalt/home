@@ -41,7 +41,7 @@ redshift -l 38.627003:-90.199402 &		# Eye strain-reducer
 feh --randomize --bg-fill ~/Pictures/Wallpapers/i3 &
 compton &					# Desktop compositor
 pulseaudio -D &					# Audio daemon
-polybar top & # Simple bar
+polybar alpha & # Simple bar
 
 syncthing -no-browser &				# File synchronization daemon
 
