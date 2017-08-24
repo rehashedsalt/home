@@ -73,7 +73,7 @@ tray-padding = 0
 border-bottom-size = 0
 border-bottom-color = ${res/colors.primary}
 
-modules-left = i3 bspwm || wlan || mpd 
+modules-left = i3 bspwm || wlan eth || mpd 
 modules-center = xwindow
 modules-right = temperature-ramp || cpu-label memory-label || xbacklight-label volume-ramp battery-ramp || date
 
@@ -479,12 +479,12 @@ interval = 1
 [module/mpd-control]
 inherit = module/mpd
 format-online = <icon-prev> <toggle> <icon-stop> <icon-next>
-label-offline = ""
+label-offline = 
 
 [module/mpd-control-ext]
 inherit = module/mpd
 format-online = <icon-random> <icon-repeat>
-label-offline = ""
+label-offline = 
 
 [module/temperature]
 inherit = template/module/temperature
@@ -572,9 +572,16 @@ inherit = template/module/network
 label-connected =  %upspeed%  %downspeed%
 label-connected-foreground = ${res/colors.primary}
 label-connected-background = ${res/colors.background}
-label-disconnected = %ifname% Disconnected
-label-disconnected-foreground = ${res/colors.background}
-label-disconnected-background = ${res/colors.alert}
+label-disconnected =  %ifname%
+label-disconnected-foreground = ${res/colors.alert}
+label-disconnected-background = ${res/colors.background}
+
+[module/eth]
+type = internal/network
+inherit = module/wlan
+interface = enp0s31f6
+label-connected-foreground = ${res/colors.primary-dark}
+label-disconnected = 
 
 [module/backlight]
 type = internal/backlight
