@@ -62,7 +62,7 @@ font-2 = ${res/fonts.font-2}
 font-3 = ${res/fonts.font-3}
 font-4 = ${res/fonts.font-4}
 
-; UPPER
+; BARS
 ;====================
 [bar/alpha]
 inherit = template/bar
@@ -75,19 +75,6 @@ border-bottom-color = ${res/colors.primary}
 modules-left = i3 bspwm || wlan || mpd-control mpd 
 modules-center = xwindow
 modules-right = temperature-ramp || cpu-label memory-label || volume-ramp battery-ramp || date
-
-; LOWER
-;====================
-[bar/beta]
-inherit = template/bar
-bottom=true
-
-border-top-size = 0
-border-top-color = ${res/colors.primary}
-
-modules-left = battery cpu memory
-modules-center = filesystem
-modules-right = backlight volume temperature
 
 ;========================================
 ; MODULES
