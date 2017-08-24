@@ -66,7 +66,7 @@ exec_always --no-startup-id "dunst"
 exec_always --no-startup-id "feh --randomize --bg-fill ~/Pictures/Wallpapers/i3"
 exec_always --no-startup-id "xfce4-power-manager"
 exec_always --no-startup-id "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-#exec --no-startup-id "mopidy"
+exec --no-startup-id "mopidy"
 exec --no-startup-id "syncthing -no-browser"
 
 ###################
