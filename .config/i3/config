@@ -26,7 +26,7 @@ set_from_resource $green color2 #98971a
 set_from_resource $yellow color3 #d79921
 set_from_resource $blue color4 #458588
 set_from_resource $purple color5 #b16286
-set_form_resource $cyan color6 #689d6a
+set_from_resource $cyan color6 #689d6a
 set_from_resource $gray color7 #a89984
 set_from_resource $gray2 color8 #928374
 set_from_resource $red2 color9 #fb4934
@@ -39,11 +39,11 @@ set_from_resource $fg color15 #ebdbb2
 
 # Apply colors to i3
 #	<colorclass>			<border>	<backgrd>	<text>		<indicator>	<child_border>
-	client.focused			$cyan2		$bg 		$fg		$bg_soft	$cyan2
-	client.focused_inactive		$cyan2		$bg		$gray2		$bg_soft	$bg_soft
-	client.unfocused		$cyan2		$bg		$gray2		$bg		$bg_soft
+	client.focused			$cyan2		$cyan2 		$bg		$bg_soft	$cyan2
+	client.focused_inactive		$cyan		$cyan		$bg		$bg_soft	$bg_soft
+	client.unfocused		$bg		$bg		$cyan		$bg		$bg_soft
 	client.urgent			$yellow2	$bg		$yellow2	$yellow		$bg
-	client.placeholder		$purple2	$bg		$purple2		$purple		$bg
+	client.placeholder		$purple2	$bg		$purple2	$purple		$bg
 	client.background		$bg
 
 # Set up titlebar and i3bar fonts
