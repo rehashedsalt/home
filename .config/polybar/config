@@ -522,7 +522,7 @@ ramp-1 = 
 ramp-2 = 
 ramp-3 = 
 ramp-4 = 
-#ramp-0 = 
+;ramp-0 = 
 
 [module/volume-bar]
 type = internal/volume
@@ -607,7 +607,7 @@ bar-fill-foreground = ${template/module/bar.bar-fill-foreground-setting}
 type = internal/xbacklight
 format = <label>
 
-label =  %percentage%%
+label =  %percentage%%
 label-foreground = ${res/colors.foreground}
 label-background = ${res/colors.background}
 
