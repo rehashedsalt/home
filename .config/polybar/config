@@ -292,11 +292,11 @@ label-full-padding = 0
 label-full-foreground = ${res/colors.primary-dark}
 label-full-background = ${res/colors.background}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+;ramp-capacity-0 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
@@ -327,7 +327,7 @@ bar-load-empty-background = ${template/module/bar.bar-empty-background}
 
 interval = 1
 
-[module/cpu-ramp]
+[module/cpu-coreload]
 inherit = template/module/cpu
 format = <label> <ramp-coreload>
 
