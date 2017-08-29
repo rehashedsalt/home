@@ -583,9 +583,6 @@ inherit = template/module/network
 label-connected =  %upspeed%  %downspeed%
 label-connected-foreground = ${res/colors.foreground}
 label-connected-background = ${res/colors.background}
-label-disconnected =  %ifname%
-label-disconnected-foreground = ${res/colors.alert}
-label-disconnected-background = ${res/colors.background}
 
 [module/eth]
 type = internal/network
