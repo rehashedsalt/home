@@ -75,7 +75,7 @@ tray-padding = 0
 border-bottom-size = 0
 border-bottom-color = ${res/colors.primary}
 
-modules-left = i3 bspwm || wlan eth || cpu-label memory-label || temperature-ramp
+modules-left = i3 bspwm || wlan-network eth || wlan-speed cpu-label memory-label || temperature-ramp
 modules-center = xwindow
 modules-right =  mpd || xbacklight-label volume-ramp battery-ramp || date
 
@@ -93,7 +93,7 @@ content-foreground = ${res/colors.foreground}
 [module/||]
 type = custom/text
 content = |
-content-foreground = ${res/colors.foreground}
+content-foreground = ${res/colors.background-4}
 
 ; CUSTOM
 ;====================
@@ -569,10 +569,19 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
-[module/wlan]
+[module/wlan-network]
 inherit = template/module/network
-label-connected =  %signal%%  %upspeed%  %downspeed%
+label-connected =  %signal%% (%essid%)
 label-connected-foreground = ${res/colors.primary}
+label-connected-background = ${res/colors.background}
+label-disconnected =  %ifname%
+label-disconnected-foreground = ${res/colors.alert}
+label-disconnected-background = ${res/colors.background}
+
+[module/wlan-speed]
+inherit = template/module/network
+label-connected =  %upspeed%  %downspeed%
+label-connected-foreground = ${res/colors.foreground}
 label-connected-background = ${res/colors.background}
 label-disconnected =  %ifname%
 label-disconnected-foreground = ${res/colors.alert}
@@ -580,7 +589,7 @@ label-disconnected-background = ${res/colors.background}
 
 [module/eth]
 type = internal/network
-inherit = module/wlan
+inherit = module/wlan-network
 interface = enp0s31f6
 label-connected =  %upspeed%  %downspeed%
 label-connected-foreground = ${res/colors.primary-dark}
