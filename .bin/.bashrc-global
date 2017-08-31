@@ -6,6 +6,12 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Sometimes you can't change your shell. Sometimes you have to implement hacky
+# workarounds
+if [ -f ~/.bash-to-zsh ]; then
+	exec zsh
+fi
+
 # Source /etc/profile
 source /etc/profile
 
