@@ -47,19 +47,16 @@ set_from_resource $fg color15 #ebdbb2
 	client.background		$bg
 
 # Set up titlebar and i3bar fonts
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# font pango:Overpass 10
 font pango:xos4 Terminus 9
 
 ###################
 ## Statusbars and Daemons
 ###################
 
-# Use in case of NODM/autlogin and .xinitrc -- If we're just starting the system, we need to lock it up.
+# Use in case of NODM/autologin and .xinitrc -- If we're just starting the system, we need to lock it up.
 #exec --no-startup-id "i3lock -i ~/.i3splash"
 
 exec_always --no-startup-id "killall polybar; sleep 1; polybar -r alpha"
-#exec_always --no-startup-id "sleep 1; polybar bottom"
 exec --no-startup-id "redshift"
 exec_always --no-startup-id "compton --config ~/.config/compton.conf"
 exec_always --no-startup-id "dunst"
@@ -74,11 +71,11 @@ exec --no-startup-id "syncthing -no-browser"
 ###################
 
 # No terminal bell
-exec --no-startup-id xset -b
+exec --no-startup-id "xset -b"
 # No DPMS (display blanking)
-exec --no-startup-id xset -dpms
+exec --no-startup-id "xset -dpms"
 # No screensaver
-exec --no-startup-id xset s off
+exec --no-startup-id "xset s off"
 
 
 ###################
@@ -91,17 +88,13 @@ set $w3 3
 set $w4 4
 set $w5 5
 
-bindsym $mod+n exec i3-msg rename workspace to "$(rofi -dmenu -p 'Rename workspace: ' -l 1)"
-
-# Assign types of windows to their respective workspaces
-#assign [class="Firefox"] $w2
-#assign [class="Thunderbird"] $w3
+bindsym $mod+n exec "i3-msg rename workspace to $(rofi -dmenu -p 'Rename workspace: ' -l 1)"
 
 ###################
 ## Keybindings
 ###################
 
-# Set modifier
+# Set modifiers
 # Mod1 is LALT, Mod4 is LSUP
 set $mod Mod1
 set $sup Mod4
@@ -109,18 +102,14 @@ set $ctl Ctrl
 set $shift Shift
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-#floating_modifier $mod
+floating_modifier $mod
 
-bindsym $mod+Return exec i3-sensible-terminal
+# Program opening and closing
+bindsym $mod+Return exec "i3-sensible-terminal"
 bindsym $mod+q kill
-#bindsym $mod+space exec dmenu_run
-bindsym $mod+space exec rofi -show drun
-bindsym $mod+backslash exec rofi -show ssh
-bindsym $mod+Tab exec rofi -show
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+space exec "rofi -show drun"
+bindsym $mod+backslash exec "rofi -show ssh"
+bindsym $mod+Tab exec "rofi -show"
 
 # Pulse controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -219,7 +208,7 @@ bindsym $mod+$shift+r restart
 
 # exit i3 (logs you out of your X session)
 #bindsym $mod+$shift+e exec "i3-nagbar -t warning -m 'Really exit i3wm? This will close all running applications and end your X session.' -b 'Exit' 'i3-msg exit'"
-bindsym $mod+$shift+e exec "~/.bin/i3-salt-logout-dunst"
+bindsym $mod+$shift+e exit
 
 # lock the screen
 bindsym $sup+l exec "~/.bin/i3-salt-lock"
@@ -286,7 +275,7 @@ mode "mopidy" {
 
 bindsym $mod+m mode "mopidy"
 
-mode "control" {
+mode "test" {
 	bindsym n exec --no-startup-id notify-send "Test Notification" "This is a simple test notification"
 	bindsym p exec --no-startup-id notify-send "i3 Current Path" "$PATH"
 
@@ -295,4 +284,4 @@ mode "control" {
 	bindsym $mod+$shift+t mode "default"
 }
 
-bindsym $mod+$shift+t mode "control"
+bindsym $mod+$shift+t mode "test"
