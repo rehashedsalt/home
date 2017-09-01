@@ -25,7 +25,11 @@ xephyrdisplay=":8"
 Xephyr -screen 1908x1044 -title "Xephyr Instance" -br -ac $xephyrdisplay &
 
 DISPLAY="$xephyrdisplay"
+sleep 1
 
 urxvt &
+
+# Disown all of our jobs
+printf "\nXephyr session started with urxvt in background. Disowning and closing this terminal may break them!\n"
 
 exit 0
