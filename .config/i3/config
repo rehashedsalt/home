@@ -60,7 +60,7 @@ font pango:xos4 Terminus 9
 
 exec_always --no-startup-id "killall polybar; sleep 1; polybar -r alpha"
 #exec_always --no-startup-id "sleep 1; polybar bottom"
-exec --no-startup-id "redshift -l 38.627003:-90.199402"
+exec --no-startup-id "redshift"
 exec_always --no-startup-id "compton --config ~/.config/compton.conf"
 exec_always --no-startup-id "dunst"
 exec_always --no-startup-id "feh --randomize --bg-fill ~/Pictures/Wallpapers/i3"
