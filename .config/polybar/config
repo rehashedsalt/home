@@ -311,8 +311,7 @@ label =  %percentage_used%% (%gb_used%)
 [module/mpd]
 type = internal/mpd
 format-online = <label-song> <label-time>
-format-offline = <label-offline>
-format-offline-foreground = ${res/colors.background-4}
+format-offline =
 
 icon-next = 
 icon-pause = 
