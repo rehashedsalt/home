@@ -74,14 +74,13 @@ font-4 = ${res/fonts.font-4}
 inherit = template/bar
 bottom = true
 tray-position = right
-tray-padding = 0
 
 border-top-size = 2
 border-top-color = ${res/colors.background-2}
 
-modules-left = i3 bspwm | wlan-network eth-network | cpu-label memory-label | temperature-ramp
+modules-left = i3 bspwm | wlan-network eth-network | mpd
 modules-center = xwindow-label
-modules-right =  mpd | xbacklight-label volume-ramp battery-ramp | date
+modules-right = filesystem | temperature-ramp cpu-label memory-label | xbacklight-label volume-ramp battery-ramp | date
 
 ;========================================
 ; MODULES
@@ -103,7 +102,6 @@ content-foreground = ${res/colors.background-4}
 format = <label> <bar>
 
 label = "<TEMPLATE>"
-label-padding = 0
 label-foreground = ${res/colors.background}
 label-background = ${res/colors.primary}
 
@@ -141,9 +139,7 @@ format-disconnected = <label-disconnected>
 format-disconnected-overline = ${res/colors.alert}
 
 label-connected = %upspeed% %downspeed% - %signal%%
-label-connected-padding = 0
 label-disconnected = 
-label-disconnected-padding = 0
 
 interval = 1
 
@@ -262,7 +258,6 @@ inherit = template/module/cpu
 format = <label> <ramp-coreload>
 
 label = 
-label-padding = 0
 
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
@@ -282,7 +277,6 @@ ramp-coreload-foreground = ${res/colors.foreground}
 inherit = template/module/cpu
 format = <label>
 label =  %percentage%%
-label-padding = 0
 
 [module/date]
 type = internal/date
@@ -293,7 +287,18 @@ date-alt = %A, %B %d
 time-alt = %I:%M %p
 
 label = %date% %time%
-label-padding = 0
+
+interval = 30
+
+[module/filesystem]
+type = internal/fs
+
+label-mounted = %mountpoint%: %percentage_used%%
+label-unmounted = %mountpoint%
+label-unmounted-foreground = ${res/colors.background-4}
+
+mount-0 = /
+mount-1 = /home
 
 interval = 30
 
@@ -302,14 +307,12 @@ type = internal/memory
 format = <label>
 
 label =  %percentage_used%% (%gb_used%)
-label-padding = 0
-label-foreground = ${res/colors.foreground}
-label-background = ${res/colors.background}
 
 [module/mpd]
 type = internal/mpd
 format-online = <label-song> <label-time>
 format-offline = <label-offline>
+format-offline-foreground = ${res/colors.background-4}
 
 icon-next = 
 icon-pause = 
@@ -327,7 +330,6 @@ label-song-maxlen = 25
 label-song-ellipsis = true
 
 label-offline = "Disconnected from MPD"
-label-offline-foreground = ${res/colors.background-4}
 
 label-time = %elapsed%/%total%
 
@@ -374,13 +376,11 @@ ramp-4 = 
 [module/volume-ramp]
 type = internal/volume
 format-volume = <ramp-volume> <label-volume>
-format-muted = <label-muted>
+format-muted = <ramp-volume> <label-muted>
+format-muted-foreground = ${res/colors.background-4}
 
 label-volume = %percentage%%
-label-volume-padding = 0
-label-muted =  %percentage%%
-label-muted-padding = ${self.label-volume-padding}
-label-muted-foreground = ${res/colors.background-4}
+label-muted = %percentage%%
 
 ramp-volume-0 = 
 ramp-volume-1 = 
