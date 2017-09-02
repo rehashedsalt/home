@@ -1,9 +1,0 @@
-#!/bin/sh
-SHOT=/tmp/lockimg.png
-LOCKIMAGE=$HOME/.i3lockicon
-import -window root $SHOT
-
-convert $SHOT -scale 10% -scale 1000% $SHOT
-[[ -f $LOCKIMAGE ]] && convert $SHOT $LOCKIMAGE -gravity center -composite -matte $SHOT
-i3lock -i $SHOT
-rm $SHOT

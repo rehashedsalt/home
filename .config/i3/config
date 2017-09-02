@@ -211,7 +211,7 @@ bindsym $mod+$shift+r restart
 bindsym $mod+$shift+e exit
 
 # lock the screen
-bindsym $sup+l exec "~/.bin/i3-salt-lock"
+bindsym $sup+l exec "i3lock -i $HOME/.i3lock -c 1d2021"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
