@@ -39,9 +39,9 @@ set_from_resource $fg color15 #ebdbb2
 
 # Apply colors to i3
 #	<colorclass>			<border>	<backgrd>	<text>		<indicator>	<child_border>
-	client.focused			$cyan2		$cyan2 		$bg		$bg_soft	$cyan2
-	client.focused_inactive		$cyan		$cyan		$bg		$bg_soft	$bg_soft
-	client.unfocused		$bg		$bg		$cyan		$bg		$bg_soft
+	client.focused			$blue2		$blue2 		$bg		$bg_soft	$blue2
+	client.focused_inactive		$blue		$blue		$bg		$bg_soft	$bg_soft
+	client.unfocused		$bg		$bg		$blue		$bg		$bg_soft
 	client.urgent			$yellow2	$bg		$yellow2	$yellow		$bg
 	client.placeholder		$purple2	$bg		$purple2	$purple		$bg
 	client.background		$bg
