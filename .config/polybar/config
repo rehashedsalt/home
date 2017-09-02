@@ -48,11 +48,14 @@ font-4 =
 [template/bar]
 ; Rendering of the bar
 width = 100%
-height = 24
+height = 28
 
 ; Module padding and spacing
 padding = 2
 module-margin = 1
+
+line-size = 2
+line-color = ${res/colors.background-2}
 
 ; Module colors
 background = ${res/colors.background}
@@ -69,11 +72,12 @@ font-4 = ${res/fonts.font-4}
 ;====================
 [bar/alpha]
 inherit = template/bar
+bottom = true
 tray-position = right
 tray-padding = 0
 
-border-bottom-size = 0
-border-bottom-color = ${res/colors.primary}
+border-top-size = 2
+border-top-color = ${res/colors.background-2}
 
 modules-left = i3 bspwm | wlan-network eth-network | cpu-label memory-label | temperature-ramp
 modules-center = xwindow-label
@@ -133,11 +137,8 @@ interval = 1
 type = internal/network
 interface = wlp1s0
 format-connected = <label-connected>
-format-connected-foreground = ${res/colors.background}
-format-connected-background = ${res/colors.primary}
 format-disconnected = <label-disconnected>
-format-disconnected-foreground = ${res/colors.resource-bad}
-format-disconnected-background = ${res/colors.background}
+format-disconnected-overline = ${res/colors.alert}
 
 label-connected = %upspeed% %downspeed% - %signal%%
 label-connected-padding = 0
@@ -165,26 +166,20 @@ label-mode-background = ${res/colors.primary}
 ; Active workspace on focused monitor
 label-focused = %name%
 label-focused-padding = ${self.label-mode-padding}
-label-focused-foreground = ${res/colors.background}
-label-focused-background = ${res/colors.primary}
+label-focused-overline = ${res/colors.primary}
 
 ; Active workspace on unfocused monitor
 label-visible = ${self.label-focused}
 label-visible-padding = ${self.label-focused-padding}
-label-visible-foreground = ${self.label-focused-foreground}
-label-visible-background = ${res/colors.primary-dark}
 
 ; Inactive workspace
 label-unfocused = ${self.label-focused}
 label-unfocused-padding = ${self.label-focused-padding}
-label-unfocused-foreground = ${res/colors.foreground}
-label-unfocused-background = ${res/colors.background} 
 
 ; Urgent workspace
 label-urgent = ${self.label-focused}
 label-urgent-padding = ${self.label-focused-padding}
-label-urgent-foreground = ${res/colors.background}
-label-urgent-background = ${res/colors.alert}
+label-urgent-overline = ${res/colors.alert}
 
 [module/bspwm]
 type = internal/bspwm
@@ -211,8 +206,7 @@ ws-icon-default = 
 ; Active workspace on focused monitor
 label-focused = %icon%
 label-focused-padding = 2
-label-focused-foreground = ${res/colors.background}
-label-focused-background = ${res/colors.primary}
+label-focused-overline = ${res/colors.primary}
 
 ; Inactive filled workspace on focused monitor
 label-occupied = ${self.label-focused}
@@ -234,28 +228,23 @@ label-dimmed-background = ${res/colors.background-4}
 ; Urgent workspace on any monitor
 label-urgent = ${self.label-focused}
 label-urgent-padding = ${self.label-focused-padding}
-label-urgent-foreground = ${res/colors.background}
-label-urgent-background = ${res/colors.alert}
+label-urgent-overline = ${res/colors.alert}
 
 [module/battery-ramp]
 inherit = template/module/battery
 format-charging = <animation-charging> <label-charging>
+format-charging-overline = ${res/colors.primary}
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <label-full>
+format-full-overline = ${res/colors.primary-dark}
 time-format = %H:%M
 
 label-charging = %percentage%%
 label-charging-padding = 0
-label-charging-foreground = ${res/colors.primary}
-label-charging-background = ${res/colors.background}
 label-discharging = %percentage%% (%time%)
 label-discharging-padding = 0
-label-discharging-foreground = ${res/colors.foreground}
-label-discharging-background = ${res/colors.background}
 label-full =  %percentage%%
 label-full-padding = 0
-label-full-foreground = ${res/colors.primary-dark}
-label-full-background = ${res/colors.background}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -274,8 +263,6 @@ format = <label> <ramp-coreload>
 
 label = 
 label-padding = 0
-label-foreground = ${res/colors.foreground}
-label-background = ${res/colors.background}
 
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
@@ -296,8 +283,6 @@ inherit = template/module/cpu
 format = <label>
 label =  %percentage%%
 label-padding = 0
-label-foreground = ${res/colors.foreground}
-label-background = ${res/colors.background}
 
 [module/date]
 type = internal/date
@@ -309,41 +294,8 @@ time-alt = %I:%M %p
 
 label = %date% %time%
 label-padding = 0
-label-foreground = ${res/colors.foreground}
-label-background = ${res/colors.background}
 
 interval = 30
-
-[module/filesystem]
-type = internal/fs
-
-mount-0 = /
-mount-1 = /home
-mount-2 = /boot
-
-format-mounted = <label-mounted> <bar-used>
-format-unmounted = <label-unmounted>
-
-label-mounted = %mountpoint%
-label-mounted-padding = ${template/module/bar.label-padding}
-label-mounted-foreground = ${res/colors.background}
-label-mounted-background = ${res/colors.primary}
-
-label-unmounted = %mountpoint%
-label-unmounted-padding = ${template/module/bar.label-padding}
-label-unmounted-foreground = ${res/colors.background}
-label-unmounted-background = ${res/colors.background-4}
-
-bar-used-width = ${template/module/bar.bar-width}
-bar-used-fill = ${template/module/bar.bar-fill}
-bar-used-fill-foreground = ${res/colors.primary}
-bar-used-fill-background = ${template/module/bar.bar-fill-background}
-bar-used-indicator = ${template/module/bar.bar-indicator}
-bar-used-indicator-foreground = ${template/module/bar.bar-indicator-foreground}
-bar-used-indicator-background = ${template/module/bar.bar-indicator-background}
-bar-used-empty = ${template/module/bar.bar-empty}
-bar-used-empty-foreground = ${template/module/bar.bar-empty-foreground}
-bar-used-empty-background = ${template/module/bar.bar-empty-background}
 
 [module/memory-label]
 type = internal/memory
@@ -371,18 +323,13 @@ toggle-on-foreground = ${res/colors.foreground}
 toggle-off-foreground = ${res/colors.background-4}
 
 label-song = %title%
-label-song-foreground = ${res/colors.foreground}
-label-song-background = ${res/colors.background}
 label-song-maxlen = 25
 label-song-ellipsis = true
 
 label-offline = "Disconnected from MPD"
 label-offline-foreground = ${res/colors.background-4}
-label-offline-background = ${res/colors.background}
 
 label-time = %elapsed%/%total%
-label-time-foreground = ${res/colors.foreground}
-label-time-background = ${res/colors.background}
 
 bar-progress-width = 100
 bar-progress-fill = ${template/module/bar.bar-fill}
@@ -412,15 +359,10 @@ inherit = template/module/temperature
 
 format = <ramp> <label>
 format-warning = <ramp> <label>
+format-warning-overline = ${res/colors.alert}
 
 label = %temperature%
-label-padding = 0
-label-foreground = ${res/colors.foreground}
-label-background = ${res/colors.background}
 label-warn =  %temperature%
-label-warn-padding = ${self.label-padding}
-label-warn-foreground = ${res/colors.alert}
-label-warn-background = ${res/colors.background}
 
 ramp-0 = 
 ramp-1 = 
@@ -436,12 +378,9 @@ format-muted = <label-muted>
 
 label-volume = %percentage%%
 label-volume-padding = 0
-label-volume-foreground = ${res/colors.foreground}
-label-volume-background = ${res/colors.background}
 label-muted =  %percentage%%
 label-muted-padding = ${self.label-volume-padding}
 label-muted-foreground = ${res/colors.background-4}
-label-muted-background = ${res/colors.background}
 
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -450,17 +389,11 @@ ramp-volume-2 = 
 [module/wlan-network]
 inherit = template/module/network
 label-connected =  %essid%
-label-connected-foreground = ${res/colors.primary}
-label-connected-background = ${res/colors.background}
 label-disconnected =  %ifname%
-label-disconnected-foreground = ${res/colors.alert}
-label-disconnected-background = ${res/colors.background}
 
 [module/wlan-speed]
 inherit = template/module/network
 label-connected =  %upspeed%  %downspeed%
-label-connected-foreground = ${res/colors.foreground}
-label-connected-background = ${res/colors.background}
 
 [module/eth-network]
 type = internal/network
@@ -475,17 +408,13 @@ type = internal/xbacklight
 format = <label>
 
 label =  %percentage%%
-label-foreground = ${res/colors.foreground}
-label-background = ${res/colors.background}
 
 [module/xkeyboard-label]
 type = internal/xkeyboard
 format = <label-indicator>
 
 label-indicator = %name%
-label-indicator-padding = 0
-label-indicator-background = ${res/colors.background}
-label-indicator-foreground = ${res/colors.primary}
+label-indicator-overline = ${res/colors.primary}
 
 [module/xwindow-label]
 type = internal/xwindow
