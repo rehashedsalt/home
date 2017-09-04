@@ -16,8 +16,8 @@ alert-hard = ${xrdb:color1:#cc241d}
 primary-dark = ${xrdb:color4:#458588}
 primary = ${xrdb:color12:#83a598}
 
-resource-bad-dark = ${xrdb:color1:#cc241d}
-resource-bad = ${xrdb:color9:#fb4934}
+resource-bad-dark = ${xrdb:color5:#b16286}
+resource-bad = ${xrdb:color13:#d3869b}
 resource-good-dark = ${xrdb:color2:#98971a}
 resource-good = ${xrdb:color10:#b8bb26}
 
