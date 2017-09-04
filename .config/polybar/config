@@ -35,7 +35,7 @@ underline-fs = ${self.resource-bad-dark}
 underline-memory = ${self.resource-bad-dark}
 underline-temperature = ${self.resource-bad-dark}
 
-underline-battery = ${self.resource-good-dark}
+underline-battery = ${self.primary}
 
 underline-backlight = ${self.primary-dark}
 underline-network = ${self.primary-dark}
