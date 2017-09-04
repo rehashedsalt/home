@@ -30,6 +30,18 @@ foreground-2 = ${xrdb:fg2:#d5c4a1}
 foreground-3 = ${xrdb:fg3:#bdae93}
 foreground-4 = ${xrdb:fg4:#a89984}
 
+underline-cpu = ${self.resource-bad-dark}
+underline-fs = ${self.resource-bad-dark}
+underline-memory = ${self.resource-bad-dark}
+underline-temperature = ${self.resource-bad-dark}
+
+underline-battery = ${self.resource-good-dark}
+
+underline-backlight = ${self.primary-dark}
+underline-network = ${self.primary-dark}
+underline-date = ${self.primary-dark}
+underline-volume = ${self.primary-dark}
+
 [res/fonts]
 #font-0 = "DejaVu Sans:size=10;1"
 font-0 = "xos4 Terminus:size=9;1"
@@ -123,20 +135,26 @@ bar-empty-background = ${res/colors.background}
 [template/module/battery]
 type = internal/battery
 battery = BAT0
+format-charging-underline = ${res/colors.underline-battery}
+format-discharging-underline = ${res/colors.underline-battery}
+format-full-underline = ${res/colors.underline-battery}
 adapter = AC
 full-at = 95
 interval = 15
 
 [template/module/cpu]
 type = internal/cpu
+format-underline = ${res/colors.underline-cpu}
 interval = 1
 
 [template/module/network]
 type = internal/network
 interface = wlp1s0
 format-connected = <label-connected>
+format-connected-underline = ${res/colors.underline-network}
 format-disconnected = <label-disconnected>
 format-disconnected-overline = ${res/colors.alert}
+format-disconnected-underline = ${res/colors.underline-network}
 
 label-connected = %upspeed% %downspeed% - %signal%%
 label-disconnected = 
@@ -282,6 +300,8 @@ label =  %percentage%%
 [module/date]
 type = internal/date
 
+format-underline = ${res/colors.underline-date}
+
 date = %a
 time = %I:%M %p
 date-alt = %A, %B %d
@@ -293,6 +313,8 @@ interval = 30
 
 [module/filesystem]
 type = internal/fs
+
+format-mounted-underline = ${res/colors.underline-fs}
 
 label-mounted = %mountpoint%: %percentage_used%%
 label-unmounted = %mountpoint%
@@ -306,6 +328,7 @@ interval = 30
 [module/memory-label]
 type = internal/memory
 format = <label>
+format-underline = ${res/colors.underline-memory}
 
 label =  %percentage_used%% (%gb_used%)
 
@@ -360,8 +383,10 @@ label-offline =
 inherit = template/module/temperature
 
 format = <ramp> <label>
+format-underline = ${res/colors.underline-temperature}
 format-warning = <ramp> <label>
 format-warning-overline = ${res/colors.alert}
+format-warning-underline = ${res/colors.underline-temperature}
 
 label = %temperature%
 label-warn =  %temperature%
@@ -376,8 +401,10 @@ ramp-4 = 
 [module/volume-ramp]
 type = internal/volume
 format-volume = <ramp-volume> <label-volume>
+format-volume-underline = ${res/colors.underline-volume}
 format-muted = <ramp-volume> <label-muted>
 format-muted-foreground = ${res/colors.background-4}
+format-muted-underline = ${res/colors.underline-volume}
 
 label-volume = %percentage%%
 label-muted = %percentage%%
@@ -406,6 +433,7 @@ label-disconnected =
 [module/xbacklight-label]
 type = internal/xbacklight
 format = <label>
+format-underline = ${res/colors.underline-backlight}
 
 label =  %percentage%%
 
