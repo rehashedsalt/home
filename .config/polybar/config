@@ -8,34 +8,34 @@
 ; RESOURCES
 ;========================================
 [res/colors]
-alert-dark = ${xrdb:color3:#d79921}
-alert = ${xrdb:color11:#fabd2f}
-alert-hard-dark = ${xrdb:color9:#fb4934}
-alert-hard = ${xrdb:color1:#cc241d}
+alert-dark = ${xrdb:color3}
+alert = ${xrdb:color11}
+alert-hard-dark = ${xrdb:color9}
+alert-hard = ${xrdb:color1}
 
-primary-dark = ${xrdb:color4:#458588}
-primary = ${xrdb:color12:#83a598}
+primary-dark = ${xrdb:color4}
+primary = ${xrdb:color12}
 
-resource-bad-dark = ${xrdb:color5:#b16286}
-resource-bad = ${xrdb:color13:#d3869b}
-resource-good-dark = ${xrdb:color2:#98971a}
-resource-good = ${xrdb:color10:#b8bb26}
+resource-bad-dark = ${xrdb:color5}
+resource-bad = ${xrdb:color13}
+resource-good-dark = ${xrdb:color2}
+resource-good = ${xrdb:color10}
 
-background = ${xrdb:background:#1d2021}
-background-2 = ${xrdb:bg2:#282828}
-background-3 = ${xrdb:bg3:#32302f}
-background-4 = ${xrdb:bg4:#504945}
-foreground = ${xrdb:foreground:#ebdbb2}
-foreground-2 = ${xrdb:fg2:#d5c4a1}
-foreground-3 = ${xrdb:fg3:#bdae93}
-foreground-4 = ${xrdb:fg4:#a89984}
+background = ${xrdb:background}
+background-2 = ${xrdb:bg2}
+background-3 = ${xrdb:bg3}
+background-4 = ${xrdb:bg4}
+foreground = ${xrdb:foreground}
+foreground-2 = ${xrdb:fg2}
+foreground-3 = ${xrdb:fg3}
+foreground-4 = ${xrdb:fg4}
 
 underline-cpu = ${self.resource-bad-dark}
 underline-fs = ${self.resource-bad-dark}
 underline-memory = ${self.resource-bad-dark}
 underline-temperature = ${self.resource-bad-dark}
 
-underline-battery = ${self.primary}
+underline-battery = ${self.resource-good-dark}
 
 underline-backlight = ${self.primary-dark}
 underline-network = ${self.primary-dark}
@@ -93,7 +93,7 @@ border-top-color = ${res/colors.background-2}
 
 modules-left = i3 bspwm | wlan-network eth-network | mpd
 modules-center = xwindow-label
-modules-right = filesystem | temperature-ramp cpu-label memory-label | xbacklight-label volume-ramp battery-ramp | date
+modules-right = temperature-ramp cpu-label memory-label | xbacklight-label volume-ramp battery-ramp | date
 
 ;========================================
 ; MODULES
@@ -153,9 +153,13 @@ type = internal/network
 interface = wlp1s0
 format-connected = <label-connected>
 format-connected-underline = ${res/colors.underline-network}
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${self.format-connected-underline}
 format-disconnected = <label-disconnected>
 format-disconnected-overline = ${res/colors.alert}
 format-disconnected-underline = ${res/colors.underline-network}
+format-disconnected-prefix = "! "
+format-disconnected-prefix-foregrouond = ${res/colors.alert}
 
 label-connected = %upspeed% %downspeed% - %signal%%
 label-disconnected = 
@@ -249,10 +253,9 @@ label-urgent-overline = ${res/colors.alert}
 [module/battery-ramp]
 inherit = template/module/battery
 format-charging = <animation-charging> <label-charging>
-format-charging-overline = ${res/colors.primary}
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <label-full>
-format-full-overline = ${res/colors.primary-dark}
+format-full-overline = ${res/colors.resource-good}
 time-format = %H:%M
 
 label-charging = %percentage%%
@@ -266,12 +269,13 @@ ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
+ramp-capacity-foreground = ${self.format-discharging-underline}
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-framerate = 750
-animation-charging-foreground = ${res/colors.primary}
+animation-charging-foreground = ${self.format-charging-underline}
 
 [module/cpu-coreload]
 inherit = template/module/cpu
@@ -296,12 +300,16 @@ ramp-coreload-foreground = ${res/colors.foreground}
 [module/cpu-label]
 inherit = template/module/cpu
 format = <label>
-label =  %percentage%%
+format-prefix = " "
+format-prefix-foreground = ${self.format-underline}
+label = %percentage%%
 
 [module/date]
 type = internal/date
 
 format-underline = ${res/colors.underline-date}
+format-prefix = " "
+format-prefix-foreground = ${self.format-underline}
 
 date = %a
 time = %I:%M %p
@@ -330,8 +338,10 @@ interval = 30
 type = internal/memory
 format = <label>
 format-underline = ${res/colors.underline-memory}
+format-prefix = " "
+format-prefix-foreground = ${self.format-underline}
 
-label =  %percentage_used%% (%gb_used%)
+label =  %percentage_used%% (%gb_used%)
 
 [module/mpd]
 type = internal/mpd
@@ -385,9 +395,11 @@ inherit = template/module/temperature
 
 format = <ramp> <label>
 format-underline = ${res/colors.underline-temperature}
-format-warning = <ramp> <label>
+format-warning = <label>
 format-warning-overline = ${res/colors.alert}
 format-warning-underline = ${res/colors.underline-temperature}
+format-warning-prefix = " "
+format-warning-prefix-foreground = ${res/colors.alert}
 
 label = %temperature%
 label-warn =  %temperature%
@@ -398,6 +410,7 @@ ramp-2 = 
 ramp-3 = 
 ramp-4 = 
 ;ramp-0 = 
+ramp-foreground = ${self.format-underline}
 
 [module/volume-ramp]
 type = internal/volume
@@ -413,11 +426,13 @@ label-muted = %percentage%%
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
+ramp-volume-foreground = ${self.format-volume-underline}
 
 [module/wlan-network]
 inherit = template/module/network
-label-connected =  %essid%
-label-disconnected =  %ifname%
+format-connected-prefix = " "
+label-connected = %essid%
+label-disconnected = %ifname%
 
 [module/wlan-speed]
 inherit = template/module/network
@@ -435,8 +450,10 @@ label-disconnected =
 type = internal/xbacklight
 format = <label>
 format-underline = ${res/colors.underline-backlight}
+format-prefix = " "
+format-prefix-foreground = ${self.format-underline}
 
-label =  %percentage%%
+label = %percentage%%
 
 [module/xkeyboard-label]
 type = internal/xkeyboard
