@@ -45,7 +45,7 @@ underline-volume = ${self.primary-dark}
 [res/fonts]
 #font-0 = "DejaVu Sans:size=10;1"
 font-0 = "xos4 Terminus:size=9;1"
-font-1 = "Material Icons:size=10;1"
+font-1 = "Material Design Icons:size=10;1"
 font-2 = "FontAwesome:size=10;1"
 font-3 =
 font-4 =
@@ -252,7 +252,9 @@ label-urgent-overline = ${res/colors.alert}
 
 [module/battery-ramp]
 inherit = template/module/battery
-format-charging = <animation-charging> <label-charging>
+format-charging = <ramp-capacity> <label-charging>
+format-charging-prefix = 
+format-charging-prefix-foreground = ${self.format-charging-underline}
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <label-full>
 format-full-overline = ${res/colors.resource-good}
@@ -262,20 +264,20 @@ label-charging = %percentage%%
 label-charging-padding = 0
 label-discharging = %percentage%% (%time%)
 label-discharging-padding = 0
-label-full =  %percentage%%
+label-full = %percentage%%
 label-full-padding = 0
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
+ramp-capacity-0= 
+ramp-capacity-1= 
+ramp-capacity-2= 
+ramp-capacity-3= 
+ramp-capacity-4= 
+ramp-capacity-5= 
+ramp-capacity-6= 
+ramp-capacity-7= 
+ramp-capacity-8= 
+ramp-capacity-9= 
 ramp-capacity-foreground = ${self.format-discharging-underline}
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-framerate = 750
-animation-charging-foreground = ${res/colors.resource-good}
 
 [module/cpu-coreload]
 inherit = template/module/cpu
@@ -402,7 +404,7 @@ format-warning-prefix = " "
 format-warning-prefix-foreground = ${res/colors.alert}
 
 label = %temperature%
-label-warn =  %temperature%
+label-warn = %temperature%
 
 ramp-0 = 
 ramp-1 = 
