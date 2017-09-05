@@ -426,7 +426,7 @@ ramp-volume-foreground = ${self.format-volume-underline}
 
 [module/wlan-network]
 inherit = template/module/network
-format-connected-prefix = " "
+format-connected-prefix = " "
 label-connected = %essid%
 label-disconnected = %ifname%
 
