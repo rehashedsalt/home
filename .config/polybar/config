@@ -419,9 +419,9 @@ format-muted-underline = ${res/colors.underline-volume}
 label-volume = %percentage%%
 label-muted = %percentage%%
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 ramp-volume-foreground = ${self.format-volume-underline}
 
 [module/wlan-network]
