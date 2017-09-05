@@ -93,7 +93,7 @@ border-top-color = ${res/colors.background-2}
 
 modules-left = i3 bspwm | wlan-network eth-network | mpd
 modules-center = xwindow-label
-modules-right = temperature-ramp cpu-label memory-label | xbacklight-label volume-ramp battery-ramp | date
+modules-right = temperature-label cpu-label memory-label | xbacklight-label volume-ramp battery-ramp | date
 
 ;========================================
 ; MODULES
@@ -392,27 +392,21 @@ inherit = module/mpd
 format-online = <icon-random> <icon-repeat>
 label-offline = 
 
-[module/temperature-ramp]
+[module/temperature-label]
 inherit = template/module/temperature
 
-format = <ramp> <label>
+format = <label>
 format-underline = ${res/colors.underline-temperature}
+format-prefix = " "
+format-prefix-foreground = ${self.format-underline}
 format-warning = <label>
 format-warning-overline = ${res/colors.alert}
 format-warning-underline = ${res/colors.underline-temperature}
-format-warning-prefix = " "
+format-warning-prefix = " "
 format-warning-prefix-foreground = ${res/colors.alert}
 
 label = %temperature%
 label-warn = %temperature%
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-ramp-4 = 
-;ramp-0 = 
-ramp-foreground = ${self.format-underline}
 
 [module/volume-ramp]
 type = internal/volume
