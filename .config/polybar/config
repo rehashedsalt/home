@@ -275,7 +275,7 @@ animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-framerate = 750
-animation-charging-foreground = ${self.format-charging-underline}
+animation-charging-foreground = ${res/colors.resource-good}
 
 [module/cpu-coreload]
 inherit = template/module/cpu
