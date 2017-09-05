@@ -432,13 +432,13 @@ label-disconnected = %ifname%
 
 [module/wlan-speed]
 inherit = template/module/network
-label-connected =  %upspeed%  %downspeed%
+label-connected =  %upspeed%  %downspeed%
 
 [module/eth-network]
 type = internal/network
 inherit = module/wlan-network
 interface = enp0s31f6
-label-connected =  %upspeed%  %downspeed%
+label-connected =  %upspeed%  %downspeed%
 label-connected-foreground = ${res/colors.primary-dark}
 label-disconnected = 
 
