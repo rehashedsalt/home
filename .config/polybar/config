@@ -283,7 +283,7 @@ ramp-capacity-foreground = ${self.format-discharging-underline}
 inherit = template/module/cpu
 format = <label> <ramp-coreload>
 
-label = 
+label = 
 
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
@@ -302,7 +302,7 @@ ramp-coreload-foreground = ${res/colors.foreground}
 [module/cpu-label]
 inherit = template/module/cpu
 format = <label>
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${self.format-underline}
 label = %percentage%%
 
