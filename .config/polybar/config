@@ -310,7 +310,7 @@ label = %percentage%%
 type = internal/date
 
 format-underline = ${res/colors.underline-date}
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${self.format-underline}
 
 date = %a
