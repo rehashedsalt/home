@@ -45,8 +45,8 @@ underline-volume = ${self.primary-dark}
 [res/fonts]
 #font-0 = "DejaVu Sans:size=10;1"
 font-0 = "xos4 Terminus:size=9;1"
-font-1 = "FontAwesome:size=10;1"
-font-2 =
+font-1 = "Material Icons:size=10;1"
+font-2 = "FontAwesome:size=10;1"
 font-3 =
 font-4 =
 
