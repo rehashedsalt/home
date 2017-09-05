@@ -471,3 +471,4 @@ label = %title%
 label-maxlen = 75
 label-ellipsis = true
 
+; vim:ft=dosini
