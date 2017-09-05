@@ -350,13 +350,13 @@ type = internal/mpd
 format-online = <label-song> <label-time>
 format-offline =
 
-icon-next = 
-icon-pause = 
-icon-play = 
-icon-prev = 
-icon-random = 
-icon-repeat = 
-icon-stop = 
+icon-next = 
+icon-pause = 
+icon-play = 
+icon-prev = 
+icon-random = 
+icon-repeat = 
+icon-stop = 
 
 toggle-on-foreground = ${res/colors.foreground}
 toggle-off-foreground = ${res/colors.background-4}
