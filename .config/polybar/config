@@ -1,12 +1,12 @@
-;==================================================
-;
-;  INFO: https://github.com/jaagr/polybar
-;
-;===================================================
+#==================================================
+#
+#  INFO: https://github.com/jaagr/polybar
+#
+#===================================================
 
-;========================================
-; RESOURCES
-;========================================
+#========================================
+# RESOURCES
+#========================================
 [res/colors]
 alert-dark = ${xrdb:color3}
 alert = ${xrdb:color11}
@@ -50,19 +50,19 @@ font-2 = "FontAwesome:size=10;1"
 font-3 =
 font-4 =
 
-;========================================
-; BARS
-;========================================
+#========================================
+# BARS
+#========================================
 
-; TEMPLATE
-;====================
+# TEMPLATE
+#====================
 
 [template/bar]
-; Rendering of the bar
+# Rendering of the bar
 width = 100%
 height = 28
 
-; Module padding and spacing
+# Module padding and spacing
 padding = 2
 module-margin = 1
 
@@ -70,19 +70,19 @@ overline-size = 2
 underline-size = 1
 line-color = ${res/colors.background-2}
 
-; Module colors
+# Module colors
 background = ${res/colors.background}
 foreground = ${res/colors.foreground}
 
-; Module fonts
+# Module fonts
 font-0 = ${res/fonts.font-0}
 font-1 = ${res/fonts.font-1}
 font-2 = ${res/fonts.font-2}
 font-3 = ${res/fonts.font-3}
 font-4 = ${res/fonts.font-4}
 
-; BARS
-;====================
+# BARS
+#====================
 [bar/alpha]
 inherit = template/bar
 bottom = true
@@ -95,22 +95,22 @@ modules-left = i3 bspwm | wlan-network eth-network | mpd
 modules-center = xwindow-label
 modules-right = temperature-label cpu-label memory-label | xbacklight-ramp volume-ramp battery-ramp | date
 
-;========================================
-; MODULES
-;========================================
+#========================================
+# MODULES
+#========================================
 
-; COSMETIC
-;====================
+# COSMETIC
+#====================
 [module/|]
 type = custom/text
 content = |
 content-foreground = ${res/colors.background-4}
 
-; CUSTOM
-;====================
+# CUSTOM
+#====================
 
-; TEMPLATE
-;====================
+# TEMPLATE
+#====================
 [template/module/bar]
 format = <label> <bar>
 
@@ -171,8 +171,8 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-; STOCK
-;====================
+# STOCK
+#====================
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
@@ -182,21 +182,21 @@ label-mode-padding = 2
 label-mode-foreground = ${res/colors.background}
 label-mode-background = ${res/colors.primary}
 
-; Active workspace on focused monitor
+# Active workspace on focused monitor
 label-focused = %name%
 label-focused-padding = ${self.label-mode-padding}
 label-focused-background = ${res/colors.background-4}
 label-focused-overline = ${res/colors.primary}
 
-; Active workspace on unfocused monitor
+# Active workspace on unfocused monitor
 label-visible = ${self.label-focused}
 label-visible-padding = ${self.label-focused-padding}
 
-; Inactive workspace
+# Inactive workspace
 label-unfocused = ${self.label-focused}
 label-unfocused-padding = ${self.label-focused-padding}
 
-; Urgent workspace
+# Urgent workspace
 label-urgent = ${self.label-focused}
 label-urgent-padding = ${self.label-focused-padding}
 label-urgent-overline = ${res/colors.alert}
@@ -208,44 +208,44 @@ enable-scroll = true
 format = <label-state> <label-mode>
 pin-workspaces = true
 
-; Firefox logo
-ws-icon-0 = I;
-; Beamed eigth notes
-ws-icon-1 = II;
-; Terminal
-ws-icon-2 = III;
-; Folder
-ws-icon-3 = IV;
-; Envelope
-ws-icon-8 = IX;
-; Erlenmeyer flask
-ws-icon-9 = X;
-; Monitor
+# Firefox logo
+ws-icon-0 = I#
+# Beamed eigth notes
+ws-icon-1 = II#
+# Terminal
+ws-icon-2 = III#
+# Folder
+ws-icon-3 = IV#
+# Envelope
+ws-icon-8 = IX#
+# Erlenmeyer flask
+ws-icon-9 = X#
+# Monitor
 ws-icon-default = 
 
-; Active workspace on focused monitor
+# Active workspace on focused monitor
 label-focused = %icon%
 label-focused-padding = 2
 label-focused-overline = ${res/colors.primary}
 
-; Inactive filled workspace on focused monitor
+# Inactive filled workspace on focused monitor
 label-occupied = ${self.label-focused}
 label-occupied-padding = ${self.label-focused-padding}
 label-occupied-foreground = ${res/colors.background}
 label-occupied-background = ${res/colors.background-4}
 
-; Inactive empty workspace on focused monitor
+# Inactive empty workspace on focused monitor
 label-empty = ${self.label-focused}
 label-empty-padding = ${self.label-focused-padding}
 label-empty-foreground = ${res/colors.background-4}
 label-empty-background = ${res/colors.background}
 
-; Filled workspace on unfocused monitor
+# Filled workspace on unfocused monitor
 label-dimmed-padding = ${self.label-focused-padding}
 label-dimmed-foreground = ${res/colors.primary-dark}
 label-dimmed-background = ${res/colors.background-4}
 
-; Urgent workspace on any monitor
+# Urgent workspace on any monitor
 label-urgent = ${self.label-focused}
 label-urgent-padding = ${self.label-focused-padding}
 label-urgent-overline = ${res/colors.alert}
@@ -471,4 +471,4 @@ label = %title%
 label-maxlen = 75
 label-ellipsis = true
 
-; vim:ft=dosini
+# vim:ft=dosini
