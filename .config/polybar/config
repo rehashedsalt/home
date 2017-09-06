@@ -93,7 +93,7 @@ border-top-color = ${res/colors.background-2}
 
 modules-left = i3 bspwm | wlan-network eth-network | mpd
 modules-center = xwindow-label
-modules-right = temperature-label cpu-label memory-label | xbacklight-ramp volume-ramp battery-ramp | date
+modules-right = temperature-label cpu-label memory-label | xbacklight-ramp-mini volume-ramp-mini battery-ramp-mini | date
 
 #========================================
 # MODULES
@@ -274,6 +274,28 @@ ramp-capacity-8= 
 ramp-capacity-9= 
 ramp-capacity-foreground = ${self.format-discharging-underline}
 
+[module/battery-ramp-mini]
+inherit = template/module/battery
+format-charging = <ramp-capacity>
+format-charging-prefix = 
+format-charging-prefix-foreground = ${self.format-charging-underline}
+format-discharging = <ramp-capacity>
+format-full = <ramp-capacity
+format-full-overline = ${res/colors.resource-good}
+format-full-prefix = " "
+format-full-prefix-foreground = ${res/colors.resource-good}
+
+ramp-capacity-0= 
+ramp-capacity-1= 
+ramp-capacity-2= 
+ramp-capacity-3= 
+ramp-capacity-4= 
+ramp-capacity-5= 
+ramp-capacity-6= 
+ramp-capacity-7= 
+ramp-capacity-8= 
+ramp-capacity-9= 
+
 [module/cpu-coreload]
 inherit = template/module/cpu
 format = <label> <ramp-coreload>
@@ -419,6 +441,18 @@ ramp-volume-1 = 
 ramp-volume-2 = 
 ramp-volume-foreground = ${self.format-volume-underline}
 
+[module/volume-ramp-mini]
+type = internal/volume
+format-volume = <ramp-volume>
+format-volume-underline = ${res/colors.underline-volume}
+format-muted = <ramp-volume>
+format-muted-foreground = ${res/colors.background-4}
+format-muted-underline = ${res/colors.underline-volume}
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
 [module/wlan-network]
 inherit = template/module/network
 format-connected-prefix = " "
@@ -452,6 +486,19 @@ ramp-4 = 
 ramp-5 = 
 ramp-6 = 
 ramp-foreground = ${self.format-underline}
+
+[module/xbacklight-ramp-mini]
+type = internal/xbacklight
+format = <ramp>
+format-underline = ${res/colors.underline-backlight}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-5 = 
+ramp-6 = 
 
 [module/xkeyboard-label]
 type = internal/xkeyboard
