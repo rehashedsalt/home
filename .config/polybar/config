@@ -251,6 +251,8 @@ format-charging-prefix-foreground = ${self.format-charging-underline}
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <label-full>
 format-full-overline = ${res/colors.resource-good}
+format-full-prefix = " "
+format-full-prefix-foreground = ${res/colors.resource-good}
 time-format = %H:%M
 
 label-charging = %percentage%%
