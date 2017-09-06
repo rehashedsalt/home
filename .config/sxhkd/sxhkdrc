@@ -12,6 +12,10 @@ alt + @space
 alt + @\
 	rofi -show ssh
 
+# alt-tabber
+alt + Tab
+	rofi -show
+
 # make sxhkd reload its configuration files:
 alt + Escape
 	pkill -USR1 -x sxhkd
