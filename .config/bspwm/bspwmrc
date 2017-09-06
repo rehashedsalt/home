@@ -43,10 +43,10 @@ redshift &					# Eye strain-reducer
 feh --randomize --bg-fill ~/Pictures/Wallpapers/i3 &
 compton &					# Desktop compositor
 pulseaudio -D &					# Audio daemon
-polybar alpha & # Simple bar
+polybar alpha & 				# Simple bar
 
 #mopidy &
-#syncthing -no-browser &				# File synchronization daemon
+#syncthing -no-browser &			# File synchronization daemon
 
 ## LOCKUP
 # I autostart my session on all of my machines
