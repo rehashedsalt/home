@@ -208,24 +208,17 @@ enable-scroll = true
 format = <label-state> <label-mode>
 pin-workspaces = true
 
-# Firefox logo
-ws-icon-0 = I#
-# Beamed eigth notes
-ws-icon-1 = II#
-# Terminal
-ws-icon-2 = III#
-# Folder
-ws-icon-3 = IV#
-# Envelope
-ws-icon-8 = IX#
-# Erlenmeyer flask
-ws-icon-9 = X#
-# Monitor
-ws-icon-default = 
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-8 = IX;
+ws-icon-9 = X;
+ws-icon-default = 
 
 # Active workspace on focused monitor
 label-focused = %icon%
 label-focused-padding = 2
+label-focused-background = ${res/colors.background-4}
 label-focused-overline = ${res/colors.primary}
 
 # Inactive filled workspace on focused monitor

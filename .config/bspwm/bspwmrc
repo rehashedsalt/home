@@ -43,7 +43,7 @@ compton &					# Desktop compositor
 pulseaudio -D &					# Audio daemon
 polybar alpha & # Simple bar
 
-syncthing -no-browser &				# File synchronization daemon
+#syncthing -no-browser &				# File synchronization daemon
 
 ## LOCKUP
 # I autostart my session on all of my machines
