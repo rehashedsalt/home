@@ -2,7 +2,7 @@
 
 # terminal emulator
 alt + Return
-	urxvt
+	termite
 
 # program launcher
 alt + @space

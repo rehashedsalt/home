@@ -35,6 +35,8 @@ xset s off
 
 ## SERVICES AND DAEMONS
 sxhkd &						# Simple hotkey daemon
+xfce4-power-manager &				# Power management daemon
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &	# That thing
 dunst &						# Notification daemon
 redshift &					# Eye strain-reducer
 
@@ -43,6 +45,7 @@ compton &					# Desktop compositor
 pulseaudio -D &					# Audio daemon
 polybar alpha & # Simple bar
 
+#mopidy &
 #syncthing -no-browser &				# File synchronization daemon
 
 ## LOCKUP
