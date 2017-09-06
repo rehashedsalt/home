@@ -36,7 +36,7 @@ xset s off
 ## SERVICES AND DAEMONS
 sxhkd &						# Simple hotkey daemon
 dunst &						# Notification daemon
-redshift -l 38.627003:-90.199402 &		# Eye strain-reducer
+redshift &					# Eye strain-reducer
 
 feh --randomize --bg-fill ~/Pictures/Wallpapers/i3 &
 compton &					# Desktop compositor
@@ -48,7 +48,7 @@ polybar alpha & # Simple bar
 ## LOCKUP
 # I autostart my session on all of my machines
 # Thus, having a session-side lock screen is kind of important
-i3lock -i ~/.i3splash &
+#i3lock -i ~/.i3splash &
 
 ## bspwm GENERAL CONFIGURATION
 bspc monitor -d			I II III IV V VI VII VIII IX X
@@ -71,6 +71,6 @@ bspc config urgent_border_color			"#fabd2f"
 
 ## bspwm WINDOW RULES
 bspc rule -a Firefox desktop=I
-bspc rule -a Spotify desktop=VIII
-bspc rule -a Thunderbird desktop=IX
+bspc rule -a Thunderbird desktop=II
+bspc rule -a Spotify desktop=IX
 
