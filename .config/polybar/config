@@ -158,8 +158,8 @@ format-connected-prefix-foreground = ${self.format-connected-underline}
 format-disconnected = <label-disconnected>
 format-disconnected-overline = ${res/colors.alert}
 format-disconnected-underline = ${res/colors.underline-network}
-format-disconnected-prefix = "! "
-format-disconnected-prefix-foregrouond = ${res/colors.alert}
+format-disconnected-prefix = " "
+format-disconnected-prefix-foreground = ${res/colors.alert}
 
 label-connected = %upspeed% %downspeed% - %signal%%
 label-disconnected = 
