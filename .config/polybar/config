@@ -95,6 +95,18 @@ modules-left = i3 bspwm | wlan-network eth-network | mpd
 modules-center = xwindow-label
 modules-right = temperature-label cpu-label memory-label | xbacklight-ramp volume-ramp battery-ramp | date
 
+[bar/gamma]
+inherit = template/bar
+bottom = true
+tray-position = right
+
+border-top-size = 2
+border-top-color = ${res/colors.background-2}
+
+modules-left = i3 bspwm | 
+modules-center = xwindow-label
+modules-right = | xbacklight-ramp-mini volume-ramp-mini wlan-network-mini battery-ramp-mini | date
+
 #========================================
 # MODULES
 #========================================
@@ -111,28 +123,6 @@ content-foreground = ${res/colors.background-4}
 
 # TEMPLATE
 #====================
-[template/module/bar]
-format = <label> <bar>
-
-label = "<TEMPLATE>"
-label-foreground = ${res/colors.background}
-label-background = ${res/colors.primary}
-
-bar-width = 30
-bar-fill = |
-bar-fill-foreground = ${res/colors.primary}
-bar-fill-foreground-progress = ${res/colors.resource-good}
-bar-fill-foreground-resource-low = ${res/colors.resource-bad}
-bar-fill-foreground-resource-high = ${res/colors.resource-good}
-bar-fill-foreground-setting = ${res/colors.primary}
-bar-fill-background = ${res/colors.background}
-bar-indicator = |
-bar-indicator-foreground = ${res/colors.foreground}
-bar-indicator-background = ${res/colors.background}
-bar-empty = |
-bar-empty-foreground = ${res/colors.background-4}
-bar-empty-background = ${res/colors.background}
-
 [template/module/battery]
 type = internal/battery
 battery = BAT0
@@ -153,7 +143,7 @@ type = internal/network
 interface = wlp1s0
 format-connected = <label-connected>
 format-connected-underline = ${res/colors.underline-network}
-format-connected-prefix = " "
+format-connected-prefix = " "
 format-connected-prefix-foreground = ${self.format-connected-underline}
 format-disconnected = <label-disconnected>
 format-disconnected-overline = ${res/colors.alert}
@@ -296,26 +286,6 @@ ramp-capacity-7= 
 ramp-capacity-8= 
 ramp-capacity-9= 
 
-[module/cpu-coreload]
-inherit = template/module/cpu
-format = <label> <ramp-coreload>
-
-label = 
-
-ramp-coreload-0 = ▁
-ramp-coreload-1 = ▂
-ramp-coreload-2 = ▃
-ramp-coreload-3 = ▄
-ramp-coreload-4 = ▅
-ramp-coreload-4-foreground = ${res/colors.alert}
-ramp-coreload-5 = ▆
-ramp-coreload-5-foreground = ${res/colors.alert}
-ramp-coreload-6 = ▇
-ramp-coreload-6-foreground = ${res/colors.alert-hard}
-ramp-coreload-7 = █
-ramp-coreload-7-foreground = ${res/colors.alert-hard}
-ramp-coreload-foreground = ${res/colors.foreground}
-
 [module/cpu-label]
 inherit = template/module/cpu
 format = <label>
@@ -339,19 +309,17 @@ label = %date% %time%
 
 interval = 30
 
-[module/filesystem]
-type = internal/fs
+[module/date-mini]
+type = internal/date
+format-underline = ${res/colors.underline-date}
 
-format-mounted-underline = ${res/colors.underline-fs}
+time = %I:%M %p
+date-alt = %A, %B %d
+time-alt = %I:%M %p
 
-label-mounted = %mountpoint%: %percentage_used%%
-label-unmounted = %mountpoint%
-label-unmounted-foreground = ${res/colors.background-4}
+label= %date% %time%
 
-mount-0 = /
-mount-1 = /home
-
-interval = 30
+interval = 60
 
 [module/memory-label]
 type = internal/memory
@@ -382,20 +350,7 @@ label-song = %title%
 label-song-maxlen = 25
 label-song-ellipsis = true
 
-label-offline = "Disconnected from MPD"
-
 label-time = %elapsed%/%total%
-
-bar-progress-width = 100
-bar-progress-fill = ${template/module/bar.bar-fill}
-bar-progress-fill-foreground = ${template/module/bar.bar-fill-foreground-progress}
-bar-progress-fill-background = ${template/module/bar.bar-fill-background}
-bar-progress-indicator = ${template/module/bar.bar-indicator}
-bar-progress-indicator-foreground = ${template/module/bar.bar-indicator-foreground}
-bar-progress-indicator-background = ${template/module/bar.bar-indicator-background}
-bar-progress-empty = ${template/module/bar.bar-empty}
-bar-progress-empty-foreground = ${template/module/bar.bar-empty-foreground}
-bar-progress-empty-background = ${template/module/bar.bar-empty-background}
 
 interval = 1
 
@@ -457,6 +412,12 @@ ramp-volume-2 = 
 inherit = template/module/network
 format-connected-prefix = " "
 label-connected = %essid%
+label-disconnected = %ifname%
+
+[module/wlan-network-mini]
+inherit = template/module/network
+format-connected-prefix = 
+label-connected = 
 label-disconnected = %ifname%
 
 [module/wlan-speed]
