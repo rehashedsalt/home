@@ -103,7 +103,7 @@ background = #001d2021
 
 modules-left = i3 bspwm | 
 modules-center = xwindow-label
-modules-right = | xbacklight-ramp-mini volume-ramp-mini wlan-network-mini battery-ramp-mini | date-mini
+modules-right = | temperature-label-alert xbacklight-ramp-mini volume-ramp-mini wlan-network-mini battery-ramp-mini | date-mini
 
 #========================================
 # MODULES
@@ -374,6 +374,17 @@ format-warning-prefix-foreground = ${res/colors.alert}
 
 label = %temperature%
 label-warn = %temperature%
+
+[module/temperature-label-alert]
+inherit = template/module/temperature
+
+format-warning = <label>
+format-warning-foreground = ${res/colors.alert}
+
+label = 
+
+label-warn =  %temperature%
+label-warn-foreground = ${res/colors.alert}
 
 [module/volume-ramp]
 type = internal/volume
