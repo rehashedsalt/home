@@ -105,7 +105,7 @@ border-top-color = ${res/colors.background-2}
 
 modules-left = i3 bspwm | 
 modules-center = xwindow-label
-modules-right = | xbacklight-ramp-mini volume-ramp-mini wlan-network-mini battery-ramp-mini | date
+modules-right = | xbacklight-ramp-mini volume-ramp-mini wlan-network-mini battery-ramp-mini | date-mini
 
 #========================================
 # MODULES
