@@ -103,7 +103,7 @@ background = #001d2021
 
 modules-left = i3 bspwm | 
 modules-center = xwindow-label
-modules-right = | temperature-label-alert xbacklight-ramp-mini volume-ramp-mini wlan-network-mini battery-ramp-mini | date-mini
+modules-right = | temperature-label-alert wlan-network-mini volume-ramp-mini battery-ramp-mini | date-mini
 
 #========================================
 # MODULES
