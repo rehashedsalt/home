@@ -35,7 +35,7 @@ filter_unmatched_urls = true
 
 [colors]
 foreground = #ebdbb2
-background = rgba(29, 32, 33, 0.94)
+background = rgba(29, 32, 33, 0.5)
 #background = #1d2021
 
 color0= #282828
