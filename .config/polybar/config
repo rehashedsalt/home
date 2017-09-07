@@ -310,10 +310,10 @@ type = internal/date
 format-underline = ${res/colors.underline-date}
 
 time = %I:%M %p
-date-alt = %A, %B %d
+date-alt = "%A, %B %d "
 time-alt = %I:%M %p
 
-label= %date% %time%
+label= %date%%time%
 
 interval = 60
 
