@@ -8,7 +8,7 @@ urxvt*font: xft:xos4 Terminus:size=9
 urxvt*letterSpace: 0
 !urxvt*font: xft:Hack Regular:size=9
 urxvt*depth: 32
-urxvt*background: rgba:1d1d/2020/2121/F000
+urxvt*background: rgba:1d1d/2020/2121/5000
 
 !-----------------------------
 ! ROFI Theme
