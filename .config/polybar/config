@@ -100,8 +100,7 @@ inherit = template/bar
 bottom = true
 tray-position = right
 
-border-top-size = 2
-border-top-color = ${res/colors.background-2}
+background = #001d2021
 
 modules-left = i3 bspwm | 
 modules-center = xwindow-label
