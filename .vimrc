@@ -1,7 +1,8 @@
 execute pathogen#infect()
 
-colorscheme gruvbox
-set background=dark
+"colorscheme gruvbox
+"set background=dark
+colorscheme wal
 let g:gruvbox_contrast_dark='medium'
 
 syntax on
