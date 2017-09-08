@@ -103,7 +103,7 @@ background = #001d2021
 
 modules-left = i3 bspwm | 
 modules-center = xwindow-label
-modules-right = | temperature-label-alert wlan-network-mini volume-ramp-mini battery-ramp-mini | date-mini
+modules-right = | temperature-label-alert mpd-mini wlan-network-mini volume-ramp-mini battery-ramp-mini | date-mini
 
 #========================================
 # MODULES
@@ -348,6 +348,12 @@ label-song-ellipsis = true
 label-time = %elapsed%/%total%
 
 interval = 1
+
+[module/mpd-mini]
+inherit = module/mpd
+format-online = <label-song>
+format-online-prefix = " "
+label-song =  %title%
 
 [module/mpd-control]
 inherit = module/mpd
