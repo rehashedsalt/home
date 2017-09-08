@@ -20,6 +20,23 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# Set a wallpaper
 wal -a 80 -i "$HOME/Pictures/Wallpapers/i3"
+
+# Source its generated colors
+source "$HOME/.cache/wal/colors.sh"
+
+# Restart dunst
+pkill dunst
+dunst \
+	-lb "${color0}" \
+	-nb "${color0}" \
+	-cb "${color0}" \
+	-lfr "${color0}" \
+	-nfr "${color0}" \
+	-cfr "${color0}" \
+	-lf "${color7}" \
+	-nf "${color15}" \
+	-cf "${color9}" \
 
 exit 0
