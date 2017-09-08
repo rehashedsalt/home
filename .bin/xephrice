@@ -22,7 +22,7 @@
 
 xephyrdisplay=":8"
 
-Xephyr -screen 1908x1042 -title "Xephyr Instance" -br -ac $xephyrdisplay &
+Xephyr -screen 1920x1080 -title "Xephyr Instance" -br -ac $xephyrdisplay &
 
 DISPLAY="$xephyrdisplay"
 sleep 1
