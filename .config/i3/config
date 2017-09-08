@@ -60,14 +60,14 @@ exec_always --no-startup-id "killall polybar; sleep 1; polybar -r gamma"
 exec --no-startup-id "redshift"
 exec_always --no-startup-id "compton --config ~/.config/compton.conf"
 exec_always --no-startup-id "dunst"
-exec_always --no-startup-id "feh --randomize --bg-fill ~/Pictures/Wallpapers/i3"
+exec_always --no-startup-id "~/.bin/wal-set"
 exec_always --no-startup-id "xfce4-power-manager"
 exec --no-startup-id "xfce4-volumed-pulse"
 exec_always --no-startup-id "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 exec --no-startup-id "mopidy"
 #exec --no-startup-id "syncthing -no-browser"
 
-bindsym $mod+$shift+w exec --no-startup-id "feh --randomize --bg-fill ~/Pictures/Wallpapers/i3"
+bindsym $mod+$shift+w exec --no-startup-id "~/.bin/wal-set"
 
 ###################
 ## Settings
