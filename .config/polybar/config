@@ -25,7 +25,7 @@ background = ${xrdb:background}
 background-2 = ${xrdb:bg2}
 background-3 = ${xrdb:bg3}
 background-4 = ${xrdb:bg4}
-foreground = ${xrdb:foreground}
+foreground = ${xrdb:color15}
 foreground-2 = ${xrdb:fg2}
 foreground-3 = ${xrdb:fg3}
 foreground-4 = ${xrdb:fg4}
@@ -114,7 +114,7 @@ modules-right = | temperature-label-alert mpd-mini wlan-network-mini volume-ramp
 [module/|]
 type = custom/text
 content = |
-content-foreground = ${res/colors.foreground-4}
+content-foreground = ${res/colors.foreground}
 
 # CUSTOM
 #====================
