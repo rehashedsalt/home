@@ -28,7 +28,7 @@
 # dcfldd is a fork of dd with some improvements
 # I prefer it, so there's an alias here
 if [ `which dcfldd` ]; then
-	alias dd=sudo dcfldd
+	alias dd=dcfldd
 	alias ddgnu=dd
 fi
 
