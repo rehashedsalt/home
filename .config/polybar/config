@@ -429,8 +429,9 @@ label-disconnected = %ifname%
 [module/wlan-network-mini]
 inherit = template/module/network
 format-connected-prefix = 
+format-disconnected-prefix = 
 label-connected = 
-label-disconnected = %ifname%
+label-disconnected = 
 
 [module/wlan-speed]
 inherit = template/module/network
