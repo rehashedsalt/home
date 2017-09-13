@@ -103,7 +103,7 @@ background = #001d2021
 
 modules-left = i3 bspwm | 
 modules-center = xwindow-label
-modules-right = | temperature-label-alert mpd-mini wlan-network-mini volume-ramp-mini battery-ramp-mini | date-mini
+modules-right = | temperature-label-alert mpd-mini wlan-network-mini volume-ramp-mini battery-ramp-mini | weather-mini date-mini
 
 #========================================
 # MODULES
@@ -419,6 +419,11 @@ format-muted-underline = ${res/colors.underline-volume}
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
+
+[module/weather-mini]
+type = custom/script
+exec = $HOME/.config/polybar/weather.sh
+interval = 60
 
 [module/wlan-network]
 inherit = template/module/network
