@@ -18,6 +18,7 @@ if   [ "$w_txt" == "Sunny" ]; then w_sym="";
 elif [ "$w_txt" == "Mostly Sunny" ]; then w_sym="~";
 elif [ "$w_txt" == "Showers" ]; then w_sym="";
 elif [ "$w_txt" == "Clear" ]; then w_sym="";
+elif [ "$w_txt" == "Mostly Clear" ]; then w_sym="~";
 elif [ "$w_txt" == "Thunderstorms" ]; then w_sym="";
 elif [ "$w_txt" == "Scattered Thunderstorms" ]; then w_sym="~";
 elif [ "$w_txt" == "Isolated Thundershovers" ]; then w_sym="~~";
