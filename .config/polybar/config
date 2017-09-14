@@ -96,6 +96,7 @@ modules-right = temperature-label cpu-label memory-label | xbacklight-ramp volum
 
 [bar/gamma]
 inherit = template/bar
+monitor = eDP1
 bottom = true
 tray-position = right
 
@@ -178,6 +179,7 @@ label-focused-overline = ${res/colors.primary}
 # Active workspace on unfocused monitor
 label-visible = ${self.label-focused}
 label-visible-padding = ${self.label-focused-padding}
+label-visible-overline = ${res/colors.primary-dark}
 
 # Inactive workspace
 label-unfocused = ${self.label-focused}
