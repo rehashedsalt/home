@@ -3,7 +3,7 @@
 source $HOME/.config/polybar/location.sh
 
 # write xml to variable
-w_xml=$(curl --silent "http://weather.tuxnet24.de/?id=$location&mode=xml&unit=imperial");
+w_xml=$(curl --silent "https://weather.tuxnet24.de/?id=$location&mode=xml&unit=imperial");
 # get fields from xml via xmllint | xargs for trimming
 # weather description
 w_txt=$(xmllint --xpath "string(//current_text)" - <<<"$w_xml" | xargs);
