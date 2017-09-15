@@ -76,6 +76,10 @@ function input-get {
 }
 
 input="$(input-get | tr -d '\n')"
+if [ "$input" = "" ]; then
+	exit 1
+fi
+
 printf "Input: $input\n"
 
 if cache-lookup-by-name "$input"; then
