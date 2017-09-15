@@ -34,6 +34,7 @@ cachecontent="$(cat $cachefile)"
 
 function video-play {
 	notify-send -u low -t 10 -a 'MPV' "Embedded Video" "Playing $1 as a stream embedded in the desktop"
+	pkill mpv
 	xwinwrap -ni -fs -b -nf -ov -- mpv -wid WID $1
 	return 0
 }
