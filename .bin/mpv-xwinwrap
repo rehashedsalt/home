@@ -20,6 +20,18 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+if [ "$XDG_DATA_HOME" = "" ]; then
+	cachefile="$HOME/.local/share/mpv-wrapcache"
+else
+	cachefile="$XDG_DATA_HOME/mpv-wrapcache"
+fi
+
+if ! [ -f "$cachefile" ]; then
+	touch $cachefile
+fi
+
+cachecontent="$(cat $cachefile)"
+
 function video-play {
 	notify-send -u low -t 10 -a 'MPV' "Embedded Video" "Playing $1 as a stream embedded in the desktop"
 	xwinwrap -ni -fs -b -nf -ov -- mpv -wid WID $1
@@ -27,20 +39,56 @@ function video-play {
 }
 
 function video-validate {
-	if [[ "$(curl -Is $1 | head -1)" = *"200"* ]]; then
+	if [[ "$(curl -Is $1 | head -1)" = *"200"* ]] && [[ "$1" = *"youtu"* ]]; then
 		return 0
 	fi
 	return 1
 }
 
-input="$(rofi -dmenu -p 'Embed video: ' -l 1)"
+function cache-add {
+	if [[ "$cachecontent" == *"$1"* ]]; then
+		return 0
+	fi
+	name="$(youtube-dl -e $1)"
+	printf "$name\n$1\n" >> $cachefile
+	return 0
+}
+
+function cache-populate {
+	names="$(awk -F'\n' 'BEGIN{RS="\n\n"} {for (i=1;i<=NF;i+=2) print $i}' $cachefile)"
+	printf "$names"
+	return 0
+}
+
+function cache-lookup-by-name {
+	url="$(awk -v URL="$1" -F'\n' 'BEGIN{RS="\n\n"} {for (i=1;i<=NF;i++) if (index($i, URL)) print $(i+1)}' $cachefile)"
+	if [ "$url" = "" ]; then
+		return 1
+	fi
+	printf "$url"
+	return 0
+}
+
+function input-get {
+	cache-populate | rofi -dmenu -p 'Embed video: '
+	return 0
+}
+
+input="$(input-get | tr -d '\n')"
 printf "Input: $input\n"
+
+if cache-lookup-by-name "$input"; then
+	printf "Lookup successful: "
+	input="$(cache-lookup-by-name "$input")"
+	printf "\n"
+fi
 
 if ! video-validate $input; then
 	printf "Not a valid stream: $input\n"
 	exit 1
 fi
 
+cache-add $input
 video-play $input
 
 exit 0
