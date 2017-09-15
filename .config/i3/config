@@ -93,6 +93,9 @@ set $w5 5
 
 bindsym $mod+n exec "i3-msg rename workspace to $(rofi -dmenu -p 'Rename workspace: ' -l 1)"
 
+bindsym $mod+p exec "~/.bin/mpv-xwinwrap"
+bindsym $mod+$shift+p exec "pkill mpv"
+
 ###################
 ## Keybindings
 ###################
