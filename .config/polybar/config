@@ -151,7 +151,6 @@ format-connected-underline = ${res/colors.underline-network}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${self.format-connected-underline}
 format-disconnected = <label-disconnected>
-format-disconnected-overline = ${res/colors.alert}
 format-disconnected-underline = ${res/colors.underline-network}
 format-disconnected-prefix = " "
 format-disconnected-prefix-foreground = ${res/colors.alert}
@@ -449,6 +448,7 @@ interval = 60
 [module/wlan-network]
 inherit = template/module/network
 format-connected-prefix = " "
+format-disconnected-overline = ${res/colors.alert}
 label-connected = %essid%
 label-disconnected = %ifname%
 
@@ -456,6 +456,8 @@ label-disconnected = %ifname%
 inherit = template/module/network
 format-connected-prefix = 
 format-disconnected-prefix = 
+format-disconnected-foreground = ${res/colors.alert}
+format-disconnected-oveerline = 
 label-connected = 
 label-disconnected = 
 
