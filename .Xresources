@@ -18,10 +18,10 @@ rofi.color-enabled: true
 rofi.font: xos4 Terminus 9
 rofi.bw: 4
 !                  BG       FG       BG-ALT   HLBG       HLFG
-rofi.color-window: #1d2021, #83a598, #1d2021
-rofi.color-normal: #1d2021, #ebdbb2, #282828, #BB83a598, #1d2021
-rofi.color-active: #1d2021, #458588, #282828, #BB458588, #1d2021
-rofi.color-urgent: #1d2021, #d79921, #282828, #BBd79921, #1d2021
+rofi.color-window: #282828, #83a598, #282828
+rofi.color-normal: #282828, #ebdbb2, #32302f, #BB83a598, #282828
+rofi.color-active: #282828, #458588, #32302f, #BB458588, #282828
+rofi.color-urgent: #282828, #d79921, #32302f, #BBd79921, #282828
 
 rofi.width: 30
 !-----------------------------
