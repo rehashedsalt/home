@@ -16,7 +16,7 @@ urxvt*depth: 32
 !-----------------------------
 rofi.color-enabled: true
 rofi.font: xos4 Terminus 9
-rofi.bw: 2
+rofi.bw: 4
 !                  BG       FG       BG-ALT   HLBG       HLFG
 rofi.color-window: #1d2021, #83a598, #1d2021
 rofi.color-normal: #1d2021, #ebdbb2, #282828, #BB83a598, #1d2021
