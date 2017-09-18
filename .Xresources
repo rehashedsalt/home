@@ -14,16 +14,19 @@ urxvt*depth: 32
 ! ROFI Theme
 ! 
 !-----------------------------
+rofi.matching: fuzzy
+
 rofi.color-enabled: true
 rofi.font: xos4 Terminus 9
 rofi.bw: 4
 !                  BG       FG       BG-ALT   HLBG       HLFG
-rofi.color-window: #282828, #83a598, #282828
+rofi.color-window: #282828, #32302f, #282828
 rofi.color-normal: #282828, #ebdbb2, #32302f, #BB83a598, #282828
 rofi.color-active: #282828, #458588, #32302f, #BB458588, #282828
 rofi.color-urgent: #282828, #d79921, #32302f, #BBd79921, #282828
 
 rofi.width: 30
+rofi.location: 0
 !-----------------------------
 ! Colors merged from Gruvbox-Dark
 ! Author: morhetz <morhetz@gmail.com>
