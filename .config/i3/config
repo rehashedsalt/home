@@ -7,11 +7,11 @@
 ###################
 
 # Titlebar and borders
-new_window pixel 2
-for_window [class=".*"] border pixel 2
+new_window pixel 4
+for_window [class=".*"] border pixel 4
 
 # i3-gaps configs
-gaps inner 16
+gaps inner 24
 gaps outer 0
 
 # Set up our colors
@@ -39,9 +39,9 @@ set_from_resource $fg color15 #ebdbb2
 
 # Apply colors to i3
 #	<colorclass>			<border>	<backgrd>	<text>		<indicator>	<child_border>
-	client.focused			$blue2		$blue2 		$bg		$bg_soft	$blue2
-	client.focused_inactive		$blue		$blue		$bg		$bg_soft	$bg_soft
-	client.unfocused		$bg		$bg		$blue		$bg		$bg_soft
+	client.focused			$blue2		$blue2 		$bg		$bgm	$blue2
+	client.focused_inactive		$blue		$blue		$bg		$bgm	$bgm
+	client.unfocused		$bg		$bg		$blue		$bg		$bgm
 	client.urgent			$yellow2	$bg		$yellow2	$yellow		$bg
 	client.placeholder		$purple2	$bg		$purple2	$purple		$bg
 	client.background		$bg
@@ -60,7 +60,7 @@ exec_always --no-startup-id "killall polybar; sleep 1; polybar -r gamma"
 exec --no-startup-id "redshift"
 exec_always --no-startup-id "compton --config ~/.config/compton.conf"
 exec_always --no-startup-id "dunst"
-exec_always --no-startup-id "feh --randomize --bg-fill ~/Pictures/Wallpapers/i3"
+exec_always --no-startup-id "feh --randomize --bg-tile ~/Pictures/Wallpapers/i3"
 exec_always --no-startup-id "xfce4-power-manager"
 exec --no-startup-id "xfce4-volumed-pulse"
 exec_always --no-startup-id "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"

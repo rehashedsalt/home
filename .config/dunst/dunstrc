@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "400x5-8-36"
+    geometry = "400x5-0-34"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -51,7 +51,7 @@
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 1
+    separator_height = 4
 
     # Padding between text and separator.
     padding = 8
@@ -61,11 +61,11 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 4
 
     # Defines color of the frame around the notification window.
     #frame_color = "#aaaaaa"
-     frame_color = "#1d2021"
+     frame_color = "#32302f"
 
     # Define a color for the separator.
     # possible values are:
@@ -125,7 +125,7 @@
     #   %p  progress value if set ([  0%] to [100%]) or nothing
     #   %n  progress value if set without any extra characters
     # Markup is allowed
-    format = "<b>%s</b>: %a\n\n%b\n<i>Alt + Shift + Space to dismiss</i>\n<i>Alt + Shift + O for options</i>"
+    format = "<b>%s</b> (%a)\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -241,21 +241,21 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#1d2021"
+    background = "#282828"
     foreground = "#a89984"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#1d2021"
+    background = "#282828"
     foreground = "#ebdbb2"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_critical]
-    background = "#1d2021"
+    background = "#282828"
     foreground = "#fb4934"
     frame_color = "#cc241d"
     timeout = 0
