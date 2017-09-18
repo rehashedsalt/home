@@ -94,7 +94,7 @@ set $w6 6
 set $w7 7
 set $w8 8
 set $w9 9
-set $w10 0
+set $w10 10
 
 bindsym $mod+n exec "i3-msg rename workspace to $(rofi -dmenu -p 'Rename workspace: ' -l 1)"
 
