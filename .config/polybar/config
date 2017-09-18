@@ -101,7 +101,7 @@ monitor = eDP1
 bottom = true
 tray-position = right
 
-padding = 1
+padding = 2
 
 overline-size = 4
 border-size = 4
