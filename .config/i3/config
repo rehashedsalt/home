@@ -118,7 +118,7 @@ floating_modifier $mod
 # Program opening and closing
 bindsym $mod+Return exec "i3-sensible-terminal"
 bindsym $mod+q kill
-bindsym $mod+space exec "rofi -show drun"
+bindsym $mod+space exec "rofi -show drun -display-drun ':'"
 bindsym $mod+backslash exec "rofi -show ssh"
 bindsym $mod+Tab exec "rofi -show"
 
