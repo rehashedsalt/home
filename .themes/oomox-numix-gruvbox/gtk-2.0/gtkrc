@@ -1,7 +1,7 @@
 # Oomox GTK Theme (Numix Fork)
 
 gtk-color-scheme =
-"base_color:#282828\nbg_color:#1d2021\ntooltip_bg_color:#1d2021\nselected_bg_color:#83a598\ntext_color:#ebdbb2\nfg_color:#ebdbb2\ntooltip_fg_color:#ebdbb2\nselected_fg_color:#ebdbb2\nmenubar_bg_color:#32302f\nmenubar_fg_color:#ebdbb2\ntoolbar_bg_color:#1d2021\ntoolbar_fg_color:#ebdbb2\nmenu_bg_color:#32302f\nmenu_fg_color:#ebdbb2\npanel_bg_color:#1d2021\npanel_fg_color:#ebdbb2\nlink_color:#83a598\nbtn_bg_color:#32302f\nbtn_fg_color:#ebdbb2\ntitlebar_bg_color:#32302f\ntitlebar_fg_color:#ebdbb2\nprimary_caret_color:#1d2021\nsecondary_caret_color:#1d2021\n"
+"base_color:#30302f\nbg_color:#282828\ntooltip_bg_color:#282828\nselected_bg_color:#83a598\ntext_color:#ebdbb2\nfg_color:#ebdbb2\ntooltip_fg_color:#ebdbb2\nselected_fg_color:#ebdbb2\nmenubar_bg_color:#30302f\nmenubar_fg_color:#ebdbb2\ntoolbar_bg_color:#282828\ntoolbar_fg_color:#ebdbb2\nmenu_bg_color:#30302f\nmenu_fg_color:#ebdbb2\npanel_bg_color:#282828\npanel_fg_color:#ebdbb2\nlink_color:#83a598\nbtn_bg_color:#32302f\nbtn_fg_color:#ebdbb2\ntitlebar_bg_color:#30302f\ntitlebar_fg_color:#ebdbb2\nprimary_caret_color:#282828\nsecondary_caret_color:#282828\n"
 # Default Style
 
 style "murrine-default" {
@@ -147,7 +147,7 @@ style "murrine-default" {
 		menustyle = 0 # 0 = none, 1 = vertical striped
 		progressbarstyle = 0 # 0 = none, 1 = diagonal striped, 2 = vertical striped
 		reliefstyle = 0 # 0 = flat, 1 = inset, 2 = shadow, 3 = shadow with gradient, 4 = stronger shadow with gradient
-		roundness = 5 # roundness of widgets
+		roundness = 0 # roundness of widgets
 		scrollbarstyle = 0 # 0 = none, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles
 		sliderstyle = 0 # 0 = none, 1 = handles
 		stepperstyle = 1 # 0 = standard, 1 = integrated stepper handles
@@ -197,7 +197,7 @@ style "murrine-button"  = "murrine-wider" {
 
 	engine "murrine" {
 		border_colors = { mix(0.2, @btn_fg_color, @btn_bg_color), mix(0.2, @btn_fg_color, @btn_bg_color) }
-		roundness = 5
+		roundness = 0
 	}
 }
 
@@ -333,7 +333,7 @@ style "clearlooks-base-radiocheck" = "clearlooks-radiocheck" {
 style "murrine-entry" = "murrine-wider" {
 	engine "murrine" {
 		border_shades = { 1.15, 1.15 }
-		roundness = 5
+		roundness = 0
 	}
 }
 

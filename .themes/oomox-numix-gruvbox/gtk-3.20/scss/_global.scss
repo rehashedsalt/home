@@ -3,17 +3,17 @@
 @import "functions";
 
 // default color scheme
-$bg_color: if($variant == "dark", #ebdbb2, #1d2021);
-$fg_color: if($variant == "dark", #1d2021, #ebdbb2);
-$base_color: if($variant == "dark", #ebdbb2, #282828);
-$text_color: if($variant == "dark", #282828, #ebdbb2);
+$bg_color: if($variant == "dark", #ebdbb2, #282828);
+$fg_color: if($variant == "dark", #282828, #ebdbb2);
+$base_color: if($variant == "dark", #ebdbb2, #30302f);
+$text_color: if($variant == "dark", #30302f, #ebdbb2);
 $button_bg_color: if($variant == "dark", #ebdbb2, #32302f);
 $button_fg_color: if($variant == "dark", #32302f, #ebdbb2);
-$header_button_bg_color: #282828;
+$header_button_bg_color: #30302f;
 $header_button_fg_color: #ebdbb2;
 $selected_bg_color: #83a598;
 $selected_fg_color: #ebdbb2;
-$tooltip_bg_color: #1d2021;
+$tooltip_bg_color: #282828;
 $tooltip_fg_color: #ebdbb2;
 
 /*$selected_borders_color: if($variant == 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));*/
@@ -23,7 +23,7 @@ $borders_color: if($variant == 'light', mix($bg_color, $fg_color, .08), shade($b
 $borders_edge: if($variant == 'light', transparentize(white, 0.2), transparentize($fg_color, 0.93));
 
 // dark colors
-$dark_bg_color: #32302f;
+$dark_bg_color: #30302f;
 $dark_fg_color: #ebdbb2;
 
 // shadows
@@ -33,8 +33,8 @@ $dark_shadow: shade($fg_color, .2);
 $light_shadow: lighten($bg_color, .4);
 
 // caret
-$primary_caret_color: #1d2021;
-$secondary_caret_color: #1d2021;
+$primary_caret_color: #282828;
+$secondary_caret_color: #282828;
 $caret_aspect_ratio: 0.04;
 
 // white and black
@@ -103,7 +103,7 @@ $lightdm_fg_color: $dark_fg_color;
 
 $wm_bg: $titlebar_bg_color;
 $wm_border_focused: #32302f;
-$wm_border_unfocused: #1d2021;
+$wm_border_unfocused: #282828;
 $wm_title_focused: mix($titlebar_fg_color, $titlebar_bg_color, .1);
 $wm_title_unfocused: mix($titlebar_fg_color, $titlebar_bg_color, .4);
 $wm_icons_focused: mix($titlebar_fg_color, $titlebar_bg_color, .1);
@@ -142,9 +142,9 @@ $backdrop_menu_color: if($variant == 'light', $backdrop_base_color, mix($backdro
 $drop_target_color: #4e9a06;
 
 // widget styles
-$_roundness: 5;
+$_roundness: 0;
 $_spacing: 3;
-$roundness: 5px;
+$roundness: 0px;
 $spacing: 3px;
 $gradient: 0.0;
 $contrast: .8;
