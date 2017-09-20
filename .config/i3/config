@@ -132,10 +132,10 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -144,10 +144,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+$shift+j move left
-bindsym $mod+$shift+k move down
-bindsym $mod+$shift+l move up
-bindsym $mod+$shift+semicolon move right
+bindsym $mod+$shift+h move left
+bindsym $mod+$shift+j move down
+bindsym $mod+$shift+k move up
+bindsym $mod+$shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+$shift+Left move left
@@ -162,7 +162,7 @@ bindsym $sup+Up move workspace to output up
 bindsym $sup+Right move workspace to output right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+semicolon split h
 
 # split in vertical orientation
 bindsym $mod+v split v
