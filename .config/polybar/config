@@ -191,8 +191,8 @@ label-focused-background = ${res/colors.primary}
 # Active workspace on unfocused monitor
 label-visible = ${self.label-focused}
 label-visible-padding = ${self.label-focused-padding}
-label-visible-foreground = ${self.label-focused-foreground}
-label-visible-background = ${res/colors.primary-dark}
+label-visible-foreground = ${res/colors.background}
+label-visible-background = ${res/colors.background-3}
 
 # Inactive workspace
 label-unfocused = ${self.label-focused}
