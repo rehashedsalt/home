@@ -84,7 +84,6 @@ font-4 = ${res/fonts.font-4}
 #====================
 [bar/alpha]
 inherit = template/bar
-monitor = eDP1
 bottom = true
 tray-position = right
 
@@ -97,7 +96,6 @@ modules-right = temperature-label cpu-label memory-label | xbacklight-ramp volum
 
 [bar/gamma]
 inherit = template/bar
-monitor = eDP1
 bottom = true
 tray-position = right
 
