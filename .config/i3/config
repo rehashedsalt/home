@@ -99,7 +99,7 @@ set $w10 10
 bindsym $mod+n exec "i3-msg rename workspace to $(rofi -dmenu -p 'Rename workspace: ' -l 1)"
 
 bindsym $mod+p exec --no-startup-id "~/.bin/mpv-xwinwrap"
-bindsym $mod+$shift+p exec --no-startup-id "pkill mpv"
+bindsym $mod+$shift+p exec --no-startup-id "pkill xwinwrap"
 
 ###################
 ## Keybindings
