@@ -28,8 +28,8 @@
 # dcfldd is a fork of dd with some improvements
 # I prefer it, so there's an alias here
 if [ `which dcfldd` ]; then
-	alias dd=sudo dcfldd
-	alias ddgnu=sudo dd
+	alias dd="sudo dcfldd"
+	alias ddgnu="sudo dd"
 fi
 
 # If emerge exists, add emerge aliases
