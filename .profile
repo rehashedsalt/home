@@ -30,13 +30,15 @@
 if [ `which dcfldd` ]; then
 	alias dd="sudo dcfldd"
 	alias ddgnu="sudo dd"
+else
+	alias dcfldd="You stupid little shit. Install it first."
 fi
 
 # If emerge exists, add emerge aliases
 if [ `which emerge` ]; then
 	alias e-depclean='sudo emerge -a --depclean'
-	alias e-inst='sudo emerge -av'
-	alias e-upgrade='sudo emerge -DNuva --with-bdeps=y @world'
+	alias e-inst='sudo emerge -a --jobs --tree'
+	alias e-upgrade='sudo emerge -DNuva --jobs --tree --with-bdeps=y @world'
 	alias e-search='emerge -s'
 	alias e-sync='sudo emerge --sync'
 else
