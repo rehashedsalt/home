@@ -31,7 +31,7 @@ if [ `which dcfldd` ]; then
 	alias dd="sudo dcfldd"
 	alias ddgnu="sudo dd"
 else
-	alias dcfldd="You stupid little shit. Install it first."
+	alias dcfldd="echo You stupid little shit. Install it first."
 fi
 
 # If emerge exists, add emerge aliases
