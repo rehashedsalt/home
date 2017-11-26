@@ -41,6 +41,8 @@ if [ `which emerge` ]; then
 	alias e-upgrade='sudo emerge -DNuva --jobs --tree --with-bdeps=y @world'
 	alias e-search='emerge -s'
 	alias e-sync='sudo emerge --sync'
+
+	alias e-cleanup='sudo eclean -d distfiles && sudo eclean -d packages'
 else
 	alias emerge='"emerge" was not found. Does the system use portage at all?'
 fi
