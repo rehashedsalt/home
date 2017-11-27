@@ -1,6 +1,4 @@
 #!/bin/bash
-polybar -r gamma &
-
 compton &
 dunst &
 

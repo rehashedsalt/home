@@ -56,7 +56,7 @@ font pango:xos4 Terminus 9
 # Use in case of NODM/autologin and .xinitrc -- If we're just starting the system, we need to lock it up.
 #exec --no-startup-id "i3lock -i ~/.i3splash"
 
-#exec_always --no-startup-id "killall polybar; sleep 1; polybar -r gamma"
+exec_always --no-startup-id "killall polybar; sleep 1; polybar -r gamma"
 #exec --no-startup-id "redshift"
 #exec_always --no-startup-id "compton --config ~/.config/compton.conf"
 #exec_always --no-startup-id "dunst"
