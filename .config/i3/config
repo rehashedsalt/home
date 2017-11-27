@@ -67,7 +67,7 @@ exec_always --no-startup-id "feh --randomize --bg-tile ~/Pictures/Wallpapers/i3"
 #exec --no-startup-id "mopidy"
 #exec --no-startup-id "syncthing -no-browser"
 
-bindsym $mod+$shift+w exec --no-startup-id "feh --randomize --bg-fill ~/Pictures/Wallpapers/i3"
+bindsym $mod+$shift+w exec --no-startup-id "feh --randomize --bg-tile ~/Pictures/Wallpapers/i3"
 
 ###################
 ## Settings
@@ -225,7 +225,7 @@ bindsym $mod+$shift+r restart
 
 # exit i3 (logs you out of your X session)
 #bindsym $mod+$shift+e exec "i3-nagbar -t warning -m 'Really exit i3wm? This will close all running applications and end your X session.' -b 'Exit' 'i3-msg exit'"
-bindsym $mod+$shift+e exit
+#bindsym $mod+$shift+e exit
 
 # lock the screen
 bindsym $sup+l exec "i3lock -i $HOME/.i3lock -c 1d2021"
