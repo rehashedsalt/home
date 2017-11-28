@@ -60,14 +60,14 @@ exec_always --no-startup-id "killall polybar; sleep 1; polybar -r gamma"
 #exec --no-startup-id "redshift"
 #exec_always --no-startup-id "compton --config ~/.config/compton.conf"
 #exec_always --no-startup-id "dunst"
-exec_always --no-startup-id "feh --randomize --bg-tile ~/Pictures/Wallpapers/i3"
+exec_always --no-startup-id "feh --randomize --bg-fill ~/Pictures/Wallpapers/i3"
 #exec_always --no-startup-id "xfce4-power-manager"
 #exec --no-startup-id "xfce4-volumed-pulse"
 #exec_always --no-startup-id "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 #exec --no-startup-id "mopidy"
 #exec --no-startup-id "syncthing -no-browser"
 
-bindsym $mod+$shift+w exec --no-startup-id "feh --randomize --bg-tile ~/Pictures/Wallpapers/i3"
+bindsym $mod+$shift+w exec --no-startup-id "feh --randomize --bg-fill ~/Pictures/Wallpapers/i3"
 
 ###################
 ## Settings
@@ -228,7 +228,7 @@ bindsym $mod+$shift+r restart
 #bindsym $mod+$shift+e exit
 
 # lock the screen
-bindsym $sup+l exec "i3lock -i $HOME/.i3lock -c 1d2021"
+#bindsym $sup+l exec "i3lock -i $HOME/.i3lock -c 1d2021"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
