@@ -92,7 +92,7 @@ tray-position = right
 
 modules-left = i3 bspwm | wlan-network eth-network | mpd
 modules-center = xwindow-label
-modules-right = temperature-label cpu-label memory-label | xbacklight-ramp volume-ramp battery-ramp | date
+modules-right = | temperature-label cpu-label memory-label | xbacklight-ramp volume-ramp battery-ramp | date
 
 [bar/gamma]
 inherit = template/bar
