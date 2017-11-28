@@ -107,7 +107,7 @@ border-color = ${res/colors.background-2}
 
 modules-left = i3 bspwm | 
 modules-center = xwindow-label
-modules-right = | mpd-mini temperature-label-alert weather-mini wlan-network-mini volume-ramp-mini battery-ramp-mini | date-mini
+modules-right = | mpd-mini temperature-label-alert wlan-network-mini volume-ramp-mini battery-ramp-mini | date-mini
 
 #========================================
 # MODULES
