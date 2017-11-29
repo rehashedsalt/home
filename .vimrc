@@ -28,6 +28,8 @@ set incsearch " Search while you type
 set number relativenumber " Relative line numbering
 set encoding=utf-8
 
+let g:ycm_autoclose_preview_window_after_completion=1
+
 " Enable 256-color support
 " All of my machines support 256-color so this should be fine
 set t_Co=256
