@@ -13,9 +13,9 @@ set autoread
 " Use XA_PRIMARY clipboard by default
 set clipboard=unnamed
 
-" Enable line numbering
-set number
-set relativenumber
+" Miscellaneous options
+set incsearch " Search while you type
+set number relativenumber " Relative line numbering
 
 " Enable 256-color support
 " All of my machines support 256-color so this should be fine
