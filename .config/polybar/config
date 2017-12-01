@@ -407,6 +407,16 @@ label =
 label-warn =  %temperature%
 label-warn-foreground = ${res/colors.alert}
 
+[module/tether-network-mini]
+type = internal/network
+interface = enp0s20f0u2
+format-connected-prefix = " "
+format-disconnected-prefix = 
+format-disconnected-foreground = ${res/colors.background-4}
+format-disconnected-oveerline = 
+label-connected =  %upspeed%  %downspeed%
+label-disconnected = 
+
 [module/volume-ramp]
 inherit = template/module
 type = internal/volume
@@ -455,7 +465,7 @@ label-disconnected = %ifname%
 inherit = template/module/network
 format-connected-prefix = 
 format-disconnected-prefix = 
-format-disconnected-foreground = ${res/colors.alert}
+format-disconnected-foreground = ${res/colors.background-4}
 format-disconnected-oveerline = 
 label-connected = 
 label-disconnected = 
