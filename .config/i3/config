@@ -107,7 +107,7 @@ set $w8 8
 set $w9 9
 set $w10 10
 
-bindsym $mod+n exec "i3-msg rename workspace to $(rofi -dmenu -p 'Rename workspace: ' -l 1)"
+#bindsym $mod+n exec "i3-msg rename workspace to $(rofi -dmenu -p 'Rename workspace: ' -l 1)"
 
 bindsym $mod+p exec --no-startup-id "~/.bin/mpv-xwinwrap"
 bindsym $mod+$shift+p exec --no-startup-id "pkill xwinwrap"
@@ -139,8 +139,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #d
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # change focus
 bindsym $mod+h focus left
