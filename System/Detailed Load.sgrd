@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE KSysGuardWorkSheet>
+<WorkSheet interval="0.5" rows="3" locked="0" title="Detailed Load" columns="2">
+ <host command="ksysguardd" name="localhost" shell="" port="-1"/>
+ <display manualRange="1" vScroll="0" svgBackground="" row="0" hScale="6" labels="1" title="Total Load" max="400" class="FancyPlotter" min="0" unit="" stacked="1" showUnit="0" vDistance="30" vLines="0" column="0" autoRange="1" version="1" fontSize="8" rowSpan="1" hLines="1" columnSpan="1">
+  <beam sensorType="float" sensorName="cpu/cpu0/TotalLoad" hostName="localhost" color="0xffff0000"/>
+  <beam sensorType="float" sensorName="cpu/cpu1/TotalLoad" hostName="localhost" color="0xffffaa00"/>
+  <beam sensorType="float" sensorName="cpu/cpu2/TotalLoad" hostName="localhost" color="0xffffff00"/>
+  <beam sensorType="float" sensorName="cpu/cpu3/TotalLoad" hostName="localhost" color="0xffffffff"/>
+ </display>
+ <display manualRange="1" vScroll="0" svgBackground="" row="0" hScale="6" labels="1" title="User Load" max="400" class="FancyPlotter" min="0" unit="" stacked="1" showUnit="0" vDistance="30" vLines="0" column="1" autoRange="1" version="1" fontSize="8" rowSpan="1" hLines="1" columnSpan="1">
+  <beam sensorType="float" sensorName="cpu/cpu0/user" hostName="localhost" color="0xff0057ae"/>
+  <beam sensorType="float" sensorName="cpu/cpu1/user" hostName="localhost" color="0xff00aaff"/>
+  <beam sensorType="float" sensorName="cpu/cpu2/user" hostName="localhost" color="0xff00ffff"/>
+  <beam sensorType="float" sensorName="cpu/cpu3/user" hostName="localhost" color="0xffffffff"/>
+ </display>
+</WorkSheet>
