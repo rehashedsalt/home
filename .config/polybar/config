@@ -457,7 +457,6 @@ interval = 60
 [module/wlan-network]
 inherit = template/module/network
 format-connected-prefix = " "
-format-disconnected-overline = ${res/colors.alert}
 label-connected = %essid%
 label-disconnected = %ifname%
 
