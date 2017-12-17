@@ -423,11 +423,11 @@ type = internal/volume
 format-volume = <ramp-volume> <label-volume>
 format-volume-underline = ${res/colors.underline-volume}
 format-muted = <ramp-volume> <label-muted>
-format-muted-foreground = ${res/colors.background-4}
 format-muted-underline = ${res/colors.underline-volume}
 
 label-volume = %percentage%%
 label-muted = %percentage%%
+label-muted-foreground = ${res/colors.background-4}
 
 ramp-volume-0 = 
 ramp-volume-1 = 
