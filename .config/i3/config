@@ -80,11 +80,11 @@ bindsym $mod+$shift+w exec --no-startup-id "feh --randomize --bg-fill ~/Pictures
 ###################
 
 # No terminal bell
-#exec --no-startup-id "xset -b"
+exec --no-startup-id "xset -b"
 # No DPMS (display blanking)
-#exec --no-startup-id "xset -dpms"
+exec --no-startup-id "xset -dpms"
 # No screensaver
-#exec --no-startup-id "xset s off"
+exec --no-startup-id "xset s off"
 
 ###################
 ## Workspaces
