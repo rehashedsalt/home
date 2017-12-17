@@ -65,17 +65,11 @@ font pango:xos4 Terminus 9
 ## Statusbars and Daemons
 ###################
 
-# Use in case of NODM/autologin and .xinitrc -- If we're just starting the system, we need to lock it up.
-#exec --no-startup-id "i3lock -i ~/.i3splash"
-
-exec_always --no-startup-id "killall polybar; sleep 1; polybar -r gamma"
+exec_always --no-startup-id "killall polybar; sleep 1; polybar -r alpha"
 #exec --no-startup-id "redshift"
 #exec_always --no-startup-id "compton --config ~/.config/compton.conf"
 #exec_always --no-startup-id "dunst"
 exec_always --no-startup-id "feh --randomize --bg-fill ~/Pictures/Wallpapers/i3"
-#exec_always --no-startup-id "xfce4-power-manager"
-#exec --no-startup-id "xfce4-volumed-pulse"
-#exec_always --no-startup-id "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 #exec --no-startup-id "mopidy"
 #exec --no-startup-id "syncthing -no-browser"
 
@@ -86,11 +80,11 @@ bindsym $mod+$shift+w exec --no-startup-id "feh --randomize --bg-fill ~/Pictures
 ###################
 
 # No terminal bell
-exec --no-startup-id "xset -b"
+#exec --no-startup-id "xset -b"
 # No DPMS (display blanking)
-exec --no-startup-id "xset -dpms"
+#exec --no-startup-id "xset -dpms"
 # No screensaver
-exec --no-startup-id "xset s off"
+#exec --no-startup-id "xset s off"
 
 ###################
 ## Workspaces
@@ -106,11 +100,6 @@ set $w7 7
 set $w8 8
 set $w9 9
 set $w10 10
-
-#bindsym $mod+n exec "i3-msg rename workspace to $(rofi -dmenu -p 'Rename workspace: ' -l 1)"
-
-bindsym $mod+p exec --no-startup-id "~/.bin/mpv-xwinwrap"
-bindsym $mod+$shift+p exec --no-startup-id "pkill xwinwrap"
 
 ###################
 ## Keybindings
@@ -141,6 +130,15 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 # Brightness controls
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+
+# mpv-xwinwrap controls
+bindsym $mod+p exec --no-startup-id "~/.bin/mpv-xwinwrap"
+bindsym $mod+$shift+p exec --no-startup-id "pkill xwinwrap"
+
+# Miscellaneous non-movement hotkeys
+bindsym $mod+$shift+c reload
+bindsym $mod+$shift+r restart
+#bindsym $mod+$shift+e exit
 
 # change focus
 bindsym $mod+h focus left
@@ -229,38 +227,22 @@ bindsym $mod+$shift+8 move container to workspace $w8
 bindsym $mod+$shift+9 move container to workspace $w9
 bindsym $mod+$shift+0 move container to workspace $w10
 
-# reload the configuration file
-bindsym $mod+$shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+$shift+r restart
+###################
+## Modes
+###################
 
-# exit i3 (logs you out of your X session)
-#bindsym $mod+$shift+e exec "i3-nagbar -t warning -m 'Really exit i3wm? This will close all running applications and end your X session.' -b 'Exit' 'i3-msg exit'"
-#bindsym $mod+$shift+e exit
-
-# lock the screen
-#bindsym $sup+l exec "i3lock -i $HOME/.i3lock -c 1d2021"
-
-# resize window (you can also use the mouse for that)
+# Resize
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter, Escape, or MOD+R
         bindsym Return mode "default"
         bindsym Escape mode "default"
 	bindsym $mod+r mode "default"
@@ -268,6 +250,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Control Mopidy
 mode "mopidy" {
 	# Shuffle, Repeat, and Consume
 	bindsym s exec --no-startup-id "~/.bin/mpc/mpc-i3-shuffle"
@@ -303,6 +286,7 @@ mode "mopidy" {
 
 bindsym $mod+m mode "mopidy"
 
+# Test things
 mode "test" {
 	bindsym n exec --no-startup-id notify-send "Test Notification" "This is a simple test notification"
 	bindsym p exec --no-startup-id notify-send "i3 Current Path" "$PATH"
