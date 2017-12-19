@@ -390,13 +390,10 @@ format-offline =
 [module/mpd-mini]
 inherit = module/mpd
 format-online = 
-format-online-foreground = ${res/colors.resource-neutral}
+format-online-foreground = ${res/colors.background-4}
 format-playing = 
-format-playing-foreground = ${res/colors.resource-neutral}
 format-stopped = 
-format-stopped-foreground = ${res/colors.foreground}
 format-offline = 
-format-offline-foreground = ${res/colors.background-4}
 format-online-prefix = " "
 label-song =  %title%
 
