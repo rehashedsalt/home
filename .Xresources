@@ -28,7 +28,8 @@ rofi.color-active: #282828, #458588, #32302f, #458588, #282828
 rofi.color-urgent: #282828, #d79921, #32302f, #d79921, #282828
 
 rofi.width: 30
-rofi.location: 0
+rofi.location: 2
+rofi.yoffset:34
 !-----------------------------
 ! Colors merged from Gruvbox-Dark
 ! Author: morhetz <morhetz@gmail.com>
