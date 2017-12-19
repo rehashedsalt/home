@@ -16,10 +16,12 @@ alert-hard = ${xrdb:color1}
 primary-dark = ${xrdb:color4}
 primary = ${xrdb:color12}
 
-resource-bad-dark = ${xrdb:color5}
-resource-bad = ${xrdb:color13}
+resource-bad-dark = ${xrdb:color1}
+resource-bad = ${xrdb:color9}
 resource-good-dark = ${xrdb:color2}
 resource-good = ${xrdb:color10}
+resource-neutral-dark = ${xrdb:color5}
+resource-neutral = ${xrdb:color13}
 
 background = ${xrdb:background}
 background-2 = ${xrdb:bg2}
@@ -91,7 +93,7 @@ bottom = true
 tray-position = right
 
 modules-left = i3 bspwm | temperature-label cpu-label memory-label | xwindow-label
-modules-center = mpd
+modules-center = mpd-mini mpd-label
 modules-right = | xbacklight-ramp volume-ramp wlan-network eth-network battery-ramp | date
 
 [bar/gamma]
@@ -343,7 +345,7 @@ label =  %percentage_used%% (%gb_used%)
 inherit = template/module
 type = internal/mpd
 format-online = <label-song> <label-time>
-format-offline =
+format-playing = <label-song> <label-time>
 
 icon-next = 
 icon-pause = 
@@ -364,21 +366,39 @@ label-time = %elapsed%/%total%
 
 interval = 1
 
-[module/mpd-mini]
-inherit = module/mpd
-format-online = <label-song>
-format-online-prefix = " "
-label-song =  %title%
-
 [module/mpd-control]
 inherit = module/mpd
 format-online = <icon-prev> <toggle> <icon-stop> <icon-next>
-label-offline = 
+format-playing = ${self.format-online}
+format-stopped = ${self.format-online}
+format-offline = ${self.format-online}
 
 [module/mpd-control-ext]
 inherit = module/mpd
 format-online = <icon-random> <icon-repeat>
-label-offline = 
+format-playing = ${self.format-online}
+format-stopped = ${self.format-online}
+format-offline = ${self.format-online}
+
+[module/mpd-label]
+inherit = module/mpd
+format-online = <label-song> <label-time>
+format-playing = ${self.format-online}
+format-stopped = 
+format-offline = 
+
+[module/mpd-mini]
+inherit = module/mpd
+format-online = 
+format-online-foreground = ${res/colors.resource-neutral}
+format-playing = 
+format-playing-foreground = ${res/colors.resource-neutral}
+format-stopped = 
+format-stopped-foreground = ${res/colors.foreground}
+format-offline = 
+format-offline-foreground = ${res/colors.background-4}
+format-online-prefix = " "
+label-song =  %title%
 
 [module/temperature-label]
 inherit = template/module/temperature
