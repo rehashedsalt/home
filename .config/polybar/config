@@ -89,7 +89,6 @@ font-4 = ${res/fonts.font-4}
 #====================
 [bar/alpha]
 inherit = template/bar
-bottom = true
 tray-position = right
 
 modules-left = i3 bspwm | temperature-label cpu-label memory-label | xwindow-label
