@@ -46,9 +46,9 @@ underline-volume = ${self.primary-dark}
 
 [res/fonts]
 font-0 = "xos4 Terminus:size=9;2"
-font-1 = "Material Design Icons:size=11;3"
+font-1 = "Wuncon Siji:size=9;2"
 font-2 = "FontAwesome:size=10;2"
-font-3 =
+font-3 = "Material Design Icons:size=11;3"
 font-4 =
 
 #========================================
@@ -93,7 +93,7 @@ tray-position = right
 
 modules-left = i3 bspwm | temperature-label cpu-label memory-label | xwindow-label
 modules-center = mpd-mini mpd-label
-modules-right = | xbacklight-ramp volume-ramp wlan-network eth-network battery-ramp | date
+modules-right = | volume-ramp wlan-network eth-network battery-ramp | date
 
 [bar/gamma]
 inherit = template/bar
@@ -132,7 +132,7 @@ format-charging-underline = ${res/colors.underline-battery}
 format-discharging-underline = ${res/colors.underline-battery}
 format-full-underline = ${res/colors.underline-battery}
 adapter = AC
-full-at = 95
+full-at = 98
 interval = 15
 
 [template/module/cpu]
@@ -147,15 +147,13 @@ type = internal/network
 interface = wlp1s0
 format-connected = <label-connected>
 format-connected-underline = ${res/colors.underline-network}
-format-connected-prefix = " "
 format-connected-prefix-foreground = ${self.format-connected-underline}
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${res/colors.underline-network}
-format-disconnected-prefix = " "
 format-disconnected-prefix-foreground = ${res/colors.alert}
 
 label-connected = %upspeed% %downspeed% - %signal%%
-label-disconnected = 
+label-disconnected = ""
 
 interval = 1
 
@@ -242,14 +240,10 @@ label-urgent-foreground = ${res/colors.alert}
 
 [module/battery-ramp]
 inherit = template/module/battery
-format-charging = <ramp-capacity> <label-charging>
-format-charging-prefix = 
-format-charging-prefix-foreground = ${self.format-charging-underline}
+format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
-format-full = <label-full>
+format-full = <ramp-capacity> <label-full>
 format-full-overline = ${res/colors.resource-good}
-format-full-prefix = " "
-format-full-prefix-foreground = ${res/colors.resource-good}
 time-format = %H:%M
 
 label-charging = %percentage%%
@@ -259,17 +253,29 @@ label-discharging-padding = 0
 label-full = %percentage%%
 label-full-padding = 0
 
-ramp-capacity-0= 
-ramp-capacity-1= 
-ramp-capacity-2= 
-ramp-capacity-3= 
-ramp-capacity-4= 
-ramp-capacity-5= 
-ramp-capacity-6= 
-ramp-capacity-7= 
-ramp-capacity-8= 
-ramp-capacity-9= 
+ramp-capacity-0= 
+ramp-capacity-1= 
+ramp-capacity-2= 
+ramp-capacity-3= 
+ramp-capacity-4= 
+ramp-capacity-5= 
+ramp-capacity-6= 
+ramp-capacity-7= 
+ramp-capacity-8= 
+ramp-capacity-9= 
 ramp-capacity-foreground = ${self.format-discharging-underline}
+
+animation-charging-0 = {self.ramp-capacity-0}
+animation-charging-1 = {self.ramp-capacity-1}
+animation-charging-2 = {self.ramp-capacity-2}
+animation-charging-3 = {self.ramp-capacity-3}
+animation-charging-4 = {self.ramp-capacity-4}
+animation-charging-5 = {self.ramp-capacity-5}
+animation-charging-6 = {self.ramp-capacity-6}
+animation-charging-7 = {self.ramp-capacity-7}
+animation-charging-8 = {self.ramp-capacity-8}
+animation-charging-9 = {self.ramp-capacity-9}
+animation-charging-framerate = 500
 
 [module/battery-ramp-mini]
 inherit = template/module/battery
@@ -282,21 +288,21 @@ format-full-overline = ${res/colors.resource-good}
 format-full-prefix = " "
 format-full-prefix-foreground = ${res/colors.resource-good}
 
-ramp-capacity-0= 
-ramp-capacity-1= 
-ramp-capacity-2= 
-ramp-capacity-3= 
-ramp-capacity-4= 
-ramp-capacity-5= 
-ramp-capacity-6= 
-ramp-capacity-7= 
-ramp-capacity-8= 
-ramp-capacity-9= 
+ramp-capacity-0= 
+ramp-capacity-1= 
+ramp-capacity-2= 
+ramp-capacity-3= 
+ramp-capacity-4= 
+ramp-capacity-5= 
+ramp-capacity-6= 
+ramp-capacity-7= 
+ramp-capacity-8= 
+ramp-capacity-9= 
 
 [module/cpu-label]
 inherit = template/module/cpu
 format = <label>
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${self.format-underline}
 label = %percentage%%
 
@@ -305,7 +311,7 @@ inherit = template/module
 type = internal/date
 
 format-underline = ${res/colors.underline-date}
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${self.format-underline}
 
 date = %a
@@ -335,7 +341,7 @@ inherit = template/module
 type = internal/memory
 format = <label>
 format-underline = ${res/colors.underline-memory}
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${self.format-underline}
 
 label =  %percentage_used%% (%gb_used%)
@@ -346,13 +352,13 @@ type = internal/mpd
 format-online = <label-song> <label-time>
 format-playing = <label-song> <label-time>
 
-icon-next = 
-icon-pause = 
-icon-play = 
-icon-prev = 
-icon-random = 
-icon-repeat = 
-icon-stop = 
+icon-next = 
+icon-pause = 
+icon-play = 
+icon-prev = 
+icon-random = 
+icon-repeat = 
+icon-stop = 
 
 toggle-on-foreground = ${res/colors.foreground}
 toggle-off-foreground = ${res/colors.background-4}
@@ -388,11 +394,11 @@ format-offline =
 
 [module/mpd-mini]
 inherit = module/mpd
-format-online = 
+format-online = 
 format-online-foreground = ${res/colors.background-4}
-format-playing = 
-format-stopped = 
-format-offline = 
+format-playing = 
+format-stopped = 
+format-offline = 
 format-online-prefix = " "
 label-song =  %title%
 
@@ -401,12 +407,12 @@ inherit = template/module/temperature
 
 format = <label>
 format-underline = ${res/colors.underline-temperature}
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${self.format-underline}
 format-warning = <label>
 format-warning-overline = ${res/colors.alert}
 format-warning-underline = ${res/colors.underline-temperature}
-format-warning-prefix = " "
+format-warning-prefix = " "
 format-warning-prefix-foreground = ${res/colors.alert}
 
 label = %temperature%
@@ -420,18 +426,8 @@ format-warning-foreground = ${res/colors.alert}
 
 label = 
 
-label-warn =  %temperature%
+label-warn =  %temperature%
 label-warn-foreground = ${res/colors.alert}
-
-[module/tether-network-mini]
-type = internal/network
-interface = enp0s20f0u2
-format-connected-prefix = " "
-format-disconnected-prefix = 
-format-disconnected-foreground = ${res/colors.background-4}
-format-disconnected-oveerline = 
-label-connected =  %upspeed%  %downspeed%
-label-disconnected = 
 
 [module/volume-ramp]
 inherit = template/module
@@ -445,9 +441,8 @@ label-volume = %percentage%%
 label-muted = %percentage%%
 label-muted-foreground = ${res/colors.background-4}
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-0 = 
+ramp-volume-1 = 
 ramp-volume-foreground = ${self.format-volume-underline}
 
 [module/volume-ramp-mini]
@@ -459,9 +454,8 @@ format-muted = <ramp-volume>
 format-muted-foreground = ${res/colors.background-4}
 format-muted-underline = ${res/colors.underline-volume}
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-0 = 
+ramp-volume-1 = 
 
 [module/weather-mini]
 inherit = template/module
@@ -472,9 +466,14 @@ interval = 60
 
 [module/wlan-network]
 inherit = template/module/network
-format-connected-prefix = " "
-label-connected = %essid%
-label-disconnected = %ifname%
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid%  %upspeed%  %downspeed%
+label-disconnected = 
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-foreground = ${res/colors.primary-dark}
 
 [module/wlan-network-mini]
 inherit = template/module/network
@@ -483,17 +482,17 @@ format-disconnected-prefix =
 format-disconnected-foreground = ${res/colors.background-4}
 format-disconnected-oveerline = 
 label-connected = 
-label-disconnected = 
+label-disconnected = 
 
 [module/wlan-speed]
 inherit = template/module/network
-label-connected =  %upspeed%  %downspeed%
+label-connected =  %upspeed%  %downspeed%
 
 [module/eth-network]
 inherit = module/wlan-network
 type = internal/network
 interface = enp0s31f6
-label-connected =  %upspeed%  %downspeed%
+label-connected =  %upspeed%  %downspeed%
 label-connected-foreground = ${res/colors.primary-dark}
 label-disconnected = 
 
