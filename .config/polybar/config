@@ -61,7 +61,7 @@ font-4 =
 [template/bar]
 # Rendering of the bar
 width = 100%
-height = 30
+height = 28
 
 # Module padding and spacing
 padding = 2
