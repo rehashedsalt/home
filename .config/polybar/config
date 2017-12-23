@@ -262,7 +262,6 @@ ramp-capacity-5= 
 ramp-capacity-6= 
 ramp-capacity-7= 
 ramp-capacity-8= 
-ramp-capacity-9= 
 ramp-capacity-foreground = ${self.format-discharging-underline}
 
 animation-charging-0 = {self.ramp-capacity-0}
@@ -274,7 +273,6 @@ animation-charging-5 = {self.ramp-capacity-5}
 animation-charging-6 = {self.ramp-capacity-6}
 animation-charging-7 = {self.ramp-capacity-7}
 animation-charging-8 = {self.ramp-capacity-8}
-animation-charging-9 = {self.ramp-capacity-9}
 animation-charging-framerate = 500
 
 [module/battery-ramp-mini]
@@ -297,7 +295,6 @@ ramp-capacity-5= 
 ramp-capacity-6= 
 ramp-capacity-7= 
 ramp-capacity-8= 
-ramp-capacity-9= 
 
 [module/cpu-label]
 inherit = template/module/cpu
