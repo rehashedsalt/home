@@ -32,18 +32,6 @@ foreground-2 = ${xrdb:fg2}
 foreground-3 = ${xrdb:fg3}
 foreground-4 = ${xrdb:fg4}
 
-underline-cpu = ${self.resource-bad-dark}
-underline-fs = ${self.resource-bad-dark}
-underline-memory = ${self.resource-bad-dark}
-underline-temperature = ${self.resource-bad-dark}
-
-underline-battery = ${self.primary-dark}
-
-underline-backlight = ${self.primary-dark}
-underline-network = ${self.primary-dark}
-underline-date = ${self.primary-dark}
-underline-volume = ${self.primary-dark}
-
 [res/fonts]
 font-0 = "xos4 Terminus:size=9;2"
 font-1 = "Wuncon Siji:size=9;2"
@@ -93,7 +81,7 @@ tray-position = right
 
 modules-left = i3 bspwm | temperature-label cpu-label memory-label | xwindow-label
 modules-center = 
-modules-right = | volume-ramp wlan-network eth-network battery-ramp | date
+modules-right = | xbacklight-label volume-ramp wlan-network eth-network battery-ramp | date
 
 [bar/gamma]
 inherit = template/bar
@@ -128,9 +116,6 @@ format-padding = 0
 inherit = template/module
 type = internal/battery
 battery = BAT0
-format-charging-underline = ${res/colors.underline-battery}
-format-discharging-underline = ${res/colors.underline-battery}
-format-full-underline = ${res/colors.underline-battery}
 adapter = AC
 full-at = 98
 interval = 15
@@ -138,7 +123,6 @@ interval = 15
 [template/module/cpu]
 inherit = template/module
 type = internal/cpu
-format-underline = ${res/colors.underline-cpu}
 interval = 1
 
 [template/module/network]
@@ -146,10 +130,8 @@ inherit = template/module
 type = internal/network
 interface = wlp1s0
 format-connected = <label-connected>
-format-connected-underline = ${res/colors.underline-network}
-format-connected-prefix-foreground = ${self.format-connected-underline}
+format-connected-prefix-foreground = ${res/colors.primary-dark}
 format-disconnected = <label-disconnected>
-format-disconnected-underline = ${res/colors.underline-network}
 format-disconnected-prefix-foreground = ${res/colors.alert}
 
 label-connected = %upspeed% %downspeed% - %signal%%
@@ -262,7 +244,7 @@ ramp-capacity-5= 
 ramp-capacity-6= 
 ramp-capacity-7= 
 ramp-capacity-8= 
-ramp-capacity-foreground = ${self.format-discharging-underline}
+ramp-capacity-foreground = ${res/colors.primary-dark}
 
 animation-charging-0 = ${self.ramp-capacity-0}
 animation-charging-1 = ${self.ramp-capacity-1}
@@ -280,7 +262,7 @@ animation-charging-framerate = 500
 inherit = template/module/battery
 format-charging = <ramp-capacity>
 format-charging-prefix = 
-format-charging-prefix-foreground = ${self.format-charging-underline}
+format-charging-prefix-foreground = ${res/colors.resource-good-dark}
 format-discharging = <ramp-capacity>
 format-full = <ramp-capacity>
 format-full-prefix = " "
@@ -300,16 +282,15 @@ ramp-capacity-8= 
 inherit = template/module/cpu
 format = <label>
 format-prefix = " "
-format-prefix-foreground = ${self.format-underline}
+format-prefix-foreground = ${res/colors.resource-bad-dark}
 label = %percentage%%
 
 [module/date]
 inherit = template/module
 type = internal/date
 
-format-underline = ${res/colors.underline-date}
 format-prefix = " "
-format-prefix-foreground = ${self.format-underline}
+format-prefix-foreground = ${res/colors.primary-dark}
 
 date = %a
 time = %I:%M %p
@@ -323,7 +304,6 @@ interval = 30
 [module/date-mini]
 inherit = template/module
 type = internal/date
-format-underline = ${res/colors.underline-date}
 
 time = %I:%M %p
 date-alt = "%A, %B %d "
@@ -337,9 +317,8 @@ interval = 60
 inherit = template/module
 type = internal/memory
 format = <label>
-format-underline = ${res/colors.underline-memory}
 format-prefix = " "
-format-prefix-foreground = ${self.format-underline}
+format-prefix-foreground = ${res/colors.resource-bad-dark}
 
 label =  %percentage_used%% (%gb_used%)
 
@@ -403,12 +382,10 @@ label-song =  %title%
 inherit = template/module/temperature
 
 format = <label>
-format-underline = ${res/colors.underline-temperature}
 format-prefix = " "
-format-prefix-foreground = ${self.format-underline}
+format-prefix-foreground = ${res/colors.resource-bad-dark}
 format-warning = <label>
 format-warning-overline = ${res/colors.alert}
-format-warning-underline = ${res/colors.underline-temperature}
 format-warning-prefix = " "
 format-warning-prefix-foreground = ${res/colors.alert}
 
@@ -430,9 +407,7 @@ label-warn-foreground = ${res/colors.alert}
 inherit = template/module
 type = internal/volume
 format-volume = <ramp-volume> <label-volume>
-format-volume-underline = ${res/colors.underline-volume}
 format-muted = <ramp-volume> <label-muted>
-format-muted-underline = ${res/colors.underline-volume}
 
 label-volume = %percentage%%
 label-muted = %percentage%%
@@ -440,16 +415,14 @@ label-muted-foreground = ${res/colors.background-4}
 
 ramp-volume-0 = 
 ramp-volume-1 = 
-ramp-volume-foreground = ${self.format-volume-underline}
+ramp-volume-foreground = ${res/colors.primary-dark}
 
 [module/volume-ramp-mini]
 inherit = template/module
 type = internal/volume
 format-volume = <ramp-volume>
-format-volume-underline = ${res/colors.underline-volume}
 format-muted = <ramp-volume>
 format-muted-foreground = ${res/colors.background-4}
-format-muted-underline = ${res/colors.underline-volume}
 
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -464,12 +437,14 @@ interval = 60
 [module/wlan-network]
 inherit = template/module/network
 format-connected = <ramp-signal> <label-connected>
-label-connected = %essid%  %upspeed%  %downspeed%
+label-connected = %essid%
 label-disconnected = 
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
 ramp-signal-foreground = ${res/colors.primary-dark}
 
 [module/wlan-network-mini]
@@ -493,11 +468,17 @@ label-connected =  %upspeed%  %downspeed%
 label-connected-foreground = ${res/colors.primary-dark}
 label-disconnected = 
 
+[module/xbacklight-label]
+inherit = template/module
+type = internal/xbacklight
+format = <label>
+format-prefix = " "
+format-prefix-foreground = ${res/colors.primary-dark}
+
 [module/xbacklight-ramp]
 inherit = template/module
 type = internal/xbacklight
 format = <ramp> <label>
-format-underline = ${res/colors.underline-backlight}
 
 label = %percentage%%
 
@@ -514,7 +495,6 @@ ramp-foreground = ${self.format-underline}
 inherit = template/module
 type = internal/xbacklight
 format = <ramp>
-format-underline = ${res/colors.underline-backlight}
 
 ramp-0 = 
 ramp-1 = 
@@ -530,7 +510,7 @@ type = internal/xkeyboard
 format = <label-indicator>
 
 label-indicator = %name%
-label-indicator-overline = ${res/colors.primary}
+label-indicator-overline = ${res/colors.primary-dark}
 
 [module/xwindow-label]
 inherit = template/module
