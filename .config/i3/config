@@ -6,26 +6,6 @@
 ## Cosmetcs
 ###################
 
-# Titlebar and borders
-new_window pixel 4
-for_window [class=".*"] border pixel 4
-
-# Plasma integration
-exec --no-startup-id wmctrl -c Plasma
-#for_window [title="Desktop — Plasma"] kill; floating enable; border none
-for_window [class="krunner"] floating enable; border none
-for_window [class="Kmix"] floating enable; border none
-for_window [class="Klipper"] floating enable; border none
-for_window [class="plasmashell"] floating enable;
-#for_window [title="plasma-desktop"] floating enable; border none
-for_window [class="Plasma"] floating enable; border none
-for_window [class="Plasmoidviewer"] floating enable; border none
-#for_window [title="win7"] floating enable; border none
-
-# i3-gaps configs
-gaps inner 0
-gaps outer 0
-
 # Set up our colors
 # Note: fallbacks are copied from gruvbox-dark
 # Source: https://github.com/morhetz/gruvbox-generalized
@@ -49,6 +29,31 @@ set_from_resource $purple2 color13 #d3869b
 set_from_resource $cyan2 color14 #8ec07c
 set_from_resource $fg color15 #ebdbb2
 
+# Set up titlebar and i3bar fonts
+font pango:Wuncon Siji, xos4 Terminus 9
+
+# Titlebar and borders
+new_window pixel 4
+for_window [class=".*"] border pixel 4
+for_window [class=".*"] title_format "%title"
+hide_edge_borders smart
+
+# Plasma integration
+exec --no-startup-id wmctrl -c Plasma
+#for_window [title="Desktop — Plasma"] kill; floating enable; border none
+for_window [class="krunner"] floating enable; border none
+for_window [class="Kmix"] floating enable; border none
+for_window [class="Klipper"] floating enable; border none
+for_window [class="plasmashell"] floating enable;
+#for_window [title="plasma-desktop"] floating enable; border none
+for_window [class="Plasma"] floating enable; border none
+for_window [class="Plasmoidviewer"] floating enable; border none
+#for_window [title="win7"] floating enable; border none
+
+# i3-gaps configs
+gaps inner 0
+gaps outer 0
+
 # Apply colors to i3
 #	<colorclass>			<border>	<backgrd>	<text>		<indicator>	<child_border>
 	client.focused			$blue2		$blue2 		$bg		$bgm	$blue2
@@ -57,9 +62,6 @@ set_from_resource $fg color15 #ebdbb2
 	client.urgent			$yellow2	$bg		$yellow2	$yellow		$bg
 	client.placeholder		$purple2	$bg		$purple2	$purple		$bg
 	client.background		$bg
-
-# Set up titlebar and i3bar fonts
-font pango:xos4 Terminus 9
 
 ###################
 ## Statusbars and Daemons
