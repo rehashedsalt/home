@@ -473,6 +473,15 @@ label-connected =  %upspeed%  %downspeed%
 label-connected-foreground = ${res/colors.primary-dark}
 label-disconnected = 
 
+[module/tether-network]
+inherit = module/wlan-network
+type = internal/network
+unknown-as-up = true
+interface = enp0s20f0u2
+format-connected-prefix = " "
+label-connected = Tethered
+label-disconnected = 
+
 [module/xbacklight-label]
 inherit = template/module
 type = internal/xbacklight
