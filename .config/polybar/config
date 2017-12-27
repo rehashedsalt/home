@@ -453,7 +453,6 @@ format-connected = <ramp-signal>
 format-connected-prefix = 
 format-disconnected-prefix = 
 format-disconnected-foreground = ${res/colors.background-4}
-format-disconnected-oveerline = 
 label-disconnected = 
 
 ramp-signal-0 = 
