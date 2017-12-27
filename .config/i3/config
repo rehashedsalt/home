@@ -12,15 +12,15 @@ for_window [class=".*"] border pixel 4
 
 # Plasma integration
 exec --no-startup-id wmctrl -c Plasma
-for_window [title="Desktop — Plasma"] kill; floating enable; border none
+#for_window [title="Desktop — Plasma"] kill; floating enable; border none
 for_window [class="krunner"] floating enable; border none
 for_window [class="Kmix"] floating enable; border none
 for_window [class="Klipper"] floating enable; border none
 for_window [class="plasmashell"] floating enable;
-for_window [title="plasma-desktop"] floating enable; border none
+#for_window [title="plasma-desktop"] floating enable; border none
 for_window [class="Plasma"] floating enable; border none
 for_window [class="Plasmoidviewer"] floating enable; border none
-for_window [title="win7"] floating enable; border none
+#for_window [title="win7"] floating enable; border none
 
 # i3-gaps configs
 gaps inner 0
