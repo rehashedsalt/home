@@ -261,7 +261,7 @@ animation-charging-framerate = 500
 [module/battery-ramp-mini]
 inherit = template/module/battery
 format-charging = <ramp-capacity>
-format-charging-prefix = 
+format-charging-prefix = 
 format-charging-prefix-foreground = ${res/colors.resource-good-dark}
 format-discharging = <ramp-capacity>
 format-full = <ramp-capacity>
@@ -449,12 +449,18 @@ ramp-signal-foreground = ${res/colors.primary-dark}
 
 [module/wlan-network-mini]
 inherit = template/module/network
+format-connected = <ramp-signal>
 format-connected-prefix = 
 format-disconnected-prefix = 
 format-disconnected-foreground = ${res/colors.background-4}
 format-disconnected-oveerline = 
-label-connected = 
-label-disconnected = 
+label-disconnected = 
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
 
 [module/wlan-speed]
 inherit = template/module/network
