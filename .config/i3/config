@@ -36,7 +36,7 @@ font pango:Wuncon Siji, xos4 Terminus 9
 new_window pixel 4
 for_window [class=".*"] border pixel 4
 for_window [class=".*"] title_format "%title"
-for_window [class="VirtualBox Machine" title="Windows"] move container to workspace $wVM
+for_window [class="VirtualBox Machine" title="Windows"] fullscreen enable; move container to workspace $wVM
 hide_edge_borders smart
 
 # Plasma integration
