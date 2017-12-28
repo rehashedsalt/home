@@ -36,6 +36,7 @@ font pango:Wuncon Siji, xos4 Terminus 9
 new_window pixel 4
 for_window [class=".*"] border pixel 4
 for_window [class=".*"] title_format "%title"
+for_window [class="VirtualBox Machine" title="Windows"] move container to workspace $wVM
 hide_edge_borders smart
 
 # Plasma integration
@@ -102,6 +103,7 @@ set $w7 7
 set $w8 8
 set $w9 9
 set $w10 10
+set $wVM VM
 
 ###################
 ## Keybindings
@@ -209,6 +211,7 @@ bindsym $mod+7 workspace $w7
 bindsym $mod+8 workspace $w8
 bindsym $mod+9 workspace $w9
 bindsym $mod+0 workspace $w10
+bindsym $mod+grave exec --no-startup-id VBoxManage startvm "Windows 9"; workspace $wVM
 
 # switch to next and previous workspaces
 bindsym $mod+I workspace next
