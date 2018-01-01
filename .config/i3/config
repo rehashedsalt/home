@@ -51,6 +51,9 @@ for_window [class="Plasma"] floating enable; border none
 for_window [class="Plasmoidviewer"] floating enable; border none
 #for_window [title="win7"] floating enable; border none
 
+# Miscellaneous window rules
+for_window [class="Waterfox"] move to workspace 1
+
 # i3-gaps configs
 gaps inner 0
 gaps outer 0
@@ -139,6 +142,11 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightnes
 bindsym $mod+p exec --no-startup-id "~/.bin/mpv-xwinwrap"
 bindsym $mod+$shift+p exec --no-startup-id "pkill xwinwrap"
 
+# VM controls
+bindsym $mod+grave exec --no-startup-id VBoxManage startvm "Windows 9"; workspace $wVM
+bindsym $mod+$shift+grave exec --no-startup-id VBoxManage controlvm "Windows 9" acpipowerbutton
+bindsym $sup+grave exec --no-startup-id VBoxManage controlvm "Windows 9" savestate
+
 # Miscellaneous non-movement hotkeys
 bindsym $mod+$shift+c reload
 bindsym $mod+$shift+r restart
@@ -211,7 +219,6 @@ bindsym $mod+7 workspace $w7
 bindsym $mod+8 workspace $w8
 bindsym $mod+9 workspace $w9
 bindsym $mod+0 workspace $w10
-bindsym $mod+grave exec --no-startup-id VBoxManage startvm "Windows 9"; workspace $wVM
 
 # switch to next and previous workspaces
 bindsym $mod+I workspace next
