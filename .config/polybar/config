@@ -81,7 +81,7 @@ tray-position = right
 
 modules-left = i3 bspwm | temperature-label cpu-label memory-label | xwindow-label
 modules-center = 
-modules-right = | xbacklight-label volume-ramp wlan-network eth-network battery-ramp | date
+modules-right = | update-arch xbacklight-label volume-ramp wlan-network eth-network battery-ramp | date
 
 [bar/gamma]
 inherit = template/bar
@@ -402,6 +402,15 @@ label =
 
 label-warn =  %temperature%
 label-warn-foreground = ${res/colors.alert}
+
+[module/update-arch]
+inherit = template/module
+type = custom/script
+exec = $HOME/.config/polybar/update-arch.sh
+exec-if = wget -q --spider http://www.startpage.com/ && uname -r | grep -q "ARCH"
+format-prefix = " "
+format-prefix-foreground = ${res/colors.primary-dark}
+interval = 3600
 
 [module/volume-ramp]
 inherit = template/module
