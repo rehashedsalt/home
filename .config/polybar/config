@@ -406,7 +406,7 @@ label-warn-foreground = ${res/colors.alert}
 [module/update-arch]
 inherit = template/module
 type = custom/script
-exec = $HOME/.config/polybar/update-arch.sh
+exec = echo `checkupdates | wc -l`
 exec-if = wget -q --spider http://www.startpage.com/ && uname -r | grep -q "ARCH" && [ `checkupdates | wc -l` != 0 ]
 format-prefix = " "
 format-prefix-foreground = ${res/colors.alert-dark}
