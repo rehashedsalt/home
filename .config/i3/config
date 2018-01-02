@@ -1,6 +1,23 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
+#
+###################
+## Workspaces
+###################
+
+# Initialize workspaces
+set $w1 1
+set $w2 2
+set $w3 3
+set $w4 4
+set $w5 5
+set $w6 6
+set $w7 7
+set $w8 8
+set $w9 9
+set $w10 10
+set $wVM VM
 
 ###################
 ## Cosmetcs
@@ -36,8 +53,6 @@ font pango:Wuncon Siji, xos4 Terminus 9
 new_window pixel 4
 for_window [class=".*"] border pixel 4
 for_window [class=".*"] title_format "%title"
-for_window [class="VirtualBox Machine" title="Windows"] fullscreen enable; move container to workspace $wVM
-hide_edge_borders smart
 
 # Plasma integration
 exec --no-startup-id wmctrl -c Plasma
@@ -52,7 +67,10 @@ for_window [class="Plasmoidviewer"] floating enable; border none
 #for_window [title="win7"] floating enable; border none
 
 # Miscellaneous window rules
-for_window [class="Waterfox"] move to workspace 1
+for_window [class="VirtualBox Machine" title="Windows"] fullscreen enable; move container to workspace $wVM
+for_window [class="Waterfox"] move to workspace $w1
+for_window [class="Spotify"] move to workspace $w10
+hide_edge_borders smart
 
 # i3-gaps configs
 gaps inner 0
@@ -91,22 +109,6 @@ exec --no-startup-id "xset -b"
 exec --no-startup-id "xset -dpms"
 # No screensaver
 exec --no-startup-id "xset s off"
-
-###################
-## Workspaces
-###################
-# Initialize workspaces
-set $w1 1
-set $w2 2
-set $w3 3
-set $w4 4
-set $w5 5
-set $w6 6
-set $w7 7
-set $w8 8
-set $w9 9
-set $w10 10
-set $wVM VM
 
 ###################
 ## Keybindings
