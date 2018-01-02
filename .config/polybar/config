@@ -410,7 +410,7 @@ exec = echo `checkupdates | wc -l`
 exec-if = wget -q --spider http://www.startpage.com/ && uname -r | grep -q "ARCH" && [ `checkupdates | wc -l` != 0 ]
 format-prefix = " "
 format-prefix-foreground = ${res/colors.alert-dark}
-interval = 3600
+interval = 60
 
 [module/volume-ramp]
 inherit = template/module
