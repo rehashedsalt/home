@@ -79,9 +79,9 @@ font-4 = ${res/fonts.font-4}
 inherit = template/bar
 tray-position = right
 
-modules-left = i3 bspwm | temperature-label cpu-label memory-label | xwindow-label
+modules-left = i3 bspwm | temperature-label cpu-label memory-label update-arch | xwindow-label
 modules-center = 
-modules-right = | update-arch xbacklight-label volume-ramp wlan-network eth-network battery-ramp | date
+modules-right = | xbacklight-label volume-ramp wlan-network eth-network battery-ramp | date
 
 [bar/gamma]
 inherit = template/bar
@@ -407,9 +407,9 @@ label-warn-foreground = ${res/colors.alert}
 inherit = template/module
 type = custom/script
 exec = $HOME/.config/polybar/update-arch.sh
-exec-if = wget -q --spider http://www.startpage.com/ && uname -r | grep -q "ARCH"
+exec-if = wget -q --spider http://www.startpage.com/ && uname -r | grep -q "ARCH" && [ `checkupdates | wc -l` != 0 ]
 format-prefix = " "
-format-prefix-foreground = ${res/colors.primary-dark}
+format-prefix-foreground = ${res/colors.alert-dark}
 interval = 3600
 
 [module/volume-ramp]
