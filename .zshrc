@@ -53,6 +53,3 @@ source $ZSH/oh-my-zsh.sh
 if [[ -f "$HOME/.profile" ]]; then
 	source "$HOME/.profile" 2>& /dev/null
 fi
-if [[ -f "$HOME/.profile-head" ]]; then
-	source "$HOME/.profile-head"
-fi
