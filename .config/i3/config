@@ -133,7 +133,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # mpv-xwinwrap controls
-bindsym $mod+p exec --no-startup-id "~/.bin/mpv-xwinwrap"
+bindsym $mod+p exec --no-startup-id "~/.local/bin/mpv-xwinwrap"
 bindsym $mod+$shift+p exec --no-startup-id "pkill xwinwrap"
 
 # VM controls
@@ -259,9 +259,9 @@ bindsym $mod+r mode "resize"
 # Control Mopidy
 mode "mopidy" {
 	# Shuffle, Repeat, and Consume
-	bindsym s exec --no-startup-id "~/.bin/mpc/mpc-i3-shuffle"
-	bindsym r exec --no-startup-id "~/.bin/mpc/mpc-i3-repeat"
-	bindsym e exec --no-startup-id "~/.bin/mpc/mpc-i3-consume"
+	bindsym s exec --no-startup-id "~/.local/bin/mpc/mpc-i3-shuffle"
+	bindsym r exec --no-startup-id "~/.local/bin/mpc/mpc-i3-repeat"
+	bindsym e exec --no-startup-id "~/.local/bin/mpc/mpc-i3-consume"
 
 	# Volume keys
 	bindsym Up exec --no-startup-id "mpc volume +5"
@@ -271,9 +271,9 @@ mode "mopidy" {
 	bindsym t exec --no-startup-id "mpc toggle; notify-send -a 'Mopidy' -u low -t 1 'Toggle' 'Toggled playback'
 
 	# Start playing a playlist
-	bindsym p exec --no-startup-id "~/.bin/mpc/mpc-i3-playlists --clear"
+	bindsym p exec --no-startup-id "~/.local/bin/mpc/mpc-i3-playlists --clear"
 	# Append a playlist
-	bindsym o exec --no-startup-id "~/.bin/mpc/mpc-i3-playlists"
+	bindsym o exec --no-startup-id "~/.local/bin/mpc/mpc-i3-playlists"
 
 	# Skip between tracks
 	bindsym Right exec --no-startup-id "mpc next; notify-send -a 'Mopidy' -u low -t 1 'Next' 'The current song has been skipped'"
