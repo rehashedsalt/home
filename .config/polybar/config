@@ -189,8 +189,8 @@ pin-workspaces = true
 ws-icon-0 = I;
 ws-icon-1 = II;
 ws-icon-2 = III;
-ws-icon-8 = IX;
-ws-icon-9 = X;
+ws-icon-3 = IX;
+ws-icon-4 = X;
 ws-icon-default = 
 
 # Active workspace on focused monitor
