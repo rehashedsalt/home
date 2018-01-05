@@ -49,13 +49,13 @@ font-4 =
 [template/bar]
 # Rendering of the bar
 width = 100%
-height = 28
+height = 32
 
 # Module padding and spacing
 padding = 2
 module-margin = 1
 
-border-size = 4
+border-bottom-size = 0
 border-color = ${res/colors.background-2}
 
 overline-size = 4
@@ -100,9 +100,8 @@ modules-right = | mpd-mini temperature-label-alert wlan-network-mini volume-ramp
 #====================
 [module/|]
 type = custom/text
-content = " "
-content-foreground = ${res/colors.foreground}
-content-background = ${res/colors.background-2}
+content = 
+content-foreground = ${res/colors.background-4}
 
 # CUSTOM
 #====================
@@ -160,8 +159,7 @@ label-mode-background = ${res/colors.primary}
 # Active workspace on focused monitor
 label-focused = %name%
 label-focused-padding = ${self.label-mode-padding}
-label-focused-foreground = ${res/colors.background}
-label-focused-background = ${res/colors.primary}
+label-focused-foreground = ${res/colors.primary-dark}
 
 # Active workspace on unfocused monitor
 label-visible = ${self.label-focused}
