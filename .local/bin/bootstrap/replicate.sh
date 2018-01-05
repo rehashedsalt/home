@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-git clone --recursive --separate-git-dir="$HOME/.dotfiles" git@github.com:rehashedsalt/home.git /tmp/dots
-rsync -rvl --exclude ".git" /tmp/dots/ $HOME/
-rm -r /tmp/dots
+tempfolder="/tmp/dots$(uuidgen)"
+git clone --recursive --separate-git-dir="$HOME/.dotfiles" git@github.com:rehashedsalt/home.git $tempfolder
+rsync -rvl --exclude ".git" $tempfolder/ $HOME/
+rm -r $tempfolder
 git submodule update --init --recursive --git-dir="$HOME/.dotfiles" --work-tree="$HOME" $HOME/
