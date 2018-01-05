@@ -106,5 +106,5 @@ fi
 
 # Minor configuration settings
 export EDITOR=$(which vim)
-export PATH=$PATH:$HOME/.bin:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/bin
 export XDG_CONFIG_HOME="$HOME/.config"
