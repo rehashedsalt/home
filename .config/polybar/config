@@ -150,6 +150,7 @@ warn-temperature = 50
 inherit = template/module
 type = internal/i3
 format = <label-state> <label-mode>
+enable-scroll = false
 index-sort = true
 
 label-mode-padding = 2
