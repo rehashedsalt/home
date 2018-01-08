@@ -25,15 +25,6 @@
 # If it is not, open a bug report at github.com/rehashedsalt/home and I'll take
 # care of it
 
-# dcfldd is a fork of dd with some improvements
-# I prefer it, so there's an alias here
-if [ `which dcfldd` ]; then
-	alias dd="sudo dcfldd"
-	alias ddgnu="sudo dd"
-else
-	alias dcfldd="echo You stupid little shit. Install it first."
-fi
-
 # If emerge exists, add emerge aliases
 if [ `which emerge` ]; then
 	alias e-depclean='sudo emerge -a --depclean'
