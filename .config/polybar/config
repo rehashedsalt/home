@@ -71,7 +71,7 @@ font-4 = ${res/fonts.font-4}
 inherit = template/bar
 tray-position = right
 
-modules-left = i3 cpu memory
+modules-left = i3 cpu memory update-arch
 modules-center = xwindow
 modules-right = xbacklight volume battery wlan date
 
@@ -207,6 +207,19 @@ format-prefix-background = ${res/colors.icon-memory}
 interval = 1
 
 label = %percentage_used%%
+label-padding = 2
+label-background = ${res/colors.background}
+
+[module/update-arch]
+type = custom/script
+exec = echo `checkupdates | wc -l`
+exec-if = wget -q --spider http://www.startpage.com/ && uname -r | grep -q "ARCH" && [ `checkupdates | wc -l` != 0 ]
+format-prefix = 
+format-prefix-padding = 2
+format-prefix-foreground = ${res/colors.background}
+format-prefix-background = ${res/colors.alert}
+interval = 60
+
 label-padding = 2
 label-background = ${res/colors.background}
 
