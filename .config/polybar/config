@@ -10,8 +10,13 @@
 [res/colors]
 primary = ${xrdb:color4}
 secondary = ${xrdb:color12}
-
 alert = ${xrdb:color3}
+
+icon-battery = ${xrdb:color2}
+icon-cpu = ${xrdb:color5}
+icon-memory = ${self.icon-cpu}
+icon-volume = ${xrdb:color6}
+icon-xbacklight = ${xrdb:color7}
 
 background = ${xrdb:background}
 background-2 = ${xrdb:bg2}
@@ -148,7 +153,7 @@ ramp-capacity-7= 
 ramp-capacity-8= 
 ramp-capacity-padding = 2
 ramp-capacity-foreground = ${res/colors.background}
-ramp-capacity-background = ${res/colors.primary}
+ramp-capacity-background = ${res/colors.icon-battery}
 
 animation-charging-0 = ${self.ramp-capacity-0}
 animation-charging-1 = ${self.ramp-capacity-1}
@@ -170,7 +175,7 @@ format = <label>
 format-prefix = 
 format-prefix-padding = 2
 format-prefix-foreground = ${res/colors.background}
-format-prefix-background = ${res/colors.primary}
+format-prefix-background = ${res/colors.icon-cpu}
 interval = 1
 
 label = %percentage%%
@@ -198,7 +203,7 @@ format = <label>
 format-prefix = 
 format-prefix-padding = 2
 format-prefix-foreground = ${res/colors.background}
-format-prefix-background = ${res/colors.primary}
+format-prefix-background = ${res/colors.icon-memory}
 interval = 1
 
 label = %percentage_used%%
@@ -211,7 +216,7 @@ format-volume = <label-volume>
 format-volume-prefix = 
 format-volume-prefix-padding = 2
 format-volume-prefix-foreground = ${res/colors.background}
-format-volume-prefix-background = ${res/colors.primary}
+format-volume-prefix-background = ${res/colors.icon-volume}
 format-muted = <label-muted>
 format-muted-prefix = 
 format-muted-prefix-padding = 2
@@ -254,7 +259,7 @@ format = <label>
 format-prefix = 
 format-prefix-padding = 2
 format-prefix-foreground = ${res/colors.background}
-format-prefix-background = ${res/colors.primary}
+format-prefix-background = ${res/colors.icon-xbacklight}
 
 label = %percentage%%
 label-padding = 2
