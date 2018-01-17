@@ -79,7 +79,7 @@ font-4 = ${res/fonts.font-4}
 inherit = template/bar
 tray-position = right
 
-modules-left = i3 bspwm | cpu-label memory-label temperature-label update-arch | xwindow-label
+modules-left = i3 | cpu-label memory-label temperature-label update-arch | xwindow-label
 modules-center = 
 modules-right = | xbacklight-label volume-ramp wlan-network eth-network battery-ramp | date
 
@@ -88,7 +88,7 @@ inherit = template/bar
 bottom = true
 tray-position = right
 
-modules-left = i3 bspwm | 
+modules-left = i3 | 
 modules-center = xwindow-label
 modules-right = | mpd-mini temperature-label-alert wlan-network-mini volume-ramp-mini battery-ramp-mini | date-mini
 
@@ -177,47 +177,6 @@ label-urgent = ${self.label-focused}
 label-urgent-padding = ${self.label-focused-padding}
 label-urgent-foreground = ${self.label-focused-foreground}
 label-urgent-background = ${res/colors.alert}
-
-[module/bspwm]
-inherit = template/module
-type = internal/bspwm
-enable-click = true
-enable-scroll = true
-format = <label-state> <label-mode>
-pin-workspaces = true
-
-ws-icon-0 = I;
-ws-icon-1 = II;
-ws-icon-2 = III;
-ws-icon-3 = IX;
-ws-icon-4 = X;
-ws-icon-default = 
-
-# Active workspace on focused monitor
-label-focused = %icon%
-label-focused-padding = 2
-label-focused-foreground = ${res/colors.primary}
-label-focused-overline = ${res/colors.primary}
-
-# Inactive filled workspace on focused monitor
-label-occupied = ${self.label-focused}
-label-occupied-padding = ${self.label-focused-padding}
-label-occupied-foreground = ${res/colors.primary}
-
-# Inactive empty workspace on focused monitor
-label-empty = ${self.label-focused}
-label-empty-padding = ${self.label-focused-padding}
-label-empty-foreground = ${res/colors.background-4}
-
-# Filled workspace on unfocused monitor
-label-dimmed-padding = ${self.label-focused-padding}
-label-dimmed-foreground = ${res/colors.primary-dark}
-label-dimmed-background = ${res/colors.background-4}
-
-# Urgent workspace on any monitor
-label-urgent = ${self.label-focused}
-label-urgent-padding = ${self.label-focused-padding}
-label-urgent-foreground = ${res/colors.alert}
 
 [module/battery-ramp]
 inherit = template/module/battery
