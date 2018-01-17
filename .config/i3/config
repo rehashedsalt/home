@@ -62,10 +62,10 @@ for_window [class="krunner"] floating enable; border none
 for_window [class="VirtualBox Machine" title="Windows"] fullscreen enable; move container to workspace $wVM
 for_window [class="Waterfox"] move to workspace $w1
 for_window [class="Spotify"] move to workspace $w10
-hide_edge_borders smart
+#hide_edge_borders smart
 
 # i3-gaps configs
-gaps inner 0
+gaps inner 10
 gaps outer 0
 
 # Apply colors to i3
