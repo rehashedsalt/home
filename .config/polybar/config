@@ -79,7 +79,7 @@ font-4 = ${res/fonts.font-4}
 inherit = template/bar
 tray-position = right
 
-modules-left = i3 bspwm | temperature-label cpu-label memory-label update-arch | xwindow-label
+modules-left = i3 bspwm | cpu-label memory-label temperature-label update-arch | xwindow-label
 modules-center = 
 modules-right = | xbacklight-label volume-ramp wlan-network eth-network battery-ramp | date
 
