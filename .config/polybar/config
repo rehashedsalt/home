@@ -142,7 +142,7 @@ interval = 1
 inherit = template/module
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 50
+warn-temperature = 250
 
 # STOCK
 #====================
