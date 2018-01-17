@@ -91,7 +91,7 @@ content-foreground = ${res/colors.background-4}
 [module/i3]
 type = internal/i3
 format = <label-state><label-mode>
-format-prefix = "i3"
+format-prefix = ""
 format-prefix-padding = 2
 format-prefix-foreground = ${res/colors.background}
 format-prefix-background = ${res/colors.primary}
@@ -100,7 +100,7 @@ index-sort = true
 
 label-mode-padding = 2
 label-mode-foreground = ${res/colors.background}
-label-mode-background = ${res/colors.secondary}
+label-mode-background = ${res/colors.primary}
 
 label-focused = %name%
 label-focused-padding = ${self.label-mode-padding}
