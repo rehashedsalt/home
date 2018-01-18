@@ -136,7 +136,7 @@ ws-icon-default = 
 label-focused = %icon%
 label-focused-padding = 2
 label-focused-foreground = ${res/colors.background}
-label-focused-background = ${res/colors.primary}
+label-focused-background = ${res/colors.secondary}
 
 label-dimmed = ${self.label-focused}
 label-dimmed-padding = ${self.label-focused-padding}
