@@ -53,6 +53,7 @@ module-margin = 1
 background = #00000000
 foreground = ${res/colors.foreground}
 
+# Invisible border on three sides; it cooperates well with i3
 border-top = 10
 border-left = ${self.border-top}
 border-right = ${self.border-top}
@@ -79,7 +80,7 @@ modules-right = xbacklight volume battery wlan date
 # MODULES
 #========================================
 
-# COSMETIC
+# BORDERS and WHITESPACE
 #====================
 [module/|]
 type = custom/text
@@ -134,6 +135,7 @@ interval = 15
 
 label-charging = %percentage%%
 label-charging-padding = 2
+label-charging-foreground = ${res/colors.background-4}
 label-charging-background = ${res/colors.background}
 label-discharging = %percentage%% (%time%)
 label-discharging-padding = ${self.label-charging-padding}
@@ -165,8 +167,8 @@ animation-charging-6 = ${self.ramp-capacity-6}
 animation-charging-7 = ${self.ramp-capacity-7}
 animation-charging-8 = ${self.ramp-capacity-8}
 animation-charging-padding = ${self.ramp-capacity-padding}
-animation-charging-foreground = ${self.ramp-capacity-foreground}
-animation-charging-background = ${self.ramp-capacity-background}
+animation-charging-foreground = ${res/colors.background}
+animation-charging-background = ${res/colors.background-4}
 animation-charging-framerate = 500
 
 [module/cpu]
