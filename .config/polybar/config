@@ -131,7 +131,9 @@ format-prefix-background = ${res/colors.primary}
 enable-scroll = false
 pin-workspaces = true
 
-ws-icon-default = 
+ws-icon-0 = 1;
+ws-icon-1 = 10;
+ws-icon-default = 
 
 label-focused = %icon%
 label-focused-padding = 2

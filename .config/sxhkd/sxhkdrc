@@ -20,6 +20,10 @@ alt + Tab
 alt + Escape
 	pkill -USR1 -x sxhkd
 
+# Reset wallpaper
+alt + shift + w
+	feh --randomize --bg-fill ~/Pictures/Wallpapers/i3
+
 # Pulse controls
 Audio{Raise,Lower}Volume
 	pactl set-sink-volume 0 {+,-}5%
@@ -39,6 +43,10 @@ alt + shift + p
 #
 # bspwm hotkeys
 #
+
+# Reload configuration
+alt + shift + r
+	~/.config/bspwm/bspwmrc
 
 # close and kill
 alt + {_,shift + }q

@@ -33,6 +33,9 @@ xset s off
 ## SERVICES AND DAEMONS
 sxhkd &						# Simple hotkey daemon
 feh --randomize --bg-fill ~/Pictures/Wallpapers/i3 &
+if [[ $(pgrep polybar) ]]; then
+	killall polybar
+fi
 polybar -r alpha & 				# Simple bar
 
 ## bspwm GENERAL CONFIGURATION
