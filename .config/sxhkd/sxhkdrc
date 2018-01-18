@@ -25,9 +25,9 @@ alt + shift + w
 	feh --randomize --bg-fill ~/Pictures/Wallpapers/i3
 
 # Pulse controls
-Audio{Raise,Lower}Volume
+XF86Audio{Raise,Lower}Volume
 	pactl set-sink-volume 0 {+,-}5%
-AudioMute
+XF86AudioMute
 	pactl set-sink-mute 0 toggle
 
 # Brightness controls
