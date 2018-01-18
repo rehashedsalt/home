@@ -24,9 +24,6 @@
 if [[ "$PATH" != "*$HOME/.local/bin" ]]; then
 	export PATH="$HOME/.local/bin:$PATH"
 fi
-if [[ "$PATH" != "*$HOME/.bin" ]]; then
-	export PATH="$HOME/.bin:$PATH"
-fi
 
 ## SIMPLE CONFIGURATION
 xset -b
@@ -35,23 +32,8 @@ xset s off
 
 ## SERVICES AND DAEMONS
 sxhkd &						# Simple hotkey daemon
-xfce4-power-manager &				# Power management daemon
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &	# That thing
-dunst &						# Notification daemon
-redshift &					# Eye strain-reducer
-
 feh --randomize --bg-fill ~/Pictures/Wallpapers/i3 &
-compton &					# Desktop compositor
-pulseaudio -D &					# Audio daemon
 polybar alpha & 				# Simple bar
-
-#mopidy &
-#syncthing -no-browser &			# File synchronization daemon
-
-## LOCKUP
-# I autostart my session on all of my machines
-# Thus, having a session-side lock screen is kind of important
-#i3lock -i ~/.i3splash &
 
 ## bspwm GENERAL CONFIGURATION
 bspc monitor -d			I II III IV V VI VII VIII IX X
@@ -73,7 +55,6 @@ bspc config normal_border_color			"#1d2021"
 bspc config urgent_border_color			"#fabd2f"
 
 ## bspwm WINDOW RULES
-bspc rule -a Firefox desktop=I
-bspc rule -a Thunderbird desktop=II
-bspc rule -a Spotify desktop=IX
+bspc rule -a Waterfox desktop=I
+bspc rule -a Spotify desktop=X
 
