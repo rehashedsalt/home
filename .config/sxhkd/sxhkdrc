@@ -1,39 +1,44 @@
 #!/bin/bash
 
-# terminal emulator
+# Execute terminal
 alt + Return
-	termite
+	urxvt
 
-# program launcher
+# Program launcher
 alt + @space
-	rofi -show drun
+	rofi -show drun -display-drun ':'
 
-# ssh launcher
+# SSH browser
 alt + @\
 	rofi -show ssh
 
-# alt-tabber
+# Program switcher
 alt + Tab
 	rofi -show
 
-# make sxhkd reload its configuration files:
+# Reload SXHKD
 alt + Escape
 	pkill -USR1 -x sxhkd
 
-# pulseaudio hotkeys
+# Pulse controls
 Audio{Raise,Lower}Volume
 	pactl set-sink-volume 0 {+,-}5%
-
 AudioMute
 	pactl set-sink-mute 0 toggle
+
+# Brightness controls
+XF86MonBrightness(Up,Down)
+	xbacklight (-inc,-dec) 5
+
+# mpv-xwinwrap Controls
+alt + p
+	~/.local/bin/mpv-xwinwrap
+alt + shift + p
+	pkill xwinwrap
 
 #
 # bspwm hotkeys
 #
-
-# quit bspwm normally
-alt + shift + Escape
-	bspc quit
 
 # close and kill
 alt + {_,shift + }q
@@ -56,7 +61,7 @@ alt + g
 #
 
 # set the window state
-alt + {t,shift + t,s,f}
+alt + {t,shift + t,f,shift + f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
@@ -74,7 +79,7 @@ alt + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
-alt + {p,b,comma,period
+alt + {a,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous node in the current desktop
