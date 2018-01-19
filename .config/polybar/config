@@ -57,9 +57,9 @@ background = #00000000
 foreground = ${res/colors.foreground}
 
 # Invisible border on three sides; it cooperates well with i3
-border-top = 10
-border-left = ${self.border-top}
-border-right = ${self.border-top}
+border-top-size = 10
+border-left-size = ${self.border-top-size}
+border-right-size = ${self.border-top-size}
 border-color = #00000000
 
 # Module fonts
@@ -126,11 +126,7 @@ label-urgent-background = ${res/colors.alert}
 
 [module/bspwm]
 type = internal/bspwm
-format = <label-state>
-format-prefix = 
-format-prefix-padding = ${res/config.padding}
-format-prefix-foreground = ${res/colors.background}
-format-prefix-background = ${res/colors.primary}
+format = <label-mode><label-state>
 enable-scroll = false
 pin-workspaces = true
 
@@ -143,6 +139,39 @@ ws-icon-5 = 6;
 ws-icon-6 = 7;
 ws-icon-7 = 8;
 ws-icon-default = 
+
+label-monocle = 
+label-monocle-padding = ${res/config.padding}
+label-monocle-background = ${res/colors.primary}
+label-monocle-foreground = ${res/colors.background}
+label-tiled = 
+label-tiled-padding = ${res/config.padding}
+label-tiled-background = ${res/colors.primary}
+label-tiled-foreground = ${res/colors.background}
+label-fullscreen = 
+label-fullscreen-padding = ${res/config.padding}
+label-fullscreen-background = ${res/colors.primary}
+label-fullscreen-foreground = ${res/colors.background}
+label-floating = 
+label-floating-padding = ${res/config.padding}
+label-floating-background = ${res/colors.primary}
+label-floating-foreground = ${res/colors.background}
+label-pseudotiled = 
+label-pseudotiled-padding = ${res/config.padding}
+label-pseudotiled-background = ${res/colors.primary}
+label-pseudotiled-foreground = ${res/colors.background}
+label-locked = 
+label-locked-padding = ${res/config.padding}
+label-locked-background = ${res/colors.primary}
+label-locked-foreground = ${res/colors.background}
+label-sticky = 
+label-sticky-padding = ${res/config.padding}
+label-sticky-background = ${res/colors.primary}
+label-sticky-foreground = ${res/colors.background}
+label-private = 
+label-private-padding = ${res/config.padding}
+label-private-background = ${res/colors.primary}
+label-private-foreground = ${res/colors.background}
 
 label-focused = %icon%
 label-focused-padding = ${res/config.padding}
@@ -168,6 +197,7 @@ label-empty = ${self.label-focused}
 label-empty-padding = ${res/config.padding}
 label-empty-foreground = ${res/colors.background-4}
 label-empty-background = ${res/colors.background}
+
 
 [module/battery]
 type = internal/battery
