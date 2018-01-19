@@ -253,7 +253,7 @@ animation-charging-framerate = 500
 [module/cpu]
 type = internal/cpu
 format = <label>
-format-prefix = 
+format-prefix = 
 format-prefix-padding = ${res/config.padding}
 format-prefix-foreground = ${res/colors.background}
 format-prefix-background = ${res/colors.icon-cpu}
