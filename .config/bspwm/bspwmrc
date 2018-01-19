@@ -34,6 +34,7 @@ xset s off
 sxhkd &						# Simple hotkey daemon
 feh --randomize --bg-fill ~/Pictures/Wallpapers/i3 &
 if [[ $(pgrep polybar) ]]; then
+	# Just covering bases here. Makes it easy to reload settings.
 	killall polybar
 fi
 polybar -r alpha & 				# Simple bar
@@ -47,9 +48,15 @@ bspc config window_gap		10
 bspc config split_ratio		0.52
 bspc config borderless_monocle	true
 bspc config gapless_monocle	true
+
 bspc focus_follows_pointer	true
+bspc click_to_focus		true
+
 bspc pointer_follows_focus	true
 bspc pointer_follows_monitor	true
+bspc pointer_modifier		mod1
+bspc pointer_action1		move
+bspc pointer_action2		resize_corner
 
 bspc config normal_border_color			"#282828"
 bspc config active_border_color			"#458588"
