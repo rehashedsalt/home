@@ -140,7 +140,7 @@ ws-icon-6 = 7;
 ws-icon-7 = 8;
 ws-icon-default = 
 
-label-monocle = 
+label-monocle = 
 label-monocle-padding = ${res/config.padding}
 label-monocle-background = ${res/colors.primary}
 label-monocle-foreground = ${res/colors.background}
