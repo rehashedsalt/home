@@ -1,5 +1,9 @@
 #!/bin/bash
 
+####################
+# GENERAL HOTKEYS
+####################
+
 # Execute terminal
 alt + Return
 	urxvt
@@ -40,9 +44,9 @@ alt + p
 alt + shift + p
 	pkill xwinwrap
 
-#
-# bspwm hotkeys
-#
+####################
+# BSPWM HOTKEYS
+####################
 
 # Reload configuration
 alt + shift + r
@@ -121,15 +125,15 @@ super + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
-alt + ctrl + {1-9}
+super + {1-9}
 	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-alt + ctrl + space
+super + space
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-alt + ctrl + shift + space
+ctrl + alt + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
