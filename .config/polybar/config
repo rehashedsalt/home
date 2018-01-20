@@ -73,6 +73,7 @@ font-4 = ${res/fonts.font-4}
 # BARS
 #====================
 [bar/primary-top]
+monitor = ${env:PB_MONITOR}
 inherit = template/bar
 tray-position = right
 
@@ -81,6 +82,7 @@ modules-center = xwindow
 modules-right = xbacklight volume battery wlan date
 
 [bar/secondary-top]
+monitor = ${env:PB_MONITOR}
 inherit = template/bar
 
 modules-left = i3 bspwm

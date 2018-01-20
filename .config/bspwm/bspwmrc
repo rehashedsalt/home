@@ -38,11 +38,8 @@ if [[ $(pgrep polybar) ]]; then
 	killall polybar
 fi
 
-# Polybar and related configuration
-$(
-	export PB_WM_RESTACK=bspwm
-	polybar -r primary-top & 
-)&
+# Start Polybar
+$HOME/.config/polybar/start.sh
 
 ## bspwm GENERAL CONFIGURATION
 bspc monitor -d			1 2 3 4 5 6 7 8
