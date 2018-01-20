@@ -41,7 +41,7 @@ fi
 # Polybar and related configuration
 $(
 	export PB_WM_RESTACK=bspwm
-	polybar -r alpha & 
+	polybar -r primary-top & 
 )&
 
 ## bspwm GENERAL CONFIGURATION

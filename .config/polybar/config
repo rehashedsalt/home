@@ -72,7 +72,7 @@ font-4 = ${res/fonts.font-4}
 
 # BARS
 #====================
-[bar/alpha]
+[bar/primary-top]
 inherit = template/bar
 tray-position = right
 
@@ -80,7 +80,7 @@ modules-left = i3 bspwm cpu memory update-arch
 modules-center = xwindow
 modules-right = xbacklight volume battery wlan date
 
-[bar/beta]
+[bar/secondary-top]
 inherit = template/bar
 
 modules-left = i3 bspwm
