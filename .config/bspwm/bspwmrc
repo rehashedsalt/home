@@ -37,7 +37,12 @@ if [[ $(pgrep polybar) ]]; then
 	# Just covering bases here. Makes it easy to reload settings.
 	killall polybar
 fi
-polybar -r alpha & 				# Simple bar
+
+# Polybar and related configuration
+$(
+	export PB_WM_RESTACK=bspwm
+	polybar -r alpha & 
+)&
 
 ## bspwm GENERAL CONFIGURATION
 bspc monitor -d			1 2 3 4 5 6 7 8

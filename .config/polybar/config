@@ -48,7 +48,7 @@ font-4 =
 # Rendering of the bar
 width = 100%
 height = 30
-wm-restack = bspwm
+wm-restack = ${env:PB_WM_RESTACK:i3}
 
 # Module padding and spacing
 module-margin = 1
@@ -79,6 +79,13 @@ tray-position = right
 modules-left = i3 bspwm cpu memory update-arch
 modules-center = xwindow
 modules-right = xbacklight volume battery wlan date
+
+[bar/beta]
+inherit = template/bar
+
+modules-left = i3 bspwm
+modules-center = xwindow
+modules-right =
 
 #========================================
 # MODULES
