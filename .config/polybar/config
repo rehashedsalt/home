@@ -48,6 +48,7 @@ font-4 =
 # Rendering of the bar
 width = 100%
 height = 30
+wm-restack = bspwm
 
 # Module padding and spacing
 module-margin = 1
