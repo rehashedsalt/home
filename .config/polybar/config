@@ -295,7 +295,7 @@ format-prefix-foreground = ${res/colors.background}
 format-prefix-background = ${res/colors.icon-memory}
 interval = 1
 
-label = %percentage_used%%
+label = %percentage_used%% (%gb_used%)
 label-padding = ${res/config.padding}
 label-background = ${res/colors.background}
 
