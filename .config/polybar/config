@@ -136,7 +136,11 @@ label-urgent-background = ${res/colors.alert}
 
 [module/bspwm]
 type = internal/bspwm
-format = <label-mode><label-state>
+format = <label-state><label-mode>
+format-prefix = b
+format-prefix-padding = 2
+format-prefix-foreground = ${res/colors.background}
+format-prefix-background = ${res/colors.primary}
 enable-scroll = false
 pin-workspaces = true
 
