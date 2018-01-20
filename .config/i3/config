@@ -81,7 +81,7 @@ gaps outer 0
 ## Statusbars and Daemons
 ###################
 
-exec_always --no-startup-id "killall polybar && polybar -r alpha"
+exec_always --no-startup-id "killall polybar && ~/.config/polybar/start.sh"
 #exec --no-startup-id "redshift"
 #exec_always --no-startup-id "compton --config ~/.config/compton.conf"
 #exec_always --no-startup-id "dunst"
