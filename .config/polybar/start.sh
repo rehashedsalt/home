@@ -20,16 +20,18 @@ export PB_MONITOR=$(xrandr -q | awk '/\<primary\>/{print $1}')
 if [[ $PB_MONITOR == "" ]]; then
 	exit 1
 fi
+printf '[INFO] Starting Polybar primary on monitor $PB_MONITOR'
 polybar -r primary-top&
 # ...and then moving on to secondaries, if we have them
 # Alright, now this looks *really* bad, but there's no way in hell you can get
 # me to attempt to solve this with regex. Fuck regex. It starts more problems
 # than it solves
 export secondary_monitors=$(xrandr -q | grep ' connected' | grep -v 'primary' | awk '{print $1}')
-if [[ $PB_MONITOR == "" ]]; then
+if [[ $secondary_monitors == "" ]]; then
 	exit 0
 fi
-for monitor in secondary_monitors; do
+for monitor in $secondary_monitors; do
+	printf '[INFO] Starting Polybar secondary on monitor $monitor'
 	PB_MONITOR=$monitor polybar -r secondary-top
 done
 
