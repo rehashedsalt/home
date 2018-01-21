@@ -179,7 +179,7 @@ assistant.csd .sidebar {
   border-top-style: none; }
 
 assistant .sidebar label {
-  padding: 4px 8px; }
+  padding: 1px 2px; }
 
 assistant .sidebar label.highlight {
   background-color: mix(#32302f,#ebdbb2,0.8); }
@@ -210,9 +210,9 @@ button, headerbar button, .titlebar:not(headerbar) button, toolbar button, toolb
 #XfceNotifyWindow button, .osd button, .osd spinbutton:not(.vertical) button,
 #XfceNotifyWindow spinbutton:not(.vertical) button, .osd spinbutton.vertical button:first-child,
 #XfceNotifyWindow spinbutton.vertical button:first-child, .nemo-window toolbar button, .nemo-window .sidebar + separator + box .primary-toolbar button.flat, #login_window button, #shutdown_button button, #restart_button button {
-  min-height: 22px;
-  min-width: 22px;
-  padding: 4px 6px;
+  min-height: 16px;
+  min-width: 16px;
+  padding: 1px 3px;
   border-width: 1px;
   border-style: solid;
   border-radius: 3px;
@@ -595,8 +595,8 @@ spinbutton:not(.vertical) {
 
 spinbutton.vertical button, spinbutton.vertical entry {
   min-width: 0;
-  padding-left: 2px;
-  padding-right: 2px; }
+  padding-left: -1px;
+  padding-right: -1px; }
 
 spinbutton.vertical entry {
   border-radius: 0;
@@ -616,8 +616,8 @@ spinbutton.vertical button.down {
 *******************/
 combobox button.combo {
   min-width: 0;
-  padding-left: 6px;
-  padding-right: 6px; }
+  padding-left: 3px;
+  padding-right: 3px; }
 
 combobox arrow {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
@@ -625,7 +625,7 @@ combobox arrow {
   min-width: 16px; }
 
 combobox box button, combobox box entry {
-  padding: 4px 6px; }
+  padding: 1px 3px; }
 
 /*********
  ! Entry *
@@ -715,9 +715,9 @@ entry, menuitem entry, popover.background entry, .osd entry,
     border-radius: 3px;
     color: #ebdbb2; }
   entry image.left, #XfceNotifyWindow entry image.left, #login_window entry image.left {
-    padding-right: 4px; }
+    padding-right: 1px; }
   entry image.right, #XfceNotifyWindow entry image.right, #login_window entry image.right {
-    padding-left: 4px; }
+    padding-left: 1px; }
   entry.warning, popover.background entry.warning,
   #XfceNotifyWindow entry.warning, #login_window entry.warning {
     color: #32302f;
@@ -771,7 +771,7 @@ entry {
   background-color: #ebdbb2;
   background-image: none;
   border-color: shade(mix(#ebdbb2,#32302f,0.2),0.8);
-  padding: 4px;
+  padding: 1px;
   color: #32302f;
   caret-color: #282828;
   -gtk-secondary-caret-color: #282828; }
@@ -818,12 +818,12 @@ entry {
  ! Toolbar
 **********/
 toolbar {
-  padding: 3px;
+  padding: 0px;
   border-style: none; }
   toolbar.horizontal separator {
-    margin: 0 6px 1px; }
+    margin: 0 3px 1px; }
   toolbar.vertical separator {
-    margin: 6px 1px 6px 0; }
+    margin: 3px 1px 3px 0; }
 
 headerbar {
   border-width: 0 0 1px;
@@ -832,11 +832,11 @@ headerbar {
   headerbar spinbutton,
   headerbar separator,
   headerbar button {
-    margin-top: 7px;
-    margin-bottom: 7px; }
+    margin-top: 4px;
+    margin-bottom: 4px; }
   headerbar switch {
-    margin-top: 5px;
-    margin-bottom: 5px; }
+    margin-top: 2px;
+    margin-bottom: 2px; }
   window:not(.tiled):not(.maximized) separator:first-child + headerbar:backdrop, window:not(.tiled):not(.maximized) separator:first-child + headerbar,
   window:not(.tiled):not(.maximized) headerbar:first-child:backdrop,
   window:not(.tiled):not(.maximized) headerbar:first-child {
@@ -853,7 +853,7 @@ headerbar, .titlebar:not(headerbar) {
   background-image: none;
   border-radius: 3px 3px 0 0;
   color: mix(#d5c4a1,#282828,0.1);
-  padding: 0 8px;
+  padding: 0 2px;
   min-height: 42px; }
   headerbar:focus, .titlebar:focus:not(headerbar), headerbar:hover, .titlebar:hover:not(headerbar) {
     border-color: #527065; }
@@ -869,10 +869,10 @@ headerbar, .titlebar:not(headerbar) {
     color: mix(#d5c4a1,#282828,0.5); }
   headerbar .title, .titlebar:not(headerbar) .title {
     font-weight: bold;
-    padding: 0 8px; }
+    padding: 0 2px; }
   headerbar .subtitle, .titlebar:not(headerbar) .subtitle {
     font-size: smaller;
-    padding: 0 8px; }
+    padding: 0 2px; }
   headerbar button, .titlebar:not(headerbar) button {
     background-color: #282828;
     background-image: none;
@@ -992,11 +992,11 @@ headerbar, .titlebar:not(headerbar) {
     headerbar .linked > button:active:only-child, .titlebar:not(headerbar) .linked > button:active:only-child, headerbar .linked > button:active:only-child:focus, .titlebar:not(headerbar) .linked > button:active:only-child:focus, headerbar .linked > button:active:only-child:hover, .titlebar:not(headerbar) .linked > button:active:only-child:hover, headerbar .linked > button:active:only-child:hover:focus, .titlebar:not(headerbar) .linked > button:active:only-child:hover:focus, headerbar .linked > button:checked:only-child, .titlebar:not(headerbar) .linked > button:checked:only-child, headerbar .linked > button:checked:only-child:focus, .titlebar:not(headerbar) .linked > button:checked:only-child:focus, headerbar .linked > button:checked:only-child:hover, .titlebar:not(headerbar) .linked > button:checked:only-child:hover, headerbar .linked > button:checked:only-child:hover:focus, .titlebar:not(headerbar) .linked > button:checked:only-child:hover:focus {
       box-shadow: inset 1px 0 rgba(10, 10, 9, 0.06), inset 0 1px rgba(10, 10, 9, 0.07), inset -1px 0 rgba(10, 10, 9, 0.06); }
   headerbar combobox, .titlebar:not(headerbar) combobox, headerbar button, .titlebar:not(headerbar) button {
-    padding: 4px; }
+    padding: 1px; }
     headerbar combobox.text-button, .titlebar:not(headerbar) combobox.text-button, headerbar button.text-button, .titlebar:not(headerbar) button.text-button {
-      padding: 4px; }
+      padding: 1px; }
     headerbar combobox.image-button, .titlebar:not(headerbar) combobox.image-button, headerbar button.image-button, .titlebar:not(headerbar) button.image-button {
-      padding: 4px; }
+      padding: 1px; }
   headerbar separator, .titlebar:not(headerbar) separator, headerbar separator:disabled, .titlebar:not(headerbar) separator:disabled {
     color: #181818;
     border-color: currentColor;
@@ -1024,7 +1024,7 @@ headerbar, .titlebar:not(headerbar) {
   headerbar .title, .titlebar:not(headerbar) .title {
     font-weight: bold; }
   headerbar separator.titlebutton, .titlebar:not(headerbar) separator.titlebutton {
-    margin-left: 4px; }
+    margin-left: 1px; }
   headerbar button, .titlebar:not(headerbar) button {
     background-color: #32302f;
     background-image: none;
@@ -1127,7 +1127,7 @@ headerbar, .titlebar:not(headerbar) {
         color: rgba(50, 48, 47, 0.85); }
   headerbar button.titlebutton + separator.titlebutton, .titlebar:not(headerbar) button.titlebutton + separator.titlebutton {
     margin-left: 0;
-    margin-right: 4px; }
+    margin-right: 1px; }
   headerbar button.titlebutton, .titlebar:not(headerbar) button.titlebutton {
     border: 0;
     background-image: none;
@@ -1168,10 +1168,10 @@ toolbar {
     color: mix(#32302f,#ebdbb2,0.5); }
   toolbar .title {
     font-weight: bold;
-    padding: 0 8px; }
+    padding: 0 2px; }
   toolbar .subtitle {
     font-size: smaller;
-    padding: 0 8px; }
+    padding: 0 2px; }
   toolbar button {
     background-color: #ebdbb2;
     background-image: none;
@@ -1291,11 +1291,11 @@ toolbar {
     toolbar .linked > button:active:only-child, toolbar .linked > button:active:only-child:focus, toolbar .linked > button:active:only-child:hover, toolbar .linked > button:active:only-child:hover:focus, toolbar .linked > button:checked:only-child, toolbar .linked > button:checked:only-child:focus, toolbar .linked > button:checked:only-child:hover, toolbar .linked > button:checked:only-child:hover:focus {
       box-shadow: inset 1px 0 rgba(10, 10, 9, 0.06), inset 0 1px rgba(10, 10, 9, 0.07), inset -1px 0 rgba(10, 10, 9, 0.06); }
   toolbar combobox, toolbar button {
-    padding: 4px; }
+    padding: 1px; }
     toolbar combobox.text-button, toolbar button.text-button {
-      padding: 4px; }
+      padding: 1px; }
     toolbar combobox.image-button, toolbar button.image-button {
-      padding: 4px; }
+      padding: 1px; }
   toolbar separator, toolbar separator:disabled {
     color: #c59c33;
     border-color: currentColor;
@@ -1435,7 +1435,7 @@ window.csd > .titlebar:not(headerbar) {
  ! Action-bar *
 ***************/
 actionbar > revealer > box {
-  padding: 4px;
+  padding: 1px;
   border-top: 1px solid mix(#ebdbb2,#32302f,0.1); }
   actionbar > revealer > box:backdrop {
     border-color: mix(#ebdbb2,mix(#ebdbb2,#32302f,0.1),0.9); }
@@ -1750,11 +1750,11 @@ headerbar.selection-mode,
   headerbar.selection-mode .title,
   .titlebar:not(headerbar).selection-mode .title {
     font-weight: bold;
-    padding: 0 8px; }
+    padding: 0 2px; }
   headerbar.selection-mode .subtitle,
   .titlebar:not(headerbar).selection-mode .subtitle {
     font-size: smaller;
-    padding: 0 8px; }
+    padding: 0 2px; }
   headerbar.selection-mode button,
   .titlebar:not(headerbar).selection-mode button {
     background-color: #83a598;
@@ -2091,15 +2091,15 @@ headerbar.selection-mode,
   headerbar.selection-mode combobox, headerbar.selection-mode button,
   .titlebar:not(headerbar).selection-mode combobox,
   .titlebar:not(headerbar).selection-mode button {
-    padding: 4px; }
+    padding: 1px; }
     headerbar.selection-mode combobox.text-button, headerbar.selection-mode button.text-button,
     .titlebar:not(headerbar).selection-mode combobox.text-button,
     .titlebar:not(headerbar).selection-mode button.text-button {
-      padding: 4px; }
+      padding: 1px; }
     headerbar.selection-mode combobox.image-button, headerbar.selection-mode button.image-button,
     .titlebar:not(headerbar).selection-mode combobox.image-button,
     .titlebar:not(headerbar).selection-mode button.image-button {
-      padding: 4px; }
+      padding: 1px; }
   headerbar.selection-mode separator, headerbar.selection-mode separator:disabled,
   .titlebar:not(headerbar).selection-mode separator,
   .titlebar:not(headerbar).selection-mode separator:disabled {
@@ -2541,7 +2541,7 @@ colorswatch#editor-color-sample {
     border-radius: 3.5px; }
 
 button.color {
-  padding: 4px; }
+  padding: 1px; }
   button.color colorswatch:only-child, button.color colorswatch:only-child overlay {
     border-radius: 3px; }
   button.color:disabled colorswatch:only-child, button.color:backdrop colorswatch:only-child, button.color:active colorswatch:only-child, button.color:checked colorswatch:only-child {
@@ -2574,7 +2574,7 @@ list {
     background-color: #ebdbb2;
     border-color: mix(#ebdbb2,mix(#ebdbb2,#32302f,0.1),0.9); }
   list row {
-    padding: 4px; }
+    padding: 1px; }
 
 row {
   transition: all 150ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
@@ -2596,7 +2596,7 @@ row {
     background-color: #83a598; }
 
 flowbox flowboxchild {
-  padding: 4px;
+  padding: 1px;
   border-radius: 3px; }
   flowbox flowboxchild:selected {
     outline-offset: -2px; }
@@ -3129,9 +3129,9 @@ entry, menuitem entry, popover.background entry, .osd entry,
     border-radius: 3px;
     color: #ebdbb2; }
   entry image.left, #XfceNotifyWindow entry image.left, #login_window entry image.left {
-    padding-right: 4px; }
+    padding-right: 1px; }
   entry image.right, #XfceNotifyWindow entry image.right, #login_window entry image.right {
-    padding-left: 4px; }
+    padding-left: 1px; }
   entry.warning, popover.background entry.warning,
   #XfceNotifyWindow entry.warning, #login_window entry.warning {
     color: #32302f;
@@ -3193,7 +3193,7 @@ menubar, .menubar {
   color: #d5c4a1; }
   menubar > menuitem, .menubar > menuitem {
     min-height: 16px;
-    padding: 6px 10px;
+    padding: 1.5px 2.5px;
     border: 1px solid transparent;
     background-color: transparent;
     background-image: none;
@@ -3214,7 +3214,7 @@ menu,
 .context-menu {
   border: 0;
   border-radius: 0;
-  padding: 4px;
+  padding: 1px;
   background-color: #282828;
   color: #d5c4a1; }
   .csd menu, .csd
@@ -3234,7 +3234,7 @@ menu,
   .csd
   .context-menu separator {
     background-color: #242424;
-    margin: 2px 0; }
+    margin: -1px 0; }
   menu .separator,
   .csd menu .separator,
   .menu .separator,
@@ -3249,7 +3249,7 @@ menu,
   .context-menu menuitem {
     min-height: 16px;
     min-width: 40px;
-    padding: 4px;
+    padding: 1px;
     border-radius: 0; }
     menu menuitem:active, menu menuitem:hover,
     .menu menuitem:active,
@@ -3371,7 +3371,7 @@ menu,
   .context-menu > arrow {
     min-height: 16px;
     min-width: 16px;
-    padding: 4px;
+    padding: 1px;
     background-color: #282828;
     border-radius: 0; }
     menu > arrow.top,
@@ -3429,7 +3429,7 @@ menuitem entry {
   background-color: #282828;
   background-image: none;
   border-color: shade(mix(#282828,#d5c4a1,0.2),0.8);
-  padding: 4px;
+  padding: 1px;
   color: #d5c4a1;
   caret-color: #282828;
   -gtk-secondary-caret-color: #282828; }
@@ -3464,7 +3464,7 @@ menuitem entry {
  ! Popover
 **********/
 popover.background {
-  padding: 1px;
+  padding: -2px;
   border-radius: 3px;
   background-clip: border-box;
   background-color: #282828;
@@ -3514,7 +3514,7 @@ popover.background {
     background-color: #ebdbb2;
     background-image: none;
     border-color: shade(mix(#ebdbb2,#32302f,0.2),0.8);
-    padding: 4px;
+    padding: 1px;
     color: #32302f;
     caret-color: #282828;
     -gtk-secondary-caret-color: #282828; }
@@ -3668,7 +3668,7 @@ popover.background {
 
 modelbutton.flat,
 menuitem.button.flat {
-  padding: 4px 6px;
+  padding: 1px 3px;
   outline-color: transparent;
   transition: none; }
   modelbutton.flat:hover,
@@ -3725,11 +3725,11 @@ tooltip * {
 messagedialog, .message-dialog, .prompt {
   -GtkDialog-content-area-border: 0;
   -GtkDialog-action-area-border: 0;
-  -GtkDialog-button-spacing: 4px;
+  -GtkDialog-button-spacing: 1px;
   margin: 0;
   padding: 0; }
   messagedialog .dialog-action-box, .message-dialog .dialog-action-box, .prompt .dialog-action-box {
-    margin: 8px; }
+    margin: 2px; }
 
 printdialog paper {
   color: #32302f;
@@ -3741,7 +3741,7 @@ printdialog paper {
     border-color: mix(#ebdbb2,mix(#ebdbb2,#32302f,0.1),0.9); }
 
 printdialog .dialog-action-box {
-  margin: 8px; }
+  margin: 2px; }
 
 /*********************
  ! App notifications *
@@ -3751,7 +3751,7 @@ frame.app-notification {
   border-color: rgba(32, 32, 32, 0.8);
   border-width: 0 1px 1px;
   border-radius: 0 0 3px 3px;
-  padding: 8px;
+  padding: 2px;
   background-color: rgba(40, 40, 40, 0.8);
   background-image: none;
   color: #d5c4a1; }
@@ -3927,7 +3927,7 @@ GtkBubbleWindow {
  ! Font-viewer *
 ****************/
 SushiFontWidget {
-  padding: 4px 8px; }
+  padding: 1px 2px; }
 
 /*************
  ! Gucharmap *
@@ -3949,8 +3949,8 @@ EPreviewPane .entry {
 entry.entry.pin-entry {
   font-style: normal;
   font-size: 50px;
-  padding-left: 20px;
-  padding-right: 20px; }
+  padding-left: 5px;
+  padding-right: 5px; }
 
 label.pin-label {
   font-style: normal;
@@ -3963,9 +3963,9 @@ label.pin-label {
   min-width: 20px;
   min-height: 24px;
   margin-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-bottom: 0.5px;
+  padding-left: 1px;
+  padding-right: 1px;
   color: #32302f;
   background-color: #ebdbb2;
   border: 1px solid;
@@ -4072,7 +4072,7 @@ notebook {
   notebook > stack:not(:only-child) {
     background-color: #ebdbb2; }
   notebook > header {
-    padding: 4px;
+    padding: 1px;
     background-color: #ebdbb2; }
     notebook > header.top {
       box-shadow: inset 0 -1px mix(#ebdbb2,#32302f,0.1); }
@@ -4111,7 +4111,7 @@ notebook {
       background-image: none;
       border-color: mix(mix(#ebdbb2,#32302f,0.1),mix(#32302f,#ebdbb2,0.5),0.15);
       color: rgba(50, 48, 47, 0.8);
-      padding: 4px 12px;
+      padding: 1px 9px;
       min-width: 20px;
       min-height: 20px;
       outline-offset: -4px;
@@ -4120,7 +4120,6 @@ notebook {
       notebook > header > tabs > tab:hover:not(:checked) {
         background-color: mix(#ebdbb2,#32302f,0.12);
         background-image: none;
-        border-color: mix(mix(#ebdbb2,#32302f,0.1),#83a598,0.3);
         color: mix(#32302f,mix(#32302f,#ebdbb2,0.5),0.5); }
       notebook > header > tabs > tab:checked, notebook > header > tabs > tab:checked:hover {
         background: #ebdbb2;
@@ -4147,8 +4146,8 @@ notebook {
       padding-bottom: 0; }
       notebook > header.top > tabs > tab {
         border-bottom: none;
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 9px;
+        padding-right: 9px;
         -gtk-outline-radius: 0;
         margin-top: 3px; }
         notebook > header.top > tabs > tab + tab {
@@ -4159,18 +4158,20 @@ notebook {
         notebook > header.top > tabs > tab:last-child {
           border-radius: 0 3px 0 0;
           -gtk-outline-radius: 0 3px 0 0; }
-        notebook > header.top > tabs > tab:checked {
+        notebook > header.top > tabs > tab:hover:not(:checked), notebook > header.top > tabs > tab:checked {
           border-top-width: 3px;
           border-top-color: #83a598;
           margin-top: 0;
           -gtk-outline-radius: 3px;
           border-radius: 3px 3px 0 0; }
+        notebook > header.top > tabs > tab:hover:not(:checked) {
+          border-top-color: mix(#83a598,mix(#ebdbb2,#ebdbb2,0.6),0.3); }
     notebook > header.bottom {
       padding-top: 0; }
       notebook > header.bottom > tabs > tab {
         border-top: none;
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 9px;
+        padding-right: 9px;
         -gtk-outline-radius: 0;
         margin-bottom: 3px; }
         notebook > header.bottom > tabs > tab + tab {
@@ -4181,18 +4182,20 @@ notebook {
         notebook > header.bottom > tabs > tab:last-child {
           border-radius: 0 0 3px;
           -gtk-outline-radius: 0 0 3px; }
-        notebook > header.bottom > tabs > tab:checked {
+        notebook > header.bottom > tabs > tab:hover:not(:checked), notebook > header.bottom > tabs > tab:checked {
           border-bottom-width: 3px;
           border-bottom-color: #83a598;
           margin-bottom: 0;
           -gtk-outline-radius: 3px;
           border-radius: 0 0 3px 3px; }
+        notebook > header.bottom > tabs > tab:hover:not(:checked) {
+          border-bottom-color: mix(#83a598,mix(#ebdbb2,#ebdbb2,0.6),0.3); }
     notebook > header.right {
       padding-left: 0; }
       notebook > header.right > tabs > tab {
         border-left: none;
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 9px;
+        padding-right: 9px;
         -gtk-outline-radius: 0;
         margin-right: 3px; }
         notebook > header.right > tabs > tab + tab {
@@ -4203,18 +4206,20 @@ notebook {
         notebook > header.right > tabs > tab:last-child {
           border-radius: 0 0 3px;
           -gtk-outline-radius: 0 0 3px; }
-        notebook > header.right > tabs > tab:checked {
+        notebook > header.right > tabs > tab:hover:not(:checked), notebook > header.right > tabs > tab:checked {
           border-right-width: 3px;
           border-right-color: #83a598;
           margin-right: 0;
           -gtk-outline-radius: 3px;
           border-radius: 0 3px 3px 0; }
+        notebook > header.right > tabs > tab:hover:not(:checked) {
+          border-right-color: mix(#83a598,mix(#ebdbb2,#ebdbb2,0.6),0.3); }
     notebook > header.left {
       padding-right: 0; }
       notebook > header.left > tabs > tab {
         border-right: none;
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 9px;
+        padding-right: 9px;
         -gtk-outline-radius: 0;
         margin-left: 3px; }
         notebook > header.left > tabs > tab + tab {
@@ -4225,12 +4230,14 @@ notebook {
         notebook > header.left > tabs > tab:last-child {
           border-radius: 0 0 0 3px;
           -gtk-outline-radius: 0 0 0 3px; }
-        notebook > header.left > tabs > tab:checked {
+        notebook > header.left > tabs > tab:hover:not(:checked), notebook > header.left > tabs > tab:checked {
           border-left-width: 3px;
           border-left-color: #83a598;
           margin-left: 0;
           -gtk-outline-radius: 3px;
           border-radius: 3px 0 0 3px; }
+        notebook > header.left > tabs > tab:hover:not(:checked) {
+          border-left-color: mix(#83a598,mix(#ebdbb2,#ebdbb2,0.6),0.3); }
 
 /*********
  ! Buttons
@@ -4535,7 +4542,7 @@ button.osd,
 
 toolbar.osd {
   -GtkToolbar-button-relief: normal;
-  padding: 4px;
+  padding: 1px;
   border: 1px solid rgba(32, 32, 32, 0.8);
   border-radius: 3px;
   background-color: rgba(40, 40, 40, 0.8);
@@ -4857,7 +4864,7 @@ progressbar.osd {
     background-color: #282828;
     background-image: none;
     border-color: shade(mix(#282828,#d5c4a1,0.2),0.8);
-    padding: 4px;
+    padding: 1px;
     color: #d5c4a1;
     caret-color: #282828;
     -gtk-secondary-caret-color: #282828; }
@@ -5879,7 +5886,7 @@ levelbar block {
 scale {
   min-height: 10px;
   min-width: 10px;
-  padding: 4px; }
+  padding: 1px; }
   scale.horizontal trough {
     padding: 0 3px; }
   scale.horizontal highlight, scale.horizontal fill {
@@ -6158,10 +6165,10 @@ scrollbar {
     border-style: none; }
 
 stacksidebar row {
-  padding: 8px 4px; }
+  padding: 2px 1px; }
   stacksidebar row > label {
-    padding-left: 4px;
-    padding-right: 4px; }
+    padding-left: 1px;
+    padding-right: 1px; }
   stacksidebar row.needs-attention > label {
     background-size: 6px 6px, 0 0; }
 
@@ -6172,7 +6179,7 @@ placessidebar row {
   min-height: 32px;
   padding: 0; }
   placessidebar row > revealer {
-    padding: 0 8px; }
+    padding: 0 2px; }
   placessidebar row:selected {
     color: #ebdbb2; }
   placessidebar row:disabled {
@@ -6186,11 +6193,11 @@ placessidebar row {
   placessidebar row image.sidebar-icon {
     opacity: 0.7; }
     placessidebar row image.sidebar-icon:dir(ltr) {
-      padding-right: 10px;
-      padding-left: 4px; }
+      padding-right: 4px;
+      padding-left: 1px; }
     placessidebar row image.sidebar-icon:dir(rtl) {
-      padding-left: 10px;
-      padding-right: 4px; }
+      padding-left: 4px;
+      padding-right: 1px; }
   placessidebar row label.sidebar-label:dir(ltr) {
     padding-right: 2px; }
   placessidebar row label.sidebar-label:dir(rtl) {
@@ -6296,7 +6303,7 @@ radio {
   -gtk-icon-source: url("../assets/radio-unchecked-dark.svg");
   min-width: 16px;
   min-height: 16px;
-  margin-right: 4px; }
+  margin-right: 1px; }
   radio:disabled {
     -gtk-icon-source: url("../assets/radio-unchecked-insensitive-dark.svg"); }
   radio:checked, radio:active {
@@ -6329,7 +6336,7 @@ check {
   -gtk-icon-source: url("../assets/checkbox-unchecked-dark.svg");
   min-width: 16px;
   min-height: 16px;
-  margin-right: 4px; }
+  margin-right: 1px; }
   check:disabled {
     -gtk-icon-source: url("../assets/checkbox-unchecked-insensitive-dark.svg"); }
   check:checked, check:active {
@@ -6359,7 +6366,7 @@ check {
 
 radio:dir(rtl), check:dir(rtl) {
   margin-right: 0;
-  margin-left: 4px; }
+  margin-left: 1px; }
 
 .view.content-view.check:not(list), iconview.content-view.check:not(list) {
   -gtk-icon-shadow: none;
@@ -6406,7 +6413,7 @@ radio:dir(rtl), check:dir(rtl) {
 *********/
 switch {
   border-radius: 3px;
-  padding: 3px;
+  padding: 0px;
   border: 0;
   outline: none;
   transition: background-color .3s linear;
@@ -6507,7 +6514,7 @@ treeview entry.flat, treeview entry {
     border-color: #83a598; }
 
 treeview.view header button, treeview.view header button:hover, treeview.view header button:active {
-  padding: 2px 5px;
+  padding: -1px 2px;
   border-radius: 0;
   background-image: none;
   text-shadow: none;
@@ -6692,7 +6699,7 @@ decoration {
   border-radius: 3px 3px 0 0;
   box-shadow: 0 3px 9px 1px rgba(20, 19, 19, 0.7), 0 0 0 1px #282828;
   /* this is used for the resize cursor area */
-  border-width: 0px;
+  border-width: 1px;
   border-style: solid;
   border-color: #282828; }
   decoration:backdrop {
@@ -6909,7 +6916,7 @@ workbench.csd > stack.titlebar:not(headerbar) {
   background-color: rgba(20, 19, 19, 0.3);
   border-color: rgba(236, 220, 180, 0.9);
   border-radius: 7px;
-  padding: 4px;
+  padding: 1px;
   color: #ecdcb4; }
 
 .lightdm.menu {
@@ -6923,10 +6930,10 @@ workbench.csd > stack.titlebar:not(headerbar) {
     color: #ecdcb4; }
 
 .lightdm.menubar *, .lightdm.menubar.menuitem {
-  padding: 1px; }
+  padding: -2px; }
 
 .lightdm.option-button {
-  padding: 4px;
+  padding: 1px;
   background: none;
   border: 0; }
 
@@ -6950,7 +6957,7 @@ workbench.csd > stack.titlebar:not(headerbar) {
   background-color: rgba(20, 19, 19, 0.3);
   border-color: rgba(236, 220, 180, 0.6);
   border-radius: 7px;
-  padding: 6px;
+  padding: 3px;
   color: #ecdcb4;
   text-shadow: none; }
 
@@ -6991,7 +6998,7 @@ GeditWindow .pane-separator {
   background-color: #ebdbb2;
   color: mix(#32302f,#ebdbb2,0.1); }
   .gedit-document-panel list row {
-    padding: 4px; }
+    padding: 1px; }
     .gedit-document-panel list row button {
       padding: 1px;
       border-radius: 3px;
@@ -7045,7 +7052,7 @@ statusbar GeditSmallButton, GeditStatusMenuButton {
       color: #32302f; }
 
 GeditViewFrame .gedit-search-slider {
-  padding: 4px;
+  padding: 1px;
   border-radius: 0 0 3px 3px;
   border-width: 0 1px 1px;
   border-style: solid;
@@ -7057,14 +7064,14 @@ GeditViewFrame .gedit-search-slider {
     color: #32302f; }
 
 GeditFileBrowserWidget .toolbar {
-  padding: 2px;
+  padding: 0.5px;
   border-top: 0;
   background-color: #ebdbb2;
   background-image: none; }
 
 .gedit-search-entry-occurrences-tag {
-  margin: 2px;
-  padding: 2px;
+  margin: 0.5px;
+  padding: 0.5px;
   color: mix(#32302f,#ebdbb2,0.5); }
 
 .gedit-bottom-panel-paned,
@@ -7107,8 +7114,8 @@ paned.titlebar {
 .nautilus-window .searchbar-container {
   margin-top: -1px; }
   .nautilus-window .searchbar-container searchbar {
-    padding-top: 1px;
-    padding-bottom: 2px;
+    padding-top: -2px;
+    padding-bottom: -1px;
     border-bottom: 1px solid mix(#ebdbb2,#32302f,0.1); }
 
 .disk-space-display {
@@ -7278,13 +7285,13 @@ paned.titlebar {
       border-color: currentColor;
       -GtkWidget-window-dragging: true; }
     .nemo-window toolbar.primary-toolbar button.image-button {
-      padding: 0 9px; }
+      padding: 0 6px; }
     .nemo-window toolbar combobox, .nemo-window toolbar button {
-      padding: 4px; }
+      padding: 1px; }
       .nemo-window toolbar combobox.text-button, .nemo-window toolbar button.text-button {
-        padding: 4px; }
+        padding: 1px; }
       .nemo-window toolbar combobox.image-button, .nemo-window toolbar button.image-button {
-        padding: 4px; }
+        padding: 1px; }
     .nemo-window toolbar toolitem stack {
       margin-left: 15px; }
       .nemo-window toolbar toolitem stack widget button {
@@ -7309,7 +7316,7 @@ paned.titlebar {
   .nemo-window grid > widget:last-child button {
     min-height: 16px;
     min-width: 16px;
-    padding: 3px 6px; }
+    padding: 0px 0px; }
   .nemo-window grid > widget:last-child button:first-child {
     margin-left: 20px; }
   .nemo-window grid > widget:last-child button:first-child + button {
@@ -7325,8 +7332,8 @@ paned.titlebar {
     .nemo-window .sidebar .frame {
       border: 0; }
     .nemo-window .sidebar image {
-      padding-left: 4px;
-      padding-right: 4px; }
+      padding-left: 1px;
+      padding-right: 1px; }
     .nemo-window .sidebar .nemo-places-sidebar, .nemo-window .sidebar .nemo-places-sidebar .view, .nemo-window .sidebar .nemo-places-sidebar iconview {
       background-color: mix(#ebdbb2,#ebdbb2,0.5); }
     .nemo-window .sidebar .nemo-places-sidebar .view, .nemo-window .sidebar .nemo-places-sidebar iconview {
@@ -7342,8 +7349,8 @@ paned.titlebar {
     .nemo-window .sidebar + separator + box .primary-toolbar {
       background-color: #e9d8ab;
       background-image: none;
-      padding-top: 1px;
-      padding-bottom: 1px;
+      padding-top: -2px;
+      padding-bottom: -2px;
       border-bottom: 1px solid mix(#ebdbb2,#32302f,0.1); }
       .nemo-window .sidebar + separator + box .primary-toolbar button:nth-child(2) {
         border-right: 0;
@@ -7384,7 +7391,7 @@ paned.titlebar {
 GtkWindow > GtkVBox > .dock, GtkWindow > GtkVBox > .dock > GtkHBox > GtkToolbar {
   background-color: #ebdbb2;
   background-image: none;
-  padding: 4px;
+  padding: 1px;
   border: 0;
   color: #32302f; }
 
@@ -7432,7 +7439,7 @@ UnityDecoration {
     border: 1px solid #282828;
     border-bottom: 0;
     border-radius: 3px 3px 0 0;
-    padding: 1px 7px 0;
+    padding: 1px 4px 0;
     background-color: #282828;
     color: mix(#d5c4a1,#282828,0.1);
     text-shadow: none; }
@@ -7484,7 +7491,7 @@ SheetStyleDialog.unity-force-quit {
   text-shadow: 0 1px rgba(20, 19, 19, 0.5);
   -gtk-icon-shadow: 0 1px rgba(20, 19, 19, 0.5); }
   #panel_window menubar {
-    padding-left: 4px; }
+    padding-left: 1px; }
     #panel_window menubar, #panel_window menubar > menuitem {
       background-color: transparent;
       background-image: none;
@@ -7504,7 +7511,7 @@ SheetStyleDialog.unity-force-quit {
       font-weight: normal; }
 
 #content_frame {
-  padding-bottom: 12px; }
+  padding-bottom: 3px; }
 
 #login_window, #shutdown_dialog, #restart_dialog {
   border-style: none;
@@ -7622,7 +7629,7 @@ SheetStyleDialog.unity-force-quit {
   background-color: #282828;
   background-image: none;
   border-color: shade(mix(#282828,#d5c4a1,0.2),0.8);
-  padding: 4px;
+  padding: 1px;
   color: #d5c4a1;
   caret-color: #282828;
   -gtk-secondary-caret-color: #282828; }
@@ -7673,7 +7680,7 @@ SheetStyleDialog.unity-force-quit {
   box-shadow: inset 1px 0 rgba(10, 10, 9, 0.07), inset 0 1px rgba(10, 10, 9, 0.08), inset -1px 0 rgba(10, 10, 9, 0.07), inset 0 -1px rgba(10, 10, 9, 0.05); }
 
 #buttonbox_frame {
-  padding-top: 8px;
+  padding-top: 2px;
   padding-bottom: 0;
   border-style: none;
   border-bottom-left-radius: 3px;
