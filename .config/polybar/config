@@ -89,6 +89,15 @@ modules-left = i3 bspwm
 modules-center = xwindow
 modules-right =
 
+# TEST BARS
+#====================
+[bar/pico]
+inherit = template/bar
+
+modules-left = cpu
+modules-center = 
+modules-right = 
+
 #========================================
 # MODULES
 #========================================

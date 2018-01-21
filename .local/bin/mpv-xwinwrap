@@ -33,7 +33,6 @@ fi
 cachecontent="$(cat $cachefile)"
 
 function video-play {
-	notify-send -u low -t 10 -a 'MPV' "Embedded Video" "Playing $1 as a stream embedded in the desktop"
 	pkill -x xwinwrap
 	#xwinwrap -g 1920x1048+0+0 -ni -b -nf -o 0.5 -ov -- urxvt -bg rgba:2828/2828/2828/FFFF -embed WID -e cava
 	xwinwrap -ni -fs -b -nf -ov -- mpv -wid WID --title="Desktop Video" --loop-playlist=inf $1
@@ -49,7 +48,7 @@ function video-validate {
 
 function cache-add {
 	if [[ "$cachecontent" == *"$1"* ]]; then
-		return 0
+		return 1
 	fi
 	name="$(youtube-dl -e $1)"
 	printf "$name\n$1\n" >> $cachefile
@@ -67,12 +66,22 @@ function cache-lookup-by-name {
 	if [ "$url" = "" ]; then
 		return 1
 	fi
-	printf "$url"
+	printf "$url\n"
 	return 0
 }
 
 function input-get {
 	cache-populate | rofi -dmenu -p 'Embed video: '
+	return 0
+}
+
+function soft-notify {
+	notify-send -u low -t 3000 -a 'mpv-xwinwrap' "$1" "$2"
+	return 0
+}
+
+function hard-notify {
+	notify-send -u normal -t 10000 -a 'mpv-xwinwrap' "$1" "$2"
 	return 0
 }
 
@@ -84,15 +93,18 @@ fi
 printf "Input: $input\n"
 
 if cache-lookup-by-name "$input"; then
-	printf "Lookup successful: "
+	printf "Lookup successful: \n"
 	input="$(cache-lookup-by-name "$input")"
 	printf "\n"
 fi
 
 if ! video-validate $input; then
+	hard-notify "Unable to Find Video" "Please verify that the URL is a valid YouTube address and try again."
 	printf "Not a valid stream: $input\n"
 	exit 1
 fi
+
+soft-notify "Found Video" "Video $1 has been found and is buffering. It will be embedded in the desktop shortly."
 
 cache-add $input
 video-play $input
