@@ -9,11 +9,11 @@ alt + Return
 	urxvt
 
 # Program launcher
-alt + @space
+alt + space
 	rofi -show drun -display-drun ':'
 
 # SSH browser
-alt + @\
+alt + backslash
 	rofi -show ssh
 
 # Program switcher
