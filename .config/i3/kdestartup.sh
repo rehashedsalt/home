@@ -7,4 +7,5 @@ compton &
 dunst &
 
 redshift &
+conky &
 mopidy &
