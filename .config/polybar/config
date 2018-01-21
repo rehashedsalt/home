@@ -239,7 +239,7 @@ label-charging = %percentage%%
 label-charging-padding = ${res/config.padding}
 label-charging-foreground = ${res/colors.background-4}
 label-charging-background = ${res/colors.background}
-label-discharging = %percentage%% (%time%)
+label-discharging = %percentage%%
 label-discharging-padding = ${self.label-charging-padding}
 label-discharging-background = ${res/colors.background}
 label-full = %percentage%%
@@ -310,7 +310,7 @@ format-prefix-foreground = ${res/colors.background}
 format-prefix-background = ${res/colors.icon-memory}
 interval = 1
 
-label = %percentage_used%% (%gb_used%)
+label = %percentage_used%%
 label-padding = ${res/config.padding}
 label-background = ${res/colors.background}
 
