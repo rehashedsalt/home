@@ -42,7 +42,17 @@ fi
 $HOME/.config/polybar/start.sh
 
 ## bspwm GENERAL CONFIGURATION
-bspc monitor -d			1 2 3 4 5 6 7 8
+hostname=$(hostname)
+hosts_single=(iridium)
+for host in $hosts_single; do
+	if [ $hostname = $host ]; then
+		bspc monitor -d 1 2 3 4 5 6 7 8
+	fi
+done
+if [ $hostname = tungsten ]; then
+	bspc monitor DisplayPort-0 -d 1 2 3 4
+	bspc monitor HDMI-0 -d 5 6 7 8
+fi
 
 bspc config border_width	4
 bspc config window_gap		10
