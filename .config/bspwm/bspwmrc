@@ -20,26 +20,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-## PATCH PATH, IF NOT ALREADY DONE
+## Patch path, if not already done
 if [[ "$PATH" != "*$HOME/.local/bin" ]]; then
 	export PATH="$HOME/.local/bin:$PATH"
 fi
-
-## SIMPLE CONFIGURATION
-xset -b
-xset -dpms
-xset s off
-
-## SERVICES AND DAEMONS
-sxhkd &						# Simple hotkey daemon
-feh --randomize --bg-fill ~/Pictures/Wallpapers/i3 &
-if [[ $(pgrep polybar) ]]; then
-	# Just covering bases here. Makes it easy to reload settings.
-	killall polybar
-fi
-
-# Start Polybar
-$HOME/.config/polybar/start.sh
 
 ## bspwm GENERAL CONFIGURATION
 hostname=$(hostname)
@@ -51,6 +35,7 @@ for host in $hosts_single; do
 done
 if [ $hostname = tungsten ]; then
 	$HOME/.local/bin/layout/tungsten.sh
+	bspc monitor -o DisplayPort-0 HDMI-0
 	bspc monitor DisplayPort-0 -d 1 2 3 4
 	bspc monitor HDMI-0 -d 5 6 7 8
 fi
@@ -81,3 +66,21 @@ bspc config urgent_border_color			"#fabd2f"
 bspc rule -a Waterfox desktop=1
 bspc rule -a Spotify desktop=10
 
+## SIMPLE CONFIGURATION
+xset -b
+xset -dpms
+xset s off
+
+## SERVICES AND DAEMONS
+sxhkd &						# Simple hotkey daemon
+feh --randomize --bg-fill ~/Pictures/Wallpapers/i3 &
+if [[ $(pgrep polybar) ]]; then
+	# Just covering bases here. Makes it easy to reload settings.
+	killall polybar
+fi
+$HOME/.config/polybar/start.sh &
+
+if [[ $(pgrep conky) ]]; then
+	killall conky
+fi
+conky &
