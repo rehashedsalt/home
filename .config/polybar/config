@@ -335,17 +335,14 @@ format-volume-prefix-padding = ${res/config.padding}
 format-volume-prefix-foreground = ${res/colors.background}
 format-volume-prefix-background = ${res/colors.primary}
 format-muted = <label-muted>
-format-muted-prefix = 
-format-muted-prefix-padding = ${res/config.padding}
-format-muted-prefix-foreground = ${res/colors.background}
-format-muted-prefix-background = ${res/colors.background-4}
 
 label-volume-padding = ${res/config.padding}
 label-volume-background = ${res/colors.background}
 
-label-muted-padding = ${self.label-volume-padding}
-label-muted-foreground = ${res/colors.background-4}
-label-muted-background = ${self.label-volume-background}
+label-muted = 
+label-muted-padding = ${res/config.padding}
+label-muted-foreground = ${res/colors.background}
+label-muted-background = ${res/colors.background-4}
 
 [module/wlan]
 type = internal/network
