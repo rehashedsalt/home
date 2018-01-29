@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/SimpylFold"]
 	path = .vim/bundle/SimpylFold
 	url = git@github.com:tmhedberg/SimpylFold.git
+[submodule ".vim/bundle/vim-template"]
+	path = .vim/bundle/vim-template
+	url = git@github.com:aperezdc/vim-template.git
