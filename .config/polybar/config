@@ -19,7 +19,7 @@ icon-wlan = ${xrdb:color6}
 icon-xbacklight = ${xrdb:color7}
 
 background = ${xrdb:background}
-background-alt = ${xrdb:color8}
+background-alt = ${xrdb:color10}
 foreground = ${xrdb:color15}
 
 [res/config]
