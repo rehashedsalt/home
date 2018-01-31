@@ -19,7 +19,7 @@ icon-wlan = ${xrdb:color6}
 icon-xbacklight = ${xrdb:color7}
 
 background = ${xrdb:background}
-background-mute = ${xrdb:bg4}
+background-alt = ${xrdb:background-alt}
 foreground = ${xrdb:color15}
 
 [res/config]
@@ -102,7 +102,7 @@ modules-right =
 [module/|]
 type = custom/text
 content = " "
-content-foreground = ${res/colors.background-mute}
+content-foreground = ${res/colors.background-alt}
 
 # OTHER
 #====================
@@ -128,7 +128,7 @@ label-focused-background = ${res/colors.secondary}
 
 label-visible = ${self.label-focused}
 label-visible-padding = ${res/config.padding}
-label-visible-background = ${res/colors.background-mute}
+label-visible-background = ${res/colors.background-alt}
 
 label-unfocused = ${self.label-focused}
 label-unfocused-padding = ${res/config.padding}
@@ -199,7 +199,7 @@ label-focused-background = ${res/colors.secondary}
 label-dimmed = ${self.label-focused}
 label-dimmed-padding = ${res/config.padding}
 label-dimmed-foreground = ${self.label-focused-foreground}
-label-dimmed-background = ${res/colors.background-mute}
+label-dimmed-background = ${res/colors.background-alt}
 
 label-occupied = ${self.label-focused}
 label-occupied-padding = ${res/config.padding}
@@ -213,14 +213,14 @@ label-urgent-background = ${res/colors.background}
 
 label-empty = ${self.label-focused}
 label-empty-padding = ${res/config.padding}
-label-empty-foreground = ${res/colors.background-mute}
+label-empty-foreground = ${res/colors.background-alt}
 label-empty-background = ${res/colors.background}
 
 
 [module/battery]
 type = internal/battery
 format-charging = <ramp-capacity>
-format-charging-background = ${res/colors.background-mute}
+format-charging-background = ${res/colors.background-alt}
 format-discharging = <ramp-capacity><label-discharging>
 format-discharging-background = ${res/colors.icon-battery}
 format-full = <label-full>
@@ -230,7 +230,7 @@ interval = 15
 
 label-charging = %percentage%%
 label-charging-padding = ${res/config.padding}
-label-charging-foreground = ${res/colors.background-mute}
+label-charging-foreground = ${res/colors.background-alt}
 label-charging-background = ${res/colors.background}
 label-discharging = %percentage%%
 label-discharging-padding = ${self.label-charging-padding}
@@ -263,7 +263,7 @@ animation-charging-7 = ${self.ramp-capacity-7}
 animation-charging-8 = ${self.ramp-capacity-8}
 animation-charging-padding = ${self.ramp-capacity-padding}
 animation-charging-foreground = ${res/colors.background}
-animation-charging-background = ${res/colors.background-mute}
+animation-charging-background = ${res/colors.background-alt}
 animation-charging-framerate = 500
 
 [module/cpu]
@@ -335,7 +335,7 @@ label-volume-background = ${res/colors.background}
 label-muted = 
 label-muted-padding = ${res/config.padding}
 label-muted-foreground = ${res/colors.background}
-label-muted-background = ${res/colors.background-mute}
+label-muted-background = ${res/colors.background-alt}
 
 [module/wlan]
 type = internal/network
@@ -349,7 +349,7 @@ label-connected-background = ${res/colors.background}
 label-disconnected = 
 label-disconnected-padding = ${res/config.padding}
 label-disconnected-foreground = ${res/colors.background}
-label-disconnected-background = ${res/colors.background-mute}
+label-disconnected-background = ${res/colors.background-alt}
 
 ramp-signal-0 = 
 ramp-signal-1 = 

@@ -34,14 +34,9 @@ rofi.width: 30
 ! hard contrast: 
 ! *background: #1d2021
 *background: #282828
-*bg2: #32302f
-*bg3: #504945
-*bg4: #665c54
+*background-alt: #665c54
 
 *foreground: #d5c4a1
-*fg2: #d5c4a1
-*fg3: #bdae93
-*fg4: #a89984
 
 ! Black + DarkGrey
 *color0:  #282828
