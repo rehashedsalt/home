@@ -26,7 +26,7 @@ alt + Escape
 
 # Reset wallpaper
 alt + shift + w
-	feh --randomize --bg-fill ~/Pictures/Wallpapers/i3
+	feh --randomize --bg-fill ~/Pictures/Wallpapers/.active
 
 # Pulse controls
 XF86Audio{Raise,Lower}Volume

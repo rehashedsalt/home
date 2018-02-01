@@ -73,7 +73,7 @@ xset s off
 
 ## SERVICES AND DAEMONS
 sxhkd &						# Simple hotkey daemon
-feh --randomize --bg-fill ~/Pictures/Wallpapers/i3 &
+feh --randomize --bg-fill ~/Pictures/Wallpapers/.active &
 if [[ $(pgrep polybar) ]]; then
 	# Just covering bases here. Makes it easy to reload settings.
 	killall polybar
