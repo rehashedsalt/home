@@ -113,7 +113,7 @@ content-foreground = ${res/colors.background-alt}
 [module/i3]
 type = internal/i3
 format = <label-state><label-mode>
-format-prefix = 
+format-prefix = i3
 format-prefix-padding = ${res/config.padding}
 format-prefix-foreground = ${res/colors.background}
 format-prefix-background = ${res/colors.icon-wm}
