@@ -76,7 +76,7 @@ monitor = ${env:PB_MONITOR}
 inherit = template/bar
 tray-position = right
 
-modules-left = i3 bspwm cpu memory fs-home update-arch
+modules-left = i3 bspwm cpu memory update-arch
 modules-center = xwindow
 modules-right = wlan battery xbacklight volume date
 
