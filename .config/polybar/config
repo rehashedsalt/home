@@ -14,10 +14,12 @@ alert = ${xrdb:color3}
 
 icon-battery = ${xrdb:color2}
 icon-cpu = ${xrdb:color4}
-icon-date = ${self.primary}
+icon-date = ${xrdb:color7}
+icon-fs = ${xrdb:color2}
 icon-memory = ${xrdb:color5}
-icon-volume = ${self.primary}
+icon-volume = ${xrdb:color7}
 icon-wlan = ${xrdb:color6}
+icon-wm = ${xrdb:color7}
 icon-xbacklight = ${xrdb:color7}
 
 background = ${xrdb:background}
@@ -74,9 +76,9 @@ monitor = ${env:PB_MONITOR}
 inherit = template/bar
 tray-position = right
 
-modules-left = i3 bspwm cpu memory update-arch
+modules-left = i3 bspwm cpu memory fs-home update-arch
 modules-center = xwindow
-modules-right = xbacklight volume battery wlan date
+modules-right = wlan battery xbacklight volume date
 
 [bar/secondary-top]
 monitor = ${env:PB_MONITOR}
@@ -114,14 +116,14 @@ format = <label-state><label-mode>
 format-prefix = 
 format-prefix-padding = ${res/config.padding}
 format-prefix-foreground = ${res/colors.background}
-format-prefix-background = ${res/colors.primary}
+format-prefix-background = ${res/colors.icon-wm}
 enable-scroll = false
 index-sort = true
 pin-workspaces = true
 
 label-mode-padding = ${res/config.padding}
 label-mode-foreground = ${res/colors.background}
-label-mode-background = ${res/colors.primary}
+label-mode-background = ${res/colors.icon-wm}
 
 label-focused = %name%
 label-focused-padding = ${res/config.padding}
@@ -146,7 +148,7 @@ format = <label-state><label-mode>
 format-prefix = b
 format-prefix-padding = 2
 format-prefix-foreground = ${res/colors.background}
-format-prefix-background = ${res/colors.primary}
+format-prefix-background = ${res/colors.icon-wm}
 enable-scroll = false
 pin-workspaces = true
 
@@ -162,35 +164,35 @@ ws-icon-default = 
 
 label-monocle = 
 label-monocle-padding = ${res/config.padding}
-label-monocle-background = ${res/colors.primary}
+label-monocle-background = ${res/colors.icon-wm}
 label-monocle-foreground = ${res/colors.background}
 label-tiled = 
 label-tiled-padding = ${res/config.padding}
-label-tiled-background = ${res/colors.primary}
+label-tiled-background = ${res/colors.icon-wm}
 label-tiled-foreground = ${res/colors.background}
 label-fullscreen = 
 label-fullscreen-padding = ${res/config.padding}
-label-fullscreen-background = ${res/colors.primary}
+label-fullscreen-background = ${res/colors.icon-wm}
 label-fullscreen-foreground = ${res/colors.background}
 label-floating = 
 label-floating-padding = ${res/config.padding}
-label-floating-background = ${res/colors.primary}
+label-floating-background = ${res/colors.icon-wm}
 label-floating-foreground = ${res/colors.background}
 label-pseudotiled = 
 label-pseudotiled-padding = ${res/config.padding}
-label-pseudotiled-background = ${res/colors.primary}
+label-pseudotiled-background = ${res/colors.icon-wm}
 label-pseudotiled-foreground = ${res/colors.background}
 label-locked = 
 label-locked-padding = ${res/config.padding}
-label-locked-background = ${res/colors.primary}
+label-locked-background = ${res/colors.icon-wm}
 label-locked-foreground = ${res/colors.background}
 label-sticky = 
 label-sticky-padding = ${res/config.padding}
-label-sticky-background = ${res/colors.primary}
+label-sticky-background = ${res/colors.icon-wm}
 label-sticky-foreground = ${res/colors.background}
 label-private = 
 label-private-padding = ${res/config.padding}
-label-private-background = ${res/colors.primary}
+label-private-background = ${res/colors.icon-wm}
 label-private-foreground = ${res/colors.background}
 
 label-focused = %icon%
@@ -295,6 +297,19 @@ interval = 30
 label = %date% %time%
 label-padding = ${res/config.padding}
 label-background = ${res/colors.background}
+
+[module/fs-home]
+type = internal/fs
+format-mounted = <label-mounted>
+format-mounted-prefix = 
+format-mounted-prefix-padding = ${res/config.padding}
+format-mounted-prefix-foreground = ${res/colors.background}
+format-mounted-prefix-background = ${res/colors.icon-fs}
+mount-0 = /home
+
+label-mounted = %percentage_used%%
+label-mounted-padding = ${res/config.padding}
+label-mounted-background = ${res/colors.background}
 
 [module/memory]
 type = internal/memory
