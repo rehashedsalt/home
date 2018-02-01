@@ -23,9 +23,9 @@ fi
 printf '[INFO] Starting Polybar primary on monitor $PB_MONITOR'
 polybar -r primary-top&
 # ...and then moving on to secondaries, if we have them
-# Alright, now this looks *really* bad, but there's no way in hell you can get
-# me to attempt to solve this with regex. Fuck regex. It starts more problems
-# than it solves
+# Alright, now this looks *really* bad, spawning so many subprocesses, but
+# there's no way in hell you can get me to attempt to solve this with regex.
+# To hell with regex. It starts more problems than it solves
 export secondary_monitors=$(xrandr -q | grep ' connected' | grep -v 'primary' | awk '{print $1}')
 if [[ $secondary_monitors == "" ]]; then
 	exit 0
