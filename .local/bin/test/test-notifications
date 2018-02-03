@@ -1,5 +1,0 @@
-#!/bin/sh
-notify-send -u low "Low Urgency Notification" "This is a simple test notification with low urgency. It's okay to ignore me, I guess."
-notify-send -u normal "Normal Urgency Notification" "This is another simple test notification with normal urgency. My information will help you work."
-notify-send -u critical "High Urgency Notification" "This notification really should grab your attention! It's important!"
-notify-send -u normal "Long Notification" "This is a very long notification with a very long, unabridged description. Its sole purpose is to test whether or not your notification handler can properly wrap descriptions and truncate where necessary. This is important as notifications should simply alert the user that something is going on, and should not otherwise impede work."

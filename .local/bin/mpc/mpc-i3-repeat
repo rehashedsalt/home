@@ -1,6 +1,0 @@
-#!/bin/bash
-if [[ "$(mpc repeat)" == *"repeat: on"* ]]; then
-	notify-send -a "Mopidy" -u low -t 1 "Repeat On" "The playlist will be repeated after it is completed"
-else
-	notify-send -a "Mopidy" -u low -t 1 "Repeat Off" "Playback will stop at the end of the playlist"
-fi
