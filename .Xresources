@@ -57,6 +57,18 @@ urxvt*geometry: 90x30
 *color15:                 S_base3
 
 !-----------------------------
+! POLYBAR EXTRA COLORS
+!-----------------------------
+polybar*base03: S_base03
+polybar*base02: S_base02
+polybar*base01: S_base01
+polybar*base00: S_base00
+polybar*base0: S_base0
+polybar*base1: S_base1
+polybar*base2: S_base2
+polybar*base3: S_base3
+
+!-----------------------------
 ! ROFI THEME
 !-----------------------------
 rofi.matching: fuzzy
