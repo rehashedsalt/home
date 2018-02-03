@@ -12,7 +12,7 @@ primary = ${xrdb:color4}
 secondary = ${xrdb:color12}
 alert = ${xrdb:color3}
 
-icon-battery = ${xrdb:color2}
+icon-battery = ${xrdb:color7}
 icon-cpu = ${xrdb:color4}
 icon-date = ${xrdb:color7}
 icon-fs = ${xrdb:color2}
@@ -78,7 +78,7 @@ tray-position = right
 
 modules-left = i3 bspwm cpu memory fs-home update-arch
 modules-center = 
-modules-right = wlan battery xbacklight volume date
+modules-right = wlan xbacklight volume battery date
 
 [bar/secondary-top]
 monitor = ${env:PB_MONITOR}
