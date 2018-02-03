@@ -1,1 +1,1 @@
-/home/salt/.bin/.bashrc-global
+.local/bin/.bashrc-global
