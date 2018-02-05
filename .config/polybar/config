@@ -49,6 +49,7 @@ width = 40%
 height = 32
 offset-y = 10
 wm-restack = ${env:PB_WM_RESTACK:bspwm}
+bottom = true
 
 # Module padding and spacing
 padding = 3
