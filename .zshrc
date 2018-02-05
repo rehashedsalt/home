@@ -29,7 +29,7 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
-setopt appendhistory autocd correctall extendedglob nomatch
+setopt appendhistory autocd extendedglob nomatch
 unsetopt beep notify
 bindkey -v
 zstyle :compinstall filename '/home/salt/.zshrc'
