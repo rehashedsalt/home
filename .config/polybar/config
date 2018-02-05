@@ -137,6 +137,35 @@ label-empty = ${self.label-focused}
 label-empty-padding = ${res/config.padding}
 label-empty-foreground = ${res/colors.background-alt}
 
+[module/xworkspaces]
+type = internal/xworkspaces
+format = <label-state>
+format-prefix = " "
+format-prefix-foreground = ${res/colors.icon-wm}
+enable-scroll = false
+pin-workspaces = true
+
+label-active = %name%
+label-active-padding = ${res/config.padding}
+label-active-foreground = ${res/colors.background}
+label-active-background = ${res/colors.secondary}
+
+label-dimmed = ${self.label-active}
+label-dimmed-padding = ${res/config.padding}
+label-dimmed-foreground = ${self.label-active-foreground}
+label-dimmed-background = ${res/colors.background-alt}
+
+label-occupied = ${self.label-active}
+label-occupied-padding = ${res/config.padding}
+label-occupied-foreground = ${res/colors.foreground}
+
+label-urgent = ${self.label-active}
+label-urgent-padding = ${res/config.padding}
+label-urgent-foreground = ${res/colors.alert}
+
+label-empty = ${self.label-active}
+label-empty-padding = ${res/config.padding}
+label-empty-foreground = ${res/colors.background-alt}
 
 [module/battery]
 type = internal/battery
