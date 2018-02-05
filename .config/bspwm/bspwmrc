@@ -80,7 +80,3 @@ if [[ $(pgrep polybar) ]]; then
 fi
 $HOME/.config/polybar/start.sh &
 
-if [[ $(pgrep conky) ]]; then
-	killall conky
-fi
-conky &
