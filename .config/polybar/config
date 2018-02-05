@@ -107,36 +107,6 @@ content-foreground = ${res/colors.background-alt}
 
 # OTHER
 #====================
-[module/i3]
-type = internal/i3
-format = <label-state><label-mode>
-format-prefix = "i3 "
-format-prefix-foreground = ${res/colors.icon-wm}
-enable-scroll = false
-index-sort = true
-pin-workspaces = true
-
-label-mode-padding = ${res/config.padding}
-label-mode-foreground = ${res/colors.background}
-label-mode-background = ${res/colors.icon-wm}
-
-label-focused = %name%
-label-focused-padding = ${res/config.padding}
-label-focused-foreground = ${self.label-mode-foreground}
-label-focused-background = ${res/colors.secondary}
-
-label-visible = ${self.label-focused}
-label-visible-padding = ${res/config.padding}
-label-visible-background = ${res/colors.background-alt}
-
-label-unfocused = ${self.label-focused}
-label-unfocused-padding = ${res/config.padding}
-label-unfocused-background = ${res/colors.background}
-
-label-urgent = ${self.label-focused}
-label-urgent-padding = ${res/config.padding}
-label-urgent-background = ${res/colors.alert}
-
 [module/bspwm]
 type = internal/bspwm
 format = <label-state>
