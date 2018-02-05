@@ -6,7 +6,7 @@ urxvt*font: xft:Hack:size=9
 urxvt*letterSpace: 0
 urxvt*depth: 32
 urxvt*geometry: 90x30
-!urxvt*background: rgba:1d1d/2020/2121/5000
+urxvt*internalBorder: 4
 
 !-----------------------------
 ! COLORS
