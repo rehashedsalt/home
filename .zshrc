@@ -7,7 +7,7 @@ export LANG="en_US.UTF-8"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="powerlevel9k/powerlevel9k"
-ZSH_THEME="agnoster"
+ZSH_THEME="eastwood"
 
 #CASE_SENSITIVE="true"
 #HYPHEN_INSENSITIVE="true"
