@@ -158,7 +158,6 @@ interval = 15
 label-charging = %percentage%%
 label-discharging = %percentage%%
 label-full = 
-label-full-foreground = ${res/colors.alert}
 
 ramp-capacity-0= 
 ramp-capacity-1= 
