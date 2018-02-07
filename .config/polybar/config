@@ -12,16 +12,6 @@ primary = ${xrdb:color4}
 secondary = ${xrdb:color12}
 alert = ${xrdb:color3}
 
-icon-battery = ${xrdb:color7}
-icon-cpu = ${xrdb:color4}
-icon-date = ${xrdb:color7}
-icon-fs = ${xrdb:color2}
-icon-memory = ${xrdb:color5}
-icon-volume = ${xrdb:color7}
-icon-wlan = ${xrdb:color6}
-icon-wm = ${xrdb:color7}
-icon-xbacklight = ${xrdb:color7}
-
 background = ${xrdb:background}
 background-alt = ${xrdb:color10}
 foreground = ${xrdb:color15}
@@ -32,9 +22,6 @@ padding = 3
 [res/fonts]
 font-0 = "Helvetica CE:size=10;2"
 font-1 = "Material Design Icons:size=13;3"
-font-2 = "FontAwesome:size=10;2"
-font-3 = "Wuncon Siji:size=9;2"
-font-4 =
 
 #========================================
 # BARS
@@ -63,9 +50,6 @@ radius=4
 # Module fonts
 font-0 = ${res/fonts.font-0}
 font-1 = ${res/fonts.font-1}
-font-2 = ${res/fonts.font-2}
-font-3 = ${res/fonts.font-3}
-font-4 = ${res/fonts.font-4}
 
 # BARS
 #====================
@@ -103,7 +87,6 @@ modules-right = xwindow
 [module/|]
 type = custom/text
 content = " "
-content-foreground = ${res/colors.background-alt}
 
 # OTHER
 #====================
@@ -111,7 +94,6 @@ content-foreground = ${res/colors.background-alt}
 type = internal/bspwm
 format = <label-state>
 format-prefix = " "
-format-prefix-foreground = ${res/colors.icon-wm}
 enable-scroll = false
 pin-workspaces = true
 
@@ -127,7 +109,6 @@ label-dimmed-background = ${res/colors.background-alt}
 
 label-occupied = ${self.label-focused}
 label-occupied-padding = ${res/config.padding}
-label-occupied-foreground = ${res/colors.foreground}
 
 label-urgent = ${self.label-focused}
 label-urgent-padding = ${res/config.padding}
@@ -141,7 +122,6 @@ label-empty-foreground = ${res/colors.background-alt}
 type = internal/xworkspaces
 format = <label-state>
 format-prefix = " "
-format-prefix-foreground = ${res/colors.icon-wm}
 enable-scroll = false
 pin-workspaces = true
 
@@ -157,7 +137,6 @@ label-dimmed-background = ${res/colors.background-alt}
 
 label-occupied = ${self.label-active}
 label-occupied-padding = ${res/config.padding}
-label-occupied-foreground = ${res/colors.foreground}
 
 label-urgent = ${self.label-active}
 label-urgent-padding = ${res/config.padding}
@@ -170,6 +149,7 @@ label-empty-foreground = ${res/colors.background-alt}
 [module/battery]
 type = internal/battery
 format-charging = <animation-charging> <label-charging>
+format-charging-foreground = ${res/colors.background-alt}
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <label-full>
 time-format = %H:%M
@@ -191,7 +171,6 @@ ramp-capacity-6= 
 ramp-capacity-7= 
 ramp-capacity-8= 
 ramp-capacity-9= 
-ramp-capacity-foreground = ${res/colors.icon-battery}
 
 animation-charging-0 = ${self.ramp-capacity-0}
 animation-charging-1 = ${self.ramp-capacity-1}
@@ -203,14 +182,12 @@ animation-charging-6 = ${self.ramp-capacity-6}
 animation-charging-7 = ${self.ramp-capacity-7}
 animation-charging-8 = ${self.ramp-capacity-8}
 animation-charging-9 = ${self.ramp-capacity-9}
-animation-charging-foreground = ${res/colors.background-alt}
 animation-charging-framerate = 500
 
 [module/cpu]
 type = internal/cpu
 format = <label>
 format-prefix = " "
-format-prefix-foreground = ${res/colors.icon-cpu}
 interval = 1
 
 label = %percentage%%
@@ -219,34 +196,27 @@ label-background = ${res/colors.background}
 [module/date]
 type = internal/date
 format = <label>
-format-prefix = " "
-format-prefix-foreground = ${res/colors.icon-date}
 date = %a
 time = %I:%M %p
 interval = 30
 
 label = %date% %time%
-label-background = ${res/colors.background}
 
 [module/fs-home]
 type = internal/fs
 format-mounted = <label-mounted>
 format-mounted-prefix = " "
-format-mounted-prefix-foreground = ${res/colors.icon-fs}
 mount-0 = /home
 
 label-mounted = %percentage_used%%
-label-mounted-background = ${res/colors.background}
 
 [module/memory]
 type = internal/memory
 format = <label>
 format-prefix = " "
-format-prefix-foreground = ${res/colors.icon-memory}
 interval = 1
 
 label = %percentage_used%%
-label-background = ${res/colors.background}
 
 [module/update-arch]
 type = custom/script
@@ -267,13 +237,11 @@ label-muted-foreground = ${res/colors.background-alt}
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
-ramp-volume-foreground = ${res/colors.icon-volume}
 
 [module/wlan]
 type = internal/network
 format-connected = <label-connected>
 format-connected-prefix = " "
-format-connected-prefix-foreground = ${res/colors.icon-wlan}
 format-disconnected = <label-disconnected>
 interface = wlp1s0
 
@@ -285,7 +253,6 @@ label-disconnected-foreground = ${res/colors.background-alt}
 type = internal/xbacklight
 format = <label>
 format-prefix = " "
-format-prefix-foreground = ${res/colors.icon-xbacklight}
 
 label = %percentage%%
 
