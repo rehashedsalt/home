@@ -8,8 +8,7 @@
 # RESOURCES
 #========================================
 [res/colors]
-primary = ${xrdb:color4}
-secondary = ${xrdb:color12}
+primary = ${xrdb:color12}
 alert = ${xrdb:color3}
 
 background = ${xrdb:background}
@@ -100,7 +99,7 @@ pin-workspaces = true
 label-focused = %name%
 label-focused-padding = ${res/config.padding}
 label-focused-foreground = ${res/colors.background}
-label-focused-background = ${res/colors.secondary}
+label-focused-background = ${res/colors.primary}
 
 label-dimmed = ${self.label-focused}
 label-dimmed-padding = ${res/config.padding}
@@ -128,7 +127,7 @@ pin-workspaces = true
 label-active = %name%
 label-active-padding = ${res/config.padding}
 label-active-foreground = ${res/colors.background}
-label-active-background = ${res/colors.secondary}
+label-active-background = ${res/colors.primary}
 
 label-dimmed = ${self.label-active}
 label-dimmed-padding = ${res/config.padding}
