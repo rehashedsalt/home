@@ -12,8 +12,9 @@ primary = ${xrdb:color12}
 alert = ${xrdb:color3}
 
 background = ${xrdb:background}
-background-alt = ${xrdb:color10}
+background-alt = ${xrdb:color0}
 foreground = ${xrdb:color15}
+foreground-alt = ${xrdb:color10}
 
 [res/config]
 padding = 3
@@ -115,7 +116,7 @@ label-urgent-foreground = ${res/colors.alert}
 
 label-empty = ${self.label-focused}
 label-empty-padding = ${res/config.padding}
-label-empty-foreground = ${res/colors.background-alt}
+label-empty-foreground = ${res/colors.foreground-alt}
 
 [module/xworkspaces]
 type = internal/xworkspaces
@@ -132,7 +133,7 @@ label-active-background = ${res/colors.primary}
 label-dimmed = ${self.label-active}
 label-dimmed-padding = ${res/config.padding}
 label-dimmed-foreground = ${self.label-active-foreground}
-label-dimmed-background = ${res/colors.background-alt}
+label-dimmed-background = ${res/colors.foreground-alt}
 
 label-occupied = ${self.label-active}
 label-occupied-padding = ${res/config.padding}
@@ -143,12 +144,12 @@ label-urgent-foreground = ${res/colors.alert}
 
 label-empty = ${self.label-active}
 label-empty-padding = ${res/config.padding}
-label-empty-foreground = ${res/colors.background-alt}
+label-empty-foreground = ${res/colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
 format-charging = <animation-charging> <label-charging>
-format-charging-foreground = ${res/colors.background-alt}
+format-charging-foreground = ${res/colors.foreground-alt}
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <label-full>
 time-format = %H:%M
@@ -230,7 +231,7 @@ format-volume = <ramp-volume> <label-volume>
 format-muted = <label-muted>
 
 label-muted = 
-label-muted-foreground = ${res/colors.background-alt}
+label-muted-foreground = ${res/colors.foreground-alt}
 
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -245,7 +246,7 @@ interface = wlp1s0
 
 label-connected = %essid%
 label-disconnected = 
-label-disconnected-foreground = ${res/colors.background-alt}
+label-disconnected-foreground = ${res/colors.foreground-alt}
 
 [module/xbacklight]
 type = internal/xbacklight
