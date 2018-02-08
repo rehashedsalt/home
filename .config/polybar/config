@@ -186,7 +186,7 @@ animation-charging-framerate = 500
 [module/cpu]
 type = internal/cpu
 format = <label>
-format-prefix = " "
+format-prefix = " "
 interval = 1
 
 label = %percentage%%
