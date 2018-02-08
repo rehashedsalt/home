@@ -70,7 +70,7 @@ rofi.bw: 4
 rofi.padding: 8
 !                  BG       	FG       	BG-ALT		HLBG		HLFG
 rofi.color-window: S_base03,	S_base02,	S_base03
-rofi.color-normal: S_base03,	S_base0,	S_base02,	S_base0,	S_base03
+rofi.color-normal: S_base03,	S_base0,	S_base03,	S_base0,	S_base03
 rofi.color-active: S_base03,	S_blue,		S_base02,	S_blue,		S_base03
 rofi.color-urgent: S_base03,	S_yellow,	S_base02,	S_yellow,	S_base03
 
