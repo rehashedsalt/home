@@ -52,7 +52,7 @@ font-1 = ${res/fonts.font-1}
 
 # BARS
 #====================
-[bar/primary-top-left]
+[bar/primary-left]
 monitor = ${env:PB_MONITOR}
 inherit = template/bar
 offset-x = 5%
@@ -60,7 +60,7 @@ offset-x = 5%
 modules-left = i3 bspwm
 modules-right = update-arch cpu memory fs-home
 
-[bar/primary-top-right]
+[bar/primary-right]
 monitor = ${env:PB_MONITOR}
 inherit = template/bar
 offset-x = 55%
@@ -68,7 +68,7 @@ offset-x = 55%
 modules-left = wlan
 modules-right = xbacklight volume battery date
 
-[bar/secondary-top]
+[bar/secondary]
 monitor = ${env:PB_MONITOR}
 inherit = template/bar
 width = 90%
