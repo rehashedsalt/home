@@ -135,12 +135,12 @@ label-dimmed-padding = ${res/config.padding}
 label-dimmed-foreground = ${self.label-active-foreground}
 label-dimmed-background = ${res/colors.foreground-alt}
 
-label-occupied = ${self.label-active}
-label-occupied-padding = ${res/config.padding}
-
 label-urgent = ${self.label-active}
 label-urgent-padding = ${res/config.padding}
 label-urgent-foreground = ${res/colors.alert}
+
+label-occupied = ${self.label-active}
+label-occupied-padding = ${res/config.padding}
 
 label-empty = ${self.label-active}
 label-empty-padding = ${res/config.padding}
