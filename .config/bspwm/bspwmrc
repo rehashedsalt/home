@@ -63,6 +63,7 @@ bspc config presel_border_color			"#6c71c4"
 bspc config urgent_border_color			"#b58900"
 
 ## bspwm WINDOW RULES
+bspc rule -r '*'
 bspc rule -a Waterfox desktop=1
 bspc rule -a Spotify desktop=10
 
