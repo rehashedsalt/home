@@ -3,26 +3,26 @@ if [[ -f "/etc/profile" ]]; then
 fi
 export ZSH=/home/salt/.oh-my-zsh
 export LANG="en_US.UTF-8"
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="powerlevel9k/powerlevel9k"
-ZSH_THEME="mh"
 
 #CASE_SENSITIVE="true"
 #HYPHEN_INSENSITIVE="true"
-#DISABLE_AUTO_UPDATE="true"
-#export UPDATE_ZSH_DAYS=13
+DISABLE_AUTO_UPDATE="true"
 #DISABLE_AUTO_TITLE="true"
 #ENABLE_CORRECTION="true"
 #COMPLETION_WAITING_DOTS="true"
 #DISABLE_UNTRACKED_FILES_DIRTY="true"
+ZSH_CUSTOM="$HOME/.omzcustom"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="mh"
 
 DEFAULT_USER=salt
 HISTFILE=~/.histfile
