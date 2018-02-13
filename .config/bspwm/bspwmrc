@@ -72,6 +72,7 @@ bspc config urgent_border_color			"#b58900"
 bspc rule -r '*'
 bspc rule -a Waterfox desktop=1
 bspc rule -a Spotify desktop=10
+bspc rule -a plasmashell state=floating sticky=on border=off
 
 ## SIMPLE CONFIGURATION
 xset -b
@@ -88,5 +89,5 @@ if [[ $(pgrep compton) ]]; then
 	killall compton
 fi
 compton&
-$HOME/.config/polybar/start.sh &
+#$HOME/.config/polybar/start.sh &
 
