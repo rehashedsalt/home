@@ -76,7 +76,7 @@ bspc rule -a Waterfox desktop=1
 bspc rule -a Spotify desktop=10
 # Plasma rules
 bspc rule -a plasmashell state=floating sticky=on border=off
-bspc rule -a krunner state=floating sticky=on border=off
+bspc rule -a krunner state=floating layer=above sticky=on border=off
 
 ## SIMPLE CONFIGURATION
 xset -b
