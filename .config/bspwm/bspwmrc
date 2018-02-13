@@ -54,14 +54,13 @@ bspc config gapless_monocle	true
 bspc config remove_disabled_monitors	true
 bspc config remove_unplugged_monitors	true
 
-bspc focus_follows_pointer	true
-bspc click_to_focus		true
+bspc config focus_follows_pointer	true
+bspc config click_to_focus		true
 
-bspc pointer_follows_focus	true
-bspc pointer_follows_monitor	true
-bspc pointer_modifier		mod1
-bspc pointer_action1		move
-bspc pointer_action2		resize_corner
+bspc config pointer_follows_monitor	true
+bspc config pointer_modifier		mod1
+bspc config pointer_action1		move
+bspc config pointer_action2		resize_corner
 
 bspc config normal_border_color			"#eee8d5"
 bspc config active_border_color			"#268bd2"
