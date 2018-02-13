@@ -27,18 +27,17 @@ fi
 
 ## bspwm GENERAL CONFIGURATION
 monitors=$(bspc query -M | wc -l)
-desktops=8
+desktops=9
 deskpermon=$(expr $desktops / $monitors)
-i = 1
+i=1
 for monitor in $(bspc query -M); do
-	layout="$layout $i"
-	i=$(expr $i + 1)
 	until [[ "$(expr $i % $deskpermon)" == *"0"* ]]; do
 		layout="$layout $i"
 		i=$(expr $i + 1)
 	done
 	bspc monitor $monitor -d $layout
-	layout=""
+	layout="$i"
+	i=$(expr $i + 1) 
 done
 unset layout
 unset monitors
