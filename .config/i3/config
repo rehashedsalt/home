@@ -56,6 +56,8 @@ for_window [class=".*"] title_format "%title"
 
 # Plasma integration
 exec --no-startup-id wmctrl -c Plasma
+exec --no-startup-id killall plasmashell
+exec --no-startup-id killall krunner
 for_window [class="krunner"] floating enable; border none
 
 # Miscellaneous window rules

@@ -1,7 +1,5 @@
 #!/bin/bash
 xrdb ~/.Xresources &
-killall plasmashell &
-killall krunner &
 killall xembedsniproxy &
 feh --randomize --bg-fill ~/Pictures/Wallpapers/i3 &
 
