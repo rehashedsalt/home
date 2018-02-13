@@ -8,35 +8,9 @@
 alt + Return
 	konsole
 
-# Program launcher
-#alt + space
-#	rofi -show drun -display-drun ':'
-
-# SSH browser
-alt + backslash
-	rofi -show ssh
-
-# Program switcher
-alt + Tab
-	rofi -show
-
 # Reload SXHKD
 alt + Escape
 	pkill -USR1 -x sxhkd
-
-# Reset wallpaper
-alt + shift + w
-	feh --randomize --bg-fill ~/Pictures/Wallpapers/.active
-
-# Pulse controls
-XF86Audio{Raise,Lower}Volume
-	pactl set-sink-volume 0 {+,-}5%
-XF86AudioMute
-	pactl set-sink-mute 0 toggle
-
-# Brightness controls
-XF86MonBrightness(Up,Down)
-	xbacklight (-inc,-dec) 5
 
 # mpv-xwinwrap Controls
 alt + p
