@@ -26,19 +26,24 @@ if [[ "$PATH" != "*$HOME/.local/bin" ]]; then
 fi
 
 ## bspwm GENERAL CONFIGURATION
-hostname=$(hostname)
-hosts_single=(iridium)
-for host in $hosts_single; do
-	if [ $hostname = $host ]; then
-		bspc monitor -d 1 2 3 4 5 6 7 8
-	fi
+monitors=$(bspc query -M | wc -l)
+desktops=8
+deskpermon=$(expr $desktops / $monitors)
+i = 1
+for monitor in $(bspc query -M); do
+	layout="$layout $i"
+	i=$(expr $i + 1)
+	until [[ "$(expr $i % $deskpermon)" == *"0"* ]]; do
+		layout="$layout $i"
+		i=$(expr $i + 1)
+	done
+	bspc monitor $monitor -d $layout
+	layout=""
 done
-if [ $hostname = tungsten ]; then
-	$HOME/.local/bin/layout/tungsten.sh
-	bspc monitor -o DisplayPort-0 HDMI-0
-	bspc monitor DisplayPort-0 -d 1 2 3 4
-	bspc monitor HDMI-0 -d 5 6 7 8
-fi
+unset layout
+unset monitors
+unset desktops
+unset deskpermon
 
 bspc config border_width	4
 bspc config window_gap		10
