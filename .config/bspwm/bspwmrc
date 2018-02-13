@@ -54,7 +54,6 @@ bspc config gapless_monocle	true
 bspc config remove_disabled_monitors	true
 bspc config remove_unplugged_monitors	true
 
-bspc config focus_follows_pointer	true
 bspc config click_to_focus		true
 
 bspc config pointer_follows_monitor	true
