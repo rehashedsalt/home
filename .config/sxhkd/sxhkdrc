@@ -6,7 +6,7 @@
 
 # Execute terminal
 alt + Return
-	urxvt
+	konsole
 
 # Program launcher
 alt + space
