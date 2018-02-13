@@ -9,8 +9,8 @@ alt + Return
 	konsole
 
 # Program launcher
-alt + space
-	rofi -show drun -display-drun ':'
+#alt + space
+#	rofi -show drun -display-drun ':'
 
 # SSH browser
 alt + backslash
