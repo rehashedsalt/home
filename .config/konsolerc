@@ -1,0 +1,33 @@
+[Desktop Entry]
+DefaultProfile=Primary.profile
+
+[Favorite Profiles]
+Favorites=
+
+[FileDialogSize]
+Height 1080=480
+Width 1920=641
+
+[FileLocation]
+scrollbackUseCacheLocation=true
+scrollbackUseSystemLocation=false
+
+[KFileDialog Settings]
+Recent Files[$e]=gentoo-cow-gdm-remake-1920x1080.png,file:$HOME/Pictures/Wallpapers/Loonix/gentoo-cow-gdm-remake-1920x1080.png
+Recent URLs[$e]=file:$HOME/Pictures/Wallpapers/Loonix/
+
+[KonsoleWindow]
+SaveGeometryOnExit=false
+ShowMenuBarByDefault=false
+
+[MainWindow]
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAB2QAAAP3AAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+
+[Notification Messages]
+CloseAllTabs=true
+
+[TabBar]
+TabBarPosition=Top
+TabBarVisibility=AlwaysHideTabBar
