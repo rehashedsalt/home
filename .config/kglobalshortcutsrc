@@ -7,7 +7,7 @@ _k_friendly_name=KDE Daemon
 
 [kaccess]
 Toggle Screen Reader On and Off=Meta+Alt+S,Meta+Alt+S,Toggle Screen Reader On and Off
-_k_friendly_name=Accessibility
+_k_friendly_name=kaccess
 
 [kcm_touchpad]
 Disable Touchpad=Touchpad Off,Touchpad Off,Disable Touchpad
@@ -16,7 +16,15 @@ Toggle Touchpad=Touchpad Toggle,Touchpad Toggle,Toggle Touchpad
 _k_friendly_name=KDE Daemon
 
 [kded5]
+Decrease Keyboard Brightness=,Keyboard Brightness Down,Decrease Keyboard Brightness
+Decrease Screen Brightness=,Monitor Brightness Down,Decrease Screen Brightness
+Hibernate=,Hibernate,Hibernate
+Increase Keyboard Brightness=,Keyboard Brightness Up,Increase Keyboard Brightness
+Increase Screen Brightness=,Monitor Brightness Up,Increase Screen Brightness
+PowerOff=,Power Off,Power Off
 Show System Activity=Ctrl+Esc,Ctrl+Esc,Show System Activity
+Sleep=,Sleep,Suspend
+Toggle Keyboard Backlight=,Keyboard Light On/Off,Toggle Keyboard Backlight
 _k_friendly_name=Power Management
 display=Display\tMeta+P,Display\tMeta+P,Switch Display
 
@@ -287,6 +295,7 @@ activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 25=none,none,Activate Pager Widget
 activate widget 50=Alt+F1,none,Activate Application Launcher Widget
+activate widget 62=none,none,Activate Updates Widget
 clear-history=none,none,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Enable Clipboard Actions
 cycleNextAction=none,none,Next History Item

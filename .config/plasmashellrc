@@ -39,7 +39,7 @@ thickness=30
 thickness=36
 
 [ScreenConnectors]
-0=eDP1
+0=eDP-1
 
 [Updates]
-performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js
+performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/desktop-base.js
