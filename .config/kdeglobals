@@ -6,25 +6,25 @@ Style=InApplication
 
 [ColorEffects:Disabled]
 ChangeSelectionColor=
-Color=
-ColorAmount=
-ColorEffect=
-ContrastAmount=
-ContrastEffect=
+Color=56,56,56
+ColorAmount=0
+ColorEffect=0
+ContrastAmount=0.65
+ContrastEffect=1
 Enable=
-IntensityAmount=
-IntensityEffect=
+IntensityAmount=0.1
+IntensityEffect=2
 
 [ColorEffects:Inactive]
 ChangeSelectionColor=true
-Color=
-ColorAmount=
-ColorEffect=
-ContrastAmount=
-ContrastEffect=
-Enable=true
-IntensityAmount=
-IntensityEffect=
+Color=112,111,110
+ColorAmount=0.025
+ColorEffect=2
+ContrastAmount=0.1
+ContrastEffect=2
+Enable=false
+IntensityAmount=0
+IntensityEffect=0
 
 [Colors:Button]
 BackgroundAlternate=77,77,77
@@ -160,13 +160,16 @@ parseMode=2
 ColorScheme=Breeze Dark
 Name=Arc Dark
 TerminalApplication[$e]=urxvt
+XftAntialias=true
+XftHintStyle=hintslight
+XftSubPixel=rgb
 dbfile=/home/salt/.mozilla/firefox/v30p40mn.default/places.sqlite
 fixed=Hack,9,-1,5,50,0,0,0,0,0
-font=Noto Sans,10,-1,0,50,0,0,0,0,0
-menuFont=Noto Sans,10,-1,0,50,0,0,0,0,0
+font=Noto Sans,10,-1,5,50,0,0,0,0,0
+menuFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 shadeSortColumn=true
-smallestReadableFont=Noto Sans,8,-1,0,50,0,0,0,0,0
-toolBarFont=Noto Sans,10,-1,0,50,0,0,0,0,0
+smallestReadableFont=Noto Sans,8,-1,5,50,0,0,0,0,0
+toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 widgetStyle=Breeze
 
 [Icons]
@@ -196,7 +199,7 @@ Show hidden files=false
 Sort by=Name
 Sort directories first=true
 Sort reversed=false
-Speedbar Width=258
+Speedbar Width=150
 View Style=Simple
 detailedViewIconSize=0
 listViewIconSize=43
@@ -287,7 +290,7 @@ Size=22
 [WM]
 activeBackground=49,54,59
 activeBlend=255,255,255
-activeFont=Noto Sans,10,-1,0,50,0,0,0,0,0
+activeFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 activeForeground=239,240,241
 inactiveBackground=49,54,59
 inactiveBlend=75,71,67
