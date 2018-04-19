@@ -61,16 +61,18 @@ bspc config pointer_modifier		mod1
 bspc config pointer_action1		move
 bspc config pointer_action2		resize_corner
 
-bspc config normal_border_color			"#2a353b"
+bspc config normal_border_color			"#000000"
 bspc config active_border_color			"#a0a0a0"
-bspc config focused_border_color		"#00bcd4"
+bspc config focused_border_color		"#00d4d4"
 bspc config presel_border_color			"#9b9b9b"
-bspc config urgent_border_color			"#ff80e0"
+bspc config urgent_border_color			"#ff8000"
 
 ## bspwm WINDOW RULES
 bspc rule -r '*'
 bspc rule -a Waterfox desktop=1
-bspc rule -a Spotify desktop=10
+bspc rule -a Discord desktop=7
+bspc rule -a Spotify desktop=8
+bspc rule -a 'Minecraft 1.7.10' state=fullscreen
 # Plasma rules
 bspc rule -a plasmashell state=floating sticky=on border=off
 bspc rule -a krunner state=floating layer=above sticky=on border=off

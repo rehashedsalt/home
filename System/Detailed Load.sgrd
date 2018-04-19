@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE KSysGuardWorkSheet>
-<WorkSheet interval="0.5" rows="3" locked="0" title="Detailed Load" columns="2">
- <host command="ksysguardd" name="localhost" shell="" port="-1"/>
- <display manualRange="1" vScroll="0" svgBackground="" row="0" hScale="6" labels="1" title="CPU Total Load" max="400" class="FancyPlotter" min="0" unit="" stacked="1" showUnit="0" vDistance="30" vLines="0" column="0" autoRange="1" version="1" fontSize="8" rowSpan="1" hLines="1" columnSpan="1">
-  <beam sensorType="float" sensorName="cpu/cpu0/TotalLoad" hostName="localhost" color="0xffff0000"/>
-  <beam sensorType="float" sensorName="cpu/cpu1/TotalLoad" hostName="localhost" color="0xffffaa00"/>
-  <beam sensorType="float" sensorName="cpu/cpu2/TotalLoad" hostName="localhost" color="0xffffff00"/>
-  <beam sensorType="float" sensorName="cpu/cpu3/TotalLoad" hostName="localhost" color="0xffffffff"/>
+<WorkSheet locked="0" title="Detailed Load" rows="3" columns="2" interval="0.5">
+ <host port="-1" shell="" name="localhost" command="ksysguardd"/>
+ <display manualRange="1" vLines="0" column="0" vScroll="0" unit="" svgBackground="" row="0" columnSpan="1" vDistance="30" autoRange="1" class="FancyPlotter" hScale="6" version="1" showUnit="0" hLines="1" stacked="1" title="CPU Total Load" rowSpan="1" labels="1" fontSize="8" max="400" min="0">
+  <beam sensorName="cpu/cpu0/TotalLoad" hostName="localhost" sensorType="float" color="0xffff0000"/>
+  <beam sensorName="cpu/cpu1/TotalLoad" hostName="localhost" sensorType="float" color="0xffffaa00"/>
+  <beam sensorName="cpu/cpu2/TotalLoad" hostName="localhost" sensorType="float" color="0xffffff00"/>
+  <beam sensorName="cpu/cpu3/TotalLoad" hostName="localhost" sensorType="float" color="0xffffffff"/>
  </display>
- <display manualRange="1" vScroll="0" svgBackground="" row="0" hScale="6" labels="1" title="CPU User Load" max="400" class="FancyPlotter" min="0" unit="" stacked="1" showUnit="0" vDistance="30" vLines="0" column="1" autoRange="1" version="1" fontSize="8" rowSpan="1" hLines="1" columnSpan="1">
-  <beam sensorType="float" sensorName="cpu/cpu0/user" hostName="localhost" color="0xff0057ae"/>
-  <beam sensorType="float" sensorName="cpu/cpu1/user" hostName="localhost" color="0xff00aaff"/>
-  <beam sensorType="float" sensorName="cpu/cpu2/user" hostName="localhost" color="0xff00ffff"/>
-  <beam sensorType="float" sensorName="cpu/cpu3/user" hostName="localhost" color="0xffffffff"/>
+ <display manualRange="1" vLines="0" column="1" vScroll="0" unit="" svgBackground="" row="0" columnSpan="1" vDistance="30" autoRange="1" class="FancyPlotter" hScale="6" version="1" showUnit="0" hLines="1" stacked="1" title="CPU User Load" rowSpan="1" labels="1" fontSize="8" max="400" min="0">
+  <beam sensorName="cpu/cpu0/user" hostName="localhost" sensorType="float" color="0xff0057ae"/>
+  <beam sensorName="cpu/cpu1/user" hostName="localhost" sensorType="float" color="0xff00aaff"/>
+  <beam sensorName="cpu/cpu2/user" hostName="localhost" sensorType="float" color="0xff00ffff"/>
+  <beam sensorName="cpu/cpu3/user" hostName="localhost" sensorType="float" color="0xffffffff"/>
  </display>
- <display manualRange="1" vScroll="0" svgBackground="" row="1" hScale="6" labels="1" title="CPU Load Averages" max="100" class="FancyPlotter" min="0" unit="" stacked="0" showUnit="0" vDistance="30" vLines="0" column="0" autoRange="1" version="1" fontSize="8" rowSpan="1" hLines="1" columnSpan="1">
-  <beam sensorType="float" sensorName="cpu/system/loadavg1" hostName="localhost" color="0xffff0000"/>
-  <beam sensorType="float" sensorName="cpu/system/loadavg5" hostName="localhost" color="0xffffff00"/>
-  <beam sensorType="float" sensorName="cpu/system/loadavg15" hostName="localhost" color="0xff00ff00"/>
+ <display manualRange="1" vLines="0" column="0" vScroll="0" unit="" svgBackground="" row="1" columnSpan="1" vDistance="30" autoRange="1" class="FancyPlotter" hScale="6" version="1" showUnit="0" hLines="1" stacked="0" title="CPU Load Averages" rowSpan="1" labels="1" fontSize="8" max="100" min="0">
+  <beam sensorName="cpu/system/loadavg1" hostName="localhost" sensorType="float" color="0xffff0000"/>
+  <beam sensorName="cpu/system/loadavg5" hostName="localhost" sensorType="float" color="0xffffff00"/>
+  <beam sensorName="cpu/system/loadavg15" hostName="localhost" sensorType="float" color="0xff00ff00"/>
  </display>
- <display manualRange="1" vScroll="0" svgBackground="" row="1" hScale="6" labels="1" title="Average Clock Frequency" max="4000" class="FancyPlotter" min="0" unit="" stacked="0" showUnit="0" vDistance="30" vLines="0" column="1" autoRange="1" version="1" fontSize="8" rowSpan="1" hLines="1" columnSpan="1">
-  <beam sensorType="float" sensorName="cpu/system/AverageClock" hostName="localhost" color="0xffff5500"/>
+ <display manualRange="1" vLines="0" column="1" vScroll="0" unit="" svgBackground="" row="1" columnSpan="1" vDistance="30" autoRange="1" class="FancyPlotter" hScale="6" version="1" showUnit="0" hLines="1" stacked="0" title="Average Clock Frequency" rowSpan="1" labels="1" fontSize="8" max="4000" min="0">
+  <beam sensorName="cpu/system/AverageClock" hostName="localhost" sensorType="float" color="0xffff5500"/>
  </display>
- <display upperLimit="90" row="2" lowerLimit="0" title="Fill Level" hostName="localhost" upperLimitActive="1" class="MultiMeter" unit="%" normalDigitColor="0xff888888" backgroundColor="0xffffffff" sensorType="integer" showUnit="1" sensorName="partitions//filllevel" column="1" lowerLimitActive="0" rowSpan="1" mAlarmDigitColor="0xffff0000" columnSpan="1"/>
- <display manualRange="1" vScroll="0" svgBackground="" row="2" hScale="6" labels="1" title="Core Temperature" max="100" class="FancyPlotter" min="0" unit="" stacked="0" showUnit="0" vDistance="30" vLines="0" column="0" autoRange="1" version="1" fontSize="8" rowSpan="1" hLines="1" columnSpan="1">
-  <beam sensorType="float" sensorName="lmsensors/pch_skylake-virtual-0/temp1" hostName="localhost" color="0xff00ffff"/>
+ <display manualRange="1" vLines="0" column="0" vScroll="0" unit="" svgBackground="" row="2" columnSpan="1" vDistance="30" autoRange="1" class="FancyPlotter" hScale="6" version="1" showUnit="0" hLines="1" stacked="0" title="Core Temperature" rowSpan="1" labels="1" fontSize="8" max="100" min="0">
+  <beam sensorName="lmsensors/pch_skylake-virtual-0/temp1" hostName="localhost" sensorType="float" color="0xff00ffff"/>
+ </display>
+ <display manualRange="0" vLines="0" column="1" vScroll="0" unit="" svgBackground="" row="2" columnSpan="1" vDistance="30" autoRange="1" class="FancyPlotter" hScale="6" version="1" showUnit="0" hLines="1" stacked="1" title="Application Memory" fontSize="8" labels="1" rowSpan="1">
+  <beam sensorName="mem/physical/application" hostName="localhost" sensorType="integer" color="0xffaa0000"/>
+  <beam sensorName="mem/physical/cached" hostName="localhost" sensorType="integer" color="0xff55ff00"/>
  </display>
 </WorkSheet>

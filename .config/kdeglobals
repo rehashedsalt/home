@@ -157,8 +157,9 @@ emoticonsTheme=GoogleEmojiComplete
 parseMode=2
 
 [General]
+BrowserApplication[$e]=waterfox.desktop
 ColorScheme=Breeze Dark
-Name=Arc Dark
+Name=Breeze Dark
 TerminalApplication[$e]=urxvt
 XftAntialias=true
 XftHintStyle=hintslight
@@ -177,11 +178,16 @@ Theme=Papirus-Color
 
 [KDE]
 ColorScheme=Breeze
-LookAndFeelPackage=com.github.varlesh.arc-dark
+DoubleClickInterval=400
+LookAndFeelPackage=org.kde.breezedark.desktop
 ShowIconsInMenuItems=true
 ShowIconsOnPushButtons=true
+SingleClick=true
+StartDragDist=4
+StartDragTime=500
+WheelScrollLines=3
 contrast=4
-widgetStyle=breeze
+widgetStyle=Breeze
 
 [KFileDialog Settings]
 Automatically select filename extension=true
@@ -199,7 +205,7 @@ Show hidden files=false
 Sort by=Name
 Sort directories first=true
 Sort reversed=false
-Speedbar Width=150
+Speedbar Width=180
 View Style=Simple
 detailedViewIconSize=0
 listViewIconSize=43

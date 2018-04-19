@@ -5,7 +5,7 @@ update_info=kscreenlocker.upd:0.1-autolock
 Autolock=false
 
 [Greeter]
-Theme=com.github.varlesh.arc-dark
+Theme=org.kde.breezedark.desktop
 
 [Greeter][Wallpaper][org.kde.color][General]
 Color=0,0,0
