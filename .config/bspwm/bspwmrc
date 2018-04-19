@@ -21,7 +21,7 @@
 # SOFTWARE.
 
 ## Patch path, if not already done
-if [[ "$PATH" != "*$HOME/.local/bin" ]]; then
+if [[ "$PATH" != "*$HOME/.local/bin*" ]]; then
 	export PATH="$HOME/.local/bin:$PATH"
 fi
 
