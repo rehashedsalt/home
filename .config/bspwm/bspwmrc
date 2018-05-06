@@ -88,7 +88,7 @@ feh --randomize --bg-fill ~/Pictures/Wallpapers/.active &
 if [[ $(pgrep polybar) ]]; then
 	killall polybar
 fi
-#$HOME/.config/polybar/start.sh &
+$HOME/.config/polybar/start.sh &
 if [[ $(pgrep compton) ]]; then
 	killall compton
 fi
