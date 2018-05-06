@@ -5,14 +5,7 @@
 #
 # Distributed under terms of the MIT license.
 #
-
-# Which WM are we using?
-if $(pgrep i3); then
-	export PB_WM_RESTACK=i3
-fi
-if $(pgrep bspwm); then
-	export PB_WM_RESTACK=bspwm
-fi
+export PB_WM_RESTACK=bspwm
 
 # Iterate through monitors and spawn bars on each
 # Starting with the primary monitor...
