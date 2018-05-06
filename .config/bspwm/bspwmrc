@@ -44,8 +44,8 @@ unset monitors
 unset desktops
 unset deskpermon
 
-bspc config border_width	2
-bspc config window_gap		0
+bspc config border_width	4
+bspc config window_gap		10
 bspc config bottom_padding	37
 
 bspc config split_ratio		0.50
@@ -61,11 +61,11 @@ bspc config pointer_modifier		mod1
 bspc config pointer_action1		move
 bspc config pointer_action2		resize_corner
 
-bspc config normal_border_color			"#000000"
+bspc config normal_border_color			"#002b36"
 bspc config active_border_color			"#a0a0a0"
-bspc config focused_border_color		"#00d4d4"
+bspc config focused_border_color		"#fdf6e3"
 bspc config presel_border_color			"#9b9b9b"
-bspc config urgent_border_color			"#ff8000"
+bspc config urgent_border_color			"#b58900"
 
 ## bspwm WINDOW RULES
 bspc rule -r '*'
