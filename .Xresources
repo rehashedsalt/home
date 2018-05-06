@@ -64,8 +64,7 @@ rofi.matching: fuzzy
 rofi.color-enabled: true
 rofi.show-icons: true
 rofi.drun-icon-theme: Papirus-Color
-rofi.columns: 3
-rofi.font: Helvetica CE 10
+rofi.font: Terminus 9
 rofi.bw: 4
 rofi.padding: 8
 !                  BG       	FG       	BG-ALT		HLBG		HLFG
@@ -74,5 +73,5 @@ rofi.color-normal: S_base03,	S_base0,	S_base03,	S_base0,	S_base03
 rofi.color-active: S_base03,	S_blue,		S_base02,	S_blue,		S_base03
 rofi.color-urgent: S_base03,	S_yellow,	S_base02,	S_yellow,	S_base03
 
-rofi.width: 48
+rofi.width: 32
 

@@ -11,7 +11,7 @@ export PB_WM_RESTACK=bspwm
 # Starting with the primary monitor...
 export PB_MONITOR=$(xrandr -q | awk '/\<primary\>/{print $1}')
 if [[ $PB_MONITOR == "" ]]; then
-	exit 1
+	unset PB_MONITOR
 fi
 printf '[INFO] Starting Polybar primary on monitor $PB_MONITOR'
 polybar -r primary-top&

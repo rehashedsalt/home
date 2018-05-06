@@ -72,7 +72,7 @@ font-4 = ${res/fonts.font-4}
 # BARS
 #====================
 [bar/primary-top]
-monitor = ${env:PB_MONITOR}
+monitor = ${env:PB_MONITOR:eDP-1}
 inherit = template/bar
 
 modules-left = i3 bspwm cpu memory fs-home update-arch
