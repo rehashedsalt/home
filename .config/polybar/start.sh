@@ -14,8 +14,7 @@ if [[ $PB_MONITOR == "" ]]; then
 	exit 1
 fi
 printf '[INFO] Starting Polybar primary on monitor $PB_MONITOR'
-polybar -r primary-left&
-polybar -r primary-right&
+polybar -r primary-top&
 # ...and then moving on to secondaries, if we have them
 # Alright, now this looks *really* bad, spawning so many subprocesses, but
 # there's no way in hell you can get me to attempt to solve this with regex.
