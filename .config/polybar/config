@@ -21,6 +21,7 @@ icon-volume = ${xrdb:color7}
 icon-wlan = ${xrdb:color6}
 icon-wm = ${xrdb:color7}
 icon-xbacklight = ${xrdb:color7}
+icon-xwindow = ${xrdb:color7}
 
 background = ${xrdb:background}
 background-alt = ${xrdb:color10}
@@ -75,8 +76,8 @@ font-4 = ${res/fonts.font-4}
 monitor = ${env:PB_MONITOR:eDP-1}
 inherit = template/bar
 
-modules-left = i3 bspwm cpu memory fs-home update-arch
-modules-center = 
+modules-left = bspwm cpu memory fs-home
+modules-center = xwindow
 modules-right = wlan xbacklight volume battery date
 
 [bar/secondary-top]
@@ -381,10 +382,15 @@ label-background = ${res/colors.background}
 
 [module/xwindow]
 type = internal/xwindow
+format = <label>
+format-prefix = 
+format-prefix-padding = ${res/config.padding}
+format-prefix-foreground = ${res/colors.background}
+format-prefix-background = ${res/colors.icon-xwindow}
 label = %title%
 label-padding = ${res/config.padding}
 label-background = ${res/colors.background}
-label-maxlen = 75
+label-maxlen = 60
 label-ellipsis = true
 
 # vim:ft=dosini
