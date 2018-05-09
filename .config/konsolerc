@@ -19,10 +19,11 @@ Recent URLs[$e]=file:$HOME/Pictures/Wallpapers/Loonix/
 [KonsoleWindow]
 SaveGeometryOnExit=false
 ShowMenuBarByDefault=false
+ShowWindowTitleOnTitleBar=true
 
 [MainWindow]
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAAA0oAAAIeAAAABAAAAAQAAAAIAAAACPwAAAAA
+State=AAAA/wAAAAD9AAAAAAAAA6kAAAP0AAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 
 [Notification Messages]
