@@ -96,4 +96,8 @@ if [[ $(pgrep conky) ]]; then
 	killall conky
 fi
 conky&
+if [[ $(pgrep dunst) ]]; then
+	killall dunst
+fi
+dunst&
 
