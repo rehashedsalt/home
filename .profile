@@ -74,7 +74,7 @@ fi
 
 # Alias for the dotfile setup
 if [ -d "$HOME/.dotfiles" ]; then
-	alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+	alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 fi
 
 # Aliases for common utilities
