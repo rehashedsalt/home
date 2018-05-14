@@ -1,6 +1,0 @@
-[Confirmations]
-ConfirmDelete=false
-ConfirmTrash=false
-
-[Executable scripts]
-behaviourOnLaunch=execute
