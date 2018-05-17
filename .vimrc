@@ -1,7 +1,7 @@
 execute pathogen#infect()
 
-set background=light
-colorscheme solarized
+set background=dark
+colorscheme gruvbox
 
 syntax on
 filetype plugin indent on
