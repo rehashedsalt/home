@@ -59,7 +59,6 @@ module-margin = 1
 background = #00000000
 foreground = ${res/colors.foreground}
 
-# Invisible border on three sides; it cooperates well with i3
 border-top-size = 10
 border-left-size = ${self.border-top-size}
 border-right-size = ${self.border-top-size}
