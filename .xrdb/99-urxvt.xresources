@@ -1,0 +1,6 @@
+urxvt*scrollBar: false
+urxvt*font: xft:Hack:size=9
+urxvt*letterSpace: 0
+urxvt*depth: 32
+urxvt*geometry: 90x30
+urxvt*internalBorder: 4

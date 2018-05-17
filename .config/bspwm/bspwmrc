@@ -80,6 +80,8 @@ bspc rule -a krunner state=floating layer=above sticky=on border=off
 xset -b
 xset -dpms
 xset s off
+# This depends on a script found at rehashedsalt/bin
+xrdbupdate
 
 ## SERVICES AND DAEMONS
 sxhkd &						# Simple hotkey daemon
