@@ -22,3 +22,6 @@
 [submodule ".omzcustom"]
 	path = .omzcustom
 	url = git@github.com:rehashedsalt/omzcustom.git
+[submodule ".themes/gruvbox-gtk"]
+	path = .themes/gruvbox-gtk
+	url = https://github.com/3ximus/gruvbox-gtk
