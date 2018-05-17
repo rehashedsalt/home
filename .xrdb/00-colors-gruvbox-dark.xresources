@@ -1,0 +1,53 @@
+! Gruvbox Dark
+#define G_base03        #282828
+#define G_base02        #3c3836
+#define G_base01        #504945
+#define G_base00        #665c54
+#define G_base0         #7c6f64
+#define G_base1         #928374
+#define G_base2         #a89984
+#define G_base3         #ebdbb2
+
+#define G_yellow        #fabd2f
+#define G_red           #fb4934
+#define G_magenta       #d3869b
+#define G_blue          #83a598
+#define G_cyan          #8ec07c
+#define G_green         #b8bb26
+
+#define G_dark_yellow   #d79921
+#define G_dark_red      #cc241d
+#define G_dark_magenta  #b16286
+#define G_dark_blue     #458588
+#define G_dark_cyan     #689d6a
+#define G_dark_green    #98971a
+
+! Color declarations
+*background:              G_base03
+*foreground:              G_base3
+*cursorColor:             G_base1
+*pointerColorBackground:  G_base01
+*pointerColorForeground:  G_base1
+
+*color0:                  G_base03
+*color1:                  G_dark_red
+*color2:                  G_dark_green
+*color3:                  G_dark_yellow
+*color4:                  G_dark_blue
+*color5:                  G_dark_magenta
+*color6:                  G_dark_cyan
+*color7:                  G_base2
+*color8:                  G_base1
+*color9:                  G_red
+*color10:                 G_green
+*color11:                 G_yellow
+*color12:                 G_blue
+*color13:                 G_magenta
+*color14:                 G_cyan
+*color15:                 G_base3
+
+!                  BG       	FG       	BG-ALT		HLBG		HLFG
+rofi.color-window: G_base03,	G_base02,	G_base03
+rofi.color-normal: G_base03,	G_base3,	G_base03,	G_blue,		G_base03
+rofi.color-active: G_base03,	G_blue,		G_base02,	G_blue,		G_base03
+rofi.color-urgent: G_base03,	G_yellow,	G_base02,	G_yellow,	G_base03
