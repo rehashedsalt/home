@@ -77,7 +77,7 @@ monitor = ${env:PB_MONITOR:eDP-1}
 inherit = template/bar
 
 modules-left = bspwm cpu memory fs-home
-modules-center = 
+modules-center = xwindow
 modules-right = wlan xbacklight volume battery date
 
 [bar/secondary-top]
