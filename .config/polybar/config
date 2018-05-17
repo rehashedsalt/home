@@ -25,9 +25,9 @@ icon-xbacklight = ${xrdb:color7}
 icon-xwindow = ${xrdb:color7}
 
 background = ${xrdb:background}
-background-alt = ${xrdb:color10}
+background-alt = ${xrdb:color8}
 foreground = ${xrdb:color15}
-foreground-light = ${xrdb:color8}
+foreground-dark = ${xrdb:color0}
 
 [res/config]
 padding = 2
@@ -108,7 +108,7 @@ type = internal/i3
 format = <label-state><label-mode>
 format-prefix = i3
 format-prefix-padding = ${res/config.padding}
-format-prefix-foreground = ${res/colors.foreground-light}
+format-prefix-foreground = ${res/colors.foreground-dark}
 format-prefix-background = ${res/colors.icon-wm}
 enable-scroll = false
 index-sort = true
@@ -140,7 +140,7 @@ type = internal/bspwm
 format = <label-state><label-mode>
 format-prefix = b
 format-prefix-padding = 2
-format-prefix-foreground = ${res/colors.foreground-light}
+format-prefix-foreground = ${res/colors.foreground-dark}
 format-prefix-background = ${res/colors.icon-wm}
 enable-scroll = false
 pin-workspaces = true
@@ -158,35 +158,35 @@ ws-icon-default = 
 label-monocle = 
 label-monocle-padding = ${res/config.padding}
 label-monocle-background = ${res/colors.icon-wm}
-label-monocle-foreground = ${res/colors.foreground-light}
+label-monocle-foreground = ${res/colors.foreground-dark}
 label-tiled = 
 label-tiled-padding = ${res/config.padding}
 label-tiled-background = ${res/colors.icon-wm}
-label-tiled-foreground = ${res/colors.foreground-light}
+label-tiled-foreground = ${res/colors.foreground-dark}
 label-fullscreen = 
 label-fullscreen-padding = ${res/config.padding}
 label-fullscreen-background = ${res/colors.icon-wm}
-label-fullscreen-foreground = ${res/colors.foreground-light}
+label-fullscreen-foreground = ${res/colors.foreground-dark}
 label-floating = 
 label-floating-padding = ${res/config.padding}
 label-floating-background = ${res/colors.icon-wm}
-label-floating-foreground = ${res/colors.foreground-light}
+label-floating-foreground = ${res/colors.foreground-dark}
 label-pseudotiled = 
 label-pseudotiled-padding = ${res/config.padding}
 label-pseudotiled-background = ${res/colors.icon-wm}
-label-pseudotiled-foreground = ${res/colors.foreground-light}
+label-pseudotiled-foreground = ${res/colors.foreground-dark}
 label-locked = 
 label-locked-padding = ${res/config.padding}
 label-locked-background = ${res/colors.icon-wm}
-label-locked-foreground = ${res/colors.foreground-light}
+label-locked-foreground = ${res/colors.foreground-dark}
 label-sticky = 
 label-sticky-padding = ${res/config.padding}
 label-sticky-background = ${res/colors.icon-wm}
-label-sticky-foreground = ${res/colors.foreground-light}
+label-sticky-foreground = ${res/colors.foreground-dark}
 label-private = 
 label-private-padding = ${res/config.padding}
 label-private-background = ${res/colors.icon-wm}
-label-private-foreground = ${res/colors.foreground-light}
+label-private-foreground = ${res/colors.foreground-dark}
 
 label-focused = %icon%
 label-focused-padding = ${res/config.padding}
@@ -234,7 +234,7 @@ label-discharging-padding = ${self.label-charging-padding}
 label-discharging-background = ${res/colors.background}
 label-full = 
 label-full-padding = ${res/config.padding}
-label-full-foreground = ${res/colors.foreground-light}
+label-full-foreground = ${res/colors.foreground-dark}
 label-full-background = ${res/colors.alert}
 
 ramp-capacity-0= 
@@ -247,7 +247,7 @@ ramp-capacity-6= 
 ramp-capacity-7= 
 ramp-capacity-8= 
 ramp-capacity-padding = ${res/config.padding}
-ramp-capacity-foreground = ${res/colors.foreground-light}
+ramp-capacity-foreground = ${res/colors.foreground-dark}
 
 animation-charging-0 = ${self.ramp-capacity-0}
 animation-charging-1 = ${self.ramp-capacity-1}
@@ -259,7 +259,7 @@ animation-charging-6 = ${self.ramp-capacity-6}
 animation-charging-7 = ${self.ramp-capacity-7}
 animation-charging-8 = ${self.ramp-capacity-8}
 animation-charging-padding = ${self.ramp-capacity-padding}
-animation-charging-foreground = ${res/colors.foreground-light}
+animation-charging-foreground = ${res/colors.foreground-dark}
 animation-charging-background = ${res/colors.background-alt}
 animation-charging-framerate = 500
 
@@ -268,7 +268,7 @@ type = internal/cpu
 format = <label>
 format-prefix = 
 format-prefix-padding = ${res/config.padding}
-format-prefix-foreground = ${res/colors.foreground-light}
+format-prefix-foreground = ${res/colors.foreground-dark}
 format-prefix-background = ${res/colors.icon-cpu}
 interval = 1
 
@@ -281,7 +281,7 @@ type = internal/date
 format = <label>
 format-prefix = 
 format-prefix-padding = ${res/config.padding}
-format-prefix-foreground = ${res/colors.foreground-light}
+format-prefix-foreground = ${res/colors.foreground-dark}
 format-prefix-background = ${res/colors.icon-date}
 date = %a
 time = %I:%M %p
@@ -296,7 +296,7 @@ type = internal/fs
 format-mounted = <label-mounted>
 format-mounted-prefix = 
 format-mounted-prefix-padding = ${res/config.padding}
-format-mounted-prefix-foreground = ${res/colors.foreground-light}
+format-mounted-prefix-foreground = ${res/colors.foreground-dark}
 format-mounted-prefix-background = ${res/colors.icon-fs}
 mount-0 = /home
 
@@ -309,7 +309,7 @@ type = internal/memory
 format = <label>
 format-prefix = 
 format-prefix-padding = ${res/config.padding}
-format-prefix-foreground = ${res/colors.foreground-light}
+format-prefix-foreground = ${res/colors.foreground-dark}
 format-prefix-background = ${res/colors.icon-memory}
 interval = 1
 
@@ -323,7 +323,7 @@ exec = echo `checkupdates | wc -l`
 exec-if = wget -q --spider http://www.startpage.com/ && uname -r | grep -q "ARCH" && [ `checkupdates | wc -l` != 0 ]
 format-prefix = 
 format-prefix-padding = ${res/config.padding}
-format-prefix-foreground = ${res/colors.foreground-light}
+format-prefix-foreground = ${res/colors.foreground-dark}
 format-prefix-background = ${res/colors.alert}
 interval = 60
 
@@ -335,7 +335,7 @@ type = internal/volume
 format-volume = <label-volume>
 format-volume-prefix = 
 format-volume-prefix-padding = ${res/config.padding}
-format-volume-prefix-foreground = ${res/colors.foreground-light}
+format-volume-prefix-foreground = ${res/colors.foreground-dark}
 format-volume-prefix-background = ${res/colors.icon-volume}
 format-muted = <label-muted>
 
@@ -344,7 +344,7 @@ label-volume-background = ${res/colors.background}
 
 label-muted = 
 label-muted-padding = ${res/config.padding}
-label-muted-foreground = ${res/colors.foreground-light}
+label-muted-foreground = ${res/colors.foreground-dark}
 label-muted-background = ${res/colors.background-alt}
 
 [module/wlan]
@@ -358,7 +358,7 @@ label-connected-padding = ${res/config.padding}
 label-connected-background = ${res/colors.background}
 label-disconnected = 
 label-disconnected-padding = ${res/config.padding}
-label-disconnected-foreground = ${res/colors.foreground-light}
+label-disconnected-foreground = ${res/colors.foreground-dark}
 label-disconnected-background = ${res/colors.background-alt}
 
 ramp-signal-0 = 
@@ -367,7 +367,7 @@ ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-padding = ${res/config.padding}
-ramp-signal-foreground = ${res/colors.foreground-light}
+ramp-signal-foreground = ${res/colors.foreground-dark}
 ramp-signal-background = ${res/colors.icon-wlan}
 
 [module/xbacklight]
@@ -375,7 +375,7 @@ type = internal/xbacklight
 format = <label>
 format-prefix = 
 format-prefix-padding = ${res/config.padding}
-format-prefix-foreground = ${res/colors.foreground-light}
+format-prefix-foreground = ${res/colors.foreground-dark}
 format-prefix-background = ${res/colors.icon-xbacklight}
 
 label = %percentage%%
@@ -387,7 +387,7 @@ type = internal/xwindow
 format = <label>
 format-prefix = 
 format-prefix-padding = ${res/config.padding}
-format-prefix-foreground = ${res/colors.foreground-light}
+format-prefix-foreground = ${res/colors.foreground-dark}
 format-prefix-background = ${res/colors.icon-xwindow}
 label = %title%
 label-padding = ${res/config.padding}
