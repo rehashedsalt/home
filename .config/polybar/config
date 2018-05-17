@@ -14,12 +14,12 @@ alert = ${xrdb:color3}
 warning = ${xrdb:color1}
 
 icon-battery = ${xrdb:color7}
-icon-cpu = ${xrdb:color4}
+icon-cpu = ${xrdb:color12}
 icon-date = ${xrdb:color7}
-icon-fs = ${xrdb:color2}
-icon-memory = ${xrdb:color5}
+icon-fs = ${xrdb:color10}
+icon-memory = ${xrdb:color13}
 icon-volume = ${xrdb:color7}
-icon-wlan = ${xrdb:color6}
+icon-wlan = ${xrdb:color14}
 icon-wm = ${xrdb:color7}
 icon-xbacklight = ${xrdb:color7}
 icon-xwindow = ${xrdb:color7}
