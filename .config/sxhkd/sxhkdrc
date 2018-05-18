@@ -10,7 +10,7 @@ alt + Return
 
 # Program launcher
 alt + space
-	rofi -show drun -display-drun ':'
+	rofi -show
 
 # SSH browser
 alt + backslash
@@ -18,7 +18,7 @@ alt + backslash
 
 # Program switcher
 alt + Tab
-	rofi -show
+	rofi -show window
 
 # Reload SXHKD
 alt + Escape

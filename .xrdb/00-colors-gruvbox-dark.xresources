@@ -45,9 +45,3 @@
 *color13:                 G_magenta
 *color14:                 G_cyan
 *color15:                 G_base3
-
-!                  BG       	FG       	BG-ALT		HLBG		HLFG
-rofi.color-window: G_base03,	G_base02,	G_base03
-rofi.color-normal: G_base03,	G_base3,	G_base03,	G_blue,		G_base03
-rofi.color-active: G_base03,	G_blue,		G_base02,	G_blue,		G_base03
-rofi.color-urgent: G_base03,	G_yellow,	G_base02,	G_yellow,	G_base03

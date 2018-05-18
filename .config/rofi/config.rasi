@@ -1,0 +1,100 @@
+/* rehashedsalt's Gruvbox rofi theme
+ * Distributed under the terms of the MIT License
+ * github.com/rehashedsalt
+ */
+
+configuration {
+	matching: "fuzzy";
+	show-icons: true;
+	drun-icon-theme: "Papirus-Color";
+	modi: "drun,ssh,window";
+	sidebar-mode: true;
+
+	yoffset: -48;
+	xoffset: 10;
+	width: 32;
+}
+
+* {
+	background: #282828;
+	background-alt: #3c3836;
+	foreground: #ebdbb2;
+	foreground-alt: #a89984;
+	blue-dark: #458588;
+	blue: #83a598;
+	yellow: #fabd2f;
+
+	text-color: @foreground;
+	background-color: @background;
+	font: "Terminus 9";
+}
+
+#window {
+	location: southwest;
+	anchor: southwest;
+	orientation: horizontal;
+
+	border-color: @background-alt;
+	background-color: @background;
+
+	border: 4px;
+	height: 50%;
+	width: 520px;
+}
+
+#inputbar {
+	padding: 8px;
+	border: 0px 0px 4px 0px;
+	border-color: @background-alt;
+}
+
+#prompt {
+	padding: 0px 4px 0px 0px;
+	text-color: @foreground-alt;
+}
+
+#case-indicator {
+	text-color: @foreground-alt;
+}
+
+#listview {
+	spacing: 0px;
+}
+
+#element {
+	padding: 4px;
+}
+
+#element normal active {
+	text-color: @blue-dark;
+}
+
+#element normal urgent {
+	text-color: @yellow;
+}
+
+#element selected normal {
+	background-color: @blue;
+	text-color: @background;
+}
+
+#element selected active {
+	background-color: @blue-dark;
+	text-color: @background;
+}
+
+#element selected urgent {
+	background-color: @yellow;
+	text-color: @background;
+}
+
+#button {
+	padding: 8px;
+}
+
+#button selected {
+	background-color: @background-alt;
+}
+
+/* vim:ft=css
+ */
