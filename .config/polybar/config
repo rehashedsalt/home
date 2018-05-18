@@ -84,7 +84,7 @@ modules-right = wlan xbacklight volume battery date
 monitor = ${env:PB_MONITOR}
 inherit = template/bar
 
-modules-left = i3 bspwm
+modules-left = bspwm
 modules-center = xwindow
 modules-right =
 
@@ -103,7 +103,7 @@ content-foreground = ${res/colors.background-alt}
 #====================
 [module/bspwm]
 type = internal/bspwm
-format = <label-mode>  <label-state>
+format = <label-state>  <label-mode>
 enable-scroll = false
 pin-workspaces = true
 
