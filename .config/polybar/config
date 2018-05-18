@@ -50,6 +50,7 @@ font-4 =
 # Rendering of the bar
 width = 100%
 height = 30
+bottom = true
 wm-restack = ${env:PB_WM_RESTACK:bspwm}
 
 # Module padding and spacing
