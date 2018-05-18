@@ -10,7 +10,7 @@ alt + Return
 
 # Program launcher
 alt + space
-	rofi -show drun
+	rofi -show
 
 # SSH browser
 alt + backslash
