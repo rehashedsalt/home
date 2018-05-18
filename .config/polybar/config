@@ -72,7 +72,7 @@ font-4 = ${res/fonts.font-4}
 
 # BARS
 #====================
-[bar/primary-top]
+[bar/primary]
 monitor = ${env:PB_MONITOR:eDP-1}
 inherit = template/bar
 
@@ -80,7 +80,7 @@ modules-left = bspwm cpu memory fs-home
 modules-center = xwindow
 modules-right = wlan xbacklight volume battery date
 
-[bar/secondary-top]
+[bar/secondary]
 monitor = ${env:PB_MONITOR}
 inherit = template/bar
 
