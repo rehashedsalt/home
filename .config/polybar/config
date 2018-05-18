@@ -103,7 +103,7 @@ content-foreground = ${res/colors.background-alt}
 #====================
 [module/bspwm]
 type = internal/bspwm
-format = <label-state>  <label-mode>
+format = <label-mode>  <label-state>
 enable-scroll = false
 pin-workspaces = true
 
