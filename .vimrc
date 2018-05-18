@@ -9,6 +9,10 @@ filetype plugin indent on
 " Automatically read when a file is changed outside of Vim
 set autoread
 
+" Enable modelines
+set modeline
+set modelines=5
+
 " Use XA_PRIMARY clipboard by default
 set clipboard=unnamed
 
