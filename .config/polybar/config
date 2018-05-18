@@ -252,7 +252,7 @@ label-muted-foreground = ${res/colors.foreground-dark}
 
 [module/wlan]
 type = internal/network
-format-connected = <ramp-signal><label-connected>
+format-connected = <ramp-signal> <label-connected>
 format-disconnected = <label-disconnected>
 interface = wlp1s0
 
