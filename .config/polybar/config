@@ -28,6 +28,7 @@ background = ${xrdb:background}
 background-alt = ${xrdb:color8}
 foreground = ${xrdb:color15}
 foreground-dark = ${xrdb:color8}
+border = #3c3836
 
 [res/config]
 padding = 2
@@ -62,7 +63,7 @@ background = ${res/colors.background}
 foreground = ${res/colors.foreground}
 
 border-size = 4
-border-color = #3c3836
+border-color = ${res/colors.border}
 
 # Module fonts
 font-0 = ${res/fonts.font-0}
@@ -97,8 +98,13 @@ modules-right =
 #====================
 [module/|]
 type = custom/text
+content = "|"
+content-foreground = ${res/colors.border}
+
+[module/||]
+type = custom/text
 content = " "
-content-foreground = ${res/colors.background-alt}
+content-background = ${res/colors.border}
 
 # OTHER
 #====================
