@@ -20,7 +20,7 @@ icon-fs = ${xrdb:color10}
 icon-memory = ${xrdb:color13}
 icon-volume = ${res/colors.primary}
 icon-wlan = ${xrdb:color14}
-icon-wm = ${res/colors.primary}
+icon-wm = ${xrdb:color12}
 icon-xbacklight = ${res/colors.primary}
 icon-xwindow = ${res/colors.primary}
 
@@ -64,7 +64,6 @@ foreground = ${res/colors.foreground}
 
 border-size = 4
 border-color = ${res/colors.border}
-underline-size = 2
 
 # Module fonts
 font-0 = ${res/fonts.font-0}
@@ -154,12 +153,10 @@ label-dimmed-background = ${res/colors.background-alt}
 
 label-occupied = ${self.label-focused}
 label-occupied-padding = ${res/config.padding}
-label-occupied-underline = ${res/colors.secondary}
 
 label-urgent = ${self.label-focused}
 label-urgent-padding = ${res/config.padding}
 label-urgent-foreground = ${res/colors.alert}
-label-urgent-underline = ${res/colors.alert}
 
 label-empty = ${self.label-focused}
 label-empty-padding = ${res/config.padding}
