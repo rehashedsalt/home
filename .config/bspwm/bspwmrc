@@ -71,6 +71,7 @@ bspc rule -r '*'
 bspc rule -a Waterfox desktop=1
 bspc rule -a Discord desktop=7
 bspc rule -a Spotify desktop=8
+bspc rule -a xfd state=pseudo_tiled
 bspc rule -a 'Minecraft 1.7.10' state=fullscreen
 # Plasma rules
 bspc rule -a plasmashell state=floating sticky=on border=off
