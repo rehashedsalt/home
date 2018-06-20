@@ -26,7 +26,7 @@ configuration {
 
 	text-color: @foreground;
 	background-color: @background;
-	font: "Terminus 9";
+	font: "Roboto 10";
 }
 
 #window {

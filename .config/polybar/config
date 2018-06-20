@@ -22,7 +22,6 @@ icon-volume = ${res/colors.primary}
 icon-wlan = ${xrdb:color14}
 icon-wm = ${xrdb:color12}
 icon-xbacklight = ${res/colors.primary}
-icon-xwindow = ${res/colors.primary}
 
 background = ${xrdb:background}
 background-alt = ${xrdb:color8}
@@ -31,13 +30,13 @@ foreground-dark = ${xrdb:color8}
 border = #3c3836
 
 [res/config]
-padding = 2
+padding = 4
 
 [res/fonts]
-font-0 = "Terminus:size=9;2"
-font-1 = "Siji:size=9;2"
-font-2 = "FontAwesome:size=10;2"
-font-3 = "Material Design Icons:size=11;3"
+font-0 = "Roboto:size=10;2"
+font-1 = "FontAwesome:size=10;2"
+font-2 = "Material Design Icons:size=11;3"
+font-3 = 
 font-4 = 
 
 #========================================
@@ -49,8 +48,10 @@ font-4 =
 
 [template/bar]
 # Rendering of the bar
-width = 100%
-height = 30
+width = 94%
+height = 34
+offset-x = 3%
+offset-y = 0
 bottom = true
 wm-restack = ${env:PB_WM_RESTACK:bspwm}
 
@@ -63,6 +64,7 @@ background = ${res/colors.background}
 foreground = ${res/colors.foreground}
 
 border-size = 4
+border-bottom-size = 0
 border-color = ${res/colors.border}
 
 # Module fonts
@@ -78,9 +80,9 @@ font-4 = ${res/fonts.font-4}
 monitor = ${env:PB_MONITOR:eDP-1}
 inherit = template/bar
 
-modules-left = bspwm cpu memory fs-home
+modules-left = bspwm | cpu memory fs-home
 modules-center = xwindow
-modules-right = wlan xbacklight volume battery date
+modules-right = wlan xbacklight volume battery | date
 
 [bar/secondary]
 monitor = ${env:PB_MONITOR}
@@ -110,38 +112,11 @@ content-background = ${res/colors.border}
 #====================
 [module/bspwm]
 type = internal/bspwm
-format = <label-mode>  <label-state>
+format = <label-state>
 enable-scroll = false
 pin-workspaces = true
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-default = 
-
-label-monocle = 
-label-monocle-foreground = ${res/colors.icon-wm}
-label-tiled = 
-label-tiled-foreground = ${res/colors.icon-wm}
-label-fullscreen = 
-label-fullscreen-foreground = ${res/colors.icon-wm}
-label-floating = 
-label-floating-foreground = ${res/colors.icon-wm}
-label-pseudotiled = 
-label-pseudotiled-foreground = ${res/colors.icon-wm}
-label-locked = 
-label-locked-foreground = ${res/colors.icon-wm}
-label-sticky = 
-label-sticky-foreground = ${res/colors.icon-wm}
-label-private = 
-label-private-foreground = ${res/colors.icon-wm}
-
-label-focused = %icon%
+label-focused = %name%
 label-focused-padding = ${res/config.padding}
 label-focused-foreground = ${res/colors.background}
 label-focused-background = ${res/colors.icon-wm}
@@ -162,7 +137,6 @@ label-empty = ${self.label-focused}
 label-empty-padding = ${res/config.padding}
 label-empty-foreground = ${res/colors.background-alt}
 
-
 [module/battery]
 type = internal/battery
 format-charging = <animation-charging> <label-charging>
@@ -174,18 +148,14 @@ interval = 15
 
 label-charging = %percentage%%
 label-discharging = %percentage%%
-label-full = 
+label-full = 
 label-full-foreground = ${res/colors.alert}
 
-ramp-capacity-0= 
-ramp-capacity-1= 
-ramp-capacity-2= 
-ramp-capacity-3= 
-ramp-capacity-4= 
-ramp-capacity-5= 
-ramp-capacity-6= 
-ramp-capacity-7= 
-ramp-capacity-8= 
+ramp-capacity-0= 
+ramp-capacity-1= 
+ramp-capacity-2= 
+ramp-capacity-3= 
+ramp-capacity-4= 
 ramp-capacity-foreground = ${res/colors.icon-battery}
 
 animation-charging-0 = ${self.ramp-capacity-0}
@@ -193,17 +163,13 @@ animation-charging-1 = ${self.ramp-capacity-1}
 animation-charging-2 = ${self.ramp-capacity-2}
 animation-charging-3 = ${self.ramp-capacity-3}
 animation-charging-4 = ${self.ramp-capacity-4}
-animation-charging-5 = ${self.ramp-capacity-5}
-animation-charging-6 = ${self.ramp-capacity-6}
-animation-charging-7 = ${self.ramp-capacity-7}
-animation-charging-8 = ${self.ramp-capacity-8}
 animation-charging-framerate = 500
 animation-charging-foreground = ${res/colors.icon-battery}
 
 [module/cpu]
 type = internal/cpu
 format = <label>
-format-prefix = " "
+format-prefix = "CPU: "
 format-prefix-foreground = ${res/colors.icon-cpu}
 interval = 1
 
@@ -212,7 +178,7 @@ label = %percentage%%
 [module/date]
 type = internal/date
 format = <label>
-format-prefix = " "
+format-prefix = 
 format-prefix-foreground = ${res/colors.icon-date}
 date = %a
 time = %I:%M %p
@@ -223,16 +189,16 @@ label = %date% %time%
 [module/fs-home]
 type = internal/fs
 format-mounted = <label-mounted>
-format-mounted-prefix = " "
+format-mounted-prefix = "Home: "
 format-mounted-prefix-foreground = ${res/colors.icon-fs}
 mount-0 = /home
 
-label-mounted = %percentage_used%%
+label-mounted = %percentage_used%% full
 
 [module/memory]
 type = internal/memory
 format = <label>
-format-prefix = " "
+format-prefix = "Memory: "
 format-prefix-foreground = ${res/colors.icon-memory}
 interval = 1
 
@@ -241,34 +207,31 @@ label = %percentage_used%%
 [module/volume]
 type = internal/volume
 format-volume = <label-volume>
-format-volume-prefix = " "
+format-volume-prefix = "Volume: "
 format-volume-prefix-foreground = ${res/colors.icon-volume}
 format-muted = <label-muted>
 
-label-muted = 
+label-muted = Muted
 label-muted-foreground = ${res/colors.foreground-dark}
 
 [module/wlan]
 type = internal/network
-format-connected = <ramp-signal> <label-connected>
+format-connected = <label-connected>
+format-connected-prefix = "WLAN: "
+format-connected-prefix-foreground = ${res/colors.icon-wlan}
 format-disconnected = <label-disconnected>
+format-disconnected-prefix = "WLAN: "
+format-disconnected-prefix-foreground = ${res/colors.icon-wlan}
 interface = wlp1s0
 
 label-connected = %essid%
-label-disconnected = 
+label-disconnected = None
 label-disconnected-foreground = ${res/colors.foreground-dark}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${res/colors.icon-wlan}
 
 [module/xbacklight]
 type = internal/xbacklight
 format = <label>
-format-prefix = " "
+format-prefix = "Light: "
 format-prefix-foreground = ${res/colors.icon-xbacklight}
 
 label = %percentage%%
@@ -276,8 +239,6 @@ label = %percentage%%
 [module/xwindow]
 type = internal/xwindow
 format = <label>
-format-prefix = " "
-format-prefix-foreground = ${res/colors.icon-xwindow}
 label = %title%
 label-background = ${res/colors.background}
 label-maxlen = 60
