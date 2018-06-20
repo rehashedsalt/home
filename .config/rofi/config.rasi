@@ -10,8 +10,8 @@ configuration {
 	modi: "drun,ssh,window";
 	sidebar-mode: true;
 
-	yoffset: -48;
-	xoffset: 10;
+	yoffset: -44;
+	xoffset: 6;
 	width: 32;
 }
 
