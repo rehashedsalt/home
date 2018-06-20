@@ -183,7 +183,7 @@ format-mounted-prefix = "Home: "
 format-mounted-prefix-foreground = ${res/colors.icon-fs}
 mount-0 = /home
 
-label-mounted = %percentage_used%% full
+label-mounted = %free% free
 
 [module/memory]
 type = internal/memory
@@ -192,7 +192,7 @@ format-prefix = "Memory: "
 format-prefix-foreground = ${res/colors.icon-memory}
 interval = 1
 
-label = %percentage_used%%
+label = %gb_free% usable
 
 [module/volume]
 type = internal/volume
