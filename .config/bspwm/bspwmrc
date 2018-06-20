@@ -94,10 +94,6 @@ if [[ $(pgrep compton) ]]; then
 	killall compton
 fi
 compton&
-if [[ $(pgrep conky) ]]; then
-	killall conky
-fi
-conky&
 if [[ $(pgrep dunst) ]]; then
 	killall dunst
 fi
