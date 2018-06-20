@@ -48,9 +48,9 @@ font-4 =
 
 [template/bar]
 # Rendering of the bar
-width = 94%
+width = 1908
 height = 34
-offset-x = 3%
+offset-x = 6
 offset-y = 0
 bottom = true
 wm-restack = ${env:PB_WM_RESTACK:bspwm}
