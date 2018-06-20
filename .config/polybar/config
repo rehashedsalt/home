@@ -57,7 +57,7 @@ wm-restack = ${env:PB_WM_RESTACK:bspwm}
 
 # Module padding and spacing
 module-margin = 2
-padding = 2
+padding = 4
 
 # Mild ricing
 background = ${res/colors.background}
