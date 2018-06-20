@@ -152,9 +152,9 @@ time-format = %H:%M
 full-at = 98
 interval = 15
 
-label-charging = %percentage%%
+label-charging = %percentage%%, charging
 label-discharging = %percentage%%
-label-full = %percentage%%
+label-full = %percentage%%, full
 
 [module/cpu]
 type = internal/cpu
