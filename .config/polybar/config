@@ -100,8 +100,8 @@ modules-right =
 #====================
 [module/|]
 type = custom/text
-content = "||"
-content-foreground = ${res/colors.border}
+content = "|"
+content-foreground = ${res/colors.background-alt}
 
 [module/||]
 type = custom/text
