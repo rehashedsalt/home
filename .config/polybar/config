@@ -139,32 +139,22 @@ label-empty-foreground = ${res/colors.background-alt}
 
 [module/battery]
 type = internal/battery
-format-charging = <animation-charging> <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
+format-charging = <label-charging>
+format-charging-prefix = "Battery: "
+format-charging-prefix-foreground = ${res/colors.icon-battery}
+format-discharging = <label-discharging>
+format-discharging-prefix = "Battery: "
+format-discharging-prefix-foreground = ${res/colors.icon-battery}
 format-full = <label-full>
+format-full-prefix = "Battery: "
+format-full-prefix-foreground = ${res/colors.alert}
 time-format = %H:%M
 full-at = 98
 interval = 15
 
 label-charging = %percentage%%
 label-discharging = %percentage%%
-label-full = 
-label-full-foreground = ${res/colors.alert}
-
-ramp-capacity-0= 
-ramp-capacity-1= 
-ramp-capacity-2= 
-ramp-capacity-3= 
-ramp-capacity-4= 
-ramp-capacity-foreground = ${res/colors.icon-battery}
-
-animation-charging-0 = ${self.ramp-capacity-0}
-animation-charging-1 = ${self.ramp-capacity-1}
-animation-charging-2 = ${self.ramp-capacity-2}
-animation-charging-3 = ${self.ramp-capacity-3}
-animation-charging-4 = ${self.ramp-capacity-4}
-animation-charging-framerate = 500
-animation-charging-foreground = ${res/colors.icon-battery}
+label-full = %percentage%%
 
 [module/cpu]
 type = internal/cpu
