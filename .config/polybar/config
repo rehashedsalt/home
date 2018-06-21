@@ -81,6 +81,10 @@ font-4 = ${res/fonts.font-4}
 monitor = ${env:PB_MONITOR:eDP-1}
 inherit = template/bar
 
+tray-detached = true
+tray-position = center
+tray-maxsize = 16
+
 modules-left = cpu memory
 modules-center =
 modules-right = xbacklight volume battery | date
