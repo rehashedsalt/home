@@ -44,12 +44,6 @@ if [ `which lsblk` ]; then
 	alias lsblkf='lsblk -pf'
 fi
 
-# Add neofetch aliases if we have that
-if [ `which neofetch` ]; then
-	alias fetch='neofetch --disable model resolution --block_range 0 15 --image wall --xoffset 4 --yoffset 4 --scrot ~/Pictures/Screenshots/neofetch.png'
-	alias fetch-up='neofetch --disable model resolution --block_range 0 15 --image wall --xoffset 4 --yoffset 4 --upload --image-host imgur'
-fi
-
 # If pacman exists, check for helpers and add aliases
 if [ "`which pacman > /dev/null 2>&1`" ]; then
 	export pac_helper="pacaur"
