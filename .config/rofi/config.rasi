@@ -10,8 +10,8 @@ configuration {
 	modi: "drun,ssh,window";
 	sidebar-mode: true;
 
-	yoffset: -44;
-	xoffset: 6;
+	yoffset: -4;
+	xoffset: 0;
 	width: 32;
 }
 
@@ -30,20 +30,20 @@ configuration {
 }
 
 #window {
-	location: southwest;
-	anchor: southwest;
+	location: north;
+	anchor: north;
 	orientation: horizontal;
 
 	border-color: @background-alt;
 	background-color: @background;
 
 	border: 4px;
-	height: 50%;
+	height: 35%;
 	width: 520px;
 }
 
 #inputbar {
-	padding: 8px;
+	padding: 10px;
 	border: 0px 0px 4px 0px;
 	border-color: @background-alt;
 }
