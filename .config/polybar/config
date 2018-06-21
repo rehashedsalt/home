@@ -31,6 +31,8 @@ border = #3c3836
 
 [res/config]
 padding = 4
+bar-width = 15
+bar-fill = ━
 
 [res/fonts]
 font-0 = "Roboto:size=10;2"
@@ -51,7 +53,6 @@ font-4 =
 width = 1908
 height = 34
 offset-x = 6
-offset-y = 0
 bottom = true
 wm-restack = ${env:PB_WM_RESTACK:bspwm}
 
@@ -80,9 +81,21 @@ font-4 = ${res/fonts.font-4}
 monitor = ${env:PB_MONITOR:eDP-1}
 inherit = template/bar
 
-modules-left = bspwm | cpu memory fs-home
+modules-left = cpu memory
 modules-center = xwindow
-modules-right = wlan xbacklight volume battery | date
+modules-right = xbacklight volume battery | date
+
+[bar/primary-2]
+monitor = ${env:PB_MONITOR:eDP-1}
+inherit = template/bar
+
+bottom = false
+border-bottom-size = 4
+border-top-size = 0
+
+modules-left = bspwm
+modules-center =
+modules-right = fs-home | wlan
 
 [bar/secondary]
 monitor = ${env:PB_MONITOR}
@@ -139,41 +152,45 @@ label-empty-foreground = ${res/colors.background-alt}
 
 [module/battery]
 type = internal/battery
-format-charging = <label-charging>
+format-charging = <bar-capacity> <label-charging>
 format-charging-prefix = "Battery: "
 format-charging-prefix-foreground = ${res/colors.icon-battery}
-format-discharging = <label-discharging>
+format-discharging = <bar-capacity> <label-discharging>
 format-discharging-prefix = "Battery: "
 format-discharging-prefix-foreground = ${res/colors.icon-battery}
-format-full = <label-full>
+format-full = <bar-capacity> <label-full>
 format-full-prefix = "Battery: "
 format-full-prefix-foreground = ${res/colors.alert}
 time-format = %H:%M
 full-at = 98
 interval = 15
 
-label-charging = %percentage%%, charging
-label-discharging = %percentage%%
-label-full = %percentage%%, full
+label-charging = %percentage%%+
+label-discharging = %time%
+label-full = %percentage%%
+
+bar-capacity-width = ${res/config.bar-width}
+bar-capacity-fill = ${res/config.bar-fill}
+bar-capacity-fill-foreground = ${res/colors.icon-battery}
+bar-capacity-empty = ${self.bar-capacity-fill}
+bar-capacity-empty-foreground = ${res/colors.background-alt}
+bar-capacity-indicator = |
+bar-capacity-indicator-foreground = ${res/colors.background-alt}
 
 [module/cpu]
 type = internal/cpu
-format = <ramp-coreload>
+format = <bar-load>
 format-prefix = "CPU: "
 format-prefix-foreground = ${res/colors.icon-cpu}
 interval = 1
 
-ramp-coreload-0 = ▁
-ramp-coreload-1 = ▂
-ramp-coreload-2 = ▃
-ramp-coreload-3 = ▄
-ramp-coreload-4 = ▅
-ramp-coreload-5 = ▆
-ramp-coreload-5-foreground = ${res/colors.alert}
-ramp-coreload-6 = ▇
-ramp-coreload-6-foreground = ${res/colors.alert}
-ramp-coreload-7 = █
-ramp-coreload-7-foreground = ${res/colors.warning}
+bar-load-width = ${res/config.bar-width}
+bar-load-fill = ${res/config.bar-fill}
+bar-load-fill-foreground = ${res/colors.icon-cpu}
+bar-load-empty = ${self.bar-load-fill}
+bar-load-empty-foreground = ${res/colors.background-alt}
+bar-load-indicator = |
+bar-load-indicator-foreground = ${res/colors.background-alt}
 
 [module/date]
 type = internal/date
@@ -188,31 +205,56 @@ label = %date% %time%
 
 [module/fs-home]
 type = internal/fs
-format-mounted = <label-mounted>
+format-mounted = <bar-used> <label-mounted>
 format-mounted-prefix = "Home: "
 format-mounted-prefix-foreground = ${res/colors.icon-fs}
 mount-0 = /home
 
 label-mounted = %free% free
 
+bar-used-width = ${res/config.bar-width}
+bar-used-fill = ${res/config.bar-fill}
+bar-used-fill-foreground = ${res/colors.icon-fs}
+bar-used-empty = ${self.bar-used-fill}
+bar-used-empty-foreground = ${res/colors.background-alt}
+bar-used-indicator = |
+bar-used-indicator-foreground = ${res/colors.background-alt}
+
 [module/memory]
 type = internal/memory
-format = <label>
+format = <bar-used> <label>
 format-prefix = "Memory: "
 format-prefix-foreground = ${res/colors.icon-memory}
 interval = 1
 
-label = %gb_free% usable
+label = %gb_used%
+
+bar-used-width = ${res/config.bar-width}
+bar-used-fill = ${res/config.bar-fill}
+bar-used-fill-foreground = ${res/colors.icon-memory}
+bar-used-empty = ${self.bar-used-fill}
+bar-used-empty-foreground = ${res/colors.background-alt}
+bar-used-indicator = |
+bar-used-indicator-foreground = ${res/colors.background-alt}
 
 [module/volume]
 type = internal/volume
-format-volume = <label-volume>
+format-volume = <bar-volume> <label-volume>
 format-volume-prefix = "Volume: "
 format-volume-prefix-foreground = ${res/colors.icon-volume}
 format-muted = <label-muted>
 
+label-volume = %percentage%%
 label-muted = Muted
 label-muted-foreground = ${res/colors.foreground-dark}
+
+bar-volume-width = ${res/config.bar-width}
+bar-volume-fill = ${res/config.bar-fill}
+bar-volume-fill-foreground = ${res/colors.icon-volume}
+bar-volume-empty = ${self.bar-volume-fill}
+bar-volume-empty-foreground = ${res/colors.background-alt}
+bar-volume-indicator = |
+bar-volume-indicator-foreground = ${res/colors.background-alt}
 
 [module/wlan]
 type = internal/network
