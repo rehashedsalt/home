@@ -16,6 +16,7 @@ warning = ${xrdb:color1}
 icon-battery = ${res/colors.primary}
 icon-cpu = ${xrdb:color12}
 icon-date = ${res/colors.primary}
+icon-dropbox = ${res/colors.primary}
 icon-fs = ${xrdb:color10}
 icon-memory = ${xrdb:color13}
 icon-volume = ${res/colors.primary}
@@ -99,7 +100,7 @@ border-top-size = 0
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = fs-home | wlan
+modules-right = dropbox fs-home | wlan
 
 [bar/secondary]
 monitor = ${env:PB_MONITOR}
@@ -211,6 +212,15 @@ time = %I:%M %p
 interval = 30
 
 label = %date% %time%
+
+[module/dropbox]
+type = custom/script
+format-prefix = "Dropbox: "
+format-prefix-foreground = ${res/colors.icon-dropbox}
+interval = 15
+
+exec = dropbox status
+exec-if = which dropbox
 
 [module/fs-home]
 type = internal/fs
