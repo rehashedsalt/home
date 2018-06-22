@@ -84,8 +84,11 @@ xset s off
 xrdbupdate
 
 ## SERVICES AND DAEMONS
-sxhkd &						# Simple hotkey daemon
 feh --randomize --bg-fill ~/Pictures/Wallpapers/.active &
+if [[ $(pgrep sxhkd) ]]; then
+	killall sxhkd
+fi
+sxhkd &
 if [[ $(pgrep polybar) ]]; then
 	killall polybar
 fi

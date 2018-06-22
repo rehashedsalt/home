@@ -2,7 +2,7 @@
 DefaultProfile=Primary.profile
 
 [Favorite Profiles]
-Favorites=
+Favorites=Small.profile,Primary.profile
 
 [FileDialogSize]
 Height 1080=480
@@ -23,7 +23,7 @@ ShowWindowTitleOnTitleBar=true
 
 [MainWindow]
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAAA6kAAAP0AAAABAAAAAQAAAAIAAAACPwAAAAA
+State=AAAA/wAAAAD9AAAAAAAAA0oAAAH6AAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 
 [Notification Messages]
