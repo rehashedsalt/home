@@ -302,7 +302,7 @@ type = internal/xwindow
 format = <label>
 label = %title%
 label-background = ${res/colors.background}
-label-maxlen = 60
+label-maxlen = 180
 label-ellipsis = true
 
 # vim:ft=dosini
