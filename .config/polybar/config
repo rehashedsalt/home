@@ -262,6 +262,8 @@ format-volume = <bar-volume> <label-volume>
 format-volume-prefix = "Volume: "
 format-volume-prefix-foreground = ${res/colors.icon-volume}
 format-muted = <label-muted>
+format-muted-prefix = "Volume: "
+format-muted-prefix-foreground = ${res/colors.icon-volume}
 
 label-volume = %percentage%%
 label-muted = Muted
