@@ -30,6 +30,10 @@ alt + p
 alt + shift + p
 	pkill xwinwrap
 
+# Conky toggling
+alt + c
+	pgrep conky && killall conky || conky&
+
 # Pulse controls
 XF86Audio{Raise,Lower}Volume
 	pactl set-sink-volume 0 {+,-}5%
