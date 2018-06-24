@@ -2,7 +2,7 @@
 DefaultProfile=Primary.profile
 
 [Favorite Profiles]
-Favorites=Primary.profile,Small.profile
+Favorites=Small.profile,Primary.profile
 
 [FileDialogSize]
 Height 1080=480
