@@ -29,12 +29,13 @@ background-alt = ${xrdb:color8}
 foreground = ${xrdb:color15}
 foreground-dark = ${xrdb:color8}
 border = #3c3836
+bar-empty = ${self.border}
 
 [res/config]
 padding = 4
-bar-width = 30
+bar-width = 50
 bar-indicator = 
-bar-fill = /
+bar-fill = |
 
 [res/fonts]
 font-0 = "Roboto:style=Regular:size=10;2"
@@ -184,7 +185,7 @@ bar-capacity-width = ${res/config.bar-width}
 bar-capacity-fill = ${res/config.bar-fill}
 bar-capacity-fill-foreground = ${res/colors.icon-battery}
 bar-capacity-empty = ${self.bar-capacity-fill}
-bar-capacity-empty-foreground = ${res/colors.background-alt}
+bar-capacity-empty-foreground = ${res/colors.bar-empty}
 bar-capacity-indicator = ${res/config.bar-indicator}
 bar-capacity-indicator-foreground = ${res/colors.background-alt}
 
@@ -199,7 +200,7 @@ bar-load-width = ${res/config.bar-width}
 bar-load-fill = ${res/config.bar-fill}
 bar-load-fill-foreground = ${res/colors.icon-cpu}
 bar-load-empty = ${self.bar-load-fill}
-bar-load-empty-foreground = ${res/colors.background-alt}
+bar-load-empty-foreground = ${res/colors.bar-empty}
 bar-load-indicator = ${res/config.bar-indicator}
 bar-load-indicator-foreground = ${res/colors.background-alt}
 
@@ -236,7 +237,7 @@ bar-used-width = ${res/config.bar-width}
 bar-used-fill = ${res/config.bar-fill}
 bar-used-fill-foreground = ${res/colors.icon-fs}
 bar-used-empty = ${self.bar-used-fill}
-bar-used-empty-foreground = ${res/colors.background-alt}
+bar-used-empty-foreground = ${res/colors.bar-empty}
 bar-used-indicator = ${res/config.bar-indicator}
 bar-used-indicator-foreground = ${res/colors.background-alt}
 
@@ -253,7 +254,7 @@ bar-used-width = ${res/config.bar-width}
 bar-used-fill = ${res/config.bar-fill}
 bar-used-fill-foreground = ${res/colors.icon-memory}
 bar-used-empty = ${self.bar-used-fill}
-bar-used-empty-foreground = ${res/colors.background-alt}
+bar-used-empty-foreground = ${res/colors.bar-empty}
 bar-used-indicator = ${res/config.bar-indicator}
 bar-used-indicator-foreground = ${res/colors.background-alt}
 
@@ -274,7 +275,7 @@ bar-volume-width = ${res/config.bar-width}
 bar-volume-fill = ${res/config.bar-fill}
 bar-volume-fill-foreground = ${res/colors.icon-volume}
 bar-volume-empty = ${self.bar-volume-fill}
-bar-volume-empty-foreground = ${res/colors.background-alt}
+bar-volume-empty-foreground = ${res/colors.bar-empty}
 bar-volume-indicator = ${res/config.bar-indicator}
 bar-volume-indicator-foreground = ${res/colors.background-alt}
 
