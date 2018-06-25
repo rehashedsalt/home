@@ -28,6 +28,7 @@ background = ${xrdb:background}
 background-alt = ${xrdb:color8}
 foreground = ${xrdb:color15}
 foreground-dark = ${xrdb:color8}
+
 border = #3c3836
 bar-empty = ${self.border}
 
