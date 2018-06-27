@@ -223,7 +223,7 @@ format-prefix-foreground = ${res/colors.icon-dropbox}
 interval = 15
 
 exec = dropbox status
-exec-if = which dropbox && [ "`dropbox status`" != "Up to date" ]
+exec-if = which dropbox && [ "`dropbox status`" != "Up to date" ] && wget -q --spider http://www.startpage.com/
 
 [module/fs-home]
 type = internal/fs
