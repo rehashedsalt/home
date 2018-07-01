@@ -13,11 +13,11 @@ secondary = ${xrdb:color4}
 alert = ${xrdb:color3}
 warning = ${xrdb:color1}
 
-icon-battery = ${res/colors.primary}
+icon-battery = ${xrdb:color10}
 icon-cpu = ${xrdb:color12}
 icon-date = ${res/colors.primary}
 icon-dropbox = ${res/colors.primary}
-icon-fs = ${xrdb:color10}
+icon-fs = ${xrdb:color11}
 icon-memory = ${xrdb:color13}
 icon-volume = ${res/colors.primary}
 icon-wlan = ${xrdb:color14}
@@ -89,9 +89,9 @@ tray-detached = true
 tray-position = center
 tray-maxsize = 16
 
-modules-left = cpu memory
+modules-left = battery cpu memory
 modules-center =
-modules-right = xbacklight volume battery | date
+modules-right = xbacklight volume | date
 
 [bar/primary-2]
 monitor = ${env:PB_MONITOR:eDP-1}
