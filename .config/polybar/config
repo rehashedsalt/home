@@ -179,7 +179,7 @@ full-at = 98
 interval = 15
 
 label-charging = %percentage%%+
-label-discharging = %time%
+label-discharging = %percentage%%
 label-full = %percentage%%
 
 bar-capacity-width = ${res/config.bar-width}
