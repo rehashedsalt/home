@@ -24,9 +24,9 @@ alt + Tab
 alt + Escape
 	pkill -USR1 -x sxhkd
 
-# mpv-xwinwrap Controls
+# tubetop Controls
 alt + p
-	~/.local/bin/mpv-xwinwrap
+	~/.local/bin/tubetop
 alt + shift + p
 	pkill xwinwrap
 
