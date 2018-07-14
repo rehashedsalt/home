@@ -1,6 +1,9 @@
 /* rehashedsalt's Gruvbox rofi theme
  * Distributed under the terms of the MIT License
  * github.com/rehashedsalt
+ * 
+ * See rofi-theme(5) for documentation
+ *
  */
 
 configuration {
@@ -32,69 +35,82 @@ configuration {
 #window {
 	location: north;
 	anchor: north;
-	orientation: horizontal;
 
 	border-color: @background-alt;
 	background-color: @background;
 
 	border: 4px;
-	height: 35%;
+	height: 40%;
 	width: 520px;
 }
 
-#inputbar {
-	padding: 10px;
-	border: 0px 0px 4px 0px;
-	border-color: @background-alt;
-}
+	#inputbar {
+		padding: 10px;
+		border: 0px 0px 4px 0px;
+		border-color: @background-alt;
+	}
 
-#prompt {
-	padding: 0px 4px 0px 0px;
-	text-color: @foreground-alt;
-}
+		#case-indicator {
+			text-color: @foreground-alt;
+		}
 
-#case-indicator {
-	text-color: @foreground-alt;
-}
+		#prompt {
+			font: "Roboto Bold 10";
+			padding: 0px 8px 0px 0px;
+			text-color: @foreground;
+		}
 
-#listview {
-	spacing: 0px;
-}
+	#message {
+		padding: 4px;
+	}
+		
+		#textbox {
+			padding: 4px 12px 4px 12px;
+			font-color: @foreground-alt;
+		}
 
-#element {
-	padding: 4px;
-}
+	#listview {
+		padding: 4px;
+		spacing: 0px;
+	}
 
-#element normal active {
-	text-color: @blue-dark;
-}
+		#element {
+			padding: 4px;
+		}
 
-#element normal urgent {
-	text-color: @yellow;
-}
+		#element normal active {
+			text-color: @blue-dark;
+		}
 
-#element selected normal {
-	background-color: @blue;
-	text-color: @background;
-}
+		#element normal urgent {
+			text-color: @yellow;
+		}
 
-#element selected active {
-	background-color: @blue-dark;
-	text-color: @background;
-}
+		#element selected normal {
+			background-color: @blue;
+			text-color: @background;
+		}
 
-#element selected urgent {
-	background-color: @yellow;
-	text-color: @background;
-}
+		#element selected active {
+			background-color: @blue-dark;
+			text-color: @background;
+		}
 
-#button {
-	padding: 8px;
-}
+		#element selected urgent {
+			background-color: @yellow;
+			text-color: @background;
+		}
+	
+	#sidebar {
+	}
 
-#button selected {
-	background-color: @background-alt;
-}
+		#button {
+			padding: 8px;
+		}
+
+		#button selected {
+			background-color: @background-alt;
+		}
 
 /* vim:ft=css
  */
