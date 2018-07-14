@@ -40,7 +40,7 @@ bar-fill = |
 
 [res/fonts]
 font-0 = "Roboto:style=Regular:size=10;2"
-font-1 = "Roboto:style=Medium:size=10;2"
+font-1 = "Roboto:style=Bold:size=10;2"
 font-2 = "Roboto:style=Light:size=10;2"
 font-3 = "Inconsolata:size=10;2"
 font-4 = "Material Design Icons:size=11;3"
