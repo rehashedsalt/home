@@ -74,15 +74,26 @@ fi
 # Aliases for common utilities
 alias cp='cp -i'
 
-lsarguments='--color=auto --group-directories-first'
-alias l="ls -CF  --file-type $lsarguments"
-alias la="ls -AF  --file-type $lsarguments"
-alias ls="ls -F $lsarguments"
-alias ll="ls -AhlF  --file-type $lsarguments"
-unset lsarguments
+if [ "`ls --version`" == *"GNU"* ]; then
+	lsarguments='--color=auto --group-directories-first'
+	alias l="ls -CF  --file-type $lsarguments"
+	alias la="ls -AF  --file-type $lsarguments"
+	alias ls="ls -F $lsarguments"
+	alias ll="ls -AhlF  --file-type $lsarguments"
+	unset lsarguments
+else
+	lsarguments='-F'
+	alias l="ls -$lsarguments"
+	alias la="ls -A $lsarguments"
+	alias ls="ls $lsarguments"
+	alias ll="ls -Ahl $lsarguments"
+fi
+
+if `which sudo`; then
+	alias fug='sudo `history -p !!`'
+fi
 
 alias waitwhat='echo $?'
-alias fug='sudo `history -p !!`'
 
 # urxvt isn't a very well-known terminal
 if [ "$TERM" = "rxvt-unicode-256color" ]; then
@@ -90,6 +101,6 @@ if [ "$TERM" = "rxvt-unicode-256color" ]; then
 fi
 
 # Minor configuration settings
-export EDITOR=$(which vim)
+export EDITOR=`which vim`
 export PATH=$PATH:$HOME/.local/bin
 export XDG_CONFIG_HOME="$HOME/.config"
