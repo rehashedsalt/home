@@ -74,7 +74,7 @@ fi
 # Aliases for common utilities
 alias cp='cp -i'
 
-if [ "`ls --version`" == *"GNU"* ]; then
+if [ "`uname`" = "Linux" ]; then
 	lsarguments='--color=auto --group-directories-first'
 	alias l="ls -CF  --file-type $lsarguments"
 	alias la="ls -AF  --file-type $lsarguments"
