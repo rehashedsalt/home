@@ -46,6 +46,12 @@ increase_volume=Volume Up,Volume Up,Increase Volume
 mic_mute=Microphone Mute,Microphone Mute,Mute Microphone
 mute=Volume Mute,Volume Mute,Mute
 
+[kopete]
+ReadMessage=Ctrl+Shift+I,Ctrl+Shift+I,Read Message
+Set_Away_Back=Ctrl+Shift+W,Ctrl+Shift+W,Set Away/Back
+ShowContactList=,Ctrl+Alt+T,Show/Hide Contact List
+_k_friendly_name=Kopete
+
 [krunner]
 _k_friendly_name=Run Command
 run command=\tAlt+F2,Alt+Space,Run Command
