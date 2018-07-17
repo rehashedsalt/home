@@ -85,9 +85,9 @@ xrdbupdate
 
 ## SERVICES AND DAEMONS
 feh --randomize --bg-fill ~/Pictures/Wallpapers/.active &
-services=(sxhkd polybar conky dunst compton)
+services="sxhkd polybar conky dunst compton"
 for service in $services; do
-	kill $(pgrep service)
+	kill $(pgrep $service)
 done
 # Don't start the compositor in a VM
 if [[ $(hostname) != "vm"* ]]; then
@@ -99,7 +99,7 @@ if [[ $(uname) == "Linux" ]]; then
 	$HOME/.config/polybar/start.sh &
 	sxhkd &
 else
-	sxhkd &
+	sxhkd -c $XDG_CONFIG_HOME/sxhkd/sxhkdrc-obsd &
 fi
 # Start these all the time regardless of platform
 conky&
