@@ -87,7 +87,9 @@ xrdbupdate
 feh --randomize --bg-fill ~/Pictures/Wallpapers/.active &
 services="sxhkd polybar conky dunst compton"
 for service in $services; do
-	kill $(pgrep $service)
+	if $(pgrep $service); then
+		kill $(pgrep $service)
+	fi
 done
 # Don't start the compositor in a VM
 if [[ $(hostname) != "vm"* ]]; then
