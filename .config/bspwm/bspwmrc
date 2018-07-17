@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Copyright (c) 2017 rehashedsalt/vintagesalt
 # 
@@ -85,24 +85,23 @@ xrdbupdate
 
 ## SERVICES AND DAEMONS
 feh --randomize --bg-fill ~/Pictures/Wallpapers/.active &
-if [[ $(pgrep sxhkd) ]]; then
-	killall sxhkd
+services=(sxhkd polybar conky dunst compton)
+for service in $services; do
+	kill $(pgrep service)
+done
+# Don't start the compositor in a VM
+if [[ $(hostname) != "vm"* ]]; then
+	compton &
 fi
-sxhkd &
-if [[ $(pgrep polybar) ]]; then
-	killall polybar
+# Different startup for OpenBSD and Linux
+if [[ $(uname) == "Linux" ]]; then
+	compton &
+	$HOME/.config/polybar/start.sh &
+	sxhkd &
+else
+	sxhkd &
 fi
-$HOME/.config/polybar/start.sh &
-if [[ $(pgrep compton) ]]; then
-	killall compton
-fi
-compton&
-if [[ $(pgrep conky) ]]; then
-	killall conky
-fi
+# Start these all the time regardless of platform
 conky&
-if [[ $(pgrep dunst) ]]; then
-	killall dunst
-fi
 dunst&
 
